@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Turkey Food Supply Chain — Big Data Project</title>
+
+  <!-- Reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+
+  <style>
+    /* ── Design tokens ─────────────────────────────── */
+    :root {
+      --bg:      #F0F4F8;
+      --bg2:     #FFFFFF;
+      --navy:    #1A365D;
+      --navy2:   #0F4C81;
+      --green:   #10B981;
+      --green2:  #059669;
+      --orange:  #F59E0B;
+      --red:     #E05626;
+      --text:    #2D3748;
+      --muted:   #718096;
+      --border:  #CBD5E0;
+      --light:   #EDF2F7;
+      --bronze:  #CD7F32;
+      --silver:  #718096;
+      --gold:    #D4A017;
+    }
+
+    /* ── Reveal base ───────────────────────────────── */
+    .reveal-viewport { background: var(--bg); }
+    .reveal {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+    }
+    .reveal .slides section {
+      text-align: left;
+      padding: 28px 52px;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .reveal .progress span { background: var(--navy); }
+    .reveal .progress { height: 3px; }
+    .reveal .slide-number {
+      background: transparent;
+      color: var(--muted);
+      font-family: 'Fira Code', monospace;
+      font-size: 0.7rem;
+    }
+    .reveal .controls { color: var(--navy); }
+
+    /* ── Typography ────────────────────────────────── */
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Poppins', sans-serif;
+      text-transform: none;
+      letter-spacing: -0.01em;
+      color: var(--navy);
+      margin: 0 0 0.4em;
+    }
+    .reveal h1 { font-size: 2.4rem; font-weight: 800; line-height: 1.15; }
+    .reveal h2 { font-size: 1.55rem; font-weight: 700; color: var(--navy2); border-bottom: 2px solid var(--border); padding-bottom: 0.3em; }
+    .reveal h3 { font-size: 0.72rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2em; }
+    .reveal p, .reveal li { font-size: 0.9rem; line-height: 1.65; color: var(--text); }
+    .reveal ul { list-style: none; padding: 0; margin: 0; }
+    .reveal ul li::before { content: "▸"; color: var(--navy2); margin-right: 0.5em; font-size: 0.8em; }
+    .reveal strong { color: var(--navy); }
+    code { font-family: 'Fira Code', monospace; font-size: 0.82em; background: var(--light); padding: 1px 5px; border-radius: 3px; color: var(--red); }
+
+    /* ── Cards ─────────────────────────────────────── */
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .card-grid { display: grid; gap: 12px; }
+    .card-grid.col2 { grid-template-columns: 1fr 1fr; }
+    .card-grid.col3 { grid-template-columns: 1fr 1fr 1fr; }
+    .card-grid.col4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+    /* ── Badges ─────────────────────────────────────── */
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: 'Fira Code', monospace;
+    }
+    .badge-navy   { background: #EBF4FF; color: var(--navy2); border: 1px solid #BEE3F8; }
+    .badge-green  { background: #F0FDF4; color: var(--green2); border: 1px solid #A7F3D0; }
+    .badge-orange { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+    .badge-red    { background: #FFF5F0; color: #C53030; border: 1px solid #FEB2B2; }
+
+    /* ── Stat boxes ─────────────────────────────────── */
+    .stat-row { display: flex; gap: 12px; margin-top: 12px; }
+    .stat-box {
+      flex: 1;
+      background: var(--navy);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+    }
+    .stat-num { font-family: 'Poppins', sans-serif; font-size: 1.9rem; font-weight: 800; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.68rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+    /* ── Tables ─────────────────────────────────────── */
+    .reveal table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+    .reveal table thead tr { background: var(--navy); }
+    .reveal table th { color: #fff; padding: 8px 10px; text-align: left; font-family: 'Poppins', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .reveal table td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .reveal table tbody tr:nth-child(even) { background: var(--light); }
+    .reveal table tbody tr:hover { background: #EBF8FF; }
+
+    /* ── Title slide ─────────────────────────────────── */
+    .slide-title {
+      background: linear-gradient(145deg, var(--navy) 0%, var(--navy2) 100%) !important;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide-title::before {
+      content: "";
+      position: absolute;
+      right: -80px; top: -80px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .slide-title::after {
+      content: "";
+      position: absolute;
+      left: 30%; bottom: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .slide-title h1, .slide-title h2, .slide-title h3, .slide-title p { color: rgba(255,255,255,0.95); }
+    .slide-title h1 { border: none; font-size: 2.5rem; color: #fff; }
+    .slide-title h2 { border: none; color: rgba(255,255,255,0.7); font-weight: 400; font-size: 1.1rem; }
+    .eyebrow { font-size: 0.72rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 12px; font-family: 'Poppins', sans-serif; }
+    .divider-line { width: 50px; height: 3px; background: var(--green); border-radius: 2px; margin: 16px 0; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+    .tag {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-family: 'Fira Code', monospace;
+    }
+    .team-row { display: flex; gap: 6px; align-items: center; margin-top: 22px; }
+    .team-name-pill {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ── Gap visual (Problem slide) ────────────────── */
+    .gap-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 12px 0 16px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .gap-endpoint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+    .gap-icon-circle {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    .gap-icon-circle.green { background: #F0FDF4; color: var(--green2); border: 2px solid #A7F3D0; }
+    .gap-icon-circle.red   { background: #FFF5F0; color: var(--red);    border: 2px solid #FEB2B2; }
+    .gap-price { font-family: 'Poppins', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--navy); }
+    .gap-sublabel { font-size: 0.68rem; color: var(--muted); text-align: center; margin-top: 3px; }
+    .gap-arrow-zone {
+      display: flex;
+      align-items: center;
+      color: var(--muted);
+      font-size: 1rem;
+      padding: 0 6px;
+    }
+    .blackbox {
+      background: var(--navy);
+      border-radius: 10px;
+      padding: 14px 20px;
+      text-align: center;
+      flex: 1.2;
+      position: relative;
+      overflow: hidden;
+    }
+    .blackbox::before {
+      content: ""; position: absolute; inset: 0;
+      background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 10px);
+    }
+    .blackbox-q { font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 800; color: rgba(255,255,255,0.25); letter-spacing: 0.2em; }
+    .blackbox-label { font-size: 0.65rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 4px; }
+    .blackbox-delta { font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--red); margin-top: 4px; }
+
+    /* ── Problem cards ─────────────────────────────── */
+    .problem-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 11px 14px;
+      border-left: 4px solid var(--navy);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .problem-card.red  { border-left-color: var(--red); }
+    .problem-card.green { border-left-color: var(--green); }
+    .problem-card.orange { border-left-color: var(--orange); }
+    .problem-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+    .problem-title { font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .problem-desc { font-size: 0.74rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── Pipeline flow ─────────────────────────────── */
+    .pipeline-wrap { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+    .pipeline-sources {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+    }
+    .src-chip {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 0.65rem;
+      font-family: 'Fira Code', monospace;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+    .src-chip i { font-size: 0.7rem; }
+    .src-chip.stream { border-color: #FDE68A; background: #FFFBEB; color: #92400E; }
+    .src-chip.batch  { border-color: #A7F3D0; background: #F0FDF4; color: #065F46; }
+
+    .pipeline-row {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+    .pipe-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .pipe-ingest {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      width: 100%;
+    }
+    .ingest-box {
+      flex: 1;
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      text-align: center;
+    }
+    .ingest-box.kafka { border-color: #FDE68A; background: #FFFBEB; }
+    .ingest-box.airflow { border-color: #A7F3D0; background: #F0FDF4; }
+    .ingest-icon { font-size: 1.2rem; margin-bottom: 3px; }
+    .ingest-name { font-family: 'Poppins', sans-serif; font-size: 0.68rem; font-weight: 700; }
+    .ingest-sub { font-size: 0.6rem; color: var(--muted); margin-top: 2px; }
+    .pipe-arrow {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .layer-boxes {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      justify-content: center;
+    }
+    .layer-box {
+      flex: 1;
+      border-radius: 8px;
+      padding: 10px 12px;
+      text-align: center;
+      border: 2px solid;
+      max-width: 200px;
+    }
+    .layer-box.bronze { background: #FDF4E3; border-color: #CD7F32; }
+    .layer-box.silver { background: #F7FAFC; border-color: #718096; }
+    .layer-box.gold   { background: #FFFFF0; border-color: #D4A017; }
+    .layer-icon { font-size: 1.3rem; margin-bottom: 4px; }
+    .layer-name { font-family: 'Poppins', sans-serif; font-size: 0.75rem; font-weight: 700; }
+    .layer-sub  { font-size: 0.6rem; color: var(--muted); margin-top: 2px; font-family: 'Fira Code', monospace; }
+    .bi-boxes {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      width: 100%;
+    }
+    .bi-box {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 8px 18px;
+      text-align: center;
+      color: #fff;
+    }
+    .bi-icon { font-size: 1rem; margin-bottom: 3px; }
+    .bi-name { font-family: 'Poppins', sans-serif; font-size: 0.72rem; font-weight: 700; }
+
+    /* ── Gantt ─────────────────────────────────────── */
+    .gantt-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .gantt-row { display: grid; grid-template-columns: 140px 1fr; gap: 10px; align-items: center; }
+    .gantt-label { font-family: 'Poppins', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--navy); text-align: right; padding-right: 8px; }
+    .gantt-label span { display: block; font-size: 0.68rem; color: var(--muted); font-weight: 400; }
+    .gantt-bar {
+      border-radius: 6px;
+      padding: 9px 14px;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      border-left: 4px solid;
+    }
+    .gb1 { background: #EBF8FF; border-color: var(--navy2); color: var(--navy); }
+    .gb2 { background: #FFFBEB; border-color: var(--orange); color: #78350F; }
+    .gb3 { background: #F0FDF4; border-color: var(--green); color: #064E3B; }
+    .gb4 { background: #FFF5F0; border-color: var(--red); color: #7C2D12; }
+    .gantt-weeks { display: grid; grid-template-columns: 140px repeat(8,1fr); gap: 0; margin-bottom: 4px; }
+    .gantt-week-hdr { font-size: 0.6rem; color: var(--muted); text-align: center; font-family: 'Fira Code', monospace; }
+    .gantt-vis-row { display: grid; grid-template-columns: 140px repeat(8,1fr); gap: 0; margin-bottom: 3px; align-items: center; }
+    .gantt-vis-label { font-size: 0.78rem; color: var(--navy); text-align: right; padding-right: 8px; font-weight: 600; }
+    .gantt-cell { height: 24px; }
+    .gantt-fill { height: 100%; border-radius: 3px; margin: 0 2px; }
+
+    /* ── Team cards ─────────────────────────────────── */
+    .team-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .avatar {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin: 0 auto 12px;
+      color: #fff;
+    }
+    .avatar.a1 { background: linear-gradient(135deg, var(--navy), var(--navy2)); }
+    .avatar.a2 { background: linear-gradient(135deg, var(--green2), var(--green)); }
+    .avatar.a3 { background: linear-gradient(135deg, #7C3AED, #A78BFA); }
+    .t-name { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .t-role { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green2); background: #F0FDF4; border: 1px solid #A7F3D0; border-radius: 20px; display: inline-block; padding: 2px 10px; margin-bottom: 10px; }
+    .t-tasks { list-style: none; padding: 0; margin: 0; text-align: left; }
+    .t-tasks li { font-size: 0.72rem; color: var(--muted); padding: 4px 0; border-bottom: 1px solid var(--border); }
+    .t-tasks li::before { content: "→"; color: var(--navy2); margin-right: 6px; font-size: 0.75rem; }
+
+    /* ── Quote/highlight ─────────────────────────────── */
+    .hq {
+      border-left: 4px solid var(--navy2);
+      background: var(--light);
+      padding: 10px 16px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .hq.green { border-color: var(--green); background: #F0FDF4; color: var(--green2); }
+    .hq.orange { border-color: var(--orange); background: #FFFBEB; color: #78350F; }
+
+    /* ── Business value audience blocks ─────────────── */
+    .audience-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      border-top: 4px solid;
+    }
+    .audience-card:nth-child(1) { border-top-color: var(--navy2); }
+    .audience-card:nth-child(2) { border-top-color: var(--green); }
+    .audience-card:nth-child(3) { border-top-color: var(--orange); }
+    .aud-icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .aud-title { font-family: 'Poppins', sans-serif; font-size: 0.92rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .aud-list { list-style: none; padding: 0; margin: 0; }
+    .aud-list li { font-size: 0.82rem; color: var(--muted); padding: 4px 0; }
+    .aud-list li::before { content: "✓"; color: var(--green2); margin-right: 6px; font-weight: 700; }
+
+    /* ── Viz section ─────────────────────────────────── */
+    .viz-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .viz-panel {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .viz-header {
+      background: var(--navy);
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .viz-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .viz-header-title { font-size: 0.72rem; color: rgba(255,255,255,0.9); font-weight: 600; margin-left: 4px; }
+    .viz-body { padding: 10px 14px; }
+    .viz-insight { font-size: 0.7rem; color: var(--muted); margin-top: 6px; font-style: italic; border-top: 1px solid var(--border); padding-top: 6px; }
+
+    /* ── Fragment base ───────────────────────────────── */
+    .reveal .fragment { opacity: 0.2; filter: blur(1px); transition: all 0.3s ease; }
+    .reveal .fragment.visible { opacity: 1; filter: none; }
+
+    /* ── Pipeline stage label ────────────────────────── */
+    .pipe-stage-lbl {
+      font-size: 0.6rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 0 — TITLE
+═══════════════════════════════════════════ -->
+<section class="slide-title">
+  <div class="eyebrow"><i class="fa-solid fa-database"></i> &nbsp;Big Data Engineering · 2025</div>
+  <h1>Turkey Food Supply Chain<br>Transparency &amp; Margin Analysis</h1>
+  <h2>A Real-Time Decision Support Engine for Turkey's Agricultural Value Chain</h2>
+
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:16px 0;">
+    <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px;">
+      <div style="font-size:0.62rem; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.1em; font-family:'Poppins'; margin-bottom:5px;">The Problem</div>
+      <div style="font-size:0.82rem; color:#fff; line-height:1.55;">Tomato enters Istanbul's Hall at <strong style="color:var(--orange);">₺10</strong> — hits the retail shelf at <strong style="color:var(--red);">₺35</strong>. <em style="color:rgba(255,255,255,0.65);">Nobody can explain the gap.</em></div>
+    </div>
+    <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px;">
+      <div style="font-size:0.62rem; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.1em; font-family:'Poppins'; margin-bottom:5px;">Our Answer</div>
+      <div style="font-size:0.82rem; color:#fff; line-height:1.55;">A real-time pipeline ingesting <strong style="color:var(--green);">8 independent sources</strong>, tracking every margin step across <strong style="color:var(--green);">81 provinces</strong>.</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px;">
+      <div style="font-size:0.62rem; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.1em; font-family:'Poppins'; margin-bottom:5px;">Built For</div>
+      <div style="font-size:0.82rem; color:#fff; line-height:1.55;"><strong style="color:var(--orange);">Decision Support System</strong> for Turkey's Ministry of Trade, Competition Authority &amp; regulators.</div>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+  <div class="tag-row">
+    <span class="tag"><i class="fa-solid fa-bolt"></i> Apache Kafka</span>
+    <span class="tag"><i class="fa-solid fa-wind"></i> Apache Flink</span>
+    <span class="tag"><i class="fa-solid fa-layer-group"></i> Delta Lake</span>
+    <span class="tag"><i class="fa-solid fa-calendar-days"></i> Airflow</span>
+    <span class="tag"><i class="fa-solid fa-chart-bar"></i> Superset</span>
+    <span class="tag"><i class="fa-solid fa-medal"></i> Medallion Architecture</span>
+  </div>
+  <div class="team-row">
+    <span class="team-name-pill">Azmi Yağlı</span>
+    <span style="color:rgba(255,255,255,0.3); padding:0 4px;">·</span>
+    <span class="team-name-pill">Abdullah Zengin</span>
+    <span style="color:rgba(255,255,255,0.3); padding:0 4px;">·</span>
+    <span class="team-name-pill">Hidayet Ersin Dursun</span>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 1 — PROBLEM STATEMENT
+═══════════════════════════════════════════ -->
+<section>
+  <h3><i class="fa-solid fa-triangle-exclamation"></i> &nbsp;Problem Statement</h3>
+  <h2>Turkey's Food Pricing is a Black Box</h2>
+
+  <!-- Gap visual -->
+  <div class="gap-visual">
+    <div class="gap-endpoint">
+      <div class="gap-icon-circle green"><i class="fa-solid fa-wheat-awn"></i></div>
+      <div class="gap-price" style="color:var(--green2);">₺10</div>
+      <div class="gap-sublabel">Wholesale Hall Entry<br>(İBB Hal)</div>
+    </div>
+    <div class="gap-arrow-zone"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="blackbox">
+      <div class="blackbox-q">? ? ? ? ?</div>
+      <div class="blackbox-label"><i class="fa-solid fa-lock"></i> &nbsp;The Black Box</div>
+      <div class="blackbox-delta">+₺25 unaccounted</div>
+    </div>
+    <div class="gap-arrow-zone"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="gap-endpoint">
+      <div class="gap-icon-circle red"><i class="fa-solid fa-cart-shopping"></i></div>
+      <div class="gap-price" style="color:var(--red);">₺35</div>
+      <div class="gap-sublabel">Retail Shelf<br>(Kadıköy Market)</div>
+    </div>
+  </div>
+
+  <!-- 4 problems in 2x2 grid -->
+  <div class="card-grid col2" style="gap:8px;">
+    <div class="problem-card fragment">
+      <div class="problem-icon">🕳️</div>
+      <div>
+        <div class="problem-title">Systematic Data Void</div>
+        <div class="problem-desc">No unified, machine-readable pipeline tracks the farm-to-shelf journey. The supply chain is a <strong>completely unmeasured black box</strong> — regulators and citizens have no real-time data to act on.</div>
+      </div>
+    </div>
+    <div class="problem-card red fragment">
+      <div class="problem-icon">🚀</div>
+      <div>
+        <div class="problem-title">Asymmetric Price Pass-Through ("Rockets &amp; Feathers")</div>
+        <div class="problem-desc">When input costs rise, retail prices <strong>rocket up instantly</strong>. When costs fall, prices <strong>feather down slowly</strong> — or not at all. This asymmetry is a structural consumer harm never proven with data.</div>
+      </div>
+    </div>
+    <div class="problem-card orange fragment">
+      <div class="problem-icon">📍</div>
+      <div>
+        <div class="problem-title">Location-Based Speculation</div>
+        <div class="problem-desc">Same wholesale entry price → drastically different district-level retail prices. <strong>Istanbul Kadıköy: ₺35</strong> vs <strong>Izmir Karşıyaka: ₺25</strong> for the same product from the same hall. No accountability mechanism exists.</div>
+      </div>
+    </div>
+    <div class="problem-card green fragment">
+      <div class="problem-icon">⚡</div>
+      <div>
+        <div class="problem-title">Unmeasured Supply Shock Propagation</div>
+        <div class="problem-desc">When a frost hits Antalya, <strong>how many days</strong> until Istanbul's retail shelves reflect the shock? When energy prices rise, <strong>how much</strong> of the logistics cost increase passes through to the consumer? These chains are invisible.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 2 — GOAL & SOLUTION
+═══════════════════════════════════════════ -->
+<section>
+  <h3><i class="fa-solid fa-bullseye"></i> &nbsp;Goal &amp; Solution</h3>
+  <h2>From Opacity to a National Intelligence Layer</h2>
+
+  <div class="hq">
+    Build a real-time <strong>Decision Support System (DSS)</strong> and <strong>Early Warning Radar</strong> for Turkey's Ministry of Trade, Competition Authority, and market regulators — powered by 8 independent live data streams.
+  </div>
+
+  <div class="card-grid col2" style="gap:12px;">
+    <div class="card">
+      <h3 style="font-size:0.7rem; margin-bottom:8px;"><i class="fa-solid fa-magnifying-glass"></i> Four Research Questions We Answer</h3>
+      <ul>
+        <li style="font-size:0.78rem; margin-bottom:5px;"><strong>Spatial Margin Analysis</strong> — Province &amp; market-level hall-to-shelf margin decomposition</li>
+        <li style="font-size:0.78rem; margin-bottom:5px;"><strong>Shock Propagation Speed</strong> — Days from weather event → wholesale → retail</li>
+        <li style="font-size:0.78rem; margin-bottom:5px;"><strong>Rockets &amp; Feathers</strong> — Asymmetric price pass-through quantified with lag analysis</li>
+        <li style="font-size:0.78rem;"><strong>Logistics Cost Driver</strong> — Energy/FX correlation with margin widening across provinces</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="font-size:0.7rem; margin-bottom:8px;"><i class="fa-solid fa-gears"></i> What We Build</h3>
+      <ul>
+        <li style="font-size:0.78rem; margin-bottom:5px;">Real-time ingestion of <strong>8 independent data sources</strong> in 3 different formats</li>
+        <li style="font-size:0.78rem; margin-bottom:5px;"><strong>Entity resolution engine</strong> merging hall product names with retail SKUs</li>
+        <li style="font-size:0.78rem; margin-bottom:5px;"><strong>Medallion architecture</strong> on Delta Lake (Bronze → Silver → Gold)</li>
+        <li style="font-size:0.78rem;"><strong>Superset dashboards</strong>: Turkey Margin Map, Rockets &amp; Feathers Radar, Shock Event Overlay</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stat-row fragment" style="margin-top:14px;">
+    <div class="stat-box"><div class="stat-num">8</div><div class="stat-label">Data Sources</div></div>
+    <div class="stat-box"><div class="stat-num">50–500<span style="font-size:1rem;">GB</span></div><div class="stat-label">Scalable Volume</div></div>
+    <div class="stat-box"><div class="stat-num">81</div><div class="stat-label">Provinces</div></div>
+    <div class="stat-box"><div class="stat-num">15<span style="font-size:1rem;">min</span></div><div class="stat-label">Fastest Cadence</div></div>
+    <div class="stat-box"><div class="stat-num">50K+</div><div class="stat-label">SKUs Tracked</div></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 3 — DATA SOURCES
+═══════════════════════════════════════════ -->
+<section>
+  <h3><i class="fa-solid fa-database"></i> &nbsp;Data Sources</h3>
+  <h2>8 Independent Streams — Unified Pipeline</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th><i class="fa-solid fa-plug"></i> Source</th>
+        <th>Provider</th>
+        <th>Format</th>
+        <th>Volume</th>
+        <th>Cadence</th>
+        <th>Ingestion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong><i class="fa-solid fa-store" style="color:var(--navy2);"></i> Retail Prices</strong></td>
+        <td>marketfiyati.org.tr</td>
+        <td><code>REST JSON</code></td>
+        <td>15–20 GB/mo</td>
+        <td><span class="badge badge-orange">Intraday</span></td>
+        <td><span class="badge badge-orange">Kafka Stream</span></td>
+      </tr>
+      <tr>
+        <td><strong><i class="fa-solid fa-building-columns" style="color:var(--navy2);"></i> IBB Wholesale Hall</strong></td>
+        <td>IBB Open Data (Swagger)</td>
+        <td><code>REST JSON</code></td>
+        <td>2–3 GB/yr</td>
+        <td><span class="badge badge-green">Daily</span></td>
+        <td><span class="badge badge-green">Airflow Batch</span></td>
+      </tr>
+      <tr>
+        <td><strong><i class="fa-solid fa-building-columns" style="color:var(--green2);"></i> Izmir Hall Prices</strong></td>
+        <td>Izmir BB Open Data</td>
+        <td><code>CSV / JSON</code></td>
+        <td>1 GB/yr</td>
+        <td><span class="badge badge-green">Daily</span></td>
+        <td><span class="badge badge-green">Airflow Batch</span></td>
+      </tr>
+      <tr>
+        <td><strong><i class="fa-solid fa-weight-scale" style="color:var(--muted);"></i> IBB Hall Tonnage</strong></td>
+        <td>IBB Open Data (Bulk)</td>
+        <td><code>CSV</code></td>
+        <td>500 MB hist.</td>
+        <td><span class="badge badge-navy">Monthly</span></td>
+        <td><span class="badge badge-green">Airflow Batch</span></td>
+      </tr>
+      <tr>
+        <td><strong><i class="fa-solid fa-cloud-sun-rain" style="color:#3B82F6;"></i> Weather (Agricultural)</strong></td>
+        <td>Open-Meteo API</td>
+        <td><code>JSON</code></td>
+        <td>5 GB/yr</td>
+        <td><span class="badge badge-orange">Hourly</span></td>
+        <td><span class="badge badge-orange">Kafka Stream</span></td>
+      </tr>
+      <tr>
+        <td><strong><i class="fa-solid fa-newspaper" style="color:var(--red);"></i> Food &amp; Agri News</strong></td>
+        <td>GDELT Project (S3)</td>
+        <td><code>CSV.gz</code></td>
+        <td>10–15 GB/yr</td>
+        <td><span class="badge badge-red">15-min</span></td>
+        <td><span class="badge badge-orange">Kafka Stream</span></td>
+      </tr>
+      <tr>
+        <td><strong><i class="fa-solid fa-bolt" style="color:var(--orange);"></i> Electricity Prices</strong></td>
+        <td>EPIAS Transparency API</td>
+        <td><code>JSON</code></td>
+        <td>1 GB/yr</td>
+        <td><span class="badge badge-orange">Hourly</span></td>
+        <td><span class="badge badge-orange">Kafka Stream</span></td>
+      </tr>
+      <tr>
+        <td><strong><i class="fa-solid fa-coins" style="color:var(--gold);"></i> FX &amp; Agri Input Index</strong></td>
+        <td>CBRT EVDS API</td>
+        <td><code>XML / JSON</code></td>
+        <td>&lt;100 MB</td>
+        <td><span class="badge badge-green">Daily/Monthly</span></td>
+        <td><span class="badge badge-green">Airflow Batch</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="stat-row fragment" style="margin-top:10px;">
+    <div class="stat-box" style="flex:2; background:var(--green2);">
+      <div class="stat-num">50–70 GB</div>
+      <div class="stat-label">Initial with 5–10 yr historical data</div>
+    </div>
+    <div style="display:flex;align-items:center;color:var(--muted);font-size:1.2rem;padding:0 6px;"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="stat-box" style="flex:2; background:var(--red);">
+      <div class="stat-num">200–500 GB</div>
+      <div class="stat-label">At full 81-province scale — true Big Data</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 4 — DATA PIPELINE ARCHITECTURE
+═══════════════════════════════════════════ -->
+<section style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+  <h3><i class="fa-solid fa-diagram-project"></i> &nbsp;Pipeline Architecture</h3>
+  <h2>Data Journey: From Source to Insight</h2>
+  <img src="gemini.png" style="max-width:90%; max-height:52vh; object-fit:contain; border-radius:10px; box-shadow:0 4px 24px rgba(0,0,0,0.12); margin:12px auto 14px; display:block;" />
+  <p style="font-size:0.82rem; color:var(--muted); text-align:center; max-width:720px; line-height:1.6; margin:0 auto;">
+    Real-time streams (Kafka) and scheduled batch jobs (Airflow) feed raw data into the <strong>Bronze</strong> layer.
+    Apache Flink &amp; Spark handle entity resolution and cleansing in the <strong>Silver</strong> layer.
+    Aggregated margin and shock-propagation metrics are served from the <strong>Gold</strong> layer via Trino → Superset.
+  </p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 5 — ENGINEERING CHALLENGES
+═══════════════════════════════════════════ -->
+<section style="justify-content:center;">
+  <h3><i class="fa-solid fa-wrench"></i> &nbsp;Data Engineering</h3>
+  <h2>Three Hard Problems We Solve</h2>
+
+  <div class="card-grid col3" style="margin-bottom:16px;">
+    <div class="card" style="border-top:4px solid var(--navy2);">
+      <div style="font-size:1.5rem; margin-bottom:10px;">🔗</div>
+      <h3 style="font-size:0.75rem; color:var(--navy2);">Challenge 1 · Entity Resolution</h3>
+      <p style="font-size:0.82rem; color:var(--muted); margin-top:8px;">
+        Hall API: <code>"Domates Sofralık Sera"</code><br>
+        Retail slug: <code>"salkim-domates-1-kg"</code><br><br>
+        No shared ID exists between systems. <strong>Solution:</strong> TF-IDF + Cosine Similarity NLP pipeline via Spark MLlib matches products across schemas with no manual mapping.
+      </p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--orange);">
+      <div style="font-size:1.5rem; margin-bottom:10px;">⚖️</div>
+      <h3 style="font-size:0.75rem; color:#B45309;">Challenge 2 · Unit Standardization</h3>
+      <p style="font-size:0.82rem; color:var(--muted); margin-top:8px;">
+        Hall pricing: <code>Kasa / Çuval / Bağ</code><br>
+        Retail pricing: <code>Gram / Adet / Paket</code><br><br>
+        <strong>Solution:</strong> Custom Spark UDFs convert all units to <strong>1 KG equivalent</strong> before any price comparison or aggregation.
+      </p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--green);">
+      <div style="font-size:1.5rem; margin-bottom:10px;">🕐</div>
+      <h3 style="font-size:0.75rem; color:var(--green2);">Challenge 3 · Temporal &amp; Spatial Alignment</h3>
+      <p style="font-size:0.82rem; color:var(--muted); margin-top:8px;">
+        GDELT: 15-min · EPIAS: hourly<br>
+        Hall: daily · Tonnage: monthly<br><br>
+        <strong>Solution:</strong> Delta Lake <em>As-of Join</em> aligns mismatched time granularities. <em>Spatial Join</em> maps each province's retail data to its nearest wholesale hall.
+      </p>
+    </div>
+  </div>
+
+  <div class="card-grid col3" style="gap:10px;">
+    <div class="card" style="background:var(--light); padding:12px 16px;">
+      <div style="font-size:0.76rem; font-weight:700; color:var(--navy); margin-bottom:5px; font-family:'Poppins',sans-serif;">Stream Processing</div>
+      <div style="font-size:0.76rem; color:var(--muted);">Apache Flink for real-time entity resolution, unit conversion, and anomaly flagging on the incoming Kafka stream — before data hits Bronze.</div>
+    </div>
+    <div class="card" style="background:var(--light); padding:12px 16px;">
+      <div style="font-size:0.76rem; font-weight:700; color:var(--navy); margin-bottom:5px; font-family:'Poppins',sans-serif;">Batch Transformation</div>
+      <div style="font-size:0.76rem; color:var(--muted);">Spark Structured Streaming + Airflow-triggered jobs rebuild Silver and Gold layers nightly, incorporating all newly ingested batch data from halls and CBRT.</div>
+    </div>
+    <div class="card" style="background:var(--light); padding:12px 16px;">
+      <div style="font-size:0.76rem; font-weight:700; color:var(--navy); margin-bottom:5px; font-family:'Poppins',sans-serif;">Anomaly Detection</div>
+      <div style="font-size:0.76rem; color:var(--muted);">Isolation Forest on the Silver stream flags when hall prices hold steady but retail price spikes ≥50% — distinguishing data errors from genuine speculative pricing events.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 6 — IMPLEMENTATION PLAN (8 WEEKS)
+═══════════════════════════════════════════ -->
+<section style="justify-content:center;">
+  <h3><i class="fa-solid fa-calendar-check"></i> &nbsp;Implementation Plan</h3>
+  <h2>8-Week Roadmap · 4 Phases</h2>
+
+  <!-- Week headers -->
+  <div class="gantt-weeks" style="margin-top:8px;">
+    <div></div>
+    <div class="gantt-week-hdr">Wk 1</div>
+    <div class="gantt-week-hdr">Wk 2</div>
+    <div class="gantt-week-hdr">Wk 3</div>
+    <div class="gantt-week-hdr">Wk 4</div>
+    <div class="gantt-week-hdr">Wk 5</div>
+    <div class="gantt-week-hdr">Wk 6</div>
+    <div class="gantt-week-hdr">Wk 7</div>
+    <div class="gantt-week-hdr">Wk 8</div>
+  </div>
+  <!-- Phase 1 -->
+  <div class="gantt-vis-row fragment">
+    <div class="gantt-vis-label">Phase 1<br><span style="font-size:0.6rem; color:var(--muted); font-weight:400;">Infrastructure</span></div>
+    <div class="gantt-cell"><div class="gantt-fill" style="background:var(--navy2); opacity:0.85;"></div></div>
+    <div class="gantt-cell"><div class="gantt-fill" style="background:var(--navy2); opacity:0.85;"></div></div>
+    <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+  </div>
+  <!-- Phase 2 -->
+  <div class="gantt-vis-row fragment">
+    <div class="gantt-vis-label">Phase 2<br><span style="font-size:0.6rem; color:var(--muted); font-weight:400;">Transformation</span></div>
+    <div class="gantt-cell"></div><div class="gantt-cell"></div>
+    <div class="gantt-cell"><div class="gantt-fill" style="background:var(--orange); opacity:0.85;"></div></div>
+    <div class="gantt-cell"><div class="gantt-fill" style="background:var(--orange); opacity:0.85;"></div></div>
+    <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+  </div>
+  <!-- Phase 3 -->
+  <div class="gantt-vis-row fragment">
+    <div class="gantt-vis-label">Phase 3<br><span style="font-size:0.6rem; color:var(--muted); font-weight:400;">Modeling</span></div>
+    <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+    <div class="gantt-cell"><div class="gantt-fill" style="background:var(--green2); opacity:0.85;"></div></div>
+    <div class="gantt-cell"><div class="gantt-fill" style="background:var(--green2); opacity:0.85;"></div></div>
+    <div class="gantt-cell"></div><div class="gantt-cell"></div>
+  </div>
+  <!-- Phase 4 -->
+  <div class="gantt-vis-row fragment">
+    <div class="gantt-vis-label">Phase 4<br><span style="font-size:0.6rem; color:var(--muted); font-weight:400;">Dashboard &amp; BI</span></div>
+    <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+    <div class="gantt-cell"><div class="gantt-fill" style="background:var(--red); opacity:0.85;"></div></div>
+    <div class="gantt-cell"><div class="gantt-fill" style="background:var(--red); opacity:0.85;"></div></div>
+  </div>
+
+  <div class="gantt-wrap" style="margin-top:14px;">
+    <div class="gantt-row">
+      <div class="gantt-label">Phase 1 <span>Weeks 1–2</span></div>
+      <div class="gantt-bar gb1"><strong>Infrastructure &amp; Ingestion</strong> — Kafka cluster, Airflow DAGs (IBB/Izmir Hall, CBRT), Bronze Delta Lake layer, Docker Compose</div>
+    </div>
+    <div class="gantt-row">
+      <div class="gantt-label">Phase 2 <span>Weeks 3–4</span></div>
+      <div class="gantt-bar gb2"><strong>Transformation &amp; Entity Resolution</strong> — Spark/Flink Silver layer, TF-IDF NLP matcher, unit UDFs, as-of temporal join</div>
+    </div>
+    <div class="gantt-row">
+      <div class="gantt-label">Phase 3 <span>Weeks 5–6</span></div>
+      <div class="gantt-bar gb3"><strong>Modeling &amp; Aggregation</strong> — Gold layer tables, Isolation Forest anomaly detection, spatial join (province ↔ hall), shock propagation index</div>
+    </div>
+    <div class="gantt-row">
+      <div class="gantt-label">Phase 4 <span>Weeks 7–8</span></div>
+      <div class="gantt-bar gb4"><strong>Dashboard &amp; BI</strong> — Superset: Turkey Margin Map, Rockets &amp; Feathers radar, GDELT event overlay, final reporting</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 7 — BUSINESS VALUE
+═══════════════════════════════════════════ -->
+<section style="justify-content:center;">
+  <h3><i class="fa-solid fa-briefcase"></i> &nbsp;Business &amp; Strategic Value</h3>
+  <h2>A Critical National Decision Support System</h2>
+
+  <div class="hq orange" style="margin-bottom:14px; font-size:0.96rem;">
+    Food price volatility is one of Turkey's largest structural economic problems. This engine turns it into <strong>measurable, actionable, real-time intelligence</strong>.
+  </div>
+
+  <div class="card-grid col3" style="margin-bottom:12px;">
+    <div class="audience-card">
+      <div class="aud-icon">⚖️</div>
+      <div class="aud-title">Regulators &amp; Government</div>
+      <ul class="aud-list">
+        <li>Detect unjustified price spikes with <strong>live evidence</strong></li>
+        <li>Competition Authority enforcement data</li>
+        <li>Ministry of Trade early-warning alerts</li>
+        <li>Province-level speculation identification</li>
+        <li>Evidence-based penalty mechanisms</li>
+      </ul>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon">👥</div>
+      <div class="aud-title">Consumers &amp; Society</div>
+      <ul class="aud-list">
+        <li>Supply chain <strong>transparency</strong> dashboard</li>
+        <li>Separate inflationary psychology from real cost</li>
+        <li>Media-driven fear vs. genuine shortage</li>
+        <li>District-level price fairness index</li>
+        <li>Seasonal &amp; weather shock education</li>
+      </ul>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon">📈</div>
+      <div class="aud-title">Economic Strategy</div>
+      <ul class="aud-list">
+        <li>Provinces with <strong>logistics bottlenecks</strong> flagged</li>
+        <li>Retailers exploiting asymmetry identified</li>
+        <li>Supply shock resilience scored per product</li>
+        <li>Energy cost pass-through quantified</li>
+        <li>Agricultural infrastructure investment signal</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card fragment" style="background:var(--navy); border:none; padding:12px 18px;">
+    <p style="font-size:0.85rem; color:rgba(255,255,255,0.9); margin:0; text-align:center;">
+      <i class="fa-solid fa-satellite-dish" style="color:var(--green); margin-right:8px;"></i>
+      <strong style="color:#fff;">Long-term vision:</strong>
+      An always-on national food price intelligence layer — the radar that regulators, researchers, and journalists can query in real time.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 8 — DASHBOARD & VISUALIZATIONS
+═══════════════════════════════════════════ -->
+
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 9 — TEAM
+═══════════════════════════════════════════ -->
+<section>
+  <h3><i class="fa-solid fa-users"></i> &nbsp;Meet the Team</h3>
+  <h2>Data Engineers &amp; Data Scientists</h2>
+
+  <div class="card-grid col3" style="margin-top:10px;">
+
+    <div class="team-card">
+      <div class="avatar a1">AY</div>
+      <div class="t-name">Azmi Yağlı</div>
+      <div class="t-role">Data Engineer</div>
+      <ul class="t-tasks">
+        <li>Kafka cluster design &amp; topic architecture</li>
+        <li>Bronze Delta Lake ingestion layer</li>
+        <li>Airflow DAG authoring (Hall APIs, CBRT)</li>
+        <li>Docker Compose environment setup</li>
+        <li>Real-time stream monitoring &amp; alerting</li>
+      </ul>
+    </div>
+
+    <div class="team-card">
+      <div class="avatar a2">AZ</div>
+      <div class="t-name">Abdullah Zengin</div>
+      <div class="t-role">Data Engineer · DS</div>
+      <ul class="t-tasks">
+        <li>Apache Flink streaming transformation jobs</li>
+        <li>Silver layer: null handling &amp; unit UDFs</li>
+        <li>Temporal as-of join &amp; spatial join logic</li>
+        <li>Isolation Forest anomaly detection pipeline</li>
+        <li>Trino / Presto query layer optimisation</li>
+      </ul>
+    </div>
+
+    <div class="team-card">
+      <div class="avatar a3">HD</div>
+      <div class="t-name">Hidayet Ersin Dursun</div>
+      <div class="t-role">Data Scientist · DE</div>
+      <ul class="t-tasks">
+        <li>TF-IDF + Cosine Similarity entity resolution</li>
+        <li>Gold layer aggregate model design</li>
+        <li>Shock propagation index computation</li>
+        <li>Apache Superset dashboard development</li>
+        <li>Rockets &amp; Feathers statistical analysis</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="card fragment" style="margin-top:16px; background:var(--navy); border:none; padding:14px 20px; text-align:center;">
+    <p style="font-size:0.95rem; color:#fff; margin:0; font-family:'Poppins',sans-serif; font-weight:600;">
+      By treating Turkey's food pricing opacity as a data engineering challenge,<br>
+      we transform a national black box into a transparent, queryable intelligence layer.
+    </p>
+    <p style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin:8px 0 0;">
+      Thank you &nbsp;·&nbsp; <span style="color:var(--green);">Questions welcome</span>
+    </p>
+  </div>
+</section>
+
+
+</div><!-- .slides -->
+</div><!-- .reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    progress: true,
+    controls: true,
+    controlsTutorial: false,
+    transition: 'slide',
+    transitionSpeed: 'fast',
+    backgroundTransition: 'fade',
+    center: false,
+    margin: 0.03,
+    width: 1280,
+    height: 720,
+    fragments: true,
+  });
+</script>
+</body>
+</html>
