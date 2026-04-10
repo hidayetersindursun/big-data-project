@@ -718,11 +718,11 @@
 <section style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
   <h3><i class="fa-solid fa-diagram-project"></i> &nbsp;Pipeline Architecture</h3>
   <h2>Data Journey: From Source to Insight</h2>
-  <img src="gemini.png" style="max-width:90%; max-height:52vh; object-fit:contain; border-radius:10px; box-shadow:0 4px 24px rgba(0,0,0,0.12); margin:12px auto 14px; display:block;" />
+  <img src="gemini_awsli.png" style="max-width:90%; max-height:52vh; object-fit:contain; border-radius:10px; box-shadow:0 4px 24px rgba(0,0,0,0.12); margin:12px auto 14px; display:block;" />
   <p style="font-size:0.82rem; color:var(--muted); text-align:center; max-width:720px; line-height:1.6; margin:0 auto;">
     Real-time streams (Kafka) and scheduled batch jobs (Airflow) feed raw data into the <strong>Bronze</strong> layer.
     Apache Flink &amp; Spark handle entity resolution and cleansing in the <strong>Silver</strong> layer.
-    Aggregated margin and shock-propagation metrics are served from the <strong>Gold</strong> layer via Trino → Superset.
+    Aggregated margin and shock-propagation metrics are served from the <strong>Gold</strong> layer via Athena → Superset.
   </p>
 </section>
 
@@ -919,20 +919,20 @@
 ═══════════════════════════════════════════ -->
 <section>
   <h3><i class="fa-solid fa-users"></i> &nbsp;Meet the Team</h3>
-  <h2>Data Engineers &amp; Data Scientists</h2>
+  <h2>Our Team</h2>
 
   <div class="card-grid col3" style="margin-top:10px;">
 
     <div class="team-card">
-      <div class="avatar a1">AY</div>
-      <div class="t-name">Azmi Yağlı</div>
-      <div class="t-role">Data Engineer</div>
+      <div class="avatar a3">HD</div>
+      <div class="t-name">Hidayet Ersin Dursun</div>
+      <div class="t-role">Data Scientist · DE</div>
       <ul class="t-tasks">
         <li>Kafka cluster design &amp; topic architecture</li>
         <li>Bronze Delta Lake ingestion layer</li>
         <li>Airflow DAG authoring (Hall APIs, CBRT)</li>
         <li>Docker Compose environment setup</li>
-        <li>Real-time stream monitoring &amp; alerting</li>
+        <li>Rockets &amp; Feathers statistical analysis</li>
       </ul>
     </div>
 
@@ -945,20 +945,20 @@
         <li>Silver layer: null handling &amp; unit UDFs</li>
         <li>Temporal as-of join &amp; spatial join logic</li>
         <li>Isolation Forest anomaly detection pipeline</li>
-        <li>Trino / Presto query layer optimisation</li>
+        <li>Athena query layer optimisation</li>
       </ul>
     </div>
 
     <div class="team-card">
-      <div class="avatar a3">HD</div>
-      <div class="t-name">Hidayet Ersin Dursun</div>
-      <div class="t-role">Data Scientist · DE</div>
+      <div class="avatar a1">AY</div>
+      <div class="t-name">Azmi Yağlı</div>
+      <div class="t-role">Data Engineer · Project Manager</div>
       <ul class="t-tasks">
-        <li>TF-IDF + Cosine Similarity entity resolution</li>
         <li>Gold layer aggregate model design</li>
         <li>Shock propagation index computation</li>
+        <li>TF-IDF + Cosine Similarity entity resolution</li>
         <li>Apache Superset dashboard development</li>
-        <li>Rockets &amp; Feathers statistical analysis</li>
+        <li>Real-time stream monitoring &amp; alerting</li>
       </ul>
     </div>
 
