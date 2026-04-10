@@ -1,0 +1,99 @@
+﻿Kategori,Urun Adı,Birim,En Düşük Fiyat,En Yüksek Fiyat,Tarih
+Meyve,Armut,Kilogram,50.00,65.00,10.04.2026
+Meyve,Armut (Ankara),Kilogram,45.00,50.00,10.04.2026
+Meyve,Armut (Deveci),Kilogram,65.00,80.00,10.04.2026
+Meyve,Armut (Santamaria),Kilogram,70.00,90.00,10.04.2026
+Meyve,Avakado,Adet,50.00,75.00,10.04.2026
+Meyve,Ayva,Kilogram,140.00,170.00,10.04.2026
+Meyve,Çağla (Badem),Kilogram,60.00,105.00,10.04.2026
+Meyve,Çilek,Kilogram,60.00,130.00,10.04.2026
+Meyve,Dut,Kilogram,2150.00,250.00,10.04.2026
+Meyve,Elma (Golden),Kilogram,60.00,75.00,10.04.2026
+Meyve,Elma (Gransimit),Kilogram,70.00,95.00,10.04.2026
+Meyve,Elma (Starkin),Kilogram,60.00,80.00,10.04.2026
+Meyve,Erik,Kilogram,145.00,315.00,10.04.2026
+Meyve,Erik (Can),Kilogram,275.00,460.00,10.04.2026
+Meyve,Erik (Malta),Kilogram,120.00,155.00,10.04.2026
+Meyve,Greyfurt,Kilogram,30.00,35.00,10.04.2026
+Meyve,Karpuz (1.Kalite),Kilogram,37.00,45.00,10.04.2026
+Meyve,Kavun,Kilogram,169.00,182.00,10.04.2026
+Meyve,Kivi (Yerli),Kilogram,85.00,125.00,10.04.2026
+Meyve,Limon,Kilogram,40.00,85.00,10.04.2026
+Meyve,Limon (Lamas),Kilogram,60.00,75.00,10.04.2026
+Meyve,Limon (Mayer),Kilogram,55.00,70.00,10.04.2026
+Meyve,Mandalina,Kilogram,15.00,45.00,10.04.2026
+Meyve,Muz (Yerli),Kilogram,65.00,85.00,10.04.2026
+Meyve,Nar,Kilogram,65.00,95.00,10.04.2026
+Meyve,Nektarin,Kilogram,325.00,395.00,10.04.2026
+Meyve,Portakal,Kilogram,25.00,40.00,10.04.2026
+Meyve,Portakal (Waşington),Kilogram,30.00,45.00,10.04.2026
+Meyve,Şeftali,Kilogram,505.00,530.00,10.04.2026
+Meyve,Üzüm,Kilogram,230.00,260.00,10.04.2026
+Meyve,Üzüm(Siyah),Kilogram,270.00,290.00,10.04.2026
+Sebze,Bakla,Kilogram,85.00,110.00,10.04.2026
+Sebze,Bezelye,Kilogram,150.00,170.00,10.04.2026
+Sebze,Biber (Capia),Kilogram,80.00,180.00,10.04.2026
+Sebze,Biber (Çarli),Kilogram,75.00,140.00,10.04.2026
+Sebze,Biber (Dolma),Kilogram,90.00,155.00,10.04.2026
+Sebze,Biber (Köy),Kilogram,100.00,160.00,10.04.2026
+Sebze,Biber (Renkli),Kilogram,100.00,130.00,10.04.2026
+Sebze,Biber (Sivri),Kilogram,85.00,185.00,10.04.2026
+Sebze,Biber(Sivri Kıl),Kilogram,155.00,190.00,10.04.2026
+Sebze,Brokoli,Kilogram,95.00,125.00,10.04.2026
+Sebze,Dereotu,Demet,12.00,23.00,10.04.2026
+Sebze,Domates,Kilogram,50.00,150.00,10.04.2026
+Sebze,Domates (Çeri),Kilogram,290.00,330.00,10.04.2026
+Sebze,Domates (kokteyl),Kilogram,155.00,230.00,10.04.2026
+Sebze,Domates (Pembe),Kilogram,110.00,150.00,10.04.2026
+Sebze,Domates (Salkım),Kilogram,95.00,115.00,10.04.2026
+Sebze,Enginar,Adet,75.00,85.00,10.04.2026
+Sebze,Fasülye (Çalı),Kilogram,110.00,140.00,10.04.2026
+Sebze,Fasülye (Yer),Kilogram,150.00,175.00,10.04.2026
+Sebze,Fesleğen,Kilogram,20.00,30.00,10.04.2026
+Sebze,Göbek Salata,Adet,55.00,70.00,10.04.2026
+Sebze,Havuç (Beypazarı),Kilogram,14.00,28.00,10.04.2026
+Sebze,Havuç (Beypazarı)İri,Kilogram,14.00,20.00,10.04.2026
+Sebze,Havuç I.,Kilogram,15.00,24.00,10.04.2026
+Sebze,Ispanak,Kilogram,30.00,50.00,10.04.2026
+Sebze,Kabak (Bal),Kilogram,80.00,85.00,10.04.2026
+Sebze,Kabak (Sakız),Kilogram,30.00,65.00,10.04.2026
+Sebze,Karnabahar,Kilogram,25.00,35.00,10.04.2026
+Sebze,Kereviz,Kilogram,20.00,25.00,10.04.2026
+Sebze,Kıvırcık,Adet,45.00,70.00,10.04.2026
+Sebze,Kıvırcık Kırmızı(Lolorosso),Adet,30.00,40.00,10.04.2026
+Sebze,Kuzu Kulağı,Kilogram,15.00,20.00,10.04.2026
+Sebze,Lahana (Beyaz),Kilogram,10.00,15.00,10.04.2026
+Sebze,Lahana (Brüksel),Kilogram,50.00,55.00,10.04.2026
+Sebze,Lahana (Kara),Kilogram,20.00,25.00,10.04.2026
+Sebze,Lahana (Kırmızı),Kilogram,40.00,50.00,10.04.2026
+Sebze,Mantar,Kilogram,135.00,165.00,10.04.2026
+Sebze,Marul,Adet,50.00,85.00,10.04.2026
+Sebze,Maydonoz,Demet,4.00,16.00,10.04.2026
+Sebze,Nane (Tekli),Demet,7.00,16.00,10.04.2026
+Sebze,Pancar,Kilogram,45.00,55.00,10.04.2026
+Sebze,Patates,Kilogram,15.00,24.00,10.04.2026
+Sebze,Patates (Taze),Kilogram,40.00,45.00,10.04.2026
+Sebze,Patlıcan Bostan,Kilogram,45.00,50.00,10.04.2026
+Sebze,Patlıcan I.,Kilogram,20.00,60.00,10.04.2026
+Sebze,Pazı,Kilogram,20.00,30.00,10.04.2026
+Sebze,Pırasa,Kilogram,15.00,25.00,10.04.2026
+Sebze,Roka,Demet,13.00,25.00,10.04.2026
+Sebze,Salata (Çengelköy) silor,Kilogram,30.00,50.00,10.04.2026
+Sebze,Salatalık I.,Kilogram,25.00,50.00,10.04.2026
+Sebze,Sarımsak (Kuru),Kilogram,140.00,170.00,10.04.2026
+Sebze,Sarımsak (Yeşil),Kilogram,95.00,100.00,10.04.2026
+Sebze,Semizotu,Kilogram,25.00,35.00,10.04.2026
+Sebze,Soğan (Kırmızı Balık),Kilogram,45.00,50.00,10.04.2026
+Sebze,Soğan (Taze),Kilogram,35.00,85.00,10.04.2026
+Sebze,Soğan Kuru,Kilogram,9.00,15.00,10.04.2026
+Sebze,Tereotu,Demet,18.00,23.00,10.04.2026
+Sebze,Turp,Kilogram,20.00,25.00,10.04.2026
+Sebze,Turp (Kırmızı),Kilogram,20.00,25.00,10.04.2026
+Sebze,Yaprak (Salamura),Kilogram,180.00,190.00,10.04.2026
+İthal Ürünler,Ahududu,Kilogram,2230.00,2395.00,10.04.2026
+İthal Ürünler,Ananas,Adet,110.00,125.00,10.04.2026
+İthal Ürünler,Ginger (Zencefil),Kilogram,180.00,190.00,10.04.2026
+İthal Ürünler,Hindistan Cevizi,Adet,85.00,95.00,10.04.2026
+İthal Ürünler,Mango,Adet,55.00,60.00,10.04.2026
+İthal Ürünler,Muz (1. Kalite),Kilogram,90.00,115.00,10.04.2026
+İthal Ürünler,Yaban Mersini,Kilogram,1190.00,1470.00,10.04.2026
