@@ -37,3 +37,6 @@ ENV/
 # IDE / editor
 .vscode/
 .idea/
+
+# TCMB local plot outputs
+tcmb/plots/
