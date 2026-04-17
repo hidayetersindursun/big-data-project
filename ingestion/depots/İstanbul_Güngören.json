@@ -1,0 +1,2270 @@
+[
+  {
+    "id": "a101-5401",
+    "name": "Lavanta Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.001915,
+    "lon": 28.859343
+  },
+  {
+    "id": "sok-7160",
+    "name": "Beslen Yayla",
+    "market": "sok",
+    "lat": 41.0017,
+    "lon": 28.8607
+  },
+  {
+    "id": "sok-643",
+    "name": "Bahçelievler Mağazası",
+    "market": "sok",
+    "lat": 41.001034,
+    "lon": 28.856878
+  },
+  {
+    "id": "carrefour-5459",
+    "name": "Istanbul Bahçelıevler Kupa",
+    "market": "carrefour",
+    "lat": 40.999107,
+    "lon": 28.858917
+  },
+  {
+    "id": "a101-K528",
+    "name": "Siyavuşpaşa Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.00071,
+    "lon": 28.855085
+  },
+  {
+    "id": "tarim_kredi-5457",
+    "name": "Istanbul Bahçelievler Gelincik",
+    "market": "tarim_kredi",
+    "lat": 41.00372,
+    "lon": 28.85548
+  },
+  {
+    "id": "bim-L154",
+    "name": "Yayla  Bahçelievler",
+    "market": "bim",
+    "lat": 41.001762,
+    "lon": 28.86368
+  },
+  {
+    "id": "a101-4863",
+    "name": "Necdet Uran Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.003887,
+    "lon": 28.862799
+  },
+  {
+    "id": "sok-7267",
+    "name": "Kocasinan Bahçelievler",
+    "market": "sok",
+    "lat": 40.9982,
+    "lon": 28.8561
+  },
+  {
+    "id": "sok-780",
+    "name": "Ünverdi 2 Mağazası",
+    "market": "sok",
+    "lat": 41.001465,
+    "lon": 28.864511
+  },
+  {
+    "id": "a101-I906",
+    "name": "Yayla Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.00588,
+    "lon": 28.859638
+  },
+  {
+    "id": "bim-5463",
+    "name": "Siyavuşpaşa  Bahçelievler",
+    "market": "bim",
+    "lat": 40.998726,
+    "lon": 28.854282
+  },
+  {
+    "id": "sok-6498",
+    "name": "Siyavuşpaşa Okul Cad",
+    "market": "sok",
+    "lat": 40.998787,
+    "lon": 28.85396
+  },
+  {
+    "id": "a101-5404",
+    "name": "Fetih Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 40.99732,
+    "lon": 28.855633
+  },
+  {
+    "id": "bim-L160",
+    "name": "Talatpaşa  Bahçelievler",
+    "market": "bim",
+    "lat": 41.004433,
+    "lon": 28.865051
+  },
+  {
+    "id": "migros-7128",
+    "name": "Bahçelievler Istanbul M Migros",
+    "market": "migros",
+    "lat": 41.00101,
+    "lon": 28.86619
+  },
+  {
+    "id": "bim-L156",
+    "name": "Fidan  Bahçelievler",
+    "market": "bim",
+    "lat": 41.006218,
+    "lon": 28.854628
+  },
+  {
+    "id": "bim-D815",
+    "name": "Barbaros  Bahçelievler",
+    "market": "bim",
+    "lat": 40.997227,
+    "lon": 28.854177
+  },
+  {
+    "id": "migros-4126",
+    "name": "Mjet Bahçelievler Ömür",
+    "market": "migros",
+    "lat": 41.004093,
+    "lon": 28.866266
+  },
+  {
+    "id": "carrefour-5158",
+    "name": "Istanbul Bahçelıevler Basın Sı",
+    "market": "carrefour",
+    "lat": 41.007484,
+    "lon": 28.861256
+  },
+  {
+    "id": "migros-7932",
+    "name": "Metroport Avm Istanbul Mm",
+    "market": "migros",
+    "lat": 40.99574,
+    "lon": 28.86267
+  },
+  {
+    "id": "tarim_kredi-6652",
+    "name": "Istanbul Hüdaverdi",
+    "market": "tarim_kredi",
+    "lat": 41.00657,
+    "lon": 28.85271
+  },
+  {
+    "id": "migros-3329",
+    "name": "Yayla M Migros",
+    "market": "migros",
+    "lat": 41.008545,
+    "lon": 28.858694
+  },
+  {
+    "id": "tarim_kredi-7285",
+    "name": "Istanbul Bahçelievler Yeşiltepe",
+    "market": "tarim_kredi",
+    "lat": 41.00875,
+    "lon": 28.85832
+  },
+  {
+    "id": "migros-1000",
+    "name": "Kadir Has Center Mmm Migros",
+    "market": "migros",
+    "lat": 40.99583,
+    "lon": 28.86451
+  },
+  {
+    "id": "carrefour-5020",
+    "name": "Bahçelıevler Karıkatürıst Mını",
+    "market": "carrefour",
+    "lat": 40.999878,
+    "lon": 28.869225
+  },
+  {
+    "id": "bim-O697",
+    "name": "Bereket  Bahçelievler",
+    "market": "bim",
+    "lat": 41.00143,
+    "lon": 28.87034
+  },
+  {
+    "id": "sok-6880",
+    "name": "Bahçelievler Çayçiceği",
+    "market": "sok",
+    "lat": 40.99701,
+    "lon": 28.865536
+  },
+  {
+    "id": "a101-0034",
+    "name": "Mehmetçik Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 40.996902,
+    "lon": 28.865416
+  },
+  {
+    "id": "sok-869",
+    "name": "Haznedar Mağazası",
+    "market": "sok",
+    "lat": 41.00749,
+    "lon": 28.867086
+  },
+  {
+    "id": "a101-D531",
+    "name": "Orhan Veli Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 40.99919,
+    "lon": 28.87212
+  },
+  {
+    "id": "bim-L153",
+    "name": "Çalışlar  Bahçelievler",
+    "market": "bim",
+    "lat": 41.001617,
+    "lon": 28.873487
+  },
+  {
+    "id": "carrefour-3002",
+    "name": "Istanbul Ömür Süper",
+    "market": "carrefour",
+    "lat": 40.998665,
+    "lon": 28.872808
+  },
+  {
+    "id": "a101-4710",
+    "name": "Çalışlar Bahçelievler  Istanbul",
+    "market": "a101",
+    "lat": 41.00268,
+    "lon": 28.873966
+  },
+  {
+    "id": "sok-3103",
+    "name": "Bahçelievler Sarmaşık",
+    "market": "sok",
+    "lat": 41.003883,
+    "lon": 28.875301
+  },
+  {
+    "id": "sok-1153",
+    "name": "Istanbul Evleri",
+    "market": "sok",
+    "lat": 41.005558,
+    "lon": 28.874046
+  },
+  {
+    "id": "carrefour-5230",
+    "name": "Istanbul Bahçelıevler Eserkent",
+    "market": "carrefour",
+    "lat": 41.000618,
+    "lon": 28.8773
+  },
+  {
+    "id": "bim-L157",
+    "name": "Koza  Bahçelievler",
+    "market": "bim",
+    "lat": 41.005657,
+    "lon": 28.876251
+  },
+  {
+    "id": "tarim_kredi-7424",
+    "name": "Istanbul Bahçelievler Çalışlar",
+    "market": "tarim_kredi",
+    "lat": 41.00133,
+    "lon": 28.87839
+  },
+  {
+    "id": "sok-11364",
+    "name": "Küçükyalı Orkide",
+    "market": "sok",
+    "lat": 40.95072,
+    "lon": 29.110765
+  },
+  {
+    "id": "bim-H817",
+    "name": "Incirli  Bakırköy",
+    "market": "bim",
+    "lat": 40.99546,
+    "lon": 28.87284
+  },
+  {
+    "id": "migros-9004",
+    "name": "Rams Garden Bevler Ist Mm",
+    "market": "migros",
+    "lat": 41.00678,
+    "lon": 28.880787
+  },
+  {
+    "id": "sok-1011",
+    "name": "Incirli Cadde Market",
+    "market": "sok",
+    "lat": 40.995087,
+    "lon": 28.870098
+  },
+  {
+    "id": "a101-0457",
+    "name": "Incirli Bakırköy Istanbul",
+    "market": "a101",
+    "lat": 40.993282,
+    "lon": 28.873777
+  },
+  {
+    "id": "migros-6040",
+    "name": "Ağaoğlu My Cıty Bahçelievler M",
+    "market": "migros",
+    "lat": 41.002827,
+    "lon": 28.8812
+  },
+  {
+    "id": "a101-4721",
+    "name": "Ahmet Nazif Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.0049,
+    "lon": 28.88506
+  },
+  {
+    "id": "carrefour-1014",
+    "name": "Istanbul Merter Hıper",
+    "market": "carrefour",
+    "lat": 40.996433,
+    "lon": 28.885044
+  },
+  {
+    "id": "sok-6431",
+    "name": "Osmaniye Sığırtmaç",
+    "market": "sok",
+    "lat": 40.994846,
+    "lon": 28.884022
+  },
+  {
+    "id": "migros-3330",
+    "name": "Merter Çarşı M Migros",
+    "market": "migros",
+    "lat": 41.00647,
+    "lon": 28.888878
+  },
+  {
+    "id": "a101-B168",
+    "name": "Cemiyet Bakırköy Istanbul",
+    "market": "a101",
+    "lat": 40.993248,
+    "lon": 28.882952
+  },
+  {
+    "id": "bim-H820",
+    "name": "Osmaniye  Bakırköy",
+    "market": "bim",
+    "lat": 40.993977,
+    "lon": 28.885084
+  },
+  {
+    "id": "a101-D707",
+    "name": "Merter Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.0065,
+    "lon": 28.889162
+  },
+  {
+    "id": "sok-6477",
+    "name": "Çırpıcı",
+    "market": "sok",
+    "lat": 40.998795,
+    "lon": 28.894321
+  },
+  {
+    "id": "migros-285",
+    "name": "Merter Mmm Migros",
+    "market": "migros",
+    "lat": 41.00603,
+    "lon": 28.89389
+  },
+  {
+    "id": "bim-H998",
+    "name": "Merter  Güngören",
+    "market": "bim",
+    "lat": 41.00768,
+    "lon": 28.889097
+  },
+  {
+    "id": "bim-D547",
+    "name": "Turangüneşzeytinburnu",
+    "market": "bim",
+    "lat": 41.000427,
+    "lon": 28.894764
+  },
+  {
+    "id": "sok-7162",
+    "name": "Aralık Skosmaniye",
+    "market": "sok",
+    "lat": 40.993076,
+    "lon": 28.882746
+  },
+  {
+    "id": "a101-6982",
+    "name": "Çayır Sok Zeytinburnu Istanbul ",
+    "market": "a101",
+    "lat": 40.99796,
+    "lon": 28.894878
+  },
+  {
+    "id": "tarim_kredi-7496",
+    "name": "Istanbul Zeytinburnu Turan Güneş",
+    "market": "tarim_kredi",
+    "lat": 40.99724,
+    "lon": 28.89484
+  },
+  {
+    "id": "sok-8457",
+    "name": "Zeytinburnu Gençtürk",
+    "market": "sok",
+    "lat": 40.99733,
+    "lon": 28.895542
+  },
+  {
+    "id": "a101-B266",
+    "name": "Çırpıcı Zeytinburnu Istanbul",
+    "market": "a101",
+    "lat": 41.00175,
+    "lon": 28.897905
+  },
+  {
+    "id": "bim-5559",
+    "name": "Çırpıcı  Zeytinburnu",
+    "market": "bim",
+    "lat": 41.0005,
+    "lon": 28.898643
+  },
+  {
+    "id": "sok-12614",
+    "name": "Zeytinburnu Kuzey",
+    "market": "sok",
+    "lat": 41.000053,
+    "lon": 28.899893
+  },
+  {
+    "id": "bim-7968",
+    "name": "Ahmet Vefik Paşa",
+    "market": "bim",
+    "lat": 40.99595,
+    "lon": 28.897285
+  },
+  {
+    "id": "a101-9868",
+    "name": "Hoca Ahmet Zeytinburnu Istanbul",
+    "market": "a101",
+    "lat": 40.995983,
+    "lon": 28.897692
+  },
+  {
+    "id": "sok-7139",
+    "name": "Seyitnizam Zeytinburnu",
+    "market": "sok",
+    "lat": 41.003426,
+    "lon": 28.901947
+  },
+  {
+    "id": "a101-6981",
+    "name": "Beştelsiz Mah Zeytinburnu Ist ",
+    "market": "a101",
+    "lat": 40.99973,
+    "lon": 28.902014
+  },
+  {
+    "id": "a101-0742",
+    "name": "Demirciler Sitesi Zeytinburnu Istan",
+    "market": "a101",
+    "lat": 41.004177,
+    "lon": 28.90281
+  },
+  {
+    "id": "sok-5200",
+    "name": "Zeytinburnu Yeşilyol",
+    "market": "sok",
+    "lat": 40.997948,
+    "lon": 28.900066
+  },
+  {
+    "id": "bim-V248",
+    "name": "Saha Yolu  Zeytinburnu",
+    "market": "bim",
+    "lat": 40.997753,
+    "lon": 28.901682
+  },
+  {
+    "id": "bim-V587",
+    "name": "Zeytinpark  Zeytinburnu",
+    "market": "bim",
+    "lat": 40.999397,
+    "lon": 28.904192
+  },
+  {
+    "id": "bim-5558",
+    "name": "Çarşambapazarı  Zeytinburnu",
+    "market": "bim",
+    "lat": 40.99742,
+    "lon": 28.901047
+  },
+  {
+    "id": "bim-T361",
+    "name": "Yeşilyol  Zeytinburnu",
+    "market": "bim",
+    "lat": 40.999527,
+    "lon": 28.900103
+  },
+  {
+    "id": "bim-L155",
+    "name": "Alsancak  Bahçelievler",
+    "market": "bim",
+    "lat": 41.00946,
+    "lon": 28.85852
+  },
+  {
+    "id": "bim-L158",
+    "name": "Erman  Bahçelievler",
+    "market": "bim",
+    "lat": 41.00871,
+    "lon": 28.856041
+  },
+  {
+    "id": "a101-K073",
+    "name": "Yağmur Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.00668,
+    "lon": 28.852924
+  },
+  {
+    "id": "a101-9422",
+    "name": "Tunçdal Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.00994,
+    "lon": 28.863976
+  },
+  {
+    "id": "sok-4597",
+    "name": "Şok Minimeltem",
+    "market": "sok",
+    "lat": 41.011322,
+    "lon": 28.86764
+  },
+  {
+    "id": "sok-2292",
+    "name": "Haznedar Cadde",
+    "market": "sok",
+    "lat": 41.008366,
+    "lon": 28.864273
+  },
+  {
+    "id": "migros-4240",
+    "name": "Mjet Güngören Çamlıkahve",
+    "market": "migros",
+    "lat": 41.015,
+    "lon": 28.8624
+  },
+  {
+    "id": "a101-F843",
+    "name": "Karanfil Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.00248,
+    "lon": 28.852064
+  },
+  {
+    "id": "sok-628",
+    "name": "Yayla Mağazası",
+    "market": "sok",
+    "lat": 41.00823,
+    "lon": 28.85882
+  },
+  {
+    "id": "bim-L152",
+    "name": "Nilüfer  Bahçelievler",
+    "market": "bim",
+    "lat": 41.01252,
+    "lon": 28.862776
+  },
+  {
+    "id": "a101-7186",
+    "name": "Çapa Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.01311,
+    "lon": 28.868387
+  },
+  {
+    "id": "sok-5093",
+    "name": "Tevfik Fikret Sokak",
+    "market": "sok",
+    "lat": 41.009705,
+    "lon": 28.87259
+  },
+  {
+    "id": "a101-J680",
+    "name": "Erguvan Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.01171,
+    "lon": 28.873674
+  },
+  {
+    "id": "tarim_kredi-6640",
+    "name": "Istanbul Güngören Güven",
+    "market": "tarim_kredi",
+    "lat": 41.01283,
+    "lon": 28.87495
+  },
+  {
+    "id": "a101-4707",
+    "name": "Akıncılar Güngören  Istanbul",
+    "market": "a101",
+    "lat": 41.01422,
+    "lon": 28.87336
+  },
+  {
+    "id": "bim-Q835",
+    "name": "Maraş  Güngören",
+    "market": "bim",
+    "lat": 41.01402,
+    "lon": 28.871275
+  },
+  {
+    "id": "sok-7170",
+    "name": "Kerestecıler Merter",
+    "market": "sok",
+    "lat": 41.0148,
+    "lon": 28.8821
+  },
+  {
+    "id": "sok-11110",
+    "name": "Güngören Çubukçu",
+    "market": "sok",
+    "lat": 41.014153,
+    "lon": 28.873451
+  },
+  {
+    "id": "bim-U758",
+    "name": "Barış  Güngören",
+    "market": "bim",
+    "lat": 41.01194,
+    "lon": 28.891535
+  },
+  {
+    "id": "carrefour-3437",
+    "name": "Istanbul Merter Tozkoparan Süp",
+    "market": "carrefour",
+    "lat": 41.01327,
+    "lon": 28.890503
+  },
+  {
+    "id": "a101-I897",
+    "name": "Barış Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.01505,
+    "lon": 28.887589
+  },
+  {
+    "id": "sok-7184",
+    "name": "Özmen Tozkoparan",
+    "market": "sok",
+    "lat": 41.014717,
+    "lon": 28.88975
+  },
+  {
+    "id": "carrefour-5362",
+    "name": "Istanbul Güngören Merter Konak",
+    "market": "carrefour",
+    "lat": 41.014988,
+    "lon": 28.891483
+  },
+  {
+    "id": "bim-G735",
+    "name": "Ambarlar  Zeytinburnu",
+    "market": "bim",
+    "lat": 41.007053,
+    "lon": 28.903612
+  },
+  {
+    "id": "bim-V524",
+    "name": "Çağlayan  Zeytinburnu",
+    "market": "bim",
+    "lat": 41.007435,
+    "lon": 28.905342
+  },
+  {
+    "id": "bim-T134",
+    "name": "Seyitnizam  Zeytinburnu",
+    "market": "bim",
+    "lat": 41.003452,
+    "lon": 28.905012
+  },
+  {
+    "id": "bim-5552",
+    "name": "Cumapazarı  Zeytinburnu",
+    "market": "bim",
+    "lat": 41.007874,
+    "lon": 28.907148
+  },
+  {
+    "id": "migros-3829",
+    "name": "Mjet Cevizlibağ Istanbul",
+    "market": "migros",
+    "lat": 41.00988,
+    "lon": 28.90761
+  },
+  {
+    "id": "sok-6885",
+    "name": "Zeytinburnu Kiptaş",
+    "market": "sok",
+    "lat": 41.009876,
+    "lon": 28.908476
+  },
+  {
+    "id": "a101-4735",
+    "name": "Kiptaş Zeytinburnu Istanbul",
+    "market": "a101",
+    "lat": 41.009937,
+    "lon": 28.908792
+  },
+  {
+    "id": "sok-7824",
+    "name": "Bahçelievler Sevinç Sok",
+    "market": "sok",
+    "lat": 41.01287,
+    "lon": 28.857899
+  },
+  {
+    "id": "a101-4769",
+    "name": "Soğanlı Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.013084,
+    "lon": 28.858162
+  },
+  {
+    "id": "sok-5707",
+    "name": "Bahçelievler Nilüfer Mgz",
+    "market": "sok",
+    "lat": 41.012386,
+    "lon": 28.861353
+  },
+  {
+    "id": "a101-J696",
+    "name": "Edirne Caddesi Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.014244,
+    "lon": 28.85866
+  },
+  {
+    "id": "bim-T215",
+    "name": "Kıbrıs Caddesı  Bahçelievler",
+    "market": "bim",
+    "lat": 41.01476,
+    "lon": 28.857779
+  },
+  {
+    "id": "sok-13380",
+    "name": "Bevler Genç Osman Sokak",
+    "market": "sok",
+    "lat": 41.01012,
+    "lon": 28.85518
+  },
+  {
+    "id": "sok-4651",
+    "name": "Şok Miniüçler",
+    "market": "sok",
+    "lat": 41.013145,
+    "lon": 28.85499
+  },
+  {
+    "id": "a101-8021",
+    "name": "Necati Üçler Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.012993,
+    "lon": 28.854437
+  },
+  {
+    "id": "bim-L147",
+    "name": "Halide Edip Adıvar  Bahçeliev",
+    "market": "bim",
+    "lat": 41.011517,
+    "lon": 28.853518
+  },
+  {
+    "id": "a101-E200",
+    "name": "Seray Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.01149,
+    "lon": 28.853115
+  },
+  {
+    "id": "sok-7187",
+    "name": "Güngören Posta Cad",
+    "market": "sok",
+    "lat": 41.01421,
+    "lon": 28.86508
+  },
+  {
+    "id": "sok-6224",
+    "name": "Güngören Camlıkahve",
+    "market": "sok",
+    "lat": 41.015827,
+    "lon": 28.863033
+  },
+  {
+    "id": "bim-J017",
+    "name": "Mareşal  Güngören",
+    "market": "bim",
+    "lat": 41.015877,
+    "lon": 28.865541
+  },
+  {
+    "id": "bim-V640",
+    "name": "Sultan  Güngören",
+    "market": "bim",
+    "lat": 41.015907,
+    "lon": 28.862572
+  },
+  {
+    "id": "bim-J016",
+    "name": "Çevik  Güngören",
+    "market": "bim",
+    "lat": 41.015316,
+    "lon": 28.867561
+  },
+  {
+    "id": "a101-9246",
+    "name": "Azak Sokak Güngören",
+    "market": "a101",
+    "lat": 41.0165,
+    "lon": 28.865925
+  },
+  {
+    "id": "a101-0810",
+    "name": "Inönü Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.015358,
+    "lon": 28.870493
+  },
+  {
+    "id": "bim-J013",
+    "name": "Akıncılar  Güngören",
+    "market": "bim",
+    "lat": 41.015903,
+    "lon": 28.872639
+  },
+  {
+    "id": "carrefour-3047",
+    "name": "Istanbul Güngören Kale Süper",
+    "market": "carrefour",
+    "lat": 41.015766,
+    "lon": 28.878092
+  },
+  {
+    "id": "a101-J744",
+    "name": "Öğretici Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.016335,
+    "lon": 28.86912
+  },
+  {
+    "id": "bim-J024",
+    "name": "Alipaşa  Güngören",
+    "market": "bim",
+    "lat": 41.01838,
+    "lon": 28.86991
+  },
+  {
+    "id": "a101-K377",
+    "name": "Akasya Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.01656,
+    "lon": 28.88398
+  },
+  {
+    "id": "bim-J008",
+    "name": "Malazgirt  Güngören",
+    "market": "bim",
+    "lat": 41.02,
+    "lon": 28.87792
+  },
+  {
+    "id": "migros-6742",
+    "name": "Güngören Sanayi M Migros",
+    "market": "migros",
+    "lat": 41.0193,
+    "lon": 28.883844
+  },
+  {
+    "id": "bim-J002",
+    "name": "Tozkoparan  Güngören",
+    "market": "bim",
+    "lat": 41.01486,
+    "lon": 28.896023
+  },
+  {
+    "id": "sok-7166",
+    "name": "Sosyal Meskenler Tozkopar",
+    "market": "sok",
+    "lat": 41.015835,
+    "lon": 28.896235
+  },
+  {
+    "id": "a101-4836",
+    "name": "Ülkükent Güngören",
+    "market": "a101",
+    "lat": 41.01481,
+    "lon": 28.9005
+  },
+  {
+    "id": "bim-T819",
+    "name": "Bakırcı  Zeytinburnu",
+    "market": "bim",
+    "lat": 41.016754,
+    "lon": 28.90275
+  },
+  {
+    "id": "a101-4754",
+    "name": "Tozkoparan Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.019184,
+    "lon": 28.899582
+  },
+  {
+    "id": "a101-F375",
+    "name": "Cevizlibağ Zeytinburnu Istanbul",
+    "market": "a101",
+    "lat": 41.01665,
+    "lon": 28.903532
+  },
+  {
+    "id": "migros-4505",
+    "name": "Mjet Beyaz Rezidans",
+    "market": "migros",
+    "lat": 41.016468,
+    "lon": 28.904255
+  },
+  {
+    "id": "bim-H966",
+    "name": "Fazilet  Bağcılar",
+    "market": "bim",
+    "lat": 41.01806,
+    "lon": 28.860415
+  },
+  {
+    "id": "bim-H968",
+    "name": "Sağlık  Bağcılar",
+    "market": "bim",
+    "lat": 41.02025,
+    "lon": 28.859657
+  },
+  {
+    "id": "bim-H960",
+    "name": "Yıldız  Bağcılar",
+    "market": "bim",
+    "lat": 41.02157,
+    "lon": 28.853104
+  },
+  {
+    "id": "a101-8823",
+    "name": "Arı Sk Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.021557,
+    "lon": 28.867968
+  },
+  {
+    "id": "a101-9557",
+    "name": "Saydam Sokak Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.019234,
+    "lon": 28.868654
+  },
+  {
+    "id": "a101-K046",
+    "name": "Petek Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.0209,
+    "lon": 28.866524
+  },
+  {
+    "id": "a101-6690",
+    "name": "Kutlu Sok Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.02386,
+    "lon": 28.865498
+  },
+  {
+    "id": "sok-8650",
+    "name": "Güngören Haliloğlu",
+    "market": "sok",
+    "lat": 41.01732,
+    "lon": 28.86736
+  },
+  {
+    "id": "sok-4723",
+    "name": "Şok Minitramvay Durağı",
+    "market": "sok",
+    "lat": 41.02381,
+    "lon": 28.864004
+  },
+  {
+    "id": "sok-8566",
+    "name": "Güngören Bingöl Sokak",
+    "market": "sok",
+    "lat": 41.020817,
+    "lon": 28.863413
+  },
+  {
+    "id": "sok-4581",
+    "name": "Şok Miniüveyis",
+    "market": "sok",
+    "lat": 41.022995,
+    "lon": 28.86104
+  },
+  {
+    "id": "a101-D871",
+    "name": "Nurlu Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.017815,
+    "lon": 28.860044
+  },
+  {
+    "id": "a101-4723",
+    "name": "Cumhuriyet Bahçelievler  Istanbul",
+    "market": "a101",
+    "lat": 41.017033,
+    "lon": 28.859686
+  },
+  {
+    "id": "bim-J018",
+    "name": "Yardımcı  Güngören",
+    "market": "bim",
+    "lat": 41.020348,
+    "lon": 28.865286
+  },
+  {
+    "id": "sok-8816",
+    "name": "Güngören Özyüksel",
+    "market": "sok",
+    "lat": 41.021854,
+    "lon": 28.869478
+  },
+  {
+    "id": "bim-J006",
+    "name": "Çaldıran  Güngören",
+    "market": "bim",
+    "lat": 41.019955,
+    "lon": 28.87549
+  },
+  {
+    "id": "bim-J007",
+    "name": "Asalet  Güngören",
+    "market": "bim",
+    "lat": 41.020752,
+    "lon": 28.874432
+  },
+  {
+    "id": "a101-K365",
+    "name": "Ünlü Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.021305,
+    "lon": 28.87155
+  },
+  {
+    "id": "bim-J025",
+    "name": "Realcıty  Güngören",
+    "market": "bim",
+    "lat": 41.02156,
+    "lon": 28.878069
+  },
+  {
+    "id": "bim-J023",
+    "name": "Sanayi  Güngören",
+    "market": "bim",
+    "lat": 41.021572,
+    "lon": 28.881248
+  },
+  {
+    "id": "a101-4743",
+    "name": "Atatürk Caddesi Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.023094,
+    "lon": 28.87701
+  },
+  {
+    "id": "carrefour-2068",
+    "name": "Istanbul Davutpaşa Inıstanbul",
+    "market": "carrefour",
+    "lat": 41.022747,
+    "lon": 28.900652
+  },
+  {
+    "id": "migros-5772",
+    "name": "Topkapı Beyazpark M Migros",
+    "market": "migros",
+    "lat": 41.020775,
+    "lon": 28.903967
+  },
+  {
+    "id": "bim-D702",
+    "name": "Merkezevlerzeytinburnu",
+    "market": "bim",
+    "lat": 41.011185,
+    "lon": 28.907513
+  },
+  {
+    "id": "a101-4741",
+    "name": "Yenigün Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.022713,
+    "lon": 28.859379
+  },
+  {
+    "id": "sok-669",
+    "name": "Bağcılar Kızılırmak",
+    "market": "sok",
+    "lat": 41.021435,
+    "lon": 28.856798
+  },
+  {
+    "id": "a101-5403",
+    "name": "Martı Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.019062,
+    "lon": 28.858772
+  },
+  {
+    "id": "bim-P322",
+    "name": "Bedesten Mini  Bağcılar",
+    "market": "bim",
+    "lat": 41.020927,
+    "lon": 28.862745
+  },
+  {
+    "id": "bim-L146",
+    "name": "Berrak  Bahçelievler",
+    "market": "bim",
+    "lat": 41.01874,
+    "lon": 28.858587
+  },
+  {
+    "id": "a101-F445",
+    "name": "Malta Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.024574,
+    "lon": 28.857138
+  },
+  {
+    "id": "bim-P364",
+    "name": "Işıltı  Bağcılar",
+    "market": "bim",
+    "lat": 41.02486,
+    "lon": 28.857416
+  },
+  {
+    "id": "sok-7260",
+    "name": "Bağlartepe Bağcılar",
+    "market": "sok",
+    "lat": 41.0249,
+    "lon": 28.8572
+  },
+  {
+    "id": "sok-5113",
+    "name": "Bahçelievler Doruk Sokak",
+    "market": "sok",
+    "lat": 41.019318,
+    "lon": 28.855118
+  },
+  {
+    "id": "a101-9377",
+    "name": "Doruk Bahçelievler Istanbul",
+    "market": "a101",
+    "lat": 41.019142,
+    "lon": 28.85509
+  },
+  {
+    "id": "bim-J020",
+    "name": "Çakır  Güngören",
+    "market": "bim",
+    "lat": 41.023987,
+    "lon": 28.863556
+  },
+  {
+    "id": "sok-6440",
+    "name": "Güneştepe",
+    "market": "sok",
+    "lat": 41.023815,
+    "lon": 28.866632
+  },
+  {
+    "id": "a101-8961",
+    "name": "Uğurlu Sk Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.02579,
+    "lon": 28.865124
+  },
+  {
+    "id": "bim-J010",
+    "name": "Güneştepe  Güngören",
+    "market": "bim",
+    "lat": 41.02588,
+    "lon": 28.865833
+  },
+  {
+    "id": "tarim_kredi-5486",
+    "name": "Istanbul Bağcılar Güneştepe",
+    "market": "tarim_kredi",
+    "lat": 41.02796,
+    "lon": 28.87238
+  },
+  {
+    "id": "sok-4615",
+    "name": "Şok Miniköyiçi",
+    "market": "sok",
+    "lat": 41.023674,
+    "lon": 28.869318
+  },
+  {
+    "id": "sok-4629",
+    "name": "Şok Miniyasir",
+    "market": "sok",
+    "lat": 41.025654,
+    "lon": 28.86773
+  },
+  {
+    "id": "bim-J009",
+    "name": "Köyiçi  Güngören",
+    "market": "bim",
+    "lat": 41.02485,
+    "lon": 28.872593
+  },
+  {
+    "id": "a101-6695",
+    "name": "Türker Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.022438,
+    "lon": 28.87356
+  },
+  {
+    "id": "a101-8833",
+    "name": "Köyiçi Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.02466,
+    "lon": 28.872704
+  },
+  {
+    "id": "sok-12390",
+    "name": "Istanbul Güngören Köyiçi",
+    "market": "sok",
+    "lat": 41.02485,
+    "lon": 28.87438
+  },
+  {
+    "id": "sok-1449",
+    "name": "Güngören Dumlupınar",
+    "market": "sok",
+    "lat": 41.02744,
+    "lon": 28.875793
+  },
+  {
+    "id": "a101-K378",
+    "name": "Kiptaş Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.02672,
+    "lon": 28.877947
+  },
+  {
+    "id": "a101-E382",
+    "name": "Yıldız Teknik",
+    "market": "a101",
+    "lat": 41.026726,
+    "lon": 28.887783
+  },
+  {
+    "id": "a101-4755",
+    "name": "Genç Osman Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.02761,
+    "lon": 28.881142
+  },
+  {
+    "id": "bim-J004",
+    "name": "Serinyayla  Güngören",
+    "market": "bim",
+    "lat": 41.02798,
+    "lon": 28.879543
+  },
+  {
+    "id": "sok-1807",
+    "name": "Istanbul Güngören Ince",
+    "market": "sok",
+    "lat": 41.028988,
+    "lon": 28.882654
+  },
+  {
+    "id": "a101-G829",
+    "name": "Kocayusuf Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.028988,
+    "lon": 28.897486
+  },
+  {
+    "id": "tarim_kredi-7626",
+    "name": "Istanbul Esenler Namık Kemal",
+    "market": "tarim_kredi",
+    "lat": 41.02915,
+    "lon": 28.89713
+  },
+  {
+    "id": "bim-B493",
+    "name": "Namık Kemal  Esenler",
+    "market": "bim",
+    "lat": 41.02935,
+    "lon": 28.89657
+  },
+  {
+    "id": "migros-9463",
+    "name": "Maltepe Mh Zeytinburnu Ist M",
+    "market": "migros",
+    "lat": 41.02173,
+    "lon": 28.909931
+  },
+  {
+    "id": "a101-6257",
+    "name": "Aslan Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.03005,
+    "lon": 28.896734
+  },
+  {
+    "id": "bim-R867",
+    "name": "Topkapı  Zeytinburnu",
+    "market": "bim",
+    "lat": 41.023636,
+    "lon": 28.910595
+  },
+  {
+    "id": "bim-H949",
+    "name": "Yenigün  Bağcılar",
+    "market": "bim",
+    "lat": 41.027164,
+    "lon": 28.858013
+  },
+  {
+    "id": "bim-J012",
+    "name": "Ağaçlı  Güngören",
+    "market": "bim",
+    "lat": 41.02834,
+    "lon": 28.861347
+  },
+  {
+    "id": "a101-4855",
+    "name": "Güneştepe Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.02938,
+    "lon": 28.859844
+  },
+  {
+    "id": "sok-11412",
+    "name": "Güngören Adaş",
+    "market": "sok",
+    "lat": 41.028175,
+    "lon": 28.862238
+  },
+  {
+    "id": "bim-J014",
+    "name": "Butan Sokak Güngören",
+    "market": "bim",
+    "lat": 41.025246,
+    "lon": 28.85522
+  },
+  {
+    "id": "a101-5571",
+    "name": "Molla Gürani Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.025085,
+    "lon": 28.854877
+  },
+  {
+    "id": "a101-K415",
+    "name": "Yeşilbağ Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.02985,
+    "lon": 28.856947
+  },
+  {
+    "id": "bim-H920",
+    "name": "Bağcılar  Bağcılar",
+    "market": "bim",
+    "lat": 41.030228,
+    "lon": 28.856293
+  },
+  {
+    "id": "sok-4481",
+    "name": "Şok Miniözcancanık",
+    "market": "sok",
+    "lat": 41.029472,
+    "lon": 28.863005
+  },
+  {
+    "id": "sok-6444",
+    "name": "Yıldız Tepe",
+    "market": "sok",
+    "lat": 41.028347,
+    "lon": 28.853601
+  },
+  {
+    "id": "tarim_kredi-7293",
+    "name": "Istanbul Bağcılar Salıpazarı",
+    "market": "tarim_kredi",
+    "lat": 41.03274,
+    "lon": 28.86003
+  },
+  {
+    "id": "migros-9044",
+    "name": "Bağcılar Istanbul M Migros",
+    "market": "migros",
+    "lat": 41.03256,
+    "lon": 28.85608
+  },
+  {
+    "id": "tarim_kredi-7595",
+    "name": "Istanbul Bağcılar Merkez",
+    "market": "tarim_kredi",
+    "lat": 41.03087,
+    "lon": 28.86601
+  },
+  {
+    "id": "bim-U737",
+    "name": "Toprak Mini  Güngören",
+    "market": "bim",
+    "lat": 41.027645,
+    "lon": 28.867195
+  },
+  {
+    "id": "a101-D548",
+    "name": "Akyiğit Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.031433,
+    "lon": 28.86292
+  },
+  {
+    "id": "a101-F300",
+    "name": "Cami Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.025185,
+    "lon": 28.870098
+  },
+  {
+    "id": "bim-U814",
+    "name": "Tınaztepe  Güngören",
+    "market": "bim",
+    "lat": 41.02633,
+    "lon": 28.874634
+  },
+  {
+    "id": "bim-K572",
+    "name": "Üç Çeşmeler  Güngören",
+    "market": "bim",
+    "lat": 41.027042,
+    "lon": 28.875063
+  },
+  {
+    "id": "a101-B314",
+    "name": "Dilek Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.03008,
+    "lon": 28.87396
+  },
+  {
+    "id": "sok-13929",
+    "name": "Güngören Çinçindere Cad",
+    "market": "sok",
+    "lat": 41.03009,
+    "lon": 28.87718
+  },
+  {
+    "id": "sok-12055",
+    "name": "Güngören Genç Osman",
+    "market": "sok",
+    "lat": 41.029343,
+    "lon": 28.872808
+  },
+  {
+    "id": "a101-F108",
+    "name": "Doğanbey Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.02843,
+    "lon": 28.872484
+  },
+  {
+    "id": "bim-K446",
+    "name": "Ulus Sokak  Güngören",
+    "market": "bim",
+    "lat": 41.03182,
+    "lon": 28.8817
+  },
+  {
+    "id": "bim-O053",
+    "name": "Davutpaşa mını  Esenler",
+    "market": "bim",
+    "lat": 41.031216,
+    "lon": 28.889086
+  },
+  {
+    "id": "bim-L954",
+    "name": "Güngören Park Avm  Güngören",
+    "market": "bim",
+    "lat": 41.032627,
+    "lon": 28.883514
+  },
+  {
+    "id": "a101-9858",
+    "name": "Ayazma Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.033543,
+    "lon": 28.883183
+  },
+  {
+    "id": "sok-4402",
+    "name": "Şok Minipasinler 2",
+    "market": "sok",
+    "lat": 41.033535,
+    "lon": 28.877413
+  },
+  {
+    "id": "sok-8832",
+    "name": "Esenler Kosova Caddesi",
+    "market": "sok",
+    "lat": 41.030792,
+    "lon": 28.894718
+  },
+  {
+    "id": "bim-O054",
+    "name": "Yenice  Esenler",
+    "market": "bim",
+    "lat": 41.03215,
+    "lon": 28.894926
+  },
+  {
+    "id": "a101-D091",
+    "name": "Yavuz Selim Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.032436,
+    "lon": 28.89461
+  },
+  {
+    "id": "sok-4791",
+    "name": "Şok Miniesenler Cadde",
+    "market": "sok",
+    "lat": 41.0338,
+    "lon": 28.8907
+  },
+  {
+    "id": "sok-4196",
+    "name": "Şok Mini  Rumeli",
+    "market": "sok",
+    "lat": 41.03512,
+    "lon": 28.888441
+  },
+  {
+    "id": "a101-8262",
+    "name": "Terazidere  Bayrampa",
+    "market": "a101",
+    "lat": 41.03155,
+    "lon": 28.90073
+  },
+  {
+    "id": "sok-527",
+    "name": "Bayrampaşa Otogar",
+    "market": "sok",
+    "lat": 41.033413,
+    "lon": 28.89754
+  },
+  {
+    "id": "sok-8966",
+    "name": "Bayrampaşa Güneş Cad",
+    "market": "sok",
+    "lat": 41.031906,
+    "lon": 28.900984
+  },
+  {
+    "id": "bim-B494",
+    "name": "Otogar  Esenler",
+    "market": "bim",
+    "lat": 41.0343,
+    "lon": 28.89277
+  },
+  {
+    "id": "bim-C152",
+    "name": "29 Ekim bayrampaşa",
+    "market": "bim",
+    "lat": 41.032425,
+    "lon": 28.901701
+  },
+  {
+    "id": "sok-10869",
+    "name": "Bayrampaşa Cumhuriyet",
+    "market": "sok",
+    "lat": 41.03241,
+    "lon": 28.901896
+  },
+  {
+    "id": "a101-9313",
+    "name": "60yıl Bayrampaşa Istanbul",
+    "market": "a101",
+    "lat": 41.03301,
+    "lon": 28.899645
+  },
+  {
+    "id": "sok-7154",
+    "name": "Terazidere Bayrampaşa",
+    "market": "sok",
+    "lat": 41.034176,
+    "lon": 28.901833
+  },
+  {
+    "id": "bim-J581",
+    "name": "Bayrampaşa  Bayrampaşa",
+    "market": "bim",
+    "lat": 41.03273,
+    "lon": 28.90689
+  },
+  {
+    "id": "tarim_kredi-7540",
+    "name": "Istanbul Bayrampaşa Uygur",
+    "market": "tarim_kredi",
+    "lat": 41.03474,
+    "lon": 28.90347
+  },
+  {
+    "id": "bim-V449",
+    "name": "Hilal  Bağcılar",
+    "market": "bim",
+    "lat": 41.031353,
+    "lon": 28.858128
+  },
+  {
+    "id": "sok-9194",
+    "name": "Bağcılar Kaya",
+    "market": "sok",
+    "lat": 41.0313,
+    "lon": 28.860584
+  },
+  {
+    "id": "bim-J981",
+    "name": "Okul  Bağcılar",
+    "market": "bim",
+    "lat": 41.031757,
+    "lon": 28.861298
+  },
+  {
+    "id": "bim-H924",
+    "name": "Salıpazarı  Bağcılar",
+    "market": "bim",
+    "lat": 41.032837,
+    "lon": 28.860834
+  },
+  {
+    "id": "sok-7273",
+    "name": "Ikinci Skbağcılar",
+    "market": "sok",
+    "lat": 41.0335,
+    "lon": 28.8594
+  },
+  {
+    "id": "sok-1410",
+    "name": "Bağcılar Şura",
+    "market": "sok",
+    "lat": 41.032387,
+    "lon": 28.861923
+  },
+  {
+    "id": "a101-H367",
+    "name": "Kaan Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.03149,
+    "lon": 28.855577
+  },
+  {
+    "id": "a101-4732",
+    "name": "Bağcılar Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.033485,
+    "lon": 28.862028
+  },
+  {
+    "id": "sok-13536",
+    "name": "Bağcılar Ertuğrul Gazi",
+    "market": "sok",
+    "lat": 41.032997,
+    "lon": 28.855207
+  },
+  {
+    "id": "bim-T601",
+    "name": "Zeyrek  Bağcılar",
+    "market": "bim",
+    "lat": 41.031387,
+    "lon": 28.863194
+  },
+  {
+    "id": "tarim_kredi-5293",
+    "name": "Istanbul Bağcılar Yavuz Selim",
+    "market": "tarim_kredi",
+    "lat": 41.03565,
+    "lon": 28.85412
+  },
+  {
+    "id": "migros-7504",
+    "name": "Yavuzselim Bağcılar Istanbul M",
+    "market": "migros",
+    "lat": 41.034813,
+    "lon": 28.853018
+  },
+  {
+    "id": "a101-G088",
+    "name": "Özdilek Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.032017,
+    "lon": 28.865553
+  },
+  {
+    "id": "bim-H930",
+    "name": "Akyiğit  Bağcılar",
+    "market": "bim",
+    "lat": 41.031036,
+    "lon": 28.866123
+  },
+  {
+    "id": "sok-8657",
+    "name": "Bağcılar Merkez Mah",
+    "market": "sok",
+    "lat": 41.032726,
+    "lon": 28.8664
+  },
+  {
+    "id": "sok-11337",
+    "name": "Bağcılar Meydan",
+    "market": "sok",
+    "lat": 41.034523,
+    "lon": 28.863558
+  },
+  {
+    "id": "a101-9807",
+    "name": "Parkevler Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.033054,
+    "lon": 28.867945
+  },
+  {
+    "id": "a101-9351",
+    "name": "Ebubekir Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.03513,
+    "lon": 28.865221
+  },
+  {
+    "id": "bim-H922",
+    "name": "Park  Bağcılar",
+    "market": "bim",
+    "lat": 41.034595,
+    "lon": 28.866865
+  },
+  {
+    "id": "bim-J005",
+    "name": "Doğanay  Güngören",
+    "market": "bim",
+    "lat": 41.032513,
+    "lon": 28.873262
+  },
+  {
+    "id": "sok-10470",
+    "name": "Güngören Özgecan",
+    "market": "sok",
+    "lat": 41.03272,
+    "lon": 28.874313
+  },
+  {
+    "id": "tarim_kredi-7646",
+    "name": "Istanbul Esenler Harun",
+    "market": "tarim_kredi",
+    "lat": 41.03917,
+    "lon": 28.87106
+  },
+  {
+    "id": "a101-C176",
+    "name": "Katmerci Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.031986,
+    "lon": 28.8775
+  },
+  {
+    "id": "bim-D206",
+    "name": "Ayazmaesenler",
+    "market": "bim",
+    "lat": 41.032177,
+    "lon": 28.878149
+  },
+  {
+    "id": "sok-8244",
+    "name": "Esenler Park",
+    "market": "sok",
+    "lat": 41.034626,
+    "lon": 28.875986
+  },
+  {
+    "id": "a101-B054",
+    "name": "Nine Hatun Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.033524,
+    "lon": 28.878458
+  },
+  {
+    "id": "bim-U808",
+    "name": "Malazgırt  Esenler",
+    "market": "bim",
+    "lat": 41.03429,
+    "lon": 28.879692
+  },
+  {
+    "id": "sok-4194",
+    "name": "Şok Miniazizye",
+    "market": "sok",
+    "lat": 41.035103,
+    "lon": 28.878904
+  },
+  {
+    "id": "bim-P518",
+    "name": "Meslek  Güngören",
+    "market": "bim",
+    "lat": 41.0336,
+    "lon": 28.883142
+  },
+  {
+    "id": "a101-5712",
+    "name": "Davutpaşa Güngören Istanbul",
+    "market": "a101",
+    "lat": 41.03378,
+    "lon": 28.88566
+  },
+  {
+    "id": "a101-I790",
+    "name": "Davutpaşa Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.034035,
+    "lon": 28.886356
+  },
+  {
+    "id": "a101-4847",
+    "name": "Sağlık Ocağı  Esenler",
+    "market": "a101",
+    "lat": 41.035408,
+    "lon": 28.885662
+  },
+  {
+    "id": "sok-13748",
+    "name": "Esenler Istanbul Cad",
+    "market": "sok",
+    "lat": 41.0369,
+    "lon": 28.8844
+  },
+  {
+    "id": "a101-6968",
+    "name": "Farabi Esenler Istanbul ",
+    "market": "a101",
+    "lat": 41.03399,
+    "lon": 28.891987
+  },
+  {
+    "id": "migros-8946",
+    "name": "Mjet Altıntepsi Bayrampaşa Ist",
+    "market": "migros",
+    "lat": 41.03728,
+    "lon": 28.898026
+  },
+  {
+    "id": "a101-E796",
+    "name": "Mehmetçik Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.034096,
+    "lon": 28.8948
+  },
+  {
+    "id": "bim-H527",
+    "name": "Üsküp  Bayrampaşa",
+    "market": "bim",
+    "lat": 41.03609,
+    "lon": 28.89631
+  },
+  {
+    "id": "bim-P982",
+    "name": "Uygur  Bayrampaşa",
+    "market": "bim",
+    "lat": 41.034718,
+    "lon": 28.903788
+  },
+  {
+    "id": "tarim_kredi-7184",
+    "name": "Istanbul Bayrampaşa Altıntepsi",
+    "market": "tarim_kredi",
+    "lat": 41.03917,
+    "lon": 28.90447
+  },
+  {
+    "id": "a101-4768",
+    "name": "Çınar Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.03662,
+    "lon": 28.859447
+  },
+  {
+    "id": "a101-H210",
+    "name": "Masal Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.03772,
+    "lon": 28.859104
+  },
+  {
+    "id": "sok-10113",
+    "name": "Bağcılar Arda",
+    "market": "sok",
+    "lat": 41.03762,
+    "lon": 28.860695
+  },
+  {
+    "id": "a101-G888",
+    "name": "Şükrü Savaşeri Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.038956,
+    "lon": 28.858883
+  },
+  {
+    "id": "sok-14052",
+    "name": "Bağcılar Beyaz",
+    "market": "sok",
+    "lat": 41.0382,
+    "lon": 28.8567
+  },
+  {
+    "id": "a101-6255",
+    "name": "Seyit Çavuş Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.036884,
+    "lon": 28.855928
+  },
+  {
+    "id": "bim-H928",
+    "name": "Cevahir  Bağcılar",
+    "market": "bim",
+    "lat": 41.03514,
+    "lon": 28.86146
+  },
+  {
+    "id": "sok-9855",
+    "name": "Bağcılar Kahraman",
+    "market": "sok",
+    "lat": 41.03689,
+    "lon": 28.855524
+  },
+  {
+    "id": "a101-9790",
+    "name": "Naci Ekşi  Bağcılar Bağcılar Istanbul",
+    "market": "a101",
+    "lat": 41.037174,
+    "lon": 28.862854
+  },
+  {
+    "id": "sok-4619",
+    "name": "Şok Minisancaktepe",
+    "market": "sok",
+    "lat": 41.03777,
+    "lon": 28.854834
+  },
+  {
+    "id": "bim-V458",
+    "name": "Yasemin  Bağcılar",
+    "market": "bim",
+    "lat": 41.037056,
+    "lon": 28.864109
+  },
+  {
+    "id": "bim-H936",
+    "name": "Tabya Evleri  Bağcılar",
+    "market": "bim",
+    "lat": 41.041084,
+    "lon": 28.85694
+  },
+  {
+    "id": "bim-H934",
+    "name": "Tutal  Bağcılar",
+    "market": "bim",
+    "lat": 41.03883,
+    "lon": 28.86458
+  },
+  {
+    "id": "tarim_kredi-5710",
+    "name": "Istanbul Esenler",
+    "market": "tarim_kredi",
+    "lat": 41.04284,
+    "lon": 28.86137
+  },
+  {
+    "id": "sok-1769",
+    "name": "Istanbul Bağcılar Çınar",
+    "market": "sok",
+    "lat": 41.03702,
+    "lon": 28.864346
+  },
+  {
+    "id": "sok-8118",
+    "name": "Bağcılar Yalman",
+    "market": "sok",
+    "lat": 41.03962,
+    "lon": 28.864048
+  },
+  {
+    "id": "a101-F174",
+    "name": "Hamidiye Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.03961,
+    "lon": 28.865004
+  },
+  {
+    "id": "bim-H953",
+    "name": "16 Sokak  Bağcılar",
+    "market": "bim",
+    "lat": 41.036736,
+    "lon": 28.868074
+  },
+  {
+    "id": "sok-5137",
+    "name": "Güngören Doğanbey Caddesi",
+    "market": "sok",
+    "lat": 41.03746,
+    "lon": 28.871452
+  },
+  {
+    "id": "bim-J785",
+    "name": "Aksaray  Esenler",
+    "market": "bim",
+    "lat": 41.03888,
+    "lon": 28.869972
+  },
+  {
+    "id": "a101-8018",
+    "name": "Aksaray Cad Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.038925,
+    "lon": 28.86989
+  },
+  {
+    "id": "bim-B490",
+    "name": "5cadde  Esenler",
+    "market": "bim",
+    "lat": 41.038704,
+    "lon": 28.87137
+  },
+  {
+    "id": "bim-C501",
+    "name": "Fatih Caddesi  Esenler",
+    "market": "bim",
+    "lat": 41.03888,
+    "lon": 28.871307
+  },
+  {
+    "id": "a101-K258",
+    "name": "Doğanbey Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.039173,
+    "lon": 28.871353
+  },
+  {
+    "id": "bim-K297",
+    "name": "Seyit Onbaşı  Esenler",
+    "market": "bim",
+    "lat": 41.03748,
+    "lon": 28.874834
+  },
+  {
+    "id": "sok-4425",
+    "name": "Şok Mininenehatun",
+    "market": "sok",
+    "lat": 41.0372,
+    "lon": 28.875591
+  },
+  {
+    "id": "bim-B487",
+    "name": "Üçyüzlü  Esenler",
+    "market": "bim",
+    "lat": 41.038754,
+    "lon": 28.874138
+  },
+  {
+    "id": "a101-K526",
+    "name": "Seyit Onbaşı Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.037666,
+    "lon": 28.87691
+  },
+  {
+    "id": "bim-R040",
+    "name": "Gölbaşı  Esenler",
+    "market": "bim",
+    "lat": 41.03835,
+    "lon": 28.877184
+  },
+  {
+    "id": "sok-4352",
+    "name": "Şok Minierkan",
+    "market": "sok",
+    "lat": 41.039654,
+    "lon": 28.874784
+  },
+  {
+    "id": "sok-6450",
+    "name": "Esenler Fevzi Çakmak",
+    "market": "sok",
+    "lat": 41.03836,
+    "lon": 28.88287
+  },
+  {
+    "id": "sok-10549",
+    "name": "Esenler Canpolat",
+    "market": "sok",
+    "lat": 41.040203,
+    "lon": 28.878084
+  },
+  {
+    "id": "a101-9041",
+    "name": "Üçyüzlü Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.040264,
+    "lon": 28.87308
+  },
+  {
+    "id": "a101-0026",
+    "name": "Aziziye Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.037132,
+    "lon": 28.879955
+  },
+  {
+    "id": "sok-9533",
+    "name": "Esenler Mercan Caddesi",
+    "market": "sok",
+    "lat": 41.03705,
+    "lon": 28.878765
+  },
+  {
+    "id": "bim-R758",
+    "name": "Mercan Caddesi mini  Esenler",
+    "market": "bim",
+    "lat": 41.036297,
+    "lon": 28.879307
+  },
+  {
+    "id": "sok-5795",
+    "name": "Esenler Nene Hatun",
+    "market": "sok",
+    "lat": 41.03766,
+    "lon": 28.880964
+  },
+  {
+    "id": "bim-Q791",
+    "name": "Dört Yaka  Esenler",
+    "market": "bim",
+    "lat": 41.038177,
+    "lon": 28.881071
+  },
+  {
+    "id": "bim-B496",
+    "name": "Nene Hatunesenler",
+    "market": "bim",
+    "lat": 41.03654,
+    "lon": 28.882236
+  },
+  {
+    "id": "a101-D267",
+    "name": "Ömer Seyfettin Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.039803,
+    "lon": 28.880178
+  },
+  {
+    "id": "a101-G225",
+    "name": "Ptt Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.038578,
+    "lon": 28.88284
+  },
+  {
+    "id": "a101-J119",
+    "name": "Metro Esenler Istanbul",
+    "market": "a101",
+    "lat": 41.036278,
+    "lon": 28.886368
+  },
+  {
+    "id": "bim-B495",
+    "name": "Mimarsinan  Esenler",
+    "market": "bim",
+    "lat": 41.03664,
+    "lon": 28.887411
+  },
+  {
+    "id": "sok-4737",
+    "name": "Şok Miniöykü",
+    "market": "sok",
+    "lat": 41.040302,
+    "lon": 28.882837
+  },
+  {
+    "id": "a101-5188",
+    "name": "Altıntepsi Bayrampaşa Istanbul",
+    "market": "a101",
+    "lat": 41.038776,
+    "lon": 28.896427
+  },
+  {
+    "id": "sok-9195",
+    "name": "Bayrampaşa Akpınar",
+    "market": "sok",
+    "lat": 41.03859,
+    "lon": 28.897966
+  },
+  {
+    "id": "a101-7474",
+    "name": "Cami Bayrampaşa",
+    "market": "a101",
+    "lat": 41.035595,
+    "lon": 28.900099
+  },
+  {
+    "id": "bim-C442",
+    "name": "Baharbayrampaşa",
+    "market": "bim",
+    "lat": 41.03675,
+    "lon": 28.903652
+  },
+  {
+    "id": "a101-8066",
+    "name": "Mete Bayrampaşa Istanbul",
+    "market": "a101",
+    "lat": 41.040485,
+    "lon": 28.900244
+  },
+  {
+    "id": "sok-7643",
+    "name": "Bayrampaşa Altıntepsi",
+    "market": "sok",
+    "lat": 41.03872,
+    "lon": 28.9035
+  },
+  {
+    "id": "bim-B544",
+    "name": "Altıntepsi  Bayrampaşa",
+    "market": "bim",
+    "lat": 41.03997,
+    "lon": 28.902222
+  },
+  {
+    "id": "sok-4779",
+    "name": "Şok Miniistiklal",
+    "market": "sok",
+    "lat": 41.0404,
+    "lon": 28.9024
+  }
+]

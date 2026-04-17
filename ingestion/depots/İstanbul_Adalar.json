@@ -1,0 +1,219 @@
+[
+  {
+    "id": "sok-6083",
+    "name": "Büyükada",
+    "market": "sok",
+    "lat": 40.87307,
+    "lon": 29.12995
+  },
+  {
+    "id": "bim-G315",
+    "name": "Heybeliada  Istanbul",
+    "market": "bim",
+    "lat": 40.878414,
+    "lon": 29.099722
+  },
+  {
+    "id": "a101-E020",
+    "name": "Heybeliada Adalar Istanbul",
+    "market": "a101",
+    "lat": 40.87686,
+    "lon": 29.101181
+  },
+  {
+    "id": "migros-8362",
+    "name": "Büyükada M Migros",
+    "market": "migros",
+    "lat": 40.87419,
+    "lon": 29.127003
+  },
+  {
+    "id": "a101-J669",
+    "name": "Büyükada Adalar Istanbul",
+    "market": "a101",
+    "lat": 40.874638,
+    "lon": 29.129993
+  },
+  {
+    "id": "bim-7770",
+    "name": "Yeni Büyükada  Adalar",
+    "market": "bim",
+    "lat": 40.874332,
+    "lon": 29.131546
+  },
+  {
+    "id": "sok-13682",
+    "name": "Kartal Özberk Sokak",
+    "market": "sok",
+    "lat": 40.8983,
+    "lon": 29.0371
+  },
+  {
+    "id": "a101-3983",
+    "name": "Kınalıada Adalar Istanbul",
+    "market": "a101",
+    "lat": 40.90823,
+    "lon": 29.0556
+  },
+  {
+    "id": "a101-D643",
+    "name": "Nedim Özpolat Maltepe Istanbul",
+    "market": "a101",
+    "lat": 40.91913,
+    "lon": 29.131426
+  },
+  {
+    "id": "bim-A572",
+    "name": "Sahil  Maltepe",
+    "market": "bim",
+    "lat": 40.918194,
+    "lon": 29.13442
+  },
+  {
+    "id": "migros-5708",
+    "name": "Mjet Maltepe Yalı Mahallesi",
+    "market": "migros",
+    "lat": 40.91859,
+    "lon": 29.13382
+  },
+  {
+    "id": "sok-1434",
+    "name": "Dragos",
+    "market": "sok",
+    "lat": 40.91733,
+    "lon": 29.136045
+  },
+  {
+    "id": "sok-7211",
+    "name": "Maltepe Yalı",
+    "market": "sok",
+    "lat": 40.919563,
+    "lon": 29.13195
+  },
+  {
+    "id": "carrefour-3146",
+    "name": "Istanbul Dragos Süper",
+    "market": "carrefour",
+    "lat": 40.916855,
+    "lon": 29.138372
+  },
+  {
+    "id": "bim-A580",
+    "name": "Yavuz Selim  Maltepe",
+    "market": "bim",
+    "lat": 40.91872,
+    "lon": 29.143064
+  },
+  {
+    "id": "tarim_kredi-5302",
+    "name": "Istanbul Maltepe Bağdat Caddesi",
+    "market": "tarim_kredi",
+    "lat": 40.91664,
+    "lon": 29.14587
+  },
+  {
+    "id": "bim-J745",
+    "name": "Özcan  Maltepe",
+    "market": "bim",
+    "lat": 40.920086,
+    "lon": 29.14018
+  },
+  {
+    "id": "sok-13153",
+    "name": "Istanbul Maltepe Ds",
+    "market": "sok",
+    "lat": 40.91814,
+    "lon": 29.142244
+  },
+  {
+    "id": "sok-4796",
+    "name": "Şok Minimtepe Bağdat C",
+    "market": "sok",
+    "lat": 40.9196,
+    "lon": 29.1396
+  },
+  {
+    "id": "sok-4610",
+    "name": "Şok Miniorhangazi",
+    "market": "sok",
+    "lat": 40.912624,
+    "lon": 29.140852
+  },
+  {
+    "id": "a101-H186",
+    "name": "Bağdat Park Maltepe Istanbul",
+    "market": "a101",
+    "lat": 40.91847,
+    "lon": 29.142378
+  },
+  {
+    "id": "sok-12915",
+    "name": "Maltepe Sadık Sokak",
+    "market": "sok",
+    "lat": 40.919685,
+    "lon": 29.1505
+  },
+  {
+    "id": "sok-6172",
+    "name": "Maltepe Talatpaşa Mağazas",
+    "market": "sok",
+    "lat": 40.91898,
+    "lon": 29.151567
+  },
+  {
+    "id": "bim-D605",
+    "name": "Erciyes  Maltepe",
+    "market": "bim",
+    "lat": 40.915718,
+    "lon": 29.14811
+  },
+  {
+    "id": "bim-Q965",
+    "name": "Sevgi  Maltepe",
+    "market": "bim",
+    "lat": 40.91758,
+    "lon": 29.147673
+  },
+  {
+    "id": "bim-A573",
+    "name": "Orhangazi  Maltepe",
+    "market": "bim",
+    "lat": 40.91945,
+    "lon": 29.146542
+  },
+  {
+    "id": "a101-8518",
+    "name": "Talatpaşa Maltepe Istanbul",
+    "market": "a101",
+    "lat": 40.918728,
+    "lon": 29.151335
+  },
+  {
+    "id": "a101-C770",
+    "name": "Ayhan Maltepe Istanbul",
+    "market": "a101",
+    "lat": 40.915577,
+    "lon": 29.150446
+  },
+  {
+    "id": "a101-K546",
+    "name": "Bağımsızlık Maltepe Istanbul",
+    "market": "a101",
+    "lat": 40.910873,
+    "lon": 29.154093
+  },
+  {
+    "id": "sok-6730",
+    "name": "Maltepe Yavuz Sokak",
+    "market": "sok",
+    "lat": 40.920338,
+    "lon": 29.144377
+  },
+  {
+    "id": "a101-B129",
+    "name": "Zuhal Maltepe Istanbul",
+    "market": "a101",
+    "lat": 40.917572,
+    "lon": 29.154442
+  }
+]

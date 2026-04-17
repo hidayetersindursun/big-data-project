@@ -1,0 +1,275 @@
+{
+  "İstanbul_Adalar": {
+    "total_pts": 220,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 31,
+    "status": "OK"
+  },
+  "İstanbul_Arnavutköy": {
+    "total_pts": 210,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 367,
+    "status": "OK"
+  },
+  "İstanbul_Ataşehir": {
+    "total_pts": 207,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 591,
+    "status": "OK"
+  },
+  "İstanbul_Avcılar": {
+    "total_pts": 220,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 550,
+    "status": "OK"
+  },
+  "İstanbul_Bağcılar": {
+    "total_pts": 143,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 541,
+    "status": "OK"
+  },
+  "İstanbul_Bahçelievler": {
+    "total_pts": 128,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 490,
+    "status": "OK"
+  },
+  "İstanbul_Bakırköy": {
+    "total_pts": 220,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 448,
+    "status": "OK"
+  },
+  "İstanbul_Başakşehir": {
+    "total_pts": 220,
+    "failed_pts": 9,
+    "fail_rate": 0.041,
+    "depot_count": 427,
+    "status": "OK"
+  },
+  "İstanbul_Bayrampaşa": {
+    "total_pts": 110,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 444,
+    "status": "OK"
+  },
+  "İstanbul_Beşiktaş": {
+    "total_pts": 182,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 334,
+    "status": "OK"
+  },
+  "İstanbul_Beyoğlu": {
+    "total_pts": 108,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 364,
+    "status": "OK"
+  },
+  "İstanbul_Büyükçekmece": {
+    "total_pts": 209,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 324,
+    "status": "OK"
+  },
+  "İstanbul_Beylikdüzü": {
+    "total_pts": 209,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 455,
+    "status": "OK"
+  },
+  "İstanbul_Çatalca": {
+    "total_pts": 225,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 344,
+    "status": "OK"
+  },
+  "İstanbul_Çekmeköy": {
+    "total_pts": 210,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 381,
+    "status": "OK"
+  },
+  "İstanbul_Beykoz": {
+    "total_pts": 216,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 424,
+    "status": "OK"
+  },
+  "İstanbul_Esenler": {
+    "total_pts": 221,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 850,
+    "status": "OK"
+  },
+  "İstanbul_Esenyurt": {
+    "total_pts": 208,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 645,
+    "status": "OK"
+  },
+  "İstanbul_Eyüpsultan": {
+    "total_pts": 221,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 1012,
+    "status": "OK"
+  },
+  "İstanbul_Fatih": {
+    "total_pts": 154,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 291,
+    "status": "OK"
+  },
+  "İstanbul_Gaziosmanpaşa": {
+    "total_pts": 117,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 492,
+    "status": "OK"
+  },
+  "İstanbul_Güngören": {
+    "total_pts": 72,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 324,
+    "status": "OK"
+  },
+  "İstanbul_Kağıthane": {
+    "total_pts": 9,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 73,
+    "status": "OK"
+  },
+  "İstanbul_Kadıköy": {
+    "total_pts": 216,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 565,
+    "status": "OK"
+  },
+  "İstanbul_Kartal": {
+    "total_pts": 216,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 551,
+    "status": "OK"
+  },
+  "İstanbul_Küçükçekmece": {
+    "total_pts": 210,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 515,
+    "status": "OK"
+  },
+  "İstanbul_Maltepe": {
+    "total_pts": 216,
+    "failed_pts": 3,
+    "fail_rate": 0.014,
+    "depot_count": 636,
+    "status": "OK"
+  },
+  "İstanbul_Pendik": {
+    "total_pts": 204,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 794,
+    "status": "OK"
+  },
+  "İstanbul_Sancaktepe": {
+    "total_pts": 209,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 596,
+    "status": "OK"
+  },
+  "İstanbul_Sarıyer": {
+    "total_pts": 225,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 486,
+    "status": "OK"
+  },
+  "İstanbul_Şile": {
+    "total_pts": 207,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 92,
+    "status": "OK"
+  },
+  "İstanbul_Şişli": {
+    "total_pts": 121,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 507,
+    "status": "OK"
+  },
+  "İstanbul_Sultanbeyli": {
+    "total_pts": 210,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 279,
+    "status": "OK"
+  },
+  "İstanbul_Silivri": {
+    "total_pts": 208,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 348,
+    "status": "OK"
+  },
+  "İstanbul_Sultangazi": {
+    "total_pts": 208,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 298,
+    "status": "OK"
+  },
+  "İstanbul_Tuzla": {
+    "total_pts": 224,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 859,
+    "status": "OK"
+  },
+  "İstanbul_Ümraniye": {
+    "total_pts": 216,
+    "failed_pts": 10,
+    "fail_rate": 0.046,
+    "depot_count": 724,
+    "status": "OK"
+  },
+  "İstanbul_Üsküdar": {
+    "total_pts": 225,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 660,
+    "status": "OK"
+  },
+  "İstanbul_Zeytinburnu": {
+    "total_pts": 88,
+    "failed_pts": 0,
+    "fail_rate": 0.0,
+    "depot_count": 230,
+    "status": "OK"
+  }
+}

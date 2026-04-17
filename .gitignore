@@ -1,39 +1,16 @@
-# -------------------------------
-# Project data outputs (local)
-# -------------------------------
+# Ham veri — S3'e gidecek
 ingestion/data/
-state.json
-market_data.json
-*.jsonl
 
-# -------------------------------
 # Python
-# -------------------------------
 __pycache__/
-*.py[cod]
-*$py.class
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-.coverage.*
-htmlcov/
-
-# Virtual environments
+*.pyc
+*.pyo
 .venv/
 venv/
-env/
-ENV/
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Logs
-*.log
-
-# macOS
+# Mac
 .DS_Store
+**/.DS_Store
 
-# IDE / editor
-.vscode/
-.idea/
+# State dosyası — lokal
+state.json

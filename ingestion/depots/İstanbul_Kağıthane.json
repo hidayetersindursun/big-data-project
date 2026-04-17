@@ -1,0 +1,513 @@
+[
+  {
+    "id": "bim-J055",
+    "name": "Nurtaç kağıthane",
+    "market": "bim",
+    "lat": 41.073402,
+    "lon": 28.971296
+  },
+  {
+    "id": "a101-E630",
+    "name": "Irmak Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.077957,
+    "lon": 28.964884
+  },
+  {
+    "id": "sok-7932",
+    "name": "Kağıthane Şehitler",
+    "market": "sok",
+    "lat": 41.070892,
+    "lon": 28.97211
+  },
+  {
+    "id": "bim-J050",
+    "name": "Gürsel Mahkağıthane",
+    "market": "bim",
+    "lat": 41.07113,
+    "lon": 28.972542
+  },
+  {
+    "id": "a101-8189",
+    "name": "Alapınar Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.07497,
+    "lon": 28.961514
+  },
+  {
+    "id": "bim-T170",
+    "name": "Akşemsettin  Kağıthane",
+    "market": "bim",
+    "lat": 41.0755,
+    "lon": 28.975166
+  },
+  {
+    "id": "a101-7250",
+    "name": "Sevilen Kağıthane",
+    "market": "a101",
+    "lat": 41.075253,
+    "lon": 28.97526
+  },
+  {
+    "id": "bim-J132",
+    "name": "Nurtepe  Kağıthane",
+    "market": "bim",
+    "lat": 41.07704,
+    "lon": 28.961662
+  },
+  {
+    "id": "a101-G989",
+    "name": "Tümleç Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.069378,
+    "lon": 28.970642
+  },
+  {
+    "id": "sok-6793",
+    "name": "Nurtepe Sokullu",
+    "market": "sok",
+    "lat": 41.078957,
+    "lon": 28.963032
+  },
+  {
+    "id": "sok-5489",
+    "name": "Nurtepe Sedef",
+    "market": "sok",
+    "lat": 41.076183,
+    "lon": 28.960653
+  },
+  {
+    "id": "a101-C172",
+    "name": "Yaman Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.072453,
+    "lon": 28.960554
+  },
+  {
+    "id": "sok-1491",
+    "name": "Kağıthane Çilekli",
+    "market": "sok",
+    "lat": 41.080925,
+    "lon": 28.967117
+  },
+  {
+    "id": "migros-7322",
+    "name": "Kağıthane Merkez Istanbul M",
+    "market": "migros",
+    "lat": 41.0783,
+    "lon": 28.975061
+  },
+  {
+    "id": "sok-5792",
+    "name": "Gürsel Mah Şok",
+    "market": "sok",
+    "lat": 41.069195,
+    "lon": 28.973722
+  },
+  {
+    "id": "carrefour-3155",
+    "name": "Istanbul Kağıthane Süper",
+    "market": "carrefour",
+    "lat": 41.080437,
+    "lon": 28.97312
+  },
+  {
+    "id": "bim-T007",
+    "name": "100yıl  Kağıthane",
+    "market": "bim",
+    "lat": 41.08102,
+    "lon": 28.964191
+  },
+  {
+    "id": "tarim_kredi-5500",
+    "name": "Istanbul Kağıthane Gürsel",
+    "market": "tarim_kredi",
+    "lat": 41.06763,
+    "lon": 28.97458
+  },
+  {
+    "id": "a101-C169",
+    "name": "Limon Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.07546,
+    "lon": 28.977654
+  },
+  {
+    "id": "sok-13322",
+    "name": "Kağıthane Işıklı Sokak",
+    "market": "sok",
+    "lat": 41.07029,
+    "lon": 28.975668
+  },
+  {
+    "id": "bim-J056",
+    "name": "Bahçeler  Kağıthane",
+    "market": "bim",
+    "lat": 41.070427,
+    "lon": 28.976677
+  },
+  {
+    "id": "bim-T578",
+    "name": "Başaran  Kağıthane",
+    "market": "bim",
+    "lat": 41.073345,
+    "lon": 28.9796
+  },
+  {
+    "id": "a101-4890",
+    "name": "Gürsel Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.071022,
+    "lon": 28.97788
+  },
+  {
+    "id": "a101-9716",
+    "name": "28 Nisan Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.06946,
+    "lon": 28.973654
+  },
+  {
+    "id": "sok-10702",
+    "name": "Kağıthane Bahçeler Cad",
+    "market": "sok",
+    "lat": 41.06994,
+    "lon": 28.976833
+  },
+  {
+    "id": "sok-3551",
+    "name": "Kağıthane Başaran Sokak",
+    "market": "sok",
+    "lat": 41.073086,
+    "lon": 28.980104
+  },
+  {
+    "id": "tarim_kredi-5499",
+    "name": "Istanbul Kağıthane Çağlayan",
+    "market": "tarim_kredi",
+    "lat": 41.073,
+    "lon": 28.9805
+  },
+  {
+    "id": "migros-7792",
+    "name": "Çağlayan Adliye Istanbul Mm",
+    "market": "migros",
+    "lat": 41.070873,
+    "lon": 28.97948
+  },
+  {
+    "id": "a101-D394",
+    "name": "Memba Suyu Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.07366,
+    "lon": 28.980972
+  },
+  {
+    "id": "sok-7377",
+    "name": "Vatan Cd Çağlayan",
+    "market": "sok",
+    "lat": 41.07281,
+    "lon": 28.980625
+  },
+  {
+    "id": "sok-4727",
+    "name": "Şok Miniçağlayan",
+    "market": "sok",
+    "lat": 41.076366,
+    "lon": 28.981112
+  },
+  {
+    "id": "bim-J148",
+    "name": "Ziyapaşakağıthane",
+    "market": "bim",
+    "lat": 41.072247,
+    "lon": 28.980715
+  },
+  {
+    "id": "bim-J052",
+    "name": "Çağlayan  Kağıthane",
+    "market": "bim",
+    "lat": 41.077076,
+    "lon": 28.981249
+  },
+  {
+    "id": "bim-V381",
+    "name": "Hira Sokak  Kağıthane",
+    "market": "bim",
+    "lat": 41.073708,
+    "lon": 28.982685
+  },
+  {
+    "id": "a101-0549",
+    "name": "Vatan Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.077446,
+    "lon": 28.981562
+  },
+  {
+    "id": "a101-3018",
+    "name": "Çilekli Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.08063,
+    "lon": 28.965057
+  },
+  {
+    "id": "a101-7143",
+    "name": "Topatan Kağıthane",
+    "market": "a101",
+    "lat": 41.081543,
+    "lon": 28.971544
+  },
+  {
+    "id": "sok-6495",
+    "name": "Kağıthane Topatan",
+    "market": "sok",
+    "lat": 41.08094,
+    "lon": 28.972095
+  },
+  {
+    "id": "a101-F223",
+    "name": "Zühre Eyüpsultan Istanbul",
+    "market": "a101",
+    "lat": 41.080196,
+    "lon": 28.963112
+  },
+  {
+    "id": "bim-T038",
+    "name": "Mermerciler  Kağıthane",
+    "market": "bim",
+    "lat": 41.080894,
+    "lon": 28.973257
+  },
+  {
+    "id": "a101-8510",
+    "name": "Osmanpaşa Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.08254,
+    "lon": 28.963366
+  },
+  {
+    "id": "sok-7375",
+    "name": "Meziyet Kağıthane",
+    "market": "sok",
+    "lat": 41.08197,
+    "lon": 28.973501
+  },
+  {
+    "id": "carrefour-3477",
+    "name": "Istanbul Kağıthane Merkez Süpe",
+    "market": "carrefour",
+    "lat": 41.083237,
+    "lon": 28.96354
+  },
+  {
+    "id": "sok-10110",
+    "name": "Kağıthane Günebakan Sok",
+    "market": "sok",
+    "lat": 41.083992,
+    "lon": 28.964563
+  },
+  {
+    "id": "bim-U148",
+    "name": "Osmanpaşa  Kağıthane",
+    "market": "bim",
+    "lat": 41.085133,
+    "lon": 28.965935
+  },
+  {
+    "id": "migros-5937",
+    "name": "Kağıthane Rezidanse M Migros",
+    "market": "migros",
+    "lat": 41.085907,
+    "lon": 28.969309
+  },
+  {
+    "id": "migros-5940",
+    "name": "Mjet Kağıthane Ofispark",
+    "market": "migros",
+    "lat": 41.08537,
+    "lon": 28.973534
+  },
+  {
+    "id": "carrefour-5468",
+    "name": "Istanbul Kağıthane Seba Suıtes",
+    "market": "carrefour",
+    "lat": 41.083786,
+    "lon": 28.977419
+  },
+  {
+    "id": "a101-D104",
+    "name": "Bağlar Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.0831,
+    "lon": 28.973463
+  },
+  {
+    "id": "a101-E447",
+    "name": "Kartopu Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.08074,
+    "lon": 28.979456
+  },
+  {
+    "id": "sok-9150",
+    "name": "Çağlayan Bağ",
+    "market": "sok",
+    "lat": 41.08029,
+    "lon": 28.979986
+  },
+  {
+    "id": "bim-K041",
+    "name": "Ofispark  Kağıthane",
+    "market": "bim",
+    "lat": 41.08502,
+    "lon": 28.973545
+  },
+  {
+    "id": "bim-J150",
+    "name": "Esenkağıthane",
+    "market": "bim",
+    "lat": 41.078506,
+    "lon": 28.980608
+  },
+  {
+    "id": "sok-9151",
+    "name": "Kağıthane Tatlıpınar",
+    "market": "sok",
+    "lat": 41.085423,
+    "lon": 28.968096
+  },
+  {
+    "id": "sok-5793",
+    "name": "Kağıthane Vatan Cd",
+    "market": "sok",
+    "lat": 41.07849,
+    "lon": 28.982355
+  },
+  {
+    "id": "a101-G232",
+    "name": "Zuhal Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.079033,
+    "lon": 28.982817
+  },
+  {
+    "id": "bim-J152",
+    "name": "Ayazma  Kağıthane",
+    "market": "bim",
+    "lat": 41.08256,
+    "lon": 28.981327
+  },
+  {
+    "id": "sok-8264",
+    "name": "Kağıthane Ayazma",
+    "market": "sok",
+    "lat": 41.08157,
+    "lon": 28.982466
+  },
+  {
+    "id": "bim-J149",
+    "name": "Sahra  Kağıthane",
+    "market": "bim",
+    "lat": 41.07994,
+    "lon": 28.983307
+  },
+  {
+    "id": "carrefour-3165",
+    "name": "Istanbul Kağıthane 2 Süper",
+    "market": "carrefour",
+    "lat": 41.083843,
+    "lon": 28.984245
+  },
+  {
+    "id": "tarim_kredi-7457",
+    "name": "Istanbul Kağıthane Yahya Kemal",
+    "market": "tarim_kredi",
+    "lat": 41.08533,
+    "lon": 28.98716
+  },
+  {
+    "id": "a101-B078",
+    "name": "Tatlıpınar Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.085808,
+    "lon": 28.968054
+  },
+  {
+    "id": "sok-8360",
+    "name": "Kağıthane Gönül",
+    "market": "sok",
+    "lat": 41.086956,
+    "lon": 28.968777
+  },
+  {
+    "id": "a101-H626",
+    "name": "Seval Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.088604,
+    "lon": 28.967894
+  },
+  {
+    "id": "sok-9443",
+    "name": "Kağıthane Mega Evler",
+    "market": "sok",
+    "lat": 41.088493,
+    "lon": 28.970467
+  },
+  {
+    "id": "bim-J761",
+    "name": "Havuzlar  Kağıthane",
+    "market": "bim",
+    "lat": 41.08948,
+    "lon": 28.968046
+  },
+  {
+    "id": "tarim_kredi-5619",
+    "name": "Istanbul Kağıthane Hasdal",
+    "market": "tarim_kredi",
+    "lat": 41.09309,
+    "lon": 28.96862
+  },
+  {
+    "id": "bim-J134",
+    "name": "Cendere  Kağıthane",
+    "market": "bim",
+    "lat": 41.08722,
+    "lon": 28.975079
+  },
+  {
+    "id": "a101-E910",
+    "name": "Anıl Park Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.088936,
+    "lon": 28.973253
+  },
+  {
+    "id": "tarim_kredi-5070",
+    "name": "Istanbul Kağıthane Market",
+    "market": "tarim_kredi",
+    "lat": 41.09208,
+    "lon": 28.97539
+  },
+  {
+    "id": "sok-13636",
+    "name": "Kağıthane Fermanlı",
+    "market": "sok",
+    "lat": 41.0872,
+    "lon": 28.9782
+  },
+  {
+    "id": "a101-J078",
+    "name": "Aksu Kağıthane Istanbul",
+    "market": "a101",
+    "lat": 41.08631,
+    "lon": 28.983492
+  },
+  {
+    "id": "carrefour-5458",
+    "name": "Istanbul Kağıthane Ardınç Sk",
+    "market": "carrefour",
+    "lat": 41.0931,
+    "lon": 28.978046
+  }
+]
