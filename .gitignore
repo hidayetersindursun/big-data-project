@@ -14,3 +14,6 @@ venv/
 
 # State dosyası — lokal
 state.json
+
+# Ham veri JSON'ları
+market_data.json
