@@ -39,13 +39,62 @@ CITIES = {
     "İzmir": [
         "Aliağa", "Balçova", "Bayındır", "Bayraklı", "Bergama",
         "Beydağ", "Bornova", "Buca", "Çeşme", "Çiğli",
-        "Dikili", "Foça", "Gaziemir", "Gediz", "Güzelbahçe",
-        "Karabağlar", "Karaburun", "Karşıyaka", "Kemalpaşa", "Kınık",
-        "Kiraz", "Konak", "Menderes", "Menemen", "Narlıdere",
-        "Ödemiş", "Seferihisar", "Selçuk", "Tire", "Torbalı", "Urla",
+        "Dikili", "Foça", "Gaziemir", "Güzelbahçe", "Karabağlar",
+        "Karaburun", "Karşıyaka", "Kemalpaşa", "Kınık", "Kiraz",
+        "Konak", "Menderes", "Menemen", "Narlıdere", "Ödemiş",
+        "Seferihisar", "Selçuk", "Tire", "Torbalı", "Urla",
     ],
-    # Yeni il eklemek için buraya satır ekleyin:
-    # "Ankara": ["Çankaya", "Keçiören", "Mamak", "Yenimahalle", ...],
+    "Adana": [
+        "Aladağ", "Ceyhan", "Çukurova", "Feke", "İmamoğlu",
+        "Karaisalı", "Karataş", "Kozan", "Pozantı", "Saimbeyli",
+        "Sarıçam", "Seyhan", "Tufanbeyli", "Yumurtalık", "Yüreğir",
+    ],
+    "Antalya": [
+        "Akseki", "Aksu", "Alanya", "Demre", "Döşemealtı",
+        "Elmalı", "Finike", "Gazipaşa", "Gündoğmuş", "İbradı",
+        "Kaş", "Kemer", "Kepez", "Konyaaltı", "Korkuteli",
+        "Kumluca", "Manavgat", "Muratpaşa", "Serik",
+    ],
+    "Balıkesir": [
+        "Altıeylül", "Ayvalık", "Balya", "Bandırma", "Bigadiç",
+        "Burhaniye", "Dursunbey", "Edremit", "Erdek", "Gömeç",
+        "Gönen", "Havran", "İvrindi", "Karesi", "Kepsut",
+        "Manyas", "Marmara", "Savaştepe", "Sındırgı", "Susurluk",
+    ],
+    "Ankara": [
+        "Akyurt", "Altındağ", "Ayaş", "Bala", "Beypazarı",
+        "Çamlıdere", "Çankaya", "Çubuk", "Elmadağ", "Etimesgut",
+        "Evren", "Gölbaşı", "Güdül", "Haymana", "Kalecik",
+        "Kahramankazan", "Keçiören", "Kızılcahamam", "Mamak", "Nallıhan",
+        "Polatlı", "Pursaklar", "Sincan", "Şereflikoçhisar", "Yenimahalle",
+    ],
+    "Gaziantep": [
+        "Araban", "İslahiye", "Karkamış", "Nizip", "Nurdağı",
+        "Oğuzeli", "Şahinbey", "Şehitkamil", "Yavuzeli",
+    ],
+    "Samsun": [
+        "Alaçam", "Asarcık", "Atakum", "Ayvacık", "Bafra",
+        "Canik", "Çarşamba", "Havza", "İlkadım", "Kavak",
+        "Ladik", "Ondokuzmayıs", "Salıpazarı", "Tekkeköy",
+        "Terme", "Vezirköprü", "Yakakent",
+    ],
+    "Manisa": [
+        "Ahmetli", "Akhisar", "Alaşehir", "Demirci", "Gölmarmara",
+        "Gördes", "Kırkağaç", "Köprübaşı", "Kula", "Salihli",
+        "Sarıgöl", "Saruhanlı", "Selendi", "Soma", "Şehzadeler",
+        "Turgutlu", "Yunusemre",
+    ],
+    "Mersin": [
+        "Akdeniz", "Anamur", "Aydıncık", "Bozyazı", "Çamlıyayla",
+        "Erdemli", "Gülnar", "Mezitli", "Mut", "Silifke",
+        "Tarsus", "Toroslar", "Yenişehir",
+    ],
+    "Trabzon": [
+        "Akçaabat", "Araklı", "Arsin", "Beşikdüzü", "Çarşıbaşı",
+        "Çaykara", "Dernekpazarı", "Düzköy", "Hayrat", "Köprübaşı",
+        "Maçka", "Of", "Ortahisar", "Şalpazarı", "Sürmene",
+        "Tonya", "Vakfıkebir", "Yomra",
+    ],
 }
 
 CATEGORIES = [

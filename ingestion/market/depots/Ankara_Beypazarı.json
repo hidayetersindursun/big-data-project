@@ -1,0 +1,274 @@
+[
+  {
+    "id": "sok-14217",
+    "name": "Beypazarı Ipekyolu",
+    "market": "sok",
+    "lat": 40.1456,
+    "lon": 31.9078,
+    "distance_from_center": 937.9297989647533
+  },
+  {
+    "id": "a101-H655",
+    "name": "Özdemir Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.14875,
+    "lon": 31.899923,
+    "distance_from_center": 779.331375295532
+  },
+  {
+    "id": "bim-K400",
+    "name": "Elif  Beypazarı",
+    "market": "bim",
+    "lat": 40.147484,
+    "lon": 31.904383,
+    "distance_from_center": 881.8599396286736
+  },
+  {
+    "id": "bim-P171",
+    "name": "Sefakent  Beypazarı",
+    "market": "bim",
+    "lat": 40.15101,
+    "lon": 31.90068,
+    "distance_from_center": 981.7929158963439
+  },
+  {
+    "id": "sok-6605",
+    "name": "Beypazarı Marmaris",
+    "market": "sok",
+    "lat": 40.147858,
+    "lon": 31.91204,
+    "distance_from_center": 778.3027357853592
+  },
+  {
+    "id": "bim-V318",
+    "name": "Anadolu  Beypazarı",
+    "market": "bim",
+    "lat": 40.1468,
+    "lon": 31.915474,
+    "distance_from_center": 908.3047142846243
+  },
+  {
+    "id": "bim-L144",
+    "name": "Çamlık  Beypazarı",
+    "market": "bim",
+    "lat": 40.14913,
+    "lon": 31.913946,
+    "distance_from_center": 989.2632854348387
+  },
+  {
+    "id": "a101-D612",
+    "name": "Marmara Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.149357,
+    "lon": 31.913588,
+    "distance_from_center": 990.3835374312524
+  },
+  {
+    "id": "migros-7465",
+    "name": "Başağaç Beypazarı Ankara M",
+    "market": "migros",
+    "lat": 40.151436,
+    "lon": 31.900394,
+    "distance_from_center": 880.3856497945619
+  },
+  {
+    "id": "a101-0137",
+    "name": "Mevlevi Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.151703,
+    "lon": 31.907333,
+    "distance_from_center": 695.9611407180535
+  },
+  {
+    "id": "tarim_kredi-6110",
+    "name": "Ankara Beypazarı Hacı Kara",
+    "market": "tarim_kredi",
+    "lat": 40.15251,
+    "lon": 31.90744,
+    "distance_from_center": 768.8639976273826
+  },
+  {
+    "id": "bim-H439",
+    "name": "Başağaç  Beypazarı",
+    "market": "bim",
+    "lat": 40.152744,
+    "lon": 31.907534,
+    "distance_from_center": 793.8616992031517
+  },
+  {
+    "id": "a101-5652",
+    "name": "Hacı Kara Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.153336,
+    "lon": 31.91136,
+    "distance_from_center": 790.7771187882194
+  },
+  {
+    "id": "carrefour-3369",
+    "name": "Ankara Beypazarı Süper",
+    "market": "carrefour",
+    "lat": 40.15494,
+    "lon": 31.908752,
+    "distance_from_center": 878.3955253255976
+  },
+  {
+    "id": "a101-K406",
+    "name": "Yıldırım Beyazıt Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.15271,
+    "lon": 31.915375,
+    "distance_from_center": 962.0872534387364
+  },
+  {
+    "id": "tarim_kredi-5357",
+    "name": "Ankara Beypazarı Market",
+    "market": "tarim_kredi",
+    "lat": 40.15557,
+    "lon": 31.9101,
+    "distance_from_center": 975.2489197504659
+  },
+  {
+    "id": "bim-D977",
+    "name": "Hacıkara  Beypazarı",
+    "market": "bim",
+    "lat": 40.153744,
+    "lon": 31.912561,
+    "distance_from_center": 730.9079850929486
+  },
+  {
+    "id": "sok-2555",
+    "name": "Beypazarı Hacıkara",
+    "market": "sok",
+    "lat": 40.15496,
+    "lon": 31.915726,
+    "distance_from_center": 929.3640630556167
+  },
+  {
+    "id": "bim-L714",
+    "name": "Cemiyet  Beypazarı",
+    "market": "bim",
+    "lat": 40.15593,
+    "lon": 31.917425,
+    "distance_from_center": 971.8838805292554
+  },
+  {
+    "id": "bim-K541",
+    "name": "Alparslan  Beypazarı",
+    "market": "bim",
+    "lat": 40.156696,
+    "lon": 31.911871,
+    "distance_from_center": 668.5070307050913
+  },
+  {
+    "id": "a101-G596",
+    "name": "Gazi Paşa Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.15684,
+    "lon": 31.912344,
+    "distance_from_center": 707.5320963768685
+  },
+  {
+    "id": "sok-9890",
+    "name": "Ankara Beypazarı Kurtuluş",
+    "market": "sok",
+    "lat": 40.157375,
+    "lon": 31.913046,
+    "distance_from_center": 791.6175807912791
+  },
+  {
+    "id": "tarim_kredi-7089",
+    "name": "Ankara Beypazarı Ayvaşık",
+    "market": "tarim_kredi",
+    "lat": 40.15721,
+    "lon": 31.93105,
+    "distance_from_center": 974.2312369167515
+  },
+  {
+    "id": "a101-E287",
+    "name": "Ayvaşık Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.15868,
+    "lon": 31.944576,
+    "distance_from_center": 986.3516759049753
+  },
+  {
+    "id": "sok-3520",
+    "name": "Ankara Beypazarı",
+    "market": "sok",
+    "lat": 40.16256,
+    "lon": 31.91453,
+    "distance_from_center": 896.4252876793918
+  },
+  {
+    "id": "bim-D614",
+    "name": "Gazipaşa  Beypazarı",
+    "market": "bim",
+    "lat": 40.16166,
+    "lon": 31.918463,
+    "distance_from_center": 762.4349516924952
+  },
+  {
+    "id": "a101-8350",
+    "name": "Alpaslan Türkeş Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.164562,
+    "lon": 31.922064,
+    "distance_from_center": 938.5016014328623
+  },
+  {
+    "id": "bim-L308",
+    "name": "Oğuzkent  Beypazarı",
+    "market": "bim",
+    "lat": 40.161144,
+    "lon": 31.945597,
+    "distance_from_center": 878.1477935616256
+  },
+  {
+    "id": "bim-C392",
+    "name": "Tatlı Çeşme  Beypazarı",
+    "market": "bim",
+    "lat": 40.16639,
+    "lon": 31.919708,
+    "distance_from_center": 828.663890797997
+  },
+  {
+    "id": "tarim_kredi-7068",
+    "name": "Ankara Beypazarı Kurtuluş",
+    "market": "tarim_kredi",
+    "lat": 40.16689,
+    "lon": 31.92079,
+    "distance_from_center": 935.8650528966157
+  },
+  {
+    "id": "a101-G491",
+    "name": "Yeni Milli Egemenlik Beypazarı Ankara",
+    "market": "a101",
+    "lat": 40.167377,
+    "lon": 31.92041,
+    "distance_from_center": 941.3737019353515
+  },
+  {
+    "id": "migros-9501",
+    "name": "Mjet Beypazarı Ankara",
+    "market": "migros",
+    "lat": 40.167572,
+    "lon": 31.920933,
+    "distance_from_center": 989.7738065900372
+  },
+  {
+    "id": "bim-C179",
+    "name": "Evren Cad  Beypazarı",
+    "market": "bim",
+    "lat": 40.166286,
+    "lon": 31.923306,
+    "distance_from_center": 725.8395595198442
+  },
+  {
+    "id": "bim-5937",
+    "name": "Beypazarı  Ankara",
+    "market": "bim",
+    "lat": 40.167324,
+    "lon": 31.923033,
+    "distance_from_center": 581.2213480302837
+  }
+]

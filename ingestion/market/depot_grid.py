@@ -35,10 +35,12 @@ def grid_points(center_lat, center_lon, span=DEFAULT_SPAN_DEG, step=DEFAULT_STEP
 
 
 def fetch_depots_grid(district, city, span=DEFAULT_SPAN_DEG, step=DEFAULT_STEP_DEG, radius=DEFAULT_RADIUS_KM):
+    errors: list[str] = []
+
     lat, lon = get_coordinates(district, city)
     if lat is None:
-        print(f"[ERROR] Koordinat bulunamadı: {district}, {city}")
-        return {}
+        errors.append(f"[{district},{city}] koordinat bulunamadı")
+        return {}, errors
 
     print(f"Merkez: lat={lat:.5f}, lon={lon:.5f}")
     points = grid_points(lat, lon, span=span, step=step)
@@ -46,9 +48,14 @@ def fetch_depots_grid(district, city, span=DEFAULT_SPAN_DEG, step=DEFAULT_STEP_D
 
     depots = {}
     for i, (plat, plon) in enumerate(points):
-        r = _request("POST", f"{BASE_API_URL}/nearest",
-                     json={"latitude": plat, "longitude": plon, "distance": radius},
-                     timeout=15)
+        try:
+            r = _request("POST", f"{BASE_API_URL}/nearest",
+                         json={"latitude": plat, "longitude": plon, "distance": radius},
+                         timeout=15)
+        except Exception as e:
+            errors.append(f"({plat},{plon}) → hata: {e}")
+            r = None
+
         if r:
             for d in r.json():
                 did = d.get("id")
@@ -61,11 +68,14 @@ def fetch_depots_grid(district, city, span=DEFAULT_SPAN_DEG, step=DEFAULT_STEP_D
                         "lon": d["location"]["lon"],
                         "distance_from_center": d.get("distance"),
                     }
+        else:
+            if r is None and not any(f"({plat},{plon})" in e for e in errors):
+                errors.append(f"({plat},{plon}) → API yanıt vermedi")
         print(f"  [{i+1}/{len(points)}] ({plat}, {plon}) → {len(depots)} unique depot", end="\r")
         time.sleep(0.5)
 
     print(f"\nToplam: {len(depots)} unique depot")
-    return depots
+    return depots, errors
 
 
 def main():
@@ -78,7 +88,12 @@ def main():
     parser.add_argument("--out", help="Çıktı JSON dosyası (varsayılan: stdout)")
     args = parser.parse_args()
 
-    depots = fetch_depots_grid(args.district, args.city, args.span, args.step, args.radius)
+    depots, errors = fetch_depots_grid(args.district, args.city, args.span, args.step, args.radius)
+
+    if errors:
+        import sys
+        for err in errors:
+            print(f"[WARN] {err}", file=sys.stderr)
 
     result = list(depots.values())
     if args.out:

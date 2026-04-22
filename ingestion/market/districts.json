@@ -1,0 +1,890 @@
+{
+  "İstanbul_Adalar": {
+    "lat": 40.8741659,
+    "lon": 29.1293251
+  },
+  "İstanbul_Arnavutköy": {
+    "lat": 41.184471,
+    "lon": 28.7412446
+  },
+  "İstanbul_Ataşehir": {
+    "lat": 40.9929379,
+    "lon": 29.1135187
+  },
+  "İstanbul_Avcılar": {
+    "lat": 40.9799389,
+    "lon": 28.7216689
+  },
+  "İstanbul_Bağcılar": {
+    "lat": 41.034547,
+    "lon": 28.8567558
+  },
+  "İstanbul_Bahçelievler": {
+    "lat": 41.0030495,
+    "lon": 28.8657701
+  },
+  "İstanbul_Bakırköy": {
+    "lat": 40.9782585,
+    "lon": 28.8744461
+  },
+  "İstanbul_Başakşehir": {
+    "lat": 41.1075794,
+    "lon": 28.7950711
+  },
+  "İstanbul_Bayrampaşa": {
+    "lat": 41.0345549,
+    "lon": 28.9118417
+  },
+  "İstanbul_Beşiktaş": {
+    "lat": 41.0428465,
+    "lon": 29.0075283
+  },
+  "İstanbul_Beykoz": {
+    "lat": 41.1343001,
+    "lon": 29.0920378
+  },
+  "İstanbul_Beylikdüzü": {
+    "lat": 41.0037541,
+    "lon": 28.6372583
+  },
+  "İstanbul_Beyoğlu": {
+    "lat": 41.0284233,
+    "lon": 28.9736808
+  },
+  "İstanbul_Büyükçekmece": {
+    "lat": 41.021654,
+    "lon": 28.579757
+  },
+  "İstanbul_Çatalca": {
+    "lat": 41.1436804,
+    "lon": 28.4605154
+  },
+  "İstanbul_Çekmeköy": {
+    "lat": 41.0351579,
+    "lon": 29.1739149
+  },
+  "İstanbul_Esenler": {
+    "lat": 41.0376175,
+    "lon": 28.8824519
+  },
+  "İstanbul_Esenyurt": {
+    "lat": 41.0342862,
+    "lon": 28.6801113
+  },
+  "İstanbul_Eyüpsultan": {
+    "lat": 41.0478358,
+    "lon": 28.9327383
+  },
+  "İstanbul_Fatih": {
+    "lat": 41.0192846,
+    "lon": 28.9479296
+  },
+  "İstanbul_Gaziosmanpaşa": {
+    "lat": 41.0578305,
+    "lon": 28.9122452
+  },
+  "İstanbul_Güngören": {
+    "lat": 41.0252832,
+    "lon": 28.8726498
+  },
+  "İstanbul_Kadıköy": {
+    "lat": 40.9912955,
+    "lon": 29.0245631
+  },
+  "İstanbul_Kağıthane": {
+    "lat": 41.0796544,
+    "lon": 28.9731198
+  },
+  "İstanbul_Kartal": {
+    "lat": 40.88858,
+    "lon": 29.1856536
+  },
+  "İstanbul_Küçükçekmece": {
+    "lat": 40.9918737,
+    "lon": 28.7711956
+  },
+  "İstanbul_Maltepe": {
+    "lat": 40.9247539,
+    "lon": 29.1310782
+  },
+  "İstanbul_Pendik": {
+    "lat": 40.8768715,
+    "lon": 29.2349672
+  },
+  "İstanbul_Sancaktepe": {
+    "lat": 40.9905196,
+    "lon": 29.2288624
+  },
+  "İstanbul_Sarıyer": {
+    "lat": 41.1685803,
+    "lon": 29.0572623
+  },
+  "İstanbul_Şile": {
+    "lat": 41.1744067,
+    "lon": 29.6125216
+  },
+  "İstanbul_Şişli": {
+    "lat": 41.0637891,
+    "lon": 28.9831642
+  },
+  "İstanbul_Silivri": {
+    "lat": 41.0742476,
+    "lon": 28.2481709
+  },
+  "İstanbul_Sultanbeyli": {
+    "lat": 40.9670242,
+    "lon": 29.2671314
+  },
+  "İstanbul_Sultangazi": {
+    "lat": 41.1043344,
+    "lon": 28.8614367
+  },
+  "İstanbul_Tuzla": {
+    "lat": 40.8161732,
+    "lon": 29.3034194
+  },
+  "İstanbul_Ümraniye": {
+    "lat": 41.0256362,
+    "lon": 29.0963049
+  },
+  "İstanbul_Üsküdar": {
+    "lat": 41.0265498,
+    "lon": 29.0151321
+  },
+  "İstanbul_Zeytinburnu": {
+    "lat": 40.9898653,
+    "lon": 28.9037467
+  },
+  "İzmir_Aliağa": {
+    "lat": 38.8034265,
+    "lon": 26.9713731
+  },
+  "İzmir_Balçova": {
+    "lat": 38.3953128,
+    "lon": 27.05787
+  },
+  "İzmir_Bayındır": {
+    "lat": 38.2200254,
+    "lon": 27.6483683
+  },
+  "İzmir_Bayraklı": {
+    "lat": 38.4650779,
+    "lon": 27.1633638
+  },
+  "İzmir_Bergama": {
+    "lat": 39.1189476,
+    "lon": 27.1773642
+  },
+  "İzmir_Beydağ": {
+    "lat": 38.0870318,
+    "lon": 28.2106924
+  },
+  "İzmir_Bornova": {
+    "lat": 38.4661896,
+    "lon": 27.2191942
+  },
+  "İzmir_Buca": {
+    "lat": 38.3834933,
+    "lon": 27.1686508
+  },
+  "İzmir_Çeşme": {
+    "lat": 38.3244044,
+    "lon": 26.3029604
+  },
+  "İzmir_Çiğli": {
+    "lat": 38.4943822,
+    "lon": 27.0616437
+  },
+  "İzmir_Dikili": {
+    "lat": 39.0749706,
+    "lon": 26.8892495
+  },
+  "İzmir_Foça": {
+    "lat": 38.668916,
+    "lon": 26.7547749
+  },
+  "İzmir_Gaziemir": {
+    "lat": 38.3262756,
+    "lon": 27.1399665
+  },
+  "İzmir_Güzelbahçe": {
+    "lat": 38.375516,
+    "lon": 26.8755527
+  },
+  "İzmir_Karabağlar": {
+    "lat": 38.3981367,
+    "lon": 27.1277994
+  },
+  "İzmir_Karaburun": {
+    "lat": 38.6354423,
+    "lon": 26.5098027
+  },
+  "İzmir_Karşıyaka": {
+    "lat": 38.5034452,
+    "lon": 27.1134554
+  },
+  "İzmir_Kemalpaşa": {
+    "lat": 38.4275667,
+    "lon": 27.4164281
+  },
+  "İzmir_Kınık": {
+    "lat": 39.0875983,
+    "lon": 27.3804752
+  },
+  "İzmir_Kiraz": {
+    "lat": 38.230372,
+    "lon": 28.2015786
+  },
+  "İzmir_Konak": {
+    "lat": 38.4187168,
+    "lon": 27.1282675
+  },
+  "İzmir_Menderes": {
+    "lat": 38.256053,
+    "lon": 27.130647
+  },
+  "İzmir_Menemen": {
+    "lat": 38.608665,
+    "lon": 27.069788
+  },
+  "İzmir_Narlıdere": {
+    "lat": 38.395672,
+    "lon": 26.993166
+  },
+  "İzmir_Ödemiş": {
+    "lat": 38.228849,
+    "lon": 27.974426
+  },
+  "İzmir_Seferihisar": {
+    "lat": 38.184367221153,
+    "lon": 26.885308869952
+  },
+  "İzmir_Selçuk": {
+    "lat": 37.957706764091,
+    "lon": 27.375759759305
+  },
+  "İzmir_Tire": {
+    "lat": 38.089514,
+    "lon": 27.732815
+  },
+  "İzmir_Torbalı": {
+    "lat": 38.183874179716,
+    "lon": 27.37531432918
+  },
+  "İzmir_Urla": {
+    "lat": 38.321804,
+    "lon": 26.761805
+  },
+  "Adana_Aladağ": {
+    "lat": 37.574838947853,
+    "lon": 35.32150558463
+  },
+  "Adana_Ceyhan": {
+    "lat": 37.02585,
+    "lon": 35.81709
+  },
+  "Adana_Çukurova": {
+    "lat": 37.057118,
+    "lon": 35.276823
+  },
+  "Adana_Feke": {
+    "lat": 37.871277448731,
+    "lon": 35.83203597868
+  },
+  "Adana_İmamoğlu": {
+    "lat": 37.298770604998,
+    "lon": 35.588560112857
+  },
+  "Adana_Karaisalı": {
+    "lat": 37.289161825199,
+    "lon": 35.164235951077
+  },
+  "Adana_Karataş": {
+    "lat": 36.673128841719,
+    "lon": 35.288972053693
+  },
+  "Adana_Kozan": {
+    "lat": 37.450494,
+    "lon": 35.812668
+  },
+  "Adana_Pozantı": {
+    "lat": 37.511834564242,
+    "lon": 34.943886258078
+  },
+  "Adana_Saimbeyli": {
+    "lat": 37.940006858883,
+    "lon": 36.119705585072
+  },
+  "Adana_Sarıçam": {
+    "lat": 37.101667968585,
+    "lon": 35.481113353692
+  },
+  "Adana_Seyhan": {
+    "lat": 36.9837199,
+    "lon": 35.3298202
+  },
+  "Adana_Tufanbeyli": {
+    "lat": 38.226866728323,
+    "lon": 36.211232270266
+  },
+  "Adana_Yumurtalık": {
+    "lat": 36.896892233333,
+    "lon": 35.895456966667
+  },
+  "Adana_Yüreğir": {
+    "lat": 36.98545,
+    "lon": 35.337074
+  },
+  "Antalya_Akseki": {
+    "lat": 37.083080967473,
+    "lon": 31.763675886477
+  },
+  "Antalya_Aksu": {
+    "lat": 36.9485214,
+    "lon": 30.8504751
+  },
+  "Antalya_Alanya": {
+    "lat": 36.54334,
+    "lon": 32.002802
+  },
+  "Antalya_Demre": {
+    "lat": 36.290490868392,
+    "lon": 29.942755987677
+  },
+  "Antalya_Döşemealtı": {
+    "lat": 37.023124,
+    "lon": 30.60151
+  },
+  "Antalya_Elmalı": {
+    "lat": 36.715200758647,
+    "lon": 29.928287613272
+  },
+  "Antalya_Finike": {
+    "lat": 36.442810912171,
+    "lon": 30.065930604879
+  },
+  "Antalya_Gazipaşa": {
+    "lat": 36.315793277978,
+    "lon": 32.45056547949
+  },
+  "Antalya_Gündoğmuş": {
+    "lat": 36.817398624593,
+    "lon": 32.117916194212
+  },
+  "Antalya_İbradı": {
+    "lat": 37.158145957738,
+    "lon": 31.503974519109
+  },
+  "Antalya_Kaş": {
+    "lat": 36.199248,
+    "lon": 29.6439105
+  },
+  "Antalya_Kemer": {
+    "lat": 36.576824946784,
+    "lon": 30.482572157733
+  },
+  "Antalya_Kepez": {
+    "lat": 37.015848623916,
+    "lon": 30.707496077274
+  },
+  "Antalya_Konyaaltı": {
+    "lat": 36.876593,
+    "lon": 30.642235
+  },
+  "Antalya_Korkuteli": {
+    "lat": 37.066142,
+    "lon": 30.195032
+  },
+  "Antalya_Kumluca": {
+    "lat": 36.371025,
+    "lon": 30.286616
+  },
+  "Antalya_Manavgat": {
+    "lat": 36.786352,
+    "lon": 31.446931
+  },
+  "Antalya_Muratpaşa": {
+    "lat": 36.8863907,
+    "lon": 30.7104875
+  },
+  "Antalya_Serik": {
+    "lat": 36.9172955,
+    "lon": 31.1023015
+  },
+  "Balıkesir_Altıeylül": {
+    "lat": 39.550946764585,
+    "lon": 27.887620826882
+  },
+  "Balıkesir_Ayvalık": {
+    "lat": 39.322889,
+    "lon": 26.693754
+  },
+  "Balıkesir_Balya": {
+    "lat": 39.803747066117,
+    "lon": 27.599449364534
+  },
+  "Balıkesir_Bandırma": {
+    "lat": 40.3555,
+    "lon": 27.97199
+  },
+  "Balıkesir_Bigadiç": {
+    "lat": 39.423398394873,
+    "lon": 28.267038922979
+  },
+  "Balıkesir_Burhaniye": {
+    "lat": 39.502139,
+    "lon": 26.978285
+  },
+  "Balıkesir_Dursunbey": {
+    "lat": 39.539133596898,
+    "lon": 28.662644915862
+  },
+  "Balıkesir_Edremit": {
+    "lat": 39.593155,
+    "lon": 27.023054
+  },
+  "Balıkesir_Erdek": {
+    "lat": 40.460754583686,
+    "lon": 27.836231607148
+  },
+  "Balıkesir_Gömeç": {
+    "lat": 39.370804459866,
+    "lon": 26.871762002296
+  },
+  "Balıkesir_Gönen": {
+    "lat": 40.104639,
+    "lon": 27.652846
+  },
+  "Balıkesir_Havran": {
+    "lat": 39.599638752697,
+    "lon": 27.196955871107
+  },
+  "Balıkesir_İvrindi": {
+    "lat": 39.518263534519,
+    "lon": 27.422486201392
+  },
+  "Balıkesir_Karesi": {
+    "lat": 39.6507254,
+    "lon": 27.8797559
+  },
+  "Balıkesir_Kepsut": {
+    "lat": 39.694245213666,
+    "lon": 28.266304529254
+  },
+  "Balıkesir_Manyas": {
+    "lat": 40.054775759782,
+    "lon": 27.93826383008
+  },
+  "Balıkesir_Marmara": {
+    "lat": 40.603056779007,
+    "lon": 27.60140079258
+  },
+  "Balıkesir_Savaştepe": {
+    "lat": 39.425403454569,
+    "lon": 27.661055518271
+  },
+  "Balıkesir_Sındırgı": {
+    "lat": 39.227186783046,
+    "lon": 28.301363081409
+  },
+  "Balıkesir_Susurluk": {
+    "lat": 39.909156415555,
+    "lon": 28.144297165239
+  },
+  "Ankara_Akyurt": {
+    "lat": 40.116105284213,
+    "lon": 33.144706516818
+  },
+  "Ankara_Altındağ": {
+    "lat": 39.95565,
+    "lon": 32.85465
+  },
+  "Ankara_Ayaş": {
+    "lat": 40.016907443019,
+    "lon": 32.274974207383
+  },
+  "Ankara_Bala": {
+    "lat": 39.463490765605,
+    "lon": 33.158777543031
+  },
+  "Ankara_Beypazarı": {
+    "lat": 40.137206489495,
+    "lon": 31.90663320712
+  },
+  "Ankara_Çamlıdere": {
+    "lat": 40.47544321861,
+    "lon": 32.389998856255
+  },
+  "Ankara_Çankaya": {
+    "lat": 39.8965202,
+    "lon": 32.8619738
+  },
+  "Ankara_Çubuk": {
+    "lat": 40.24046,
+    "lon": 33.032051
+  },
+  "Ankara_Elmadağ": {
+    "lat": 39.8992813808,
+    "lon": 33.209087055032
+  },
+  "Ankara_Etimesgut": {
+    "lat": 39.946412,
+    "lon": 32.669103
+  },
+  "Ankara_Evren": {
+    "lat": 39.045954136304,
+    "lon": 33.743738861874
+  },
+  "Ankara_Gölbaşı": {
+    "lat": 39.785927,
+    "lon": 32.808673
+  },
+  "Ankara_Güdül": {
+    "lat": 40.221790699113,
+    "lon": 32.239594678066
+  },
+  "Ankara_Haymana": {
+    "lat": 39.291857600965,
+    "lon": 32.53746162768
+  },
+  "Ankara_Kalecik": {
+    "lat": 40.199341237246,
+    "lon": 33.434925277708
+  },
+  "Ankara_Kahramankazan": {
+    "lat": 40.184889399813,
+    "lon": 32.658026705803
+  },
+  "Ankara_Keçiören": {
+    "lat": 39.986964,
+    "lon": 32.864722
+  },
+  "Ankara_Kızılcahamam": {
+    "lat": 40.469839019375,
+    "lon": 32.646989684101
+  },
+  "Ankara_Mamak": {
+    "lat": 39.932853,
+    "lon": 32.911268
+  },
+  "Ankara_Nallıhan": {
+    "lat": 40.183476105347,
+    "lon": 31.311998896848
+  },
+  "Ankara_Polatlı": {
+    "lat": 39.579952,
+    "lon": 32.131937
+  },
+  "Ankara_Pursaklar": {
+    "lat": 40.037352,
+    "lon": 32.903409
+  },
+  "Ankara_Sincan": {
+    "lat": 39.96561,
+    "lon": 32.57659
+  },
+  "Ankara_Şereflikoçhisar": {
+    "lat": 38.966937919177,
+    "lon": 33.484598328407
+  },
+  "Ankara_Yenimahalle": {
+    "lat": 39.966552,
+    "lon": 32.810831
+  },
+  "Gaziantep_Araban": {
+    "lat": 37.43856241745,
+    "lon": 37.764668485366
+  },
+  "Gaziantep_İslahiye": {
+    "lat": 37.025042,
+    "lon": 36.633887
+  },
+  "Gaziantep_Karkamış": {
+    "lat": 36.853894427925,
+    "lon": 37.896616783305
+  },
+  "Gaziantep_Nizip": {
+    "lat": 37.010179,
+    "lon": 37.790363
+  },
+  "Gaziantep_Nurdağı": {
+    "lat": 37.158085238987,
+    "lon": 36.876069215044
+  },
+  "Gaziantep_Oğuzeli": {
+    "lat": 36.865871725032,
+    "lon": 37.562707283826
+  },
+  "Gaziantep_Şahinbey": {
+    "lat": 37.0546276,
+    "lon": 37.3754256
+  },
+  "Gaziantep_Şehitkamil": {
+    "lat": 37.065842,
+    "lon": 37.376078
+  },
+  "Gaziantep_Yavuzeli": {
+    "lat": 37.316089361009,
+    "lon": 37.635217476827
+  },
+  "Samsun_Alaçam": {
+    "lat": 41.6122639,
+    "lon": 35.602517
+  },
+  "Samsun_Asarcık": {
+    "lat": 41.0370139,
+    "lon": 36.2344639
+  },
+  "Samsun_Atakum": {
+    "lat": 41.32859,
+    "lon": 36.2846729
+  },
+  "Samsun_Ayvacık": {
+    "lat": 40.9892539,
+    "lon": 36.630997
+  },
+  "Samsun_Bafra": {
+    "lat": 41.5684289,
+    "lon": 35.9030889
+  },
+  "Samsun_Canik": {
+    "lat": 41.271958,
+    "lon": 36.3506939
+  },
+  "Samsun_Çarşamba": {
+    "lat": 41.195933,
+    "lon": 36.7272499
+  },
+  "Samsun_Havza": {
+    "lat": 40.968389,
+    "lon": 35.6653859
+  },
+  "Samsun_İlkadım": {
+    "lat": 41.2894539,
+    "lon": 36.3392809
+  },
+  "Samsun_Kavak": {
+    "lat": 41.078774,
+    "lon": 36.0426639
+  },
+  "Samsun_Ladik": {
+    "lat": 40.9074696,
+    "lon": 35.8952333
+  },
+  "Samsun_Ondokuzmayıs": {
+    "lat": 41.4942249,
+    "lon": 36.079044
+  },
+  "Samsun_Salıpazarı": {
+    "lat": 41.0822879,
+    "lon": 36.8252089
+  },
+  "Samsun_Tekkeköy": {
+    "lat": 41.2122849,
+    "lon": 36.45905
+  },
+  "Samsun_Terme": {
+    "lat": 41.2091,
+    "lon": 36.9717549
+  },
+  "Samsun_Vezirköprü": {
+    "lat": 41.141903,
+    "lon": 35.4590199
+  },
+  "Samsun_Yakakent": {
+    "lat": 41.6330139,
+    "lon": 35.5298089
+  },
+  "Manisa_Ahmetli": {
+    "lat": 38.531975819332,
+    "lon": 27.913627466998
+  },
+  "Manisa_Akhisar": {
+    "lat": 38.921209,
+    "lon": 27.837166
+  },
+  "Manisa_Alaşehir": {
+    "lat": 38.354114,
+    "lon": 28.515147
+  },
+  "Manisa_Demirci": {
+    "lat": 38.971974244404,
+    "lon": 28.65913284199
+  },
+  "Manisa_Gölmarmara": {
+    "lat": 38.702111446147,
+    "lon": 27.970349024102
+  },
+  "Manisa_Gördes": {
+    "lat": 38.932544603212,
+    "lon": 28.269653749848
+  },
+  "Manisa_Kırkağaç": {
+    "lat": 39.16821724314,
+    "lon": 27.81149097703
+  },
+  "Manisa_Köprübaşı": {
+    "lat": 38.759986595739,
+    "lon": 28.407914475053
+  },
+  "Manisa_Kula": {
+    "lat": 38.565750112107,
+    "lon": 28.643855773049
+  },
+  "Manisa_Salihli": {
+    "lat": 38.479698,
+    "lon": 28.130986
+  },
+  "Manisa_Sarıgöl": {
+    "lat": 38.210519440257,
+    "lon": 28.701158566412
+  },
+  "Manisa_Saruhanlı": {
+    "lat": 38.735284,
+    "lon": 27.570699
+  },
+  "Manisa_Selendi": {
+    "lat": 38.788384459517,
+    "lon": 28.860519967466
+  },
+  "Manisa_Soma": {
+    "lat": 39.1810303,
+    "lon": 27.6031509
+  },
+  "Manisa_Şehzadeler": {
+    "lat": 38.6131653,
+    "lon": 27.4299764
+  },
+  "Manisa_Turgutlu": {
+    "lat": 38.49677,
+    "lon": 27.70526
+  },
+  "Manisa_Yunusemre": {
+    "lat": 38.6084478,
+    "lon": 27.4183394
+  },
+  "Mersin_Akdeniz": {
+    "lat": 36.799696,
+    "lon": 34.632328
+  },
+  "Mersin_Anamur": {
+    "lat": 36.076524,
+    "lon": 32.836653
+  },
+  "Mersin_Aydıncık": {
+    "lat": 36.215936486828,
+    "lon": 33.30791805315
+  },
+  "Mersin_Bozyazı": {
+    "lat": 36.257428844814,
+    "lon": 33.019109670803
+  },
+  "Mersin_Çamlıyayla": {
+    "lat": 37.203538038023,
+    "lon": 34.55562553353
+  },
+  "Mersin_Erdemli": {
+    "lat": 36.6061037,
+    "lon": 34.30927
+  },
+  "Mersin_Gülnar": {
+    "lat": 36.377357201777,
+    "lon": 33.328036526519
+  },
+  "Mersin_Mezitli": {
+    "lat": 36.7462849,
+    "lon": 34.5279855
+  },
+  "Mersin_Mut": {
+    "lat": 36.641877,
+    "lon": 33.440145
+  },
+  "Mersin_Silifke": {
+    "lat": 36.37803,
+    "lon": 33.92704
+  },
+  "Mersin_Tarsus": {
+    "lat": 36.917052,
+    "lon": 34.8951629
+  },
+  "Mersin_Toroslar": {
+    "lat": 37.053801606656,
+    "lon": 34.365939050175
+  },
+  "Mersin_Yenişehir": {
+    "lat": 36.777095,
+    "lon": 34.576899
+  },
+  "Trabzon_Akçaabat": {
+    "lat": 41.0231829,
+    "lon": 39.5675609
+  },
+  "Trabzon_Araklı": {
+    "lat": 40.9402809,
+    "lon": 40.054232
+  },
+  "Trabzon_Arsin": {
+    "lat": 40.953965,
+    "lon": 39.9380309
+  },
+  "Trabzon_Beşikdüzü": {
+    "lat": 41.0528419,
+    "lon": 39.2317399
+  },
+  "Trabzon_Çarşıbaşı": {
+    "lat": 41.080744,
+    "lon": 39.376062
+  },
+  "Trabzon_Çaykara": {
+    "lat": 40.636377268571,
+    "lon": 40.28325067483
+  },
+  "Trabzon_Dernekpazarı": {
+    "lat": 40.781538816968,
+    "lon": 40.223234259751
+  },
+  "Trabzon_Düzköy": {
+    "lat": 40.839616141096,
+    "lon": 39.382684463016
+  },
+  "Trabzon_Hayrat": {
+    "lat": 40.760654584669,
+    "lon": 40.404584761829
+  },
+  "Trabzon_Köprübaşı": {
+    "lat": 40.711116472937,
+    "lon": 40.112206354802
+  },
+  "Trabzon_Maçka": {
+    "lat": 40.809981,
+    "lon": 39.614179
+  },
+  "Trabzon_Of": {
+    "lat": 41.0020719,
+    "lon": 39.7192164
+  },
+  "Trabzon_Ortahisar": {
+    "lat": 41.0020719,
+    "lon": 39.7192164
+  },
+  "Trabzon_Şalpazarı": {
+    "lat": 40.88968827528,
+    "lon": 39.193129830326
+  },
+  "Trabzon_Sürmene": {
+    "lat": 40.9112239,
+    "lon": 40.1203309
+  },
+  "Trabzon_Tonya": {
+    "lat": 40.861188589302,
+    "lon": 39.286897093429
+  },
+  "Trabzon_Vakfıkebir": {
+    "lat": 41.04774,
+    "lon": 39.2752929
+  },
+  "Trabzon_Yomra": {
+    "lat": 40.954589,
+    "lon": 39.8658399
+  }
+}

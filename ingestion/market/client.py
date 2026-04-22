@@ -6,6 +6,8 @@ Sync functions are kept for depot_grid.py.
 Async functions (suffix _async) are used by scraper.py.
 """
 import asyncio
+import json
+import os
 import random
 import time
 
@@ -34,6 +36,13 @@ _IDX_DISTRICT = 5
 _IDX_CITY = 6
 _IDX_LON = 7
 _IDX_LAT = 8
+
+# Static district coordinates — kesin ve rate-limit'siz kaynak
+_DISTRICTS_PATH = os.path.join(os.path.dirname(__file__), "districts.json")
+_DISTRICTS: dict = {}
+if os.path.exists(_DISTRICTS_PATH):
+    with open(_DISTRICTS_PATH, encoding="utf-8") as _f:
+        _DISTRICTS = json.load(_f)
 
 # Sync session — used by depot_grid.py
 _SESSION = curl_requests.Session(impersonate="chrome124")
@@ -78,11 +87,16 @@ def _safe_request(method: str, url: str, **kwargs):
 
 def get_coordinates(district: str, city: str) -> tuple[float, float] | tuple[None, None]:
     """Return (lat, lon) for a district+city pair, or (None, None) on failure."""
+    key = f"{city}_{district}"
+    if key in _DISTRICTS:
+        entry = _DISTRICTS[key]
+        return entry["lat"], entry["lon"]
+
+    # Fallback: marketfiyati API (yanlış koordinat döndürebilir)
     url = f"{HARITA_API_URL}/AutoSuggestion/Search"
     r = _safe_request("GET", url, params={"words": f"{district} {city}"}, timeout=15)
     if r is None:
         return None, None
-
     results = r.json()
     for row in results:
         if (row[_IDX_DISTRICT].lower() == district.lower()
@@ -176,6 +190,12 @@ async def _async_safe_request(method: str, url: str, sem: asyncio.Semaphore, **k
 async def get_coordinates_async(
     district: str, city: str, sem: asyncio.Semaphore
 ) -> tuple[float, float] | tuple[None, None]:
+    key = f"{city}_{district}"
+    if key in _DISTRICTS:
+        entry = _DISTRICTS[key]
+        return entry["lat"], entry["lon"]
+
+    # Fallback: marketfiyati API
     url = f"{HARITA_API_URL}/AutoSuggestion/Search"
     r = await _async_safe_request("GET", url, sem, params={"words": f"{district} {city}"}, timeout=15)
     if r is None:

@@ -27,10 +27,12 @@ from client import (
     scrape_all_pages_async,
 )
 from config import CATEGORIES, CATEGORY_DELAY, CITIES
+from depot_grid import fetch_depots_grid
 from state import is_stale, load_state, save_state, update_state
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 DEPOTS_DIR = os.path.join(os.path.dirname(__file__), "depots")
+FETCH_LOG = os.path.join(DEPOTS_DIR, "fetch_log.json")
 
 
 class _RateLimiter:
@@ -93,6 +95,22 @@ def write_jsonl(path: str, records: list[dict]) -> None:
     with open(path, "w", encoding="utf-8") as f:
         for rec in records:
             f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+
+def _append_fetch_log(city: str, district: str, errors: list[str]) -> None:
+    try:
+        with open(FETCH_LOG, encoding="utf-8") as f:
+            log = json.load(f)
+    except Exception:
+        log = []
+    log.append({
+        "ts": datetime.now().replace(microsecond=0).isoformat(),
+        "city": city,
+        "district": district,
+        "errors": errors,
+    })
+    with open(FETCH_LOG, "w", encoding="utf-8") as f:
+        json.dump(log, f, ensure_ascii=False, indent=2)
 
 
 # ---------------------------------------------------------------------------
@@ -193,12 +211,27 @@ async def _scrape_district(
         if lat is None:
             print(f"  {tag} [WARN] coordinates not found, skipping")
             return
-        print(f"  {tag} coords: lat={lat:.5f}, lon={lon:.5f} [no depot JSON, using API]")
-        depots = await get_nearest_depots_async(lat, lon, sem)
-        if not depots:
-            print(f"  {tag} [WARN] no depots found, skipping")
-            return
-        print(f"  {tag} depots: {len(depots)} (API fallback — run setup_depots.py for full coverage)")
+
+        print(f"  {tag} depot JSON not found — running grid search...")
+        depots_dict, grid_errors = await asyncio.to_thread(fetch_depots_grid, district, city)
+
+        if depots_dict:
+            depot_json_path = os.path.join(DEPOTS_DIR, f"{city}_{district}.json")
+            with open(depot_json_path, "w", encoding="utf-8") as f:
+                json.dump(list(depots_dict.values()), f, ensure_ascii=False, indent=2)
+            depots = list(depots_dict.values())
+            print(f"  {tag} depots: {len(depots)} (grid search — saved to depot JSON)")
+        else:
+            depots = await get_nearest_depots_async(lat, lon, sem)
+            if not depots:
+                print(f"  {tag} [WARN] no depots found, skipping")
+                if grid_errors:
+                    _append_fetch_log(city, district, grid_errors)
+                return
+            print(f"  {tag} depots: {len(depots)} (API fallback — grid failed)")
+
+        if grid_errors:
+            _append_fetch_log(city, district, grid_errors)
 
     depot_ids = [d["id"] for d in depots]
     await asyncio.gather(*[
