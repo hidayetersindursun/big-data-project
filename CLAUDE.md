@@ -39,6 +39,25 @@ python ingestion/tcmb/plot_tcmb.py            # generate HTML dashboard
 
 Output: `ingestion/tcmb/data/*.jsonl`, dashboards: `ingestion/tcmb/plots/`
 
+### EPİAŞ (hourly electricity market data)
+
+```bash
+# Requires .env at project root with EPTR_USERNAME / EPTR_PASSWORD
+python ingestion/epias/epias_ingest.py
+
+# Single dataset
+python ingestion/epias/epias_ingest.py --dataset price_and_cost
+
+# Custom date range
+python ingestion/epias/epias_ingest.py --start-date 2026-01-01 --end-date 2026-01-31
+
+# Force full backfill from default historical start
+python ingestion/epias/epias_ingest.py --force
+```
+
+Output: `ingestion/epias/data/{dataset}/YYYY-MM-DD.jsonl`
+State: `ingestion/epias/state.json`
+
 ### Hal wholesale prices
 
 ```bash
@@ -121,7 +140,7 @@ Aynı gün iki kez çalışırsa üzerine yazar. Farklı günlerde yeni klasör 
 | TCMB EVDS (kur + enflasyon) | `ingestion/tcmb/` | EVDS REST API | Günlük/Aylık | Hazır |
 | Open-Meteo (hava) | `ingestion/weather/` | REST API | Saatlik stream | Planlandı |
 | GDELT (haber) | `ingestion/gdelt/` | S3 / API | 15 dk stream | Planlandı |
-| EPİAŞ (elektrik) | `ingestion/epias/` | Transparency API | Saatlik stream | Planlandı |
+| EPİAŞ (elektrik) | `ingestion/epias/` | Transparency API via `eptr2` | Saatlik stream | Hazır |
 | İzmir Hal | `ingestion/hal/izmir/` | API + CSV | Günlük | Planlandı |
 
 ### Pipeline Architecture (Medallion)

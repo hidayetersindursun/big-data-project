@@ -13,7 +13,7 @@ ingestion/
 │   └── harman/      # Harmanapps hal fiyatları (curl_cffi)
 ├── weather/         # Open-Meteo — yakında
 ├── gdelt/           # GDELT haber verisi — yakında
-└── epias/           # EPİAŞ elektrik fiyatları — yakında
+└── epias/           # EPİAŞ saatlik elektrik verileri (eptr2)
 
 infrastructure/      # Docker, Kafka, Airflow konfigürasyonları
 processing/          # Flink / Spark job'ları
@@ -51,6 +51,50 @@ python ingestion/tcmb/plot_tcmb.py            # HTML dashboard oluştur
 
 Çıktı: `ingestion/tcmb/data/*.jsonl`, dashboard: `ingestion/tcmb/plots/`
 
+### EPİAŞ (`ingestion/epias/`)
+
+EPİAŞ Şeffaflık Platformu'ndan `eptr2` ile elektrik piyasası verilerini çeker.
+
+Şu an başarıyla çekebildiğimiz dataset'ler:
+
+- `price_and_cost` — saatlik `mcp`, `wap`, `smp`, `pos_imb_price`, `neg_imb_price`, `system_direction`, `kupst_cost`
+- `consumption` — saatlik `load_plan`, `uecm`, `rt_cons`, `consumption`
+- `real_time_generation` — saatlik kaynak bazlı gerçek zamanlı üretim
+- `injection_quantity` — saatlik `total`, `naturalGas`, `dam`, `lignite`, `importedCoal`, `wind`, `sun`
+- `renewable_injection_quantity` — saatlik `toplam`, `ruzgar`, `jeotermal`, `rezervuarli`, `gunes`, `biyokutle`
+- `wind_forecast` — 10 dakikalık `generation`, `forecast`, `quarter1`, `quarter2`, `quarter3`, `quarter4`
+- `renewable_unit_cost` — `supplierUnitCost`, `unitCost`, `ptf`, `version`
+- `renewable_total_cost` — `toplam`, `ruzgar`, `gunes`, `jeotermal`, `biyokutle`
+- `zero_balance_adjustment` — `zeroBalanceAdjustment`, `downRegulation`, `upRegulation`, `negativeImbalance`, `kupst`
+- `transmission_loss_factor` — `firstVersionValue`, `lastVersionValue`, `difference`
+- `primary_frequency_capacity` — `amount`, `price`
+- `secondary_frequency_capacity` — `amount`, `price`
+
+Her kayıtta ortak alanlar bulunur: `timestamp`, `_dataset`, `_source`, `_ingested_at`, `contract`
+
+Not: bazı EPİAŞ servisleri aylık / gecikmeli yayımlandığı için çok yeni tarih aralıklarında boş dönebilir.
+
+Önce proje kökünde `.env` dosyasına EPİAŞ bilgilerini koy:
+
+```bash
+EPTR_USERNAME=epias-kullanici-eposta
+EPTR_PASSWORD=epias-sifre
+```
+
+Ardından çalıştır:
+
+```bash
+pip install eptr2 pandas
+
+python ingestion/epias/epias_ingest.py
+python ingestion/epias/epias_ingest.py --dataset price_and_cost
+python ingestion/epias/epias_ingest.py --start-date 2026-01-01 --end-date 2026-01-31
+python ingestion/epias/epias_ingest.py --force
+```
+
+Çıktı: `ingestion/epias/data/{dataset}/YYYY-MM-DD.jsonl`
+State: `ingestion/epias/state.json`
+
 ### İstanbul Hal fiyatları (`ingestion/hal/istanbul/`)
 
 `tarim.ibb.istanbul` adresinden Selenium ile günlük hal fiyatlarını çeker (headless Chrome, "Meyve", "Sebze", "İthal Ürünler" kategorileri).
@@ -81,6 +125,7 @@ python ingestion/hal/harman/harman_gunluk_hal_fiyat_scraber.py
 |---|---|
 | market | `aiohttp` |
 | tcmb | standart kütüphane |
+| epias | `eptr2`, `pandas` |
 | hal/istanbul | `pandas`, `selenium`, Chrome |
 | hal/harman | `pandas`, `curl_cffi`, `beautifulsoup4` |
 
