@@ -1,0 +1,2970 @@
+[
+  {
+    "id": "sok-4381",
+    "name": "Şok Miniorhun",
+    "market": "sok",
+    "lat": 41.043697,
+    "lon": 29.064974
+  },
+  {
+    "id": "a101-8375",
+    "name": "Ayışığı Hasippaşa",
+    "market": "a101",
+    "lat": 41.042557,
+    "lon": 29.069685
+  },
+  {
+    "id": "bim-L994",
+    "name": "Asyaüsküdar",
+    "market": "bim",
+    "lat": 41.039425,
+    "lon": 29.0687
+  },
+  {
+    "id": "sok-13392",
+    "name": "Üsküdar Güzelçeşme Sokak",
+    "market": "sok",
+    "lat": 41.0392,
+    "lon": 29.0763
+  },
+  {
+    "id": "bim-1094",
+    "name": "Kirazlıtepe  Üsküdar",
+    "market": "bim",
+    "lat": 41.038258,
+    "lon": 29.060293
+  },
+  {
+    "id": "a101-4166",
+    "name": "Hasippaşa  Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.039215,
+    "lon": 29.07021
+  },
+  {
+    "id": "migros-9689",
+    "name": "Kirazlıtepe Üsküdar Istanbul M",
+    "market": "migros",
+    "lat": 41.036903,
+    "lon": 29.065989
+  },
+  {
+    "id": "sok-10507",
+    "name": "Üsküdar Namazgah Cad",
+    "market": "sok",
+    "lat": 41.045822,
+    "lon": 29.069948
+  },
+  {
+    "id": "bim-3515",
+    "name": "Hasippaşa  Üsküdar",
+    "market": "bim",
+    "lat": 41.038982,
+    "lon": 29.071264
+  },
+  {
+    "id": "sok-12911",
+    "name": "Üsküdar Natoyolu",
+    "market": "sok",
+    "lat": 41.034725,
+    "lon": 29.079502
+  },
+  {
+    "id": "sok-3311",
+    "name": "Çengelköy Beynun Akyavaş",
+    "market": "sok",
+    "lat": 41.049667,
+    "lon": 29.059755
+  },
+  {
+    "id": "a101-4264",
+    "name": "Saray Üsküdar",
+    "market": "a101",
+    "lat": 41.03544,
+    "lon": 29.058323
+  },
+  {
+    "id": "a101-5523",
+    "name": "Çengelköy Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.050648,
+    "lon": 29.063215
+  },
+  {
+    "id": "bim-B779",
+    "name": "Çengelköyüsküdar",
+    "market": "bim",
+    "lat": 41.049942,
+    "lon": 29.059631
+  },
+  {
+    "id": "migros-8398",
+    "name": "Çengelköy Cadde Istanbul Mm",
+    "market": "migros",
+    "lat": 41.050766,
+    "lon": 29.062708
+  },
+  {
+    "id": "bim-T670",
+    "name": "Çamlıktepeüsküdar",
+    "market": "bim",
+    "lat": 41.048153,
+    "lon": 29.072575
+  },
+  {
+    "id": "a101-9101",
+    "name": "Özçeliküsküdar Üsküd",
+    "market": "a101",
+    "lat": 41.04358,
+    "lon": 29.076418
+  },
+  {
+    "id": "migros-5097",
+    "name": "Çengelköy Parkevleri Mm Migros",
+    "market": "migros",
+    "lat": 41.04168,
+    "lon": 29.076988
+  },
+  {
+    "id": "carrefour-3546",
+    "name": "Istanbul Çengelköy Süper",
+    "market": "carrefour",
+    "lat": 41.049572,
+    "lon": 29.054749
+  },
+  {
+    "id": "migros-2155",
+    "name": "Çengelköy Mm Migros",
+    "market": "migros",
+    "lat": 41.049923,
+    "lon": 29.07702
+  },
+  {
+    "id": "carrefour-5215",
+    "name": "Istanbul Çengelköy Kaldırım Mı",
+    "market": "carrefour",
+    "lat": 41.057304,
+    "lon": 29.063633
+  },
+  {
+    "id": "tarim_kredi-5209",
+    "name": "Istanbul Üsküdar Güzeltepe",
+    "market": "tarim_kredi",
+    "lat": 41.05592,
+    "lon": 29.07432
+  },
+  {
+    "id": "migros-4433",
+    "name": "Mjet Çengelköy Rasathane",
+    "market": "migros",
+    "lat": 41.059067,
+    "lon": 29.064621
+  },
+  {
+    "id": "bim-4189",
+    "name": "Fırın  Üsküdar",
+    "market": "bim",
+    "lat": 41.040398,
+    "lon": 29.084846
+  },
+  {
+    "id": "bim-1508",
+    "name": "Güzeltepeüsküdar",
+    "market": "bim",
+    "lat": 41.040203,
+    "lon": 29.084862
+  },
+  {
+    "id": "bim-L167",
+    "name": "Büyükçamlıcaüsküdar",
+    "market": "bim",
+    "lat": 41.040207,
+    "lon": 29.084873
+  },
+  {
+    "id": "bim-6629",
+    "name": "Sondurak  Ferah",
+    "market": "bim",
+    "lat": 41.04019,
+    "lon": 29.084871
+  },
+  {
+    "id": "bim-H478",
+    "name": "Çamlıcaüsküdar",
+    "market": "bim",
+    "lat": 41.040188,
+    "lon": 29.084871
+  },
+  {
+    "id": "a101-7456",
+    "name": "Yavuztürk Üsküdar",
+    "market": "a101",
+    "lat": 41.040573,
+    "lon": 29.085424
+  },
+  {
+    "id": "a101-4255",
+    "name": "Yeşil Yamaç Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.044956,
+    "lon": 29.085245
+  },
+  {
+    "id": "sok-3321",
+    "name": "Üsküdar Sütçü Yolu",
+    "market": "sok",
+    "lat": 41.038795,
+    "lon": 29.085888
+  },
+  {
+    "id": "a101-4279",
+    "name": "Sütçüyolu Yavuztürk Üsküdar",
+    "market": "a101",
+    "lat": 41.038284,
+    "lon": 29.086412
+  },
+  {
+    "id": "a101-C720",
+    "name": "Izmir Sokak Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.035793,
+    "lon": 29.081978
+  },
+  {
+    "id": "sok-3232",
+    "name": "Doğuş Üniversitesi",
+    "market": "sok",
+    "lat": 41.04763,
+    "lon": 29.076181
+  },
+  {
+    "id": "sok-11488",
+    "name": "Üsküdar Ata2",
+    "market": "sok",
+    "lat": 41.050327,
+    "lon": 29.079208
+  },
+  {
+    "id": "tarim_kredi-5055",
+    "name": "Istanbul Natoyolu Market",
+    "market": "tarim_kredi",
+    "lat": 41.0296,
+    "lon": 29.08068
+  },
+  {
+    "id": "bim-T046",
+    "name": "Deniz  Ümraniye",
+    "market": "bim",
+    "lat": 41.041878,
+    "lon": 29.099663
+  },
+  {
+    "id": "a101-E478",
+    "name": "Seyrantepe Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.04359,
+    "lon": 29.098389
+  },
+  {
+    "id": "bim-T044",
+    "name": "Ergeç  Ümraniye",
+    "market": "bim",
+    "lat": 41.043995,
+    "lon": 29.098845
+  },
+  {
+    "id": "a101-E918",
+    "name": "Gölgelik Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.045074,
+    "lon": 29.099693
+  },
+  {
+    "id": "bim-T040",
+    "name": "Dumlupınar  Ümraniye",
+    "market": "bim",
+    "lat": 41.045055,
+    "lon": 29.099773
+  },
+  {
+    "id": "a101-9697",
+    "name": "Şehit Mahmut Koç Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.03911,
+    "lon": 29.101044
+  },
+  {
+    "id": "bim-J292",
+    "name": "Eşref Bitlis  Ümraniye",
+    "market": "bim",
+    "lat": 41.038555,
+    "lon": 29.097057
+  },
+  {
+    "id": "bim-T041",
+    "name": "Mevlana  Ümraniye",
+    "market": "bim",
+    "lat": 41.04413,
+    "lon": 29.103231
+  },
+  {
+    "id": "a101-B900",
+    "name": "Tiryaki Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.046745,
+    "lon": 29.101269
+  },
+  {
+    "id": "sok-6941",
+    "name": "Ümraniye Asil Caddesi",
+    "market": "sok",
+    "lat": 41.0478,
+    "lon": 29.101734
+  },
+  {
+    "id": "sok-13725",
+    "name": "Ümraniye Betül Sok",
+    "market": "sok",
+    "lat": 41.036,
+    "lon": 29.1006
+  },
+  {
+    "id": "a101-8588",
+    "name": "Dumlupınar Ümraniye",
+    "market": "a101",
+    "lat": 41.048862,
+    "lon": 29.095346
+  },
+  {
+    "id": "sok-10849",
+    "name": "Ümraniye Seyit Onbaşı",
+    "market": "sok",
+    "lat": 41.03606,
+    "lon": 29.110826
+  },
+  {
+    "id": "tarim_kredi-7099",
+    "name": "Istanbul Ümraniye Kazım Karabekir",
+    "market": "tarim_kredi",
+    "lat": 41.03433,
+    "lon": 29.10321
+  },
+  {
+    "id": "sok-419",
+    "name": "Kirazlı Sokak",
+    "market": "sok",
+    "lat": 41.03473,
+    "lon": 29.109497
+  },
+  {
+    "id": "sok-4518",
+    "name": "Şok Miniyenıce",
+    "market": "sok",
+    "lat": 41.03794,
+    "lon": 29.104467
+  },
+  {
+    "id": "migros-5084",
+    "name": "Akyaka Park Avm Ümraniye Ist",
+    "market": "migros",
+    "lat": 41.03476,
+    "lon": 29.112509
+  },
+  {
+    "id": "migros-8951",
+    "name": "Oryapark Umranıye Istanbul M",
+    "market": "migros",
+    "lat": 41.032272,
+    "lon": 29.110153
+  },
+  {
+    "id": "a101-4171",
+    "name": "Inkılap Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.038925,
+    "lon": 29.108883
+  },
+  {
+    "id": "bim-A230",
+    "name": "Turan  Ümraniye",
+    "market": "bim",
+    "lat": 41.04039,
+    "lon": 29.107828
+  },
+  {
+    "id": "sok-7919",
+    "name": "Ümraniye Selman Sokak",
+    "market": "sok",
+    "lat": 41.036816,
+    "lon": 29.111757
+  },
+  {
+    "id": "sok-4171",
+    "name": "Şok Mini  Ilkkursun",
+    "market": "sok",
+    "lat": 41.037422,
+    "lon": 29.109648
+  },
+  {
+    "id": "bim-5823",
+    "name": "Selman  Ümraniye",
+    "market": "bim",
+    "lat": 41.036045,
+    "lon": 29.11142
+  },
+  {
+    "id": "a101-B252",
+    "name": "Şehit Onbaşı Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.035976,
+    "lon": 29.111393
+  },
+  {
+    "id": "bim-T045",
+    "name": "Sürmene ümraniye",
+    "market": "bim",
+    "lat": 41.045467,
+    "lon": 29.104986
+  },
+  {
+    "id": "bim-U895",
+    "name": "Erzurum Caddesi ümraniye",
+    "market": "bim",
+    "lat": 41.03692,
+    "lon": 29.105986
+  },
+  {
+    "id": "bim-Q926",
+    "name": "Ordu Caddesi ümraniye",
+    "market": "bim",
+    "lat": 41.03889,
+    "lon": 29.104115
+  },
+  {
+    "id": "a101-5273",
+    "name": "Ezber Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.049767,
+    "lon": 29.107487
+  },
+  {
+    "id": "a101-4617",
+    "name": "Haşim Işcan Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.03328,
+    "lon": 29.109396
+  },
+  {
+    "id": "tarim_kredi-7611",
+    "name": "Istanbul Ümraniye Bereket Plaza",
+    "market": "tarim_kredi",
+    "lat": 41.02753,
+    "lon": 29.11737
+  },
+  {
+    "id": "migros-9088",
+    "name": "Lens Çekmeköy Istanbul Mm",
+    "market": "migros",
+    "lat": 41.037327,
+    "lon": 29.153082
+  },
+  {
+    "id": "migros-3698",
+    "name": "Buyaka Avm Istanbul Mm Migros",
+    "market": "migros",
+    "lat": 41.026405,
+    "lon": 29.127352
+  },
+  {
+    "id": "carrefour-5007",
+    "name": "Istanbul Çekmeköy Rapsodı Mını",
+    "market": "carrefour",
+    "lat": 41.036587,
+    "lon": 29.157269
+  },
+  {
+    "id": "carrefour-5262",
+    "name": "Istanbul Ümranıye Sınpaş A Ua",
+    "market": "carrefour",
+    "lat": 41.031403,
+    "lon": 29.156713
+  },
+  {
+    "id": "sok-6002",
+    "name": "Aşağı Dudullu",
+    "market": "sok",
+    "lat": 41.0306,
+    "lon": 29.1555
+  },
+  {
+    "id": "a101-D595",
+    "name": "Volkan Caddesi Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.03123,
+    "lon": 29.159021
+  },
+  {
+    "id": "migros-6002",
+    "name": "Aşağı Dudullu M Migros",
+    "market": "migros",
+    "lat": 41.029907,
+    "lon": 29.156166
+  },
+  {
+    "id": "bim-G172",
+    "name": "Parseller  Ümraniye",
+    "market": "bim",
+    "lat": 41.030144,
+    "lon": 29.15692
+  },
+  {
+    "id": "bim-R018",
+    "name": "Olgunümraniye",
+    "market": "bim",
+    "lat": 41.028553,
+    "lon": 29.15179
+  },
+  {
+    "id": "a101-E021",
+    "name": "Üsküdar Caddesi Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.03528,
+    "lon": 29.166214
+  },
+  {
+    "id": "bim-J970",
+    "name": "Menekşe  Ümraniye",
+    "market": "bim",
+    "lat": 41.027954,
+    "lon": 29.147936
+  },
+  {
+    "id": "sok-1525",
+    "name": "Gülbaba Çekmeköy",
+    "market": "sok",
+    "lat": 41.034603,
+    "lon": 29.166176
+  },
+  {
+    "id": "sok-4079",
+    "name": "Şok Minidudullu",
+    "market": "sok",
+    "lat": 41.02737,
+    "lon": 29.149359
+  },
+  {
+    "id": "bim-J952",
+    "name": "Enes  Çekmeköy",
+    "market": "bim",
+    "lat": 41.036022,
+    "lon": 29.1678
+  },
+  {
+    "id": "sok-4103",
+    "name": "Şok Minitaş",
+    "market": "sok",
+    "lat": 41.027603,
+    "lon": 29.155167
+  },
+  {
+    "id": "sok-10607",
+    "name": "Ümraniye Ceylan Evleri",
+    "market": "sok",
+    "lat": 41.02682,
+    "lon": 29.151363
+  },
+  {
+    "id": "a101-9753",
+    "name": "Parseller Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.027534,
+    "lon": 29.15817
+  },
+  {
+    "id": "bim-G148",
+    "name": "Sinpaş  Ümraniye",
+    "market": "bim",
+    "lat": 41.027622,
+    "lon": 29.15876
+  },
+  {
+    "id": "migros-4461",
+    "name": "Çekmeköy Koru Istanbul Mmm",
+    "market": "migros",
+    "lat": 41.042236,
+    "lon": 29.17667
+  },
+  {
+    "id": "bim-G668",
+    "name": "Altınkoza  Çekmeköy",
+    "market": "bim",
+    "lat": 41.03702,
+    "lon": 29.17441
+  },
+  {
+    "id": "sok-10297",
+    "name": "Çekmeköy Zerafet Evleri",
+    "market": "sok",
+    "lat": 41.034554,
+    "lon": 29.170624
+  },
+  {
+    "id": "sok-5881",
+    "name": "Çekmeköy Piri Reis",
+    "market": "sok",
+    "lat": 41.03372,
+    "lon": 29.1692
+  },
+  {
+    "id": "a101-I987",
+    "name": "Piri Reis Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.03363,
+    "lon": 29.170534
+  },
+  {
+    "id": "sok-5109",
+    "name": "Yunus Emre Caddesi",
+    "market": "sok",
+    "lat": 41.036217,
+    "lon": 29.175877
+  },
+  {
+    "id": "a101-4123",
+    "name": "Belediye Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.040474,
+    "lon": 29.179749
+  },
+  {
+    "id": "a101-E982",
+    "name": "Engin Sokak Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.037186,
+    "lon": 29.17831
+  },
+  {
+    "id": "tarim_kredi-5277",
+    "name": "Istanbul Çekmeköy Merkez",
+    "market": "tarim_kredi",
+    "lat": 41.03993,
+    "lon": 29.17995
+  },
+  {
+    "id": "bim-G671",
+    "name": "Köyiçi  Çekmeköy",
+    "market": "bim",
+    "lat": 41.040035,
+    "lon": 29.180489
+  },
+  {
+    "id": "bim-G673",
+    "name": "Gündoğdu  Çekmeköy",
+    "market": "bim",
+    "lat": 41.033234,
+    "lon": 29.174374
+  },
+  {
+    "id": "a101-E277",
+    "name": "Sönmez Sokak Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.0337,
+    "lon": 29.1753
+  },
+  {
+    "id": "bim-Q157",
+    "name": "Mülkiyeçekmeköy",
+    "market": "bim",
+    "lat": 41.035603,
+    "lon": 29.178116
+  },
+  {
+    "id": "sok-5534",
+    "name": "Köroğlu Sokak Çekmeköy",
+    "market": "sok",
+    "lat": 41.040535,
+    "lon": 29.180988
+  },
+  {
+    "id": "migros-7169",
+    "name": "Mjet Ümraniye Sinpaş Gökorman",
+    "market": "migros",
+    "lat": 41.030506,
+    "lon": 29.167494
+  },
+  {
+    "id": "carrefour-5485",
+    "name": "Istanbul Çekmeköy Çavuşbaşı Ca",
+    "market": "carrefour",
+    "lat": 41.03148,
+    "lon": 29.173038
+  },
+  {
+    "id": "tarim_kredi-5170",
+    "name": "Istanbul Çekmeköy Market",
+    "market": "tarim_kredi",
+    "lat": 41.03217,
+    "lon": 29.18147
+  },
+  {
+    "id": "migros-3101",
+    "name": "Çekmeköy Beşyıldız Mm Mıgros",
+    "market": "migros",
+    "lat": 41.02873,
+    "lon": 29.17596
+  },
+  {
+    "id": "a101-0657",
+    "name": "Köroğlu Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.040977,
+    "lon": 29.183235
+  },
+  {
+    "id": "bim-T333",
+    "name": "Selımdedecekmekoy",
+    "market": "bim",
+    "lat": 41.03418,
+    "lon": 29.179382
+  },
+  {
+    "id": "a101-D041",
+    "name": "Selim Dede Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.03306,
+    "lon": 29.180964
+  },
+  {
+    "id": "sok-4122",
+    "name": "Şok Miniçaltepe Yeni",
+    "market": "sok",
+    "lat": 41.033752,
+    "lon": 29.177649
+  },
+  {
+    "id": "migros-1184",
+    "name": "Çekmeköy Mm Migros",
+    "market": "migros",
+    "lat": 41.031857,
+    "lon": 29.182402
+  },
+  {
+    "id": "a101-8531",
+    "name": "Mimar Sinan Çekmeköy",
+    "market": "a101",
+    "lat": 41.03268,
+    "lon": 29.177856
+  },
+  {
+    "id": "bim-G666",
+    "name": "Turan Polat  Çekmeköy",
+    "market": "bim",
+    "lat": 41.030964,
+    "lon": 29.182518
+  },
+  {
+    "id": "sok-5132",
+    "name": "Yeşilbahçe Çekmeköy",
+    "market": "sok",
+    "lat": 41.029053,
+    "lon": 29.182844
+  },
+  {
+    "id": "tarim_kredi-7324",
+    "name": "Istanbul Çekmeköy Yeşil Belde",
+    "market": "tarim_kredi",
+    "lat": 41.02812,
+    "lon": 29.17944
+  },
+  {
+    "id": "migros-4224",
+    "name": "Mjet Çekmeköy My Country",
+    "market": "migros",
+    "lat": 41.027897,
+    "lon": 29.191319
+  },
+  {
+    "id": "a101-5480",
+    "name": "Doğa Park Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.03074,
+    "lon": 29.189257
+  },
+  {
+    "id": "bim-G679",
+    "name": "Doğapark  Çekmeköy",
+    "market": "bim",
+    "lat": 41.03059,
+    "lon": 29.189098
+  },
+  {
+    "id": "sok-10440",
+    "name": "Çekmeköy Destan Sok",
+    "market": "sok",
+    "lat": 41.033215,
+    "lon": 29.21815
+  },
+  {
+    "id": "bim-G667",
+    "name": "Barış  Çekmeköy",
+    "market": "bim",
+    "lat": 41.02892,
+    "lon": 29.188316
+  },
+  {
+    "id": "bim-T189",
+    "name": "Destan  Çekmeköy",
+    "market": "bim",
+    "lat": 41.03238,
+    "lon": 29.218287
+  },
+  {
+    "id": "a101-B321",
+    "name": "Sultançiftliği Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.033585,
+    "lon": 29.22341
+  },
+  {
+    "id": "bim-O265",
+    "name": "Koru  Çekmeköy",
+    "market": "bim",
+    "lat": 41.032402,
+    "lon": 29.223637
+  },
+  {
+    "id": "bim-U086",
+    "name": "Atatürk Caddesiçekmeköy",
+    "market": "bim",
+    "lat": 41.03201,
+    "lon": 29.223707
+  },
+  {
+    "id": "sok-8505",
+    "name": "Çekmeköy Atatürk Caddesi",
+    "market": "sok",
+    "lat": 41.03157,
+    "lon": 29.223824
+  },
+  {
+    "id": "a101-C691",
+    "name": "Şehit Kubilay Cad Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.03428,
+    "lon": 29.229616
+  },
+  {
+    "id": "bim-T037",
+    "name": "Düşünür  Çekmeköy",
+    "market": "bim",
+    "lat": 41.03421,
+    "lon": 29.229649
+  },
+  {
+    "id": "sok-11865",
+    "name": "Çekmeköy Kırlangıç Sokak",
+    "market": "sok",
+    "lat": 41.032738,
+    "lon": 29.22786
+  },
+  {
+    "id": "a101-E665",
+    "name": "19 Mayıs Caddesi Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.03086,
+    "lon": 29.224089
+  },
+  {
+    "id": "bim-G130",
+    "name": "Atabeyçekmeköy",
+    "market": "bim",
+    "lat": 41.034256,
+    "lon": 29.232834
+  },
+  {
+    "id": "a101-H195",
+    "name": "Dirlik Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.03285,
+    "lon": 29.231764
+  },
+  {
+    "id": "migros-5121",
+    "name": "Mjet Taşdelen Sultançiftliği",
+    "market": "migros",
+    "lat": 41.030075,
+    "lon": 29.227608
+  },
+  {
+    "id": "a101-4271",
+    "name": "Megakent Çekmeköy",
+    "market": "a101",
+    "lat": 41.030003,
+    "lon": 29.227518
+  },
+  {
+    "id": "migros-7155",
+    "name": "Taşdelen Park M Migros",
+    "market": "migros",
+    "lat": 41.033615,
+    "lon": 29.233074
+  },
+  {
+    "id": "carrefour-5481",
+    "name": "Istanbul Çekmeköy Taşdelen",
+    "market": "carrefour",
+    "lat": 41.02777,
+    "lon": 29.222338
+  },
+  {
+    "id": "sok-3358",
+    "name": "Çekmeköy Taşdelen",
+    "market": "sok",
+    "lat": 41.030804,
+    "lon": 29.230637
+  },
+  {
+    "id": "migros-5986",
+    "name": "Turgut Özal Blv Taşdelen Mm",
+    "market": "migros",
+    "lat": 41.027428,
+    "lon": 29.221884
+  },
+  {
+    "id": "tarim_kredi-5299",
+    "name": "Istanbul Çekmeköy Sultançiftliği",
+    "market": "tarim_kredi",
+    "lat": 41.0295,
+    "lon": 29.22932
+  },
+  {
+    "id": "sok-8380",
+    "name": "Çekmeköy Sultançiftliği",
+    "market": "sok",
+    "lat": 41.029343,
+    "lon": 29.229317
+  },
+  {
+    "id": "a101-F246",
+    "name": "Saray Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.04433,
+    "lon": 29.237904
+  },
+  {
+    "id": "bim-L291",
+    "name": "Kışla  Çekmeköy",
+    "market": "bim",
+    "lat": 41.04611,
+    "lon": 29.238838
+  },
+  {
+    "id": "a101-G338",
+    "name": "Ilim Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.04868,
+    "lon": 29.239967
+  },
+  {
+    "id": "sok-11781",
+    "name": "Çekmeköy Reşadiye Caddesi",
+    "market": "sok",
+    "lat": 41.04897,
+    "lon": 29.239761
+  },
+  {
+    "id": "sok-2163",
+    "name": "Taşdelen Saray Cad",
+    "market": "sok",
+    "lat": 41.048286,
+    "lon": 29.24164
+  },
+  {
+    "id": "bim-G106",
+    "name": "Alemdağ  Çekmeköy",
+    "market": "bim",
+    "lat": 41.04862,
+    "lon": 29.24255
+  },
+  {
+    "id": "tarim_kredi-6092",
+    "name": "Istanbul Çekmeköy Reşadiye",
+    "market": "tarim_kredi",
+    "lat": 41.05119,
+    "lon": 29.23989
+  },
+  {
+    "id": "bim-G251",
+    "name": "Ekşioğlu  Çekmeköy",
+    "market": "bim",
+    "lat": 41.033783,
+    "lon": 29.241169
+  },
+  {
+    "id": "a101-4144",
+    "name": "Ekşioğlu Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.03241,
+    "lon": 29.234997
+  },
+  {
+    "id": "sok-10201",
+    "name": "Çekmeköy Sultansuyu Cad",
+    "market": "sok",
+    "lat": 41.050224,
+    "lon": 29.243673
+  },
+  {
+    "id": "tarim_kredi-5493",
+    "name": "Istanbul Çekmeköy Ekşioğlu",
+    "market": "tarim_kredi",
+    "lat": 41.03052,
+    "lon": 29.23815
+  },
+  {
+    "id": "migros-5976",
+    "name": "Alemdağ Reşadiye Cad M Migros",
+    "market": "migros",
+    "lat": 41.055927,
+    "lon": 29.237452
+  },
+  {
+    "id": "sok-7075",
+    "name": "Hüsnü Özyeğin Üni",
+    "market": "sok",
+    "lat": 41.03912,
+    "lon": 29.255898
+  },
+  {
+    "id": "migros-6840",
+    "name": "Mjet Çekmeköy Nişantepe",
+    "market": "migros",
+    "lat": 41.04369,
+    "lon": 29.259176
+  },
+  {
+    "id": "bim-L290",
+    "name": "Saray Caddesi  Çekmeköy",
+    "market": "bim",
+    "lat": 41.04837,
+    "lon": 29.24876
+  },
+  {
+    "id": "bim-U914",
+    "name": "Tunahançekmeköy",
+    "market": "bim",
+    "lat": 41.03701,
+    "lon": 29.262678
+  },
+  {
+    "id": "bim-G345",
+    "name": "Nişantepe  Çekmeköy",
+    "market": "bim",
+    "lat": 41.04371,
+    "lon": 29.26491
+  },
+  {
+    "id": "a101-D765",
+    "name": "Çatalmeşe Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.049915,
+    "lon": 29.243612
+  },
+  {
+    "id": "a101-4274",
+    "name": "Nişantepe Çekmeköy",
+    "market": "a101",
+    "lat": 41.04342,
+    "lon": 29.265587
+  },
+  {
+    "id": "a101-F601",
+    "name": "30 Ağustos Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.051983,
+    "lon": 29.246664
+  },
+  {
+    "id": "sok-13876",
+    "name": "Sancaktepe Akın Cad",
+    "market": "sok",
+    "lat": 41.0312,
+    "lon": 29.2544
+  },
+  {
+    "id": "carrefour-3733",
+    "name": "Alemdağ Emlak Konutları Gelın",
+    "market": "carrefour",
+    "lat": 41.042244,
+    "lon": 29.268469
+  },
+  {
+    "id": "migros-7642",
+    "name": "Gökkaya Cd Çekmeköy Ist Mm",
+    "market": "migros",
+    "lat": 41.03463,
+    "lon": 29.26507
+  },
+  {
+    "id": "carrefour-5068",
+    "name": "Istanbul Alemdağ Emlak Konutla",
+    "market": "carrefour",
+    "lat": 41.042896,
+    "lon": 29.27206
+  },
+  {
+    "id": "sok-12945",
+    "name": "Çekmeköy Gelin Çiçeği Sok",
+    "market": "sok",
+    "lat": 41.042286,
+    "lon": 29.268072
+  },
+  {
+    "id": "a101-F462",
+    "name": "Emlak Konutları Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.042862,
+    "lon": 29.272102
+  },
+  {
+    "id": "bim-3088",
+    "name": "Kuleli  Üsküdar",
+    "market": "bim",
+    "lat": 41.05762,
+    "lon": 29.063643
+  },
+  {
+    "id": "a101-D051",
+    "name": "Talimhane Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.057453,
+    "lon": 29.063925
+  },
+  {
+    "id": "sok-768",
+    "name": "Talimhane",
+    "market": "sok",
+    "lat": 41.0581,
+    "lon": 29.068146
+  },
+  {
+    "id": "sok-1422",
+    "name": "Kandilli Rasathane",
+    "market": "sok",
+    "lat": 41.06425,
+    "lon": 29.066444
+  },
+  {
+    "id": "a101-0188",
+    "name": "Rasathane Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.058155,
+    "lon": 29.071339
+  },
+  {
+    "id": "a101-E134",
+    "name": "Çınarlıdere Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.061768,
+    "lon": 29.072403
+  },
+  {
+    "id": "a101-0406",
+    "name": "Miralay Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.06523,
+    "lon": 29.06918
+  },
+  {
+    "id": "sok-10481",
+    "name": "Üsküdar Kireçoğlu Sok",
+    "market": "sok",
+    "lat": 41.05134,
+    "lon": 29.06504
+  },
+  {
+    "id": "bim-P530",
+    "name": "Sultan Muratüsküdar",
+    "market": "bim",
+    "lat": 41.05848,
+    "lon": 29.076496
+  },
+  {
+    "id": "sok-2794",
+    "name": "Zübeyde Hanım Cadde",
+    "market": "sok",
+    "lat": 41.05495,
+    "lon": 29.075094
+  },
+  {
+    "id": "sok-13658",
+    "name": "Üsküdar Taşocağı",
+    "market": "sok",
+    "lat": 41.0686,
+    "lon": 29.0686
+  },
+  {
+    "id": "a101-4593",
+    "name": "Bahçelievler Üsküdar",
+    "market": "a101",
+    "lat": 41.055195,
+    "lon": 29.077436
+  },
+  {
+    "id": "bim-R203",
+    "name": "Bahçelievlerüsküdar",
+    "market": "bim",
+    "lat": 41.05261,
+    "lon": 29.076458
+  },
+  {
+    "id": "bim-G453",
+    "name": "Zübeyde Hanım  Üsküdar",
+    "market": "bim",
+    "lat": 41.050922,
+    "lon": 29.076246
+  },
+  {
+    "id": "a101-G487",
+    "name": "Ayla Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.058987,
+    "lon": 29.078636
+  },
+  {
+    "id": "sok-6551",
+    "name": "Çengelköy Sultan Murat",
+    "market": "sok",
+    "lat": 41.059032,
+    "lon": 29.078323
+  },
+  {
+    "id": "bim-6362",
+    "name": "Tufan  Üsküdar",
+    "market": "bim",
+    "lat": 41.06134,
+    "lon": 29.074116
+  },
+  {
+    "id": "bim-V496",
+    "name": "Dereboyusancaktepe",
+    "market": "bim",
+    "lat": 41.05343,
+    "lon": 29.084284
+  },
+  {
+    "id": "a101-4191",
+    "name": "Küçüksu Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.06651,
+    "lon": 29.078222
+  },
+  {
+    "id": "sok-11334",
+    "name": "Beykoz Yonca Sokak",
+    "market": "sok",
+    "lat": 41.067795,
+    "lon": 29.082071
+  },
+  {
+    "id": "bim-G634",
+    "name": "Çiftlik  Beykoz",
+    "market": "bim",
+    "lat": 41.067894,
+    "lon": 29.082375
+  },
+  {
+    "id": "a101-K027",
+    "name": "Aydın Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.060493,
+    "lon": 29.099478
+  },
+  {
+    "id": "bim-G675",
+    "name": "Yenihekimbaşı  Beykoz",
+    "market": "bim",
+    "lat": 41.061363,
+    "lon": 29.09802
+  },
+  {
+    "id": "a101-4594",
+    "name": "Hekimbaşı Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.061058,
+    "lon": 29.096409
+  },
+  {
+    "id": "a101-6815",
+    "name": "Kostak Ümraniye",
+    "market": "a101",
+    "lat": 41.05328,
+    "lon": 29.093382
+  },
+  {
+    "id": "a101-4241",
+    "name": "Topağacı Ümraniye Istanbul",
+    "market": "a101",
+    "lat": 41.05068,
+    "lon": 29.10104
+  },
+  {
+    "id": "bim-G656",
+    "name": "Zafer  Beykoz",
+    "market": "bim",
+    "lat": 41.065605,
+    "lon": 29.089937
+  },
+  {
+    "id": "a101-E743",
+    "name": "Ömer Besimpaşa Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.067154,
+    "lon": 29.090763
+  },
+  {
+    "id": "bim-G662",
+    "name": "Yeni Mahalle  Beykoz",
+    "market": "bim",
+    "lat": 41.0673,
+    "lon": 29.090504
+  },
+  {
+    "id": "bim-J739",
+    "name": "Ömer Besim  Beykoz",
+    "market": "bim",
+    "lat": 41.06747,
+    "lon": 29.087286
+  },
+  {
+    "id": "bim-T042",
+    "name": "Topağacı  Ümraniye",
+    "market": "bim",
+    "lat": 41.048725,
+    "lon": 29.10474
+  },
+  {
+    "id": "sok-6400",
+    "name": "Ademyavuz",
+    "market": "sok",
+    "lat": 41.044804,
+    "lon": 29.09981
+  },
+  {
+    "id": "sok-4668",
+    "name": "Şok Miniümraniye Ayazağa",
+    "market": "sok",
+    "lat": 41.04404,
+    "lon": 29.094254
+  },
+  {
+    "id": "a101-E439",
+    "name": "Baklacı Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.068558,
+    "lon": 29.16409
+  },
+  {
+    "id": "bim-Q459",
+    "name": "Baklacıbeykoz",
+    "market": "bim",
+    "lat": 41.06686,
+    "lon": 29.16629
+  },
+  {
+    "id": "sok-13822",
+    "name": "Çekmeköy Avşar",
+    "market": "sok",
+    "lat": 41.0554,
+    "lon": 29.2324
+  },
+  {
+    "id": "bim-H406",
+    "name": "Simge  Çekmeköy",
+    "market": "bim",
+    "lat": 41.053246,
+    "lon": 29.23941
+  },
+  {
+    "id": "a101-F822",
+    "name": "Piknik Yolu Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.05309,
+    "lon": 29.239632
+  },
+  {
+    "id": "bim-G139",
+    "name": "Çatalmeşe  Çekmeköy",
+    "market": "bim",
+    "lat": 41.054203,
+    "lon": 29.243353
+  },
+  {
+    "id": "a101-0377",
+    "name": "Üçyol Üsküdar Istanbul",
+    "market": "a101",
+    "lat": 41.07374,
+    "lon": 29.071012
+  },
+  {
+    "id": "bim-G664",
+    "name": "Küçüksu  Beykoz",
+    "market": "bim",
+    "lat": 41.07234,
+    "lon": 29.071922
+  },
+  {
+    "id": "sok-7007",
+    "name": "Anadolu Hisarı",
+    "market": "sok",
+    "lat": 41.084152,
+    "lon": 29.067944
+  },
+  {
+    "id": "sok-805",
+    "name": "Üsküdar Hekimbaşı",
+    "market": "sok",
+    "lat": 41.07069,
+    "lon": 29.072683
+  },
+  {
+    "id": "bim-K808",
+    "name": "Göztepe  Beykoz",
+    "market": "bim",
+    "lat": 41.079067,
+    "lon": 29.076366
+  },
+  {
+    "id": "a101-4160",
+    "name": "Göksu Beykoz",
+    "market": "a101",
+    "lat": 41.079517,
+    "lon": 29.076565
+  },
+  {
+    "id": "sok-8206",
+    "name": "Bent Yolu Beykoz",
+    "market": "sok",
+    "lat": 41.07954,
+    "lon": 29.076561
+  },
+  {
+    "id": "migros-1747",
+    "name": "Anadolu Hisarı  Mmm Migros",
+    "market": "migros",
+    "lat": 41.081097,
+    "lon": 29.07913
+  },
+  {
+    "id": "carrefour-2005",
+    "name": "Istanbul Anadolu Hısarı Gurme",
+    "market": "carrefour",
+    "lat": 41.08007,
+    "lon": 29.08003
+  },
+  {
+    "id": "a101-4242",
+    "name": "Tufan Üsküdar  Istanbul",
+    "market": "a101",
+    "lat": 41.061947,
+    "lon": 29.066181
+  },
+  {
+    "id": "bim-J109",
+    "name": "Fatma Betül Aysan  Sarıyer",
+    "market": "bim",
+    "lat": 41.08614,
+    "lon": 29.048277
+  },
+  {
+    "id": "sok-7008",
+    "name": "Göksu Evleri",
+    "market": "sok",
+    "lat": 41.081894,
+    "lon": 29.085976
+  },
+  {
+    "id": "a101-0708",
+    "name": "Uygur Kavacık Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.084957,
+    "lon": 29.080683
+  },
+  {
+    "id": "a101-5048",
+    "name": "Yeni Mahbeykoz Istanbul",
+    "market": "a101",
+    "lat": 41.06774,
+    "lon": 29.083818
+  },
+  {
+    "id": "sok-3977",
+    "name": "Beykoz Kürşad Cad",
+    "market": "sok",
+    "lat": 41.087902,
+    "lon": 29.081793
+  },
+  {
+    "id": "bim-G649",
+    "name": "Müzellef  Beykoz",
+    "market": "bim",
+    "lat": 41.090313,
+    "lon": 29.124273
+  },
+  {
+    "id": "a101-C707",
+    "name": "Müzellef Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.09049,
+    "lon": 29.124392
+  },
+  {
+    "id": "sok-10075",
+    "name": "Beykoz Çavuşbaşı Cd",
+    "market": "sok",
+    "lat": 41.092445,
+    "lon": 29.111702
+  },
+  {
+    "id": "sok-6420",
+    "name": "Çavuşbaşı Çiftlik",
+    "market": "sok",
+    "lat": 41.081375,
+    "lon": 29.13887
+  },
+  {
+    "id": "bim-G632",
+    "name": "Çavuşbaşı  Beykoz",
+    "market": "bim",
+    "lat": 41.082493,
+    "lon": 29.13861
+  },
+  {
+    "id": "a101-9693",
+    "name": "Çavuşbaşı Çiftlik Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.08243,
+    "lon": 29.138756
+  },
+  {
+    "id": "bim-G678",
+    "name": "Edebali  Beykoz",
+    "market": "bim",
+    "lat": 41.079536,
+    "lon": 29.141975
+  },
+  {
+    "id": "bim-U928",
+    "name": "Cumhuriyet  Beykoz",
+    "market": "bim",
+    "lat": 41.086502,
+    "lon": 29.135948
+  },
+  {
+    "id": "sok-14308",
+    "name": "Çavuşbaşı Bilgekağan",
+    "market": "sok",
+    "lat": 41.0872,
+    "lon": 29.1387
+  },
+  {
+    "id": "bim-T727",
+    "name": "Bilge Kağanbeykoz",
+    "market": "bim",
+    "lat": 41.087425,
+    "lon": 29.145803
+  },
+  {
+    "id": "a101-C711",
+    "name": "Çengeldere Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.090862,
+    "lon": 29.141474
+  },
+  {
+    "id": "sok-10293",
+    "name": "Beykoz Çengeldere",
+    "market": "sok",
+    "lat": 41.091118,
+    "lon": 29.141588
+  },
+  {
+    "id": "bim-G677",
+    "name": "Yavuz Selim  Beykoz",
+    "market": "bim",
+    "lat": 41.08097,
+    "lon": 29.156137
+  },
+  {
+    "id": "a101-I537",
+    "name": "Köyiçi Reşadiye Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.08249,
+    "lon": 29.25009
+  },
+  {
+    "id": "a101-F751",
+    "name": "Hüseyinli Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.08979,
+    "lon": 29.286936
+  },
+  {
+    "id": "sok-4241",
+    "name": "Şok Miniomerlı",
+    "market": "sok",
+    "lat": 41.077236,
+    "lon": 29.330158
+  },
+  {
+    "id": "migros-8353",
+    "name": "Ömerli Çekmeköy Istanbul Mmm",
+    "market": "migros",
+    "lat": 41.083607,
+    "lon": 29.330431
+  },
+  {
+    "id": "carrefour-2042",
+    "name": "Istanbul Çekmeköy Ömerlı Gurme",
+    "market": "carrefour",
+    "lat": 41.08464,
+    "lon": 29.329443
+  },
+  {
+    "id": "a101-K345",
+    "name": "Koçullu Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.0848,
+    "lon": 29.332514
+  },
+  {
+    "id": "sok-4816",
+    "name": "Şok Koçullu",
+    "market": "sok",
+    "lat": 41.0774,
+    "lon": 29.3481
+  },
+  {
+    "id": "a101-F636",
+    "name": "Ömerli Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.087822,
+    "lon": 29.347046
+  },
+  {
+    "id": "migros-4809",
+    "name": "Kanlıca M Migros",
+    "market": "migros",
+    "lat": 41.099567,
+    "lon": 29.065977
+  },
+  {
+    "id": "sok-7006",
+    "name": "Gülçiçek Kanlıca",
+    "market": "sok",
+    "lat": 41.100456,
+    "lon": 29.066528
+  },
+  {
+    "id": "a101-D655",
+    "name": "Kehribar Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.08907,
+    "lon": 29.078396
+  },
+  {
+    "id": "bim-G642",
+    "name": "Pazar beykoz",
+    "market": "bim",
+    "lat": 41.090336,
+    "lon": 29.080284
+  },
+  {
+    "id": "sok-11641",
+    "name": "Beykoz Otağtepe",
+    "market": "sok",
+    "lat": 41.090042,
+    "lon": 29.080435
+  },
+  {
+    "id": "sok-1115",
+    "name": "Emirgan Mağazası",
+    "market": "sok",
+    "lat": 41.104836,
+    "lon": 29.05584
+  },
+  {
+    "id": "a101-F949",
+    "name": "Hisarüstü Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.086617,
+    "lon": 29.049454
+  },
+  {
+    "id": "a101-E635",
+    "name": "Kürşat Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.09048,
+    "lon": 29.081419
+  },
+  {
+    "id": "sok-7409",
+    "name": "Rumelıhısarustu",
+    "market": "sok",
+    "lat": 41.086174,
+    "lon": 29.048723
+  },
+  {
+    "id": "a101-4209",
+    "name": "Otağtepe Kavacık Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.088627,
+    "lon": 29.081507
+  },
+  {
+    "id": "a101-7613",
+    "name": "Havuzbaşı Beykoz",
+    "market": "a101",
+    "lat": 41.092815,
+    "lon": 29.083008
+  },
+  {
+    "id": "bim-Q963",
+    "name": "Kaptanlarbeykoz",
+    "market": "bim",
+    "lat": 41.096027,
+    "lon": 29.082792
+  },
+  {
+    "id": "bim-J960",
+    "name": "Yurtsever  Beykoz",
+    "market": "bim",
+    "lat": 41.091217,
+    "lon": 29.083502
+  },
+  {
+    "id": "a101-9763",
+    "name": "Orhan Veli Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.095573,
+    "lon": 29.084631
+  },
+  {
+    "id": "a101-E917",
+    "name": "Okul Caddesi Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.093468,
+    "lon": 29.08685
+  },
+  {
+    "id": "sok-1010",
+    "name": "Kavacık Market",
+    "market": "sok",
+    "lat": 41.095036,
+    "lon": 29.087519
+  },
+  {
+    "id": "bim-G641",
+    "name": "Kavacık  Beykoz",
+    "market": "bim",
+    "lat": 41.094395,
+    "lon": 29.087828
+  },
+  {
+    "id": "bim-K055",
+    "name": "Özgür  Beykoz",
+    "market": "bim",
+    "lat": 41.09489,
+    "lon": 29.087734
+  },
+  {
+    "id": "carrefour-3472",
+    "name": "Istanbul Kavacık Süper",
+    "market": "carrefour",
+    "lat": 41.095238,
+    "lon": 29.089432
+  },
+  {
+    "id": "migros-8543",
+    "name": "Kavacık Istanbul M  Migros",
+    "market": "migros",
+    "lat": 41.094807,
+    "lon": 29.091715
+  },
+  {
+    "id": "sok-6151",
+    "name": "Istanbul Çubuklu",
+    "market": "sok",
+    "lat": 41.1029,
+    "lon": 29.0849
+  },
+  {
+    "id": "sok-9255",
+    "name": "Beykoz Şenevler",
+    "market": "sok",
+    "lat": 41.100246,
+    "lon": 29.092628
+  },
+  {
+    "id": "a101-8297",
+    "name": "Fsm Kavacık",
+    "market": "a101",
+    "lat": 41.09516,
+    "lon": 29.098839
+  },
+  {
+    "id": "bim-G660",
+    "name": "Rüzgarlıbahçe  Beykoz",
+    "market": "bim",
+    "lat": 41.09519,
+    "lon": 29.099346
+  },
+  {
+    "id": "sok-2921",
+    "name": "Rüzgarlıbahçe Kavacık",
+    "market": "sok",
+    "lat": 41.0955,
+    "lon": 29.0983
+  },
+  {
+    "id": "bim-K054",
+    "name": "Necip Fazıl  Beykoz",
+    "market": "bim",
+    "lat": 41.092636,
+    "lon": 29.092318
+  },
+  {
+    "id": "a101-7612",
+    "name": "Medipol Üniversitesi Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.092228,
+    "lon": 29.09169
+  },
+  {
+    "id": "a101-4177",
+    "name": "Kavacık Beykoz  Istanbul",
+    "market": "a101",
+    "lat": 41.095615,
+    "lon": 29.091667
+  },
+  {
+    "id": "bim-G663",
+    "name": "Üniversite beykoz",
+    "market": "bim",
+    "lat": 41.095238,
+    "lon": 29.08956
+  },
+  {
+    "id": "bim-G648",
+    "name": "Şenevler  Beykoz",
+    "market": "bim",
+    "lat": 41.100212,
+    "lon": 29.092764
+  },
+  {
+    "id": "a101-D967",
+    "name": "Boğaziçi Caddesi Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.09878,
+    "lon": 29.087984
+  },
+  {
+    "id": "migros-6484",
+    "name": "Salkım Sokak Beykoz M Migros",
+    "market": "migros",
+    "lat": 41.108315,
+    "lon": 29.109882
+  },
+  {
+    "id": "carrefour-5380",
+    "name": "Istanbul Beykoz Çubuklu Mesa",
+    "market": "carrefour",
+    "lat": 41.10897,
+    "lon": 29.110613
+  },
+  {
+    "id": "migros-2902",
+    "name": "Acr Loft Mm Mıgros",
+    "market": "migros",
+    "lat": 41.109356,
+    "lon": 29.113234
+  },
+  {
+    "id": "bim-G674",
+    "name": "Gazi beykoz",
+    "market": "bim",
+    "lat": 41.11003,
+    "lon": 29.111773
+  },
+  {
+    "id": "a101-0313",
+    "name": "Karslılar Mah Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.10981,
+    "lon": 29.109777
+  },
+  {
+    "id": "bim-H132",
+    "name": "Çengeldere  Beykoz",
+    "market": "bim",
+    "lat": 41.097015,
+    "lon": 29.148657
+  },
+  {
+    "id": "sok-14291",
+    "name": "Ümraniye Iftar Sok",
+    "market": "sok",
+    "lat": 41.1003,
+    "lon": 29.1491
+  },
+  {
+    "id": "bim-R690",
+    "name": "Polonezbeykoz",
+    "market": "bim",
+    "lat": 41.108566,
+    "lon": 29.160616
+  },
+  {
+    "id": "a101-E407",
+    "name": "Bi Mola Reşadiye Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.10286,
+    "lon": 29.290962
+  },
+  {
+    "id": "carrefour-2049",
+    "name": "Istanbul Çekmeköy Ömerlı Kıyıb",
+    "market": "carrefour",
+    "lat": 41.096294,
+    "lon": 29.32524
+  },
+  {
+    "id": "sok-4408",
+    "name": "Şok Minisırapınar",
+    "market": "sok",
+    "lat": 41.10137,
+    "lon": 29.328016
+  },
+  {
+    "id": "a101-F728",
+    "name": "Sırapınar Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.093445,
+    "lon": 29.334715
+  },
+  {
+    "id": "bim-G140",
+    "name": "Sırapınar  Çekmeköy",
+    "market": "bim",
+    "lat": 41.10775,
+    "lon": 29.328873
+  },
+  {
+    "id": "migros-6273",
+    "name": "Mjet Yeniköy",
+    "market": "migros",
+    "lat": 41.117928,
+    "lon": 29.065046
+  },
+  {
+    "id": "sok-1070",
+    "name": "Istanbul Sarıyer Yeniköy",
+    "market": "sok",
+    "lat": 41.118526,
+    "lon": 29.06166
+  },
+  {
+    "id": "sok-5128",
+    "name": "Istinye Merkez",
+    "market": "sok",
+    "lat": 41.11394,
+    "lon": 29.053907
+  },
+  {
+    "id": "a101-0529",
+    "name": "Mehter Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.114426,
+    "lon": 29.05301
+  },
+  {
+    "id": "bim-J077",
+    "name": "Istinyesarıyer",
+    "market": "bim",
+    "lat": 41.114178,
+    "lon": 29.052788
+  },
+  {
+    "id": "tarim_kredi-5168",
+    "name": "Istanbul Istinye Market",
+    "market": "tarim_kredi",
+    "lat": 41.11428,
+    "lon": 29.05251
+  },
+  {
+    "id": "sok-4202",
+    "name": "Şok Mini Değirmen Sokak",
+    "market": "sok",
+    "lat": 41.113876,
+    "lon": 29.05132
+  },
+  {
+    "id": "a101-D136",
+    "name": "Dirhem Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.12158,
+    "lon": 29.069244
+  },
+  {
+    "id": "migros-1922",
+    "name": "Istinye Mmm Migros",
+    "market": "migros",
+    "lat": 41.116325,
+    "lon": 29.049965
+  },
+  {
+    "id": "carrefour-1016",
+    "name": "Istanbul Istınye Hıper",
+    "market": "carrefour",
+    "lat": 41.11894,
+    "lon": 29.049255
+  },
+  {
+    "id": "a101-5317",
+    "name": "Reşitpaşa Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.103397,
+    "lon": 29.047695
+  },
+  {
+    "id": "a101-3400",
+    "name": "Yeniköy Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.12298,
+    "lon": 29.054304
+  },
+  {
+    "id": "bim-O114",
+    "name": "Mektepbeykoz",
+    "market": "bim",
+    "lat": 41.106674,
+    "lon": 29.082735
+  },
+  {
+    "id": "bim-J082",
+    "name": "Bağlar  Sarıyer",
+    "market": "bim",
+    "lat": 41.12423,
+    "lon": 29.053978
+  },
+  {
+    "id": "bim-J081",
+    "name": "Reşitpaşasarıyer",
+    "market": "bim",
+    "lat": 41.10343,
+    "lon": 29.045631
+  },
+  {
+    "id": "bim-2724",
+    "name": "Ferah üsküdar",
+    "market": "bim",
+    "lat": 41.115463,
+    "lon": 29.044226
+  },
+  {
+    "id": "bim-Q799",
+    "name": "Karagözsırtıbeykoz",
+    "market": "bim",
+    "lat": 41.112,
+    "lon": 29.089415
+  },
+  {
+    "id": "sok-3473",
+    "name": "Karagözsırtı Cami",
+    "market": "sok",
+    "lat": 41.111855,
+    "lon": 29.09006
+  },
+  {
+    "id": "bim-G636",
+    "name": "Çubuklu  Beykoz",
+    "market": "bim",
+    "lat": 41.10352,
+    "lon": 29.083809
+  },
+  {
+    "id": "a101-4137",
+    "name": "Çubuklu Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.10299,
+    "lon": 29.08476
+  },
+  {
+    "id": "a101-5501",
+    "name": "Karagöz Sırtı Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.111664,
+    "lon": 29.093391
+  },
+  {
+    "id": "a101-D457",
+    "name": "Şenevler Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.103886,
+    "lon": 29.09049
+  },
+  {
+    "id": "bim-T910",
+    "name": "Mahmut Şevket Paşa  Beykoz",
+    "market": "bim",
+    "lat": 41.099648,
+    "lon": 29.085625
+  },
+  {
+    "id": "bim-P690",
+    "name": "Atatürk Parkıbeykoz",
+    "market": "bim",
+    "lat": 41.115837,
+    "lon": 29.094936
+  },
+  {
+    "id": "sok-7005",
+    "name": "Beyaz Erguvan Paşabahçe",
+    "market": "sok",
+    "lat": 41.1153,
+    "lon": 29.0958
+  },
+  {
+    "id": "sok-12788",
+    "name": "Beykoz Katırcı Caddesi",
+    "market": "sok",
+    "lat": 41.11246,
+    "lon": 29.09852
+  },
+  {
+    "id": "a101-4201",
+    "name": "Merkez Paşabahçe Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.11624,
+    "lon": 29.097948
+  },
+  {
+    "id": "a101-G594",
+    "name": "Çiğdem Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.11109,
+    "lon": 29.101196
+  },
+  {
+    "id": "bim-P187",
+    "name": "Çiğdembeykoz",
+    "market": "bim",
+    "lat": 41.11131,
+    "lon": 29.101593
+  },
+  {
+    "id": "bim-G633",
+    "name": "Paşabahçe  Beykoz",
+    "market": "bim",
+    "lat": 41.115425,
+    "lon": 29.096615
+  },
+  {
+    "id": "bim-G647",
+    "name": "Soğuksu  Beykoz",
+    "market": "bim",
+    "lat": 41.115185,
+    "lon": 29.101997
+  },
+  {
+    "id": "bim-L580",
+    "name": "Mehmet Akif Ersoybeykoz",
+    "market": "bim",
+    "lat": 41.11435,
+    "lon": 29.105492
+  },
+  {
+    "id": "a101-4227",
+    "name": "Soğuksu Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.11423,
+    "lon": 29.105677
+  },
+  {
+    "id": "a101-4213",
+    "name": "Paşabahçe Beykoz  Istanbul",
+    "market": "a101",
+    "lat": 41.117653,
+    "lon": 29.099192
+  },
+  {
+    "id": "sok-10769",
+    "name": "Beykoz Soğuksu",
+    "market": "sok",
+    "lat": 41.114384,
+    "lon": 29.10897
+  },
+  {
+    "id": "sok-11058",
+    "name": "Beykoz Incirköy",
+    "market": "sok",
+    "lat": 41.11844,
+    "lon": 29.105963
+  },
+  {
+    "id": "a101-E470",
+    "name": "Karadut Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.110886,
+    "lon": 29.115393
+  },
+  {
+    "id": "a101-4202",
+    "name": "Meydan Soğuksu Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.1142,
+    "lon": 29.11113
+  },
+  {
+    "id": "a101-C777",
+    "name": "Tuna Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.11647,
+    "lon": 29.114605
+  },
+  {
+    "id": "bim-G643",
+    "name": "Meydan beykoz",
+    "market": "bim",
+    "lat": 41.114426,
+    "lon": 29.109198
+  },
+  {
+    "id": "bim-G661",
+    "name": "Beşyol beykoz",
+    "market": "bim",
+    "lat": 41.116714,
+    "lon": 29.114773
+  },
+  {
+    "id": "sok-10116",
+    "name": "Beykoz Çiftehavuzlar Cami",
+    "market": "sok",
+    "lat": 41.123005,
+    "lon": 29.107464
+  },
+  {
+    "id": "a101-0028",
+    "name": "Acarkent Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.117332,
+    "lon": 29.144508
+  },
+  {
+    "id": "bim-G650",
+    "name": "Görele  Beykoz",
+    "market": "bim",
+    "lat": 41.117023,
+    "lon": 29.14572
+  },
+  {
+    "id": "sok-7759",
+    "name": "Beykoz Görele",
+    "market": "sok",
+    "lat": 41.116905,
+    "lon": 29.146055
+  },
+  {
+    "id": "migros-5899",
+    "name": "Acar Blu Istanbul Mmm Migros",
+    "market": "migros",
+    "lat": 41.12162,
+    "lon": 29.145794
+  },
+  {
+    "id": "a101-K198",
+    "name": "Ayazma Cad Çekmeköy Istanbul",
+    "market": "a101",
+    "lat": 41.11864,
+    "lon": 29.291946
+  },
+  {
+    "id": "bim-R617",
+    "name": "Hüseyinli  Çekmeköy",
+    "market": "bim",
+    "lat": 41.119022,
+    "lon": 29.292463
+  },
+  {
+    "id": "sok-4426",
+    "name": "Şok Minialipaşa",
+    "market": "sok",
+    "lat": 41.12487,
+    "lon": 29.054796
+  },
+  {
+    "id": "sok-7402",
+    "name": "Baglar",
+    "market": "sok",
+    "lat": 41.123203,
+    "lon": 29.05456
+  },
+  {
+    "id": "bim-J068",
+    "name": "Hakimevler  Sarıyer",
+    "market": "bim",
+    "lat": 41.129105,
+    "lon": 29.048525
+  },
+  {
+    "id": "a101-B125",
+    "name": "Nuripaşa Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.128708,
+    "lon": 29.04814
+  },
+  {
+    "id": "bim-T009",
+    "name": "Fıstıkçamı  Sarıyer",
+    "market": "bim",
+    "lat": 41.1265,
+    "lon": 29.048101
+  },
+  {
+    "id": "sok-2000",
+    "name": "Tarabya Sahil",
+    "market": "sok",
+    "lat": 41.1365,
+    "lon": 29.052132
+  },
+  {
+    "id": "sok-1004",
+    "name": "Tarabya Sanatçılar Si",
+    "market": "sok",
+    "lat": 41.13784,
+    "lon": 29.053774
+  },
+  {
+    "id": "bim-J076",
+    "name": "Erciyes  Sarıyer",
+    "market": "bim",
+    "lat": 41.132267,
+    "lon": 29.044485
+  },
+  {
+    "id": "bim-R926",
+    "name": "Girne Limanı  Sarıyer",
+    "market": "bim",
+    "lat": 41.12966,
+    "lon": 29.043312
+  },
+  {
+    "id": "carrefour-2021",
+    "name": "Istanbul Tarabya Bayırı Gurme",
+    "market": "carrefour",
+    "lat": 41.135704,
+    "lon": 29.044846
+  },
+  {
+    "id": "a101-1307",
+    "name": "Ferahevler Sarıyer",
+    "market": "a101",
+    "lat": 41.13012,
+    "lon": 29.041786
+  },
+  {
+    "id": "bim-G644",
+    "name": "Iskele  Beykoz",
+    "market": "bim",
+    "lat": 41.133247,
+    "lon": 29.092392
+  },
+  {
+    "id": "sok-7009",
+    "name": "Yalıköy Mağaza",
+    "market": "sok",
+    "lat": 41.13721,
+    "lon": 29.086468
+  },
+  {
+    "id": "sok-11974",
+    "name": "Beykoz On Çeşmeler",
+    "market": "sok",
+    "lat": 41.134064,
+    "lon": 29.09274
+  },
+  {
+    "id": "tarim_kredi-7334",
+    "name": "Istanbul Beykoz Mehmet Yavuz",
+    "market": "tarim_kredi",
+    "lat": 41.13423,
+    "lon": 29.09314
+  },
+  {
+    "id": "bim-G635",
+    "name": "Yalıköy  Beykoz",
+    "market": "bim",
+    "lat": 41.139637,
+    "lon": 29.087124
+  },
+  {
+    "id": "a101-7709",
+    "name": "Yalıköy Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.1398,
+    "lon": 29.08705
+  },
+  {
+    "id": "bim-R030",
+    "name": "Korubeykoz",
+    "market": "bim",
+    "lat": 41.128914,
+    "lon": 29.100288
+  },
+  {
+    "id": "a101-9692",
+    "name": "Incirköy Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.119167,
+    "lon": 29.097149
+  },
+  {
+    "id": "a101-0412",
+    "name": "Kundura Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.14203,
+    "lon": 29.087187
+  },
+  {
+    "id": "sok-4399",
+    "name": "Şok Minibahçeevli",
+    "market": "sok",
+    "lat": 41.14021,
+    "lon": 29.09239
+  },
+  {
+    "id": "bim-G637",
+    "name": "Gümüşsuyu  Beykoz",
+    "market": "bim",
+    "lat": 41.127514,
+    "lon": 29.102148
+  },
+  {
+    "id": "a101-4276",
+    "name": "Sultaniye Beykoz",
+    "market": "a101",
+    "lat": 41.124943,
+    "lon": 29.102291
+  },
+  {
+    "id": "tarim_kredi-5360",
+    "name": "Istanbul Beykoz Ortaçeşme",
+    "market": "tarim_kredi",
+    "lat": 41.14322,
+    "lon": 29.08708
+  },
+  {
+    "id": "a101-D409",
+    "name": "Dereiçi Caddesi Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.128216,
+    "lon": 29.103275
+  },
+  {
+    "id": "bim-G654",
+    "name": "Çiftehavuzlar  Beykoz",
+    "market": "bim",
+    "lat": 41.123535,
+    "lon": 29.10659
+  },
+  {
+    "id": "bim-V309",
+    "name": "Çukurçayır  Beykoz",
+    "market": "bim",
+    "lat": 41.119595,
+    "lon": 29.104082
+  },
+  {
+    "id": "a101-4109",
+    "name": "Anadolu Hisarı Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.122486,
+    "lon": 29.111324
+  },
+  {
+    "id": "a101-4138",
+    "name": "Çukurçayır Beykoz  Istanbul",
+    "market": "a101",
+    "lat": 41.118385,
+    "lon": 29.106298
+  },
+  {
+    "id": "a101-H124",
+    "name": "Toygar Örnekköy Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.13885,
+    "lon": 29.141712
+  },
+  {
+    "id": "a101-I356",
+    "name": "Elmalı Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.139385,
+    "lon": 29.12167
+  },
+  {
+    "id": "bim-G645",
+    "name": "Elmalı  Beykoz",
+    "market": "bim",
+    "lat": 41.139507,
+    "lon": 29.121115
+  },
+  {
+    "id": "bim-J669",
+    "name": "Örnekköy  Beykoz",
+    "market": "bim",
+    "lat": 41.141525,
+    "lon": 29.144924
+  },
+  {
+    "id": "sok-4301",
+    "name": "Şok Minicumhurıyet2",
+    "market": "sok",
+    "lat": 41.129814,
+    "lon": 29.259186
+  },
+  {
+    "id": "bim-T071",
+    "name": "Ressam  Beykoz",
+    "market": "bim",
+    "lat": 41.12892,
+    "lon": 29.260262
+  },
+  {
+    "id": "sok-4822",
+    "name": "Şokishaklı",
+    "market": "sok",
+    "lat": 41.138264,
+    "lon": 29.293343
+  },
+  {
+    "id": "bim-T070",
+    "name": "Ishaklıbeykoz",
+    "market": "bim",
+    "lat": 41.140392,
+    "lon": 29.289906
+  },
+  {
+    "id": "bim-J070",
+    "name": "Ömürtepesarıyer",
+    "market": "bim",
+    "lat": 41.142662,
+    "lon": 29.045189
+  },
+  {
+    "id": "a101-1577",
+    "name": "Kireçburnu Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.14318,
+    "lon": 29.045012
+  },
+  {
+    "id": "sok-13258",
+    "name": "Beykoz Çayırı",
+    "market": "sok",
+    "lat": 41.145683,
+    "lon": 29.084518
+  },
+  {
+    "id": "sok-4525",
+    "name": "Şok Miniaydınevler",
+    "market": "sok",
+    "lat": 41.13644,
+    "lon": 29.046854
+  },
+  {
+    "id": "a101-H312",
+    "name": "Çamlıbahçe Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.148743,
+    "lon": 29.084337
+  },
+  {
+    "id": "sok-5057",
+    "name": "Beykoz Çamlıbahçe",
+    "market": "sok",
+    "lat": 41.148792,
+    "lon": 29.084953
+  },
+  {
+    "id": "bim-U715",
+    "name": "Çamlıbahçebeykoz",
+    "market": "bim",
+    "lat": 41.148785,
+    "lon": 29.085026
+  },
+  {
+    "id": "bim-G658",
+    "name": "Çayır  Beykoz",
+    "market": "bim",
+    "lat": 41.14473,
+    "lon": 29.087362
+  },
+  {
+    "id": "a101-9859",
+    "name": "Çayır Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.147694,
+    "lon": 29.087353
+  },
+  {
+    "id": "bim-G638",
+    "name": "Ortaçeşme  Beykoz",
+    "market": "bim",
+    "lat": 41.14808,
+    "lon": 29.087744
+  },
+  {
+    "id": "sok-7013",
+    "name": "Sultan Aziz Beykoz",
+    "market": "sok",
+    "lat": 41.1491,
+    "lon": 29.088
+  },
+  {
+    "id": "sok-10225",
+    "name": "Beykoz Vakıftepe",
+    "market": "sok",
+    "lat": 41.147163,
+    "lon": 29.091198
+  },
+  {
+    "id": "a101-4231",
+    "name": "Şahinkaya Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.14352,
+    "lon": 29.09187
+  },
+  {
+    "id": "bim-G640",
+    "name": "Tokatköy  Beykoz",
+    "market": "bim",
+    "lat": 41.150627,
+    "lon": 29.089388
+  },
+  {
+    "id": "bim-T322",
+    "name": "Şahinkayabeykoz",
+    "market": "bim",
+    "lat": 41.14051,
+    "lon": 29.096804
+  },
+  {
+    "id": "a101-G998",
+    "name": "Sedef Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.15036,
+    "lon": 29.089262
+  },
+  {
+    "id": "a101-4105",
+    "name": "Akbaba Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.15167,
+    "lon": 29.116724
+  },
+  {
+    "id": "sok-12942",
+    "name": "Beykoz Akbaba",
+    "market": "sok",
+    "lat": 41.15253,
+    "lon": 29.116802
+  },
+  {
+    "id": "bim-H093",
+    "name": "Akbaba  Beykoz",
+    "market": "bim",
+    "lat": 41.15336,
+    "lon": 29.11687
+  },
+  {
+    "id": "sok-11419",
+    "name": "Beykoz Şirindere",
+    "market": "sok",
+    "lat": 41.148144,
+    "lon": 29.167482
+  },
+  {
+    "id": "a101-4679",
+    "name": "Mahmut Şevket Paşa Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.15257,
+    "lon": 29.190187
+  },
+  {
+    "id": "sok-4757",
+    "name": "Şokbeykoz Mahmut Ş",
+    "market": "sok",
+    "lat": 41.152416,
+    "lon": 29.191235
+  },
+  {
+    "id": "carrefour-3012",
+    "name": "Istanbul Sarıyer Süper",
+    "market": "carrefour",
+    "lat": 41.16813,
+    "lon": 29.057705
+  },
+  {
+    "id": "migros-4182",
+    "name": "Mjet Sarıyer Cadde",
+    "market": "migros",
+    "lat": 41.168587,
+    "lon": 29.056156
+  },
+  {
+    "id": "a101-1768",
+    "name": "Yeni Mahalle Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.16956,
+    "lon": 29.057503
+  },
+  {
+    "id": "bim-J088",
+    "name": "Merkez  Sarıyer",
+    "market": "bim",
+    "lat": 41.169704,
+    "lon": 29.05626
+  },
+  {
+    "id": "sok-2308",
+    "name": "Sarıyer",
+    "market": "sok",
+    "lat": 41.170063,
+    "lon": 29.053282
+  },
+  {
+    "id": "a101-B743",
+    "name": "Yusuf Ziya Öniş Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.172478,
+    "lon": 29.052425
+  },
+  {
+    "id": "bim-J091",
+    "name": "Nalbant Çeşme  Sarıyer",
+    "market": "bim",
+    "lat": 41.172615,
+    "lon": 29.052303
+  },
+  {
+    "id": "sok-13134",
+    "name": "Sarıyer Stadyum",
+    "market": "sok",
+    "lat": 41.17271,
+    "lon": 29.05162
+  },
+  {
+    "id": "sok-825",
+    "name": "Büyükdere Mağazası",
+    "market": "sok",
+    "lat": 41.160954,
+    "lon": 29.043455
+  },
+  {
+    "id": "bim-O726",
+    "name": "Büyükdere  Sarıyer",
+    "market": "bim",
+    "lat": 41.160084,
+    "lon": 29.041908
+  },
+  {
+    "id": "a101-4230",
+    "name": "Sultan Aziz Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.158012,
+    "lon": 29.095652
+  },
+  {
+    "id": "sok-8548",
+    "name": "Tokatköy Beykoz",
+    "market": "sok",
+    "lat": 41.158142,
+    "lon": 29.09575
+  },
+  {
+    "id": "bim-G659",
+    "name": "Sultan Aziz  Beykoz",
+    "market": "bim",
+    "lat": 41.159798,
+    "lon": 29.097422
+  },
+  {
+    "id": "bim-P691",
+    "name": "Anadolu Kavağıbeykoz",
+    "market": "bim",
+    "lat": 41.173096,
+    "lon": 29.088863
+  },
+  {
+    "id": "a101-D133",
+    "name": "Anadolu Kavağı Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.17411,
+    "lon": 29.08947
+  },
+  {
+    "id": "sok-4293",
+    "name": "Şok Minianadolukavagı",
+    "market": "sok",
+    "lat": 41.174725,
+    "lon": 29.088978
+  },
+  {
+    "id": "sok-14030",
+    "name": "Çekmeköy Çağrı Bey",
+    "market": "sok",
+    "lat": 41.1615,
+    "lon": 29.1435
+  },
+  {
+    "id": "a101-4281",
+    "name": "Rumeli Kavağı Sarıyer",
+    "market": "a101",
+    "lat": 41.18307,
+    "lon": 29.072666
+  },
+  {
+    "id": "bim-K872",
+    "name": "Rumeli Kavağı  Sarıyer",
+    "market": "bim",
+    "lat": 41.1823,
+    "lon": 29.073305
+  },
+  {
+    "id": "bim-J087",
+    "name": "Maden  Sarıyer",
+    "market": "bim",
+    "lat": 41.178143,
+    "lon": 29.0498
+  },
+  {
+    "id": "sok-4218",
+    "name": "Şok Miniyazıcı",
+    "market": "sok",
+    "lat": 41.186462,
+    "lon": 29.20414
+  },
+  {
+    "id": "sok-3949",
+    "name": "Beykoz Paşamandıra",
+    "market": "sok",
+    "lat": 41.187492,
+    "lon": 29.233252
+  },
+  {
+    "id": "bim-R016",
+    "name": "Paşamandırabeykoz",
+    "market": "bim",
+    "lat": 41.19021,
+    "lon": 29.231136
+  },
+  {
+    "id": "a101-0667",
+    "name": "Değirmendere Köyü Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.19018,
+    "lon": 29.231628
+  },
+  {
+    "id": "a101-2265",
+    "name": "Bizimevler Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.195866,
+    "lon": 29.053314
+  },
+  {
+    "id": "carrefour-3601",
+    "name": "Istanbul Sarıyer Aya Süper",
+    "market": "carrefour",
+    "lat": 41.19539,
+    "lon": 29.05286
+  },
+  {
+    "id": "sok-2314",
+    "name": "Sarıyer Koç Üniversitesi",
+    "market": "sok",
+    "lat": 41.194416,
+    "lon": 29.05303
+  },
+  {
+    "id": "bim-J741",
+    "name": "Acarlar  Sarıyer",
+    "market": "bim",
+    "lat": 41.19456,
+    "lon": 29.050077
+  },
+  {
+    "id": "migros-929",
+    "name": "Koç Üniversitesi Satış Mağazas",
+    "market": "migros",
+    "lat": 41.205826,
+    "lon": 29.073011
+  },
+  {
+    "id": "migros-8493",
+    "name": "Düşler Vadisi Riva Ist Mmm",
+    "market": "migros",
+    "lat": 41.202892,
+    "lon": 29.237087
+  },
+  {
+    "id": "sok-13849",
+    "name": "Yenidoğan Safa Tepesi",
+    "market": "sok",
+    "lat": 41.2022,
+    "lon": 29.2544
+  },
+  {
+    "id": "sok-4812",
+    "name": "Şok Mini Anadolu Feneri",
+    "market": "sok",
+    "lat": 41.21741,
+    "lon": 29.15374
+  },
+  {
+    "id": "bim-G646",
+    "name": "Riva  Beykoz",
+    "market": "bim",
+    "lat": 41.224125,
+    "lon": 29.218641
+  },
+  {
+    "id": "sok-1557",
+    "name": "Riva Çakırbey",
+    "market": "sok",
+    "lat": 41.22431,
+    "lon": 29.218943
+  },
+  {
+    "id": "a101-6296",
+    "name": "Riva Beykoz Istanbul",
+    "market": "a101",
+    "lat": 41.226635,
+    "lon": 29.224745
+  },
+  {
+    "id": "a101-0713",
+    "name": "Demirciköy Sarıyer Istanbul",
+    "market": "a101",
+    "lat": 41.235157,
+    "lon": 29.056099
+  },
+  {
+    "id": "sok-4579",
+    "name": "Şokrumeli Feneri",
+    "market": "sok",
+    "lat": 41.23399,
+    "lon": 29.110533
+  }
+]

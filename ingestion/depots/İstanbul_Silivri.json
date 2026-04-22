@@ -1,0 +1,2438 @@
+[
+  {
+    "id": "a101-2963",
+    "name": "Sultanköy Marmaraereğlisi Tekirdağ",
+    "market": "a101",
+    "lat": 41.020287,
+    "lon": 27.989904
+  },
+  {
+    "id": "sok-4663",
+    "name": "Şok Minisultanköy",
+    "market": "sok",
+    "lat": 41.019836,
+    "lon": 27.990171
+  },
+  {
+    "id": "a101-D849",
+    "name": "Çınaraltı Marmaraereğlisi Tekirdağ",
+    "market": "a101",
+    "lat": 41.008316,
+    "lon": 27.981117
+  },
+  {
+    "id": "a101-K500",
+    "name": "Altınevler Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.041073,
+    "lon": 28.02722
+  },
+  {
+    "id": "bim-H892",
+    "name": "Gümüşyaka  Silivri",
+    "market": "bim",
+    "lat": 41.04606,
+    "lon": 28.04068
+  },
+  {
+    "id": "a101-H965",
+    "name": "Erfelek Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.04851,
+    "lon": 28.03813
+  },
+  {
+    "id": "sok-14109",
+    "name": "Gümüşyaka Sahil",
+    "market": "sok",
+    "lat": 41.0427,
+    "lon": 28.0482
+  },
+  {
+    "id": "a101-F827",
+    "name": "Sancaktepe Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.047836,
+    "lon": 28.043495
+  },
+  {
+    "id": "a101-3182",
+    "name": "Çantaköy Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.047966,
+    "lon": 28.04337
+  },
+  {
+    "id": "a101-H833",
+    "name": "Mehpare Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.048023,
+    "lon": 28.043455
+  },
+  {
+    "id": "sok-13317",
+    "name": "Gümüşyaka",
+    "market": "sok",
+    "lat": 41.04853,
+    "lon": 28.044785
+  },
+  {
+    "id": "bim-H898",
+    "name": "Yeniçeşme  Silivri",
+    "market": "bim",
+    "lat": 41.050117,
+    "lon": 28.04301
+  },
+  {
+    "id": "bim-H893",
+    "name": "Çamlık  Silivri",
+    "market": "bim",
+    "lat": 41.047913,
+    "lon": 28.047134
+  },
+  {
+    "id": "a101-J820",
+    "name": "Kirişhane Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.05122,
+    "lon": 28.054327
+  },
+  {
+    "id": "bim-L718",
+    "name": "Yalı  Silivri",
+    "market": "bim",
+    "lat": 41.05219,
+    "lon": 28.057138
+  },
+  {
+    "id": "sok-4722",
+    "name": "Şok Minigazneli",
+    "market": "sok",
+    "lat": 41.04353,
+    "lon": 28.143679
+  },
+  {
+    "id": "carrefour-5152",
+    "name": "Istanbul Selımpaşa Sahıl Mını",
+    "market": "carrefour",
+    "lat": 41.0541,
+    "lon": 28.372284
+  },
+  {
+    "id": "sok-671",
+    "name": "Selimpaşa Semra",
+    "market": "sok",
+    "lat": 41.054665,
+    "lon": 28.368494
+  },
+  {
+    "id": "a101-4845",
+    "name": "Adnan Menderes Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.054585,
+    "lon": 28.36533
+  },
+  {
+    "id": "bim-H887",
+    "name": "Köyiçi  Silivri",
+    "market": "bim",
+    "lat": 41.054806,
+    "lon": 28.366777
+  },
+  {
+    "id": "sok-7998",
+    "name": "Selimpaşa Adnan Menderes",
+    "market": "sok",
+    "lat": 41.05468,
+    "lon": 28.364689
+  },
+  {
+    "id": "bim-L325",
+    "name": "Sahil  Silivri",
+    "market": "bim",
+    "lat": 41.054993,
+    "lon": 28.372839
+  },
+  {
+    "id": "a101-G654",
+    "name": "Halaskar Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.05515,
+    "lon": 28.369314
+  },
+  {
+    "id": "tarim_kredi-5910",
+    "name": "Istanbul Silivri Selim Paşa",
+    "market": "tarim_kredi",
+    "lat": 41.05495,
+    "lon": 28.36519
+  },
+  {
+    "id": "a101-4786",
+    "name": "E5 Selimpaşasilivri Istanbul",
+    "market": "a101",
+    "lat": 41.0554,
+    "lon": 28.372074
+  },
+  {
+    "id": "a101-J129",
+    "name": "Yoğurthane Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.05476,
+    "lon": 28.379988
+  },
+  {
+    "id": "sok-7301",
+    "name": "Aykut Barka Selımpasa",
+    "market": "sok",
+    "lat": 41.05607,
+    "lon": 28.367445
+  },
+  {
+    "id": "migros-7133",
+    "name": "Selimpaşa M Migros",
+    "market": "migros",
+    "lat": 41.05617,
+    "lon": 28.3678
+  },
+  {
+    "id": "bim-H891",
+    "name": "Pazariçi  Silivri",
+    "market": "bim",
+    "lat": 41.05608,
+    "lon": 28.365772
+  },
+  {
+    "id": "sok-13043",
+    "name": "Selimpaşa Pazaryeri",
+    "market": "sok",
+    "lat": 41.05607,
+    "lon": 28.363949
+  },
+  {
+    "id": "a101-G412",
+    "name": "Kadir Has Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.05653,
+    "lon": 28.3697
+  },
+  {
+    "id": "sok-4238",
+    "name": "Şok Miniyoğurthane",
+    "market": "sok",
+    "lat": 41.055214,
+    "lon": 28.380232
+  },
+  {
+    "id": "bim-H884",
+    "name": "Selimpaşa  Silivri",
+    "market": "bim",
+    "lat": 41.056572,
+    "lon": 28.368942
+  },
+  {
+    "id": "tarim_kredi-7224",
+    "name": "Istanbul Silivri Selimpaşa 2078",
+    "market": "tarim_kredi",
+    "lat": 41.0557,
+    "lon": 28.38396
+  },
+  {
+    "id": "a101-F832",
+    "name": "Çanakkale Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.051064,
+    "lon": 28.042582
+  },
+  {
+    "id": "a101-J224",
+    "name": "Villakent Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.05882,
+    "lon": 28.076578
+  },
+  {
+    "id": "bim-H895",
+    "name": "Kınalı  Silivri",
+    "market": "bim",
+    "lat": 41.063072,
+    "lon": 28.095755
+  },
+  {
+    "id": "sok-4769",
+    "name": "Şokmini Sencerbey",
+    "market": "sok",
+    "lat": 41.0774,
+    "lon": 28.0845
+  },
+  {
+    "id": "bim-H896",
+    "name": "Çanta  Silivri",
+    "market": "bim",
+    "lat": 41.079407,
+    "lon": 28.083338
+  },
+  {
+    "id": "sok-5144",
+    "name": "Silivri Çanta",
+    "market": "sok",
+    "lat": 41.081936,
+    "lon": 28.081966
+  },
+  {
+    "id": "bim-Q873",
+    "name": "Itfaiye  Silivri",
+    "market": "bim",
+    "lat": 41.08484,
+    "lon": 28.080343
+  },
+  {
+    "id": "a101-J999",
+    "name": "Cambaztepe Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.068523,
+    "lon": 28.114649
+  },
+  {
+    "id": "bim-H894",
+    "name": "Semizkumlar  Silivri",
+    "market": "bim",
+    "lat": 41.074493,
+    "lon": 28.145142
+  },
+  {
+    "id": "a101-5312",
+    "name": "Tuzhane Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.07474,
+    "lon": 28.14567
+  },
+  {
+    "id": "a101-0733",
+    "name": "Yeşilkent Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.07558,
+    "lon": 28.145208
+  },
+  {
+    "id": "sok-8122",
+    "name": "Silivri Semizkumlar",
+    "market": "sok",
+    "lat": 41.07456,
+    "lon": 28.148066
+  },
+  {
+    "id": "a101-C901",
+    "name": "Altınorak Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.07686,
+    "lon": 28.18412
+  },
+  {
+    "id": "a101-B675",
+    "name": "Kahraman Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.07436,
+    "lon": 28.209831
+  },
+  {
+    "id": "migros-2145",
+    "name": "5m Silivri",
+    "market": "migros",
+    "lat": 41.082737,
+    "lon": 28.203705
+  },
+  {
+    "id": "a101-B924",
+    "name": "Sergen Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.084557,
+    "lon": 28.206907
+  },
+  {
+    "id": "bim-J682",
+    "name": "Sanayi  Silivri",
+    "market": "bim",
+    "lat": 41.084713,
+    "lon": 28.208862
+  },
+  {
+    "id": "migros-9198",
+    "name": "Mjet Inönü Cd Silivri Istanbul",
+    "market": "migros",
+    "lat": 41.079987,
+    "lon": 28.230164
+  },
+  {
+    "id": "tarim_kredi-7550",
+    "name": "Istanbul Silivri Inönü",
+    "market": "tarim_kredi",
+    "lat": 41.07973,
+    "lon": 28.23076
+  },
+  {
+    "id": "tarim_kredi-7261",
+    "name": "Istanbul Silivri Sahil",
+    "market": "tarim_kredi",
+    "lat": 41.07159,
+    "lon": 28.24427
+  },
+  {
+    "id": "sok-4377",
+    "name": "Şok Minifatih Cami",
+    "market": "sok",
+    "lat": 41.072166,
+    "lon": 28.248304
+  },
+  {
+    "id": "bim-K573",
+    "name": "Karabey  Silivri",
+    "market": "bim",
+    "lat": 41.06903,
+    "lon": 28.25356
+  },
+  {
+    "id": "a101-7601",
+    "name": "Uluşahin Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.07076,
+    "lon": 28.252089
+  },
+  {
+    "id": "a101-K026",
+    "name": "Plaza Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.073196,
+    "lon": 28.248226
+  },
+  {
+    "id": "bim-V308",
+    "name": "Alibey  Silivri",
+    "market": "bim",
+    "lat": 41.071575,
+    "lon": 28.251278
+  },
+  {
+    "id": "tarim_kredi-5631",
+    "name": "Istanbul Silivri Halim Uluşahin",
+    "market": "tarim_kredi",
+    "lat": 41.07086,
+    "lon": 28.25241
+  },
+  {
+    "id": "sok-4708",
+    "name": "Şok Minibabür",
+    "market": "sok",
+    "lat": 41.07043,
+    "lon": 28.253963
+  },
+  {
+    "id": "bim-H879",
+    "name": "Pervane Cad  Silivri",
+    "market": "bim",
+    "lat": 41.075195,
+    "lon": 28.245161
+  },
+  {
+    "id": "tarim_kredi-5069",
+    "name": "Istanbul Silivri Market",
+    "market": "tarim_kredi",
+    "lat": 41.07587,
+    "lon": 28.24252
+  },
+  {
+    "id": "a101-C752",
+    "name": "Çarşı Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.0742,
+    "lon": 28.248589
+  },
+  {
+    "id": "migros-9840",
+    "name": "Silivri Ist M",
+    "market": "migros",
+    "lat": 41.075787,
+    "lon": 28.244766
+  },
+  {
+    "id": "a101-J275",
+    "name": "Kaptanı Derya Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.075203,
+    "lon": 28.248411
+  },
+  {
+    "id": "bim-H877",
+    "name": "Çeşme silivri",
+    "market": "bim",
+    "lat": 41.07468,
+    "lon": 28.25073
+  },
+  {
+    "id": "sok-2770",
+    "name": "Silivri Köprü",
+    "market": "sok",
+    "lat": 41.078293,
+    "lon": 28.237234
+  },
+  {
+    "id": "sok-1649",
+    "name": "Istanbul Silivri Çeşme",
+    "market": "sok",
+    "lat": 41.074608,
+    "lon": 28.252182
+  },
+  {
+    "id": "a101-F100",
+    "name": "Tüfekçi Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.07382,
+    "lon": 28.253801
+  },
+  {
+    "id": "sok-4199",
+    "name": "Şok Mini  Alibey",
+    "market": "sok",
+    "lat": 41.070183,
+    "lon": 28.258413
+  },
+  {
+    "id": "migros-8541",
+    "name": "Silivri Belediye Ist Mm Migros",
+    "market": "migros",
+    "lat": 41.073666,
+    "lon": 28.255245
+  },
+  {
+    "id": "tarim_kredi-7222",
+    "name": "Istanbul Silivri Cumhuriyet",
+    "market": "tarim_kredi",
+    "lat": 41.06825,
+    "lon": 28.26173
+  },
+  {
+    "id": "migros-7072",
+    "name": "Silivri Yaşam Evleri M Migros",
+    "market": "migros",
+    "lat": 41.06826,
+    "lon": 28.262123
+  },
+  {
+    "id": "bim-O077",
+    "name": "Huzurevi  Silivri",
+    "market": "bim",
+    "lat": 41.06808,
+    "lon": 28.262516
+  },
+  {
+    "id": "sok-10720",
+    "name": "Silivri Erdinç",
+    "market": "sok",
+    "lat": 41.069027,
+    "lon": 28.2605
+  },
+  {
+    "id": "sok-4665",
+    "name": "Şok Minigündoğdu",
+    "market": "sok",
+    "lat": 41.0699,
+    "lon": 28.272057
+  },
+  {
+    "id": "a101-K479",
+    "name": "Çizgi Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.068813,
+    "lon": 28.27507
+  },
+  {
+    "id": "bim-H889",
+    "name": "Adliye silivri",
+    "market": "bim",
+    "lat": 41.072075,
+    "lon": 28.260754
+  },
+  {
+    "id": "sok-4625",
+    "name": "Şok Minisilivri Hastane",
+    "market": "sok",
+    "lat": 41.072304,
+    "lon": 28.258902
+  },
+  {
+    "id": "a101-2243",
+    "name": "Adliye Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.0721,
+    "lon": 28.25657
+  },
+  {
+    "id": "a101-8677",
+    "name": "Zikri Memiş Silivri",
+    "market": "a101",
+    "lat": 41.072273,
+    "lon": 28.27278
+  },
+  {
+    "id": "bim-H886",
+    "name": "Terminal silivri",
+    "market": "bim",
+    "lat": 41.07498,
+    "lon": 28.255768
+  },
+  {
+    "id": "tarim_kredi-5241",
+    "name": "Istanbul Silivri Yenimahalle",
+    "market": "tarim_kredi",
+    "lat": 41.0805,
+    "lon": 28.26124
+  },
+  {
+    "id": "migros-7808",
+    "name": "Atabek Konutları Silivri Ist M",
+    "market": "migros",
+    "lat": 41.084183,
+    "lon": 28.270485
+  },
+  {
+    "id": "a101-F744",
+    "name": "Saraçoğlu Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.06541,
+    "lon": 28.288265
+  },
+  {
+    "id": "sok-1257",
+    "name": "Silivri Çetin Emeç",
+    "market": "sok",
+    "lat": 41.066578,
+    "lon": 28.294073
+  },
+  {
+    "id": "a101-H786",
+    "name": "Karayemiş Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.066006,
+    "lon": 28.306984
+  },
+  {
+    "id": "a101-8953",
+    "name": "Menzil Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.07444,
+    "lon": 28.279528
+  },
+  {
+    "id": "sok-14280",
+    "name": "Silivri Gazi Cad",
+    "market": "sok",
+    "lat": 41.0768,
+    "lon": 28.2827
+  },
+  {
+    "id": "sok-10638",
+    "name": "Silivri Elibol",
+    "market": "sok",
+    "lat": 41.08131,
+    "lon": 28.273659
+  },
+  {
+    "id": "bim-T583",
+    "name": "Üniversite  Silivri",
+    "market": "bim",
+    "lat": 41.081066,
+    "lon": 28.27284
+  },
+  {
+    "id": "sok-1177",
+    "name": "Selimpaşa",
+    "market": "sok",
+    "lat": 41.0603,
+    "lon": 28.3456
+  },
+  {
+    "id": "a101-9597",
+    "name": "Erseven Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.06078,
+    "lon": 28.34703
+  },
+  {
+    "id": "sok-7963",
+    "name": "Selimpaşa Mehmet Akif",
+    "market": "sok",
+    "lat": 41.056263,
+    "lon": 28.359838
+  },
+  {
+    "id": "bim-U138",
+    "name": "Yoğurthane  Silivri",
+    "market": "bim",
+    "lat": 41.057663,
+    "lon": 28.384874
+  },
+  {
+    "id": "sok-4214",
+    "name": "Şok Miniballıca Seymen",
+    "market": "sok",
+    "lat": 41.094826,
+    "lon": 27.947933
+  },
+  {
+    "id": "a101-J902",
+    "name": "Fabrika Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.09176,
+    "lon": 28.013628
+  },
+  {
+    "id": "a101-J838",
+    "name": "Yıldırım Değirmenköy Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.096863,
+    "lon": 28.008226
+  },
+  {
+    "id": "bim-H897",
+    "name": "Değirmenköy  Silivri",
+    "market": "bim",
+    "lat": 41.097492,
+    "lon": 28.009045
+  },
+  {
+    "id": "sok-5216",
+    "name": "Silivri Değirmenköy",
+    "market": "sok",
+    "lat": 41.09757,
+    "lon": 28.00909
+  },
+  {
+    "id": "a101-I394",
+    "name": "Namık Kemal Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.098293,
+    "lon": 28.011263
+  },
+  {
+    "id": "bim-U072",
+    "name": "Namık Kemal  Silivri",
+    "market": "bim",
+    "lat": 41.09782,
+    "lon": 28.012545
+  },
+  {
+    "id": "sok-8376",
+    "name": "Silivri Çanta Sancaktepe",
+    "market": "sok",
+    "lat": 41.093586,
+    "lon": 28.085564
+  },
+  {
+    "id": "carrefour-5491",
+    "name": "Istanbul Sılıvrı Marmara Ceza",
+    "market": "carrefour",
+    "lat": 41.09571,
+    "lon": 28.156467
+  },
+  {
+    "id": "tarim_kredi-6806",
+    "name": "Istanbul Silivri Kiptaş",
+    "market": "tarim_kredi",
+    "lat": 41.08691,
+    "lon": 28.19245
+  },
+  {
+    "id": "bim-P589",
+    "name": "Gökmen  Silivri",
+    "market": "bim",
+    "lat": 41.085896,
+    "lon": 28.194221
+  },
+  {
+    "id": "a101-9473",
+    "name": "Kumluk Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.085865,
+    "lon": 28.193268
+  },
+  {
+    "id": "a101-G630",
+    "name": "Fatih Sultan Mehmet Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.08579,
+    "lon": 28.193552
+  },
+  {
+    "id": "sok-12308",
+    "name": "Silivri Tombaz",
+    "market": "sok",
+    "lat": 41.085804,
+    "lon": 28.193676
+  },
+  {
+    "id": "migros-6714",
+    "name": "Sılıvrı Kıptaş 3 M Migros",
+    "market": "migros",
+    "lat": 41.084217,
+    "lon": 28.194004
+  },
+  {
+    "id": "bim-J683",
+    "name": "Alipaşa  Silivri",
+    "market": "bim",
+    "lat": 41.086086,
+    "lon": 28.240067
+  },
+  {
+    "id": "sok-14203",
+    "name": "Silivri Inönü Cad",
+    "market": "sok",
+    "lat": 41.0789,
+    "lon": 28.2425
+  },
+  {
+    "id": "sok-13883",
+    "name": "Silivri Balcı Sok",
+    "market": "sok",
+    "lat": 41.0887,
+    "lon": 28.2443
+  },
+  {
+    "id": "sok-4189",
+    "name": "Şok Mini  Akın",
+    "market": "sok",
+    "lat": 41.087772,
+    "lon": 28.244738
+  },
+  {
+    "id": "a101-J577",
+    "name": "Karanfil Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.078876,
+    "lon": 28.240335
+  },
+  {
+    "id": "bim-H880",
+    "name": "Kiptaş  Silivri",
+    "market": "bim",
+    "lat": 41.08318,
+    "lon": 28.245857
+  },
+  {
+    "id": "a101-G646",
+    "name": "Sun Of Silivri Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.08941,
+    "lon": 28.244905
+  },
+  {
+    "id": "migros-6411",
+    "name": "Silivri Şehrigül M Migros",
+    "market": "migros",
+    "lat": 41.08472,
+    "lon": 28.246813
+  },
+  {
+    "id": "a101-1412",
+    "name": "Gümüşyaka Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.082973,
+    "lon": 28.246473
+  },
+  {
+    "id": "tarim_kredi-7342",
+    "name": "Istanbul Silivri Sancak",
+    "market": "tarim_kredi",
+    "lat": 41.08869,
+    "lon": 28.24633
+  },
+  {
+    "id": "a101-D035",
+    "name": "Varnalı Caddesi Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.082268,
+    "lon": 28.247019
+  },
+  {
+    "id": "sok-8334",
+    "name": "Silivri Varnalı",
+    "market": "sok",
+    "lat": 41.07946,
+    "lon": 28.245598
+  },
+  {
+    "id": "bim-R497",
+    "name": "Doğukan  Silivri",
+    "market": "bim",
+    "lat": 41.08349,
+    "lon": 28.248276
+  },
+  {
+    "id": "a101-H760",
+    "name": "Kuzey Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.083076,
+    "lon": 28.248953
+  },
+  {
+    "id": "bim-Q702",
+    "name": "Maraş  Silivri",
+    "market": "bim",
+    "lat": 41.09526,
+    "lon": 28.242857
+  },
+  {
+    "id": "bim-J810",
+    "name": "Göksular  Silivri",
+    "market": "bim",
+    "lat": 41.080963,
+    "lon": 28.25081
+  },
+  {
+    "id": "migros-9421",
+    "name": "Hatipoğlu Sk Silivri Ist M",
+    "market": "migros",
+    "lat": 41.087112,
+    "lon": 28.25257
+  },
+  {
+    "id": "tarim_kredi-7312",
+    "name": "Istanbul Silivri Balaban",
+    "market": "tarim_kredi",
+    "lat": 41.08987,
+    "lon": 28.25295
+  },
+  {
+    "id": "migros-8204",
+    "name": "Mjet Mimarsinan Mh Silivri Ist",
+    "market": "migros",
+    "lat": 41.093967,
+    "lon": 28.25016
+  },
+  {
+    "id": "sok-8609",
+    "name": "Silivri Yeni Mahalle",
+    "market": "sok",
+    "lat": 41.082478,
+    "lon": 28.263166
+  },
+  {
+    "id": "a101-5726",
+    "name": "Gazitepe Silivri",
+    "market": "a101",
+    "lat": 41.08236,
+    "lon": 28.26204
+  },
+  {
+    "id": "sok-10215",
+    "name": "Silivri Balaban",
+    "market": "sok",
+    "lat": 41.089054,
+    "lon": 28.258825
+  },
+  {
+    "id": "bim-H878",
+    "name": "Yeni Mahsilivri",
+    "market": "bim",
+    "lat": 41.0811,
+    "lon": 28.258879
+  },
+  {
+    "id": "a101-F093",
+    "name": "Sevcihan Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.080074,
+    "lon": 28.261694
+  },
+  {
+    "id": "a101-H329",
+    "name": "Üniversite Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.080482,
+    "lon": 28.26686
+  },
+  {
+    "id": "sok-10933",
+    "name": "Silivri Bahattin",
+    "market": "sok",
+    "lat": 41.079235,
+    "lon": 28.263927
+  },
+  {
+    "id": "bim-H883",
+    "name": "Harmanlık  Silivri",
+    "market": "bim",
+    "lat": 41.07916,
+    "lon": 28.263689
+  },
+  {
+    "id": "bim-R959",
+    "name": "Aysima  Silivri",
+    "market": "bim",
+    "lat": 41.087162,
+    "lon": 28.25549
+  },
+  {
+    "id": "sok-3042",
+    "name": "Silivri Aral",
+    "market": "sok",
+    "lat": 41.086975,
+    "lon": 28.255388
+  },
+  {
+    "id": "bim-H882",
+    "name": "Bosna  Silivri",
+    "market": "bim",
+    "lat": 41.0911,
+    "lon": 28.260344
+  },
+  {
+    "id": "a101-B718",
+    "name": "Bosna Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.091946,
+    "lon": 28.260502
+  },
+  {
+    "id": "a101-H803",
+    "name": "Kiptaş 2 Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.09191,
+    "lon": 28.25875
+  },
+  {
+    "id": "migros-7618",
+    "name": "Alipaşa Silivri Istanbul M",
+    "market": "migros",
+    "lat": 41.09217,
+    "lon": 28.25921
+  },
+  {
+    "id": "bim-H881",
+    "name": "Gürsu  Silivri",
+    "market": "bim",
+    "lat": 41.077763,
+    "lon": 28.258844
+  },
+  {
+    "id": "tarim_kredi-7237",
+    "name": "Istanbul Silivri Kiptaş 2 Yenimahalle",
+    "market": "tarim_kredi",
+    "lat": 41.09251,
+    "lon": 28.25766
+  },
+  {
+    "id": "a101-H909",
+    "name": "Plevne Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.075905,
+    "lon": 28.278416
+  },
+  {
+    "id": "bim-H888",
+    "name": "Kavaklı  Silivri",
+    "market": "bim",
+    "lat": 41.09133,
+    "lon": 28.327557
+  },
+  {
+    "id": "sok-4373",
+    "name": "Şok Minigozlem",
+    "market": "sok",
+    "lat": 41.092594,
+    "lon": 28.33664
+  },
+  {
+    "id": "a101-K123",
+    "name": "Edirne Yönü Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.08457,
+    "lon": 28.37078
+  },
+  {
+    "id": "a101-K177",
+    "name": "Istanbul Yönü Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.083797,
+    "lon": 28.36777
+  },
+  {
+    "id": "a101-I629",
+    "name": "Emlak Konutları Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.075256,
+    "lon": 28.370667
+  },
+  {
+    "id": "bim-J729",
+    "name": "Ortaköy  Silivri",
+    "market": "bim",
+    "lat": 41.096344,
+    "lon": 28.376709
+  },
+  {
+    "id": "a101-K113",
+    "name": "Harbiye Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.097134,
+    "lon": 28.375755
+  },
+  {
+    "id": "sok-256",
+    "name": "Silivri Ortaköy Meydan",
+    "market": "sok",
+    "lat": 41.10087,
+    "lon": 28.376318
+  },
+  {
+    "id": "a101-9409",
+    "name": "Kavaklı Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.10101,
+    "lon": 28.375774
+  },
+  {
+    "id": "sok-4462",
+    "name": "Şok Miniortaköy",
+    "market": "sok",
+    "lat": 41.101536,
+    "lon": 28.378649
+  },
+  {
+    "id": "sok-4752",
+    "name": "Şok Minimeryem Çeltik",
+    "market": "sok",
+    "lat": 41.110764,
+    "lon": 28.116241
+  },
+  {
+    "id": "a101-J144",
+    "name": "Yonca Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.10917,
+    "lon": 28.219137
+  },
+  {
+    "id": "a101-H343",
+    "name": "Akören Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.11216,
+    "lon": 28.252655
+  },
+  {
+    "id": "bim-O475",
+    "name": "Sancak  Silivri",
+    "market": "bim",
+    "lat": 41.09463,
+    "lon": 28.24604
+  },
+  {
+    "id": "a101-K095",
+    "name": "Belinay Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.0939,
+    "lon": 28.243427
+  },
+  {
+    "id": "bim-R812",
+    "name": "Manolya  Silivri",
+    "market": "bim",
+    "lat": 41.096367,
+    "lon": 28.250633
+  },
+  {
+    "id": "a101-E649",
+    "name": "Rose Garden Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.095272,
+    "lon": 28.252266
+  },
+  {
+    "id": "bim-T584",
+    "name": "Atabek Konutları  Silivri",
+    "market": "bim",
+    "lat": 41.101536,
+    "lon": 28.260807
+  },
+  {
+    "id": "sok-13588",
+    "name": "Silivri Gazitepe",
+    "market": "sok",
+    "lat": 41.1274,
+    "lon": 28.3221
+  },
+  {
+    "id": "a101-4790",
+    "name": "Ortaköy Silivri Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.101067,
+    "lon": 28.375786
+  },
+  {
+    "id": "sok-4556",
+    "name": "Şok Minikadıköy Silivri",
+    "market": "sok",
+    "lat": 41.137665,
+    "lon": 28.364443
+  },
+  {
+    "id": "sok-4322",
+    "name": "Şok Miniseymen",
+    "market": "sok",
+    "lat": 41.156013,
+    "lon": 28.170149
+  },
+  {
+    "id": "sok-4309",
+    "name": "Şok Minifener",
+    "market": "sok",
+    "lat": 41.149887,
+    "lon": 28.235819
+  },
+  {
+    "id": "sok-4203",
+    "name": "Şok Mini Büyükkılıçlı",
+    "market": "sok",
+    "lat": 41.16612,
+    "lon": 28.19035
+  },
+  {
+    "id": "a101-J323",
+    "name": "Çavuşlu Silivri Istanbul",
+    "market": "a101",
+    "lat": 41.24211,
+    "lon": 28.062567
+  },
+  {
+    "id": "sok-4450",
+    "name": "Şok Minibeycıler Yeni",
+    "market": "sok",
+    "lat": 41.234154,
+    "lon": 28.11473
+  },
+  {
+    "id": "sok-4725",
+    "name": "Şok Mini Villa Kabakça",
+    "market": "sok",
+    "lat": 41.224087,
+    "lon": 28.36828
+  },
+  {
+    "id": "sok-4180",
+    "name": "Şok Mini kabakça",
+    "market": "sok",
+    "lat": 41.229088,
+    "lon": 28.36872
+  },
+  {
+    "id": "bim-P176",
+    "name": "Erenkızılpınartekirdağ",
+    "market": "bim",
+    "lat": 41.2608,
+    "lon": 27.971355
+  },
+  {
+    "id": "tarim_kredi-5431",
+    "name": "Tekirdağ Çerkezköy Kızılpınar",
+    "market": "tarim_kredi",
+    "lat": 41.26252,
+    "lon": 27.97296
+  },
+  {
+    "id": "bim-H497",
+    "name": "Fatihkızılpınarçerkezköytek",
+    "market": "bim",
+    "lat": 41.262722,
+    "lon": 27.973461
+  },
+  {
+    "id": "bim-H585",
+    "name": "Sultanmehmetkızılpınarçerkez",
+    "market": "bim",
+    "lat": 41.264534,
+    "lon": 27.968597
+  },
+  {
+    "id": "bim-R720",
+    "name": "Defneçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.268314,
+    "lon": 27.974424
+  },
+  {
+    "id": "bim-G927",
+    "name": "Turgut Özalçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.269127,
+    "lon": 27.962856
+  },
+  {
+    "id": "a101-K002",
+    "name": "Gültepe Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.264774,
+    "lon": 27.97651
+  },
+  {
+    "id": "a101-G224",
+    "name": "Millet Cad Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.261333,
+    "lon": 27.97149
+  },
+  {
+    "id": "a101-D541",
+    "name": "Yeni Cami Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.265892,
+    "lon": 27.972794
+  },
+  {
+    "id": "a101-D538",
+    "name": "Istiklal Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.27105,
+    "lon": 27.974554
+  },
+  {
+    "id": "sok-11871",
+    "name": "Kızılpınar Osmanlı Cad",
+    "market": "sok",
+    "lat": 41.26941,
+    "lon": 27.976864
+  },
+  {
+    "id": "a101-E946",
+    "name": "Saygın Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.26589,
+    "lon": 27.96995
+  },
+  {
+    "id": "sok-3302",
+    "name": "Kızılpınar Millet Cad",
+    "market": "sok",
+    "lat": 41.261883,
+    "lon": 27.972723
+  },
+  {
+    "id": "sok-14105",
+    "name": "Kızılpınar Kutlu Sok",
+    "market": "sok",
+    "lat": 41.267647,
+    "lon": 27.97467
+  },
+  {
+    "id": "sok-9078",
+    "name": "Çerkezköy Kzılpınar Terzi",
+    "market": "sok",
+    "lat": 41.265316,
+    "lon": 27.971567
+  },
+  {
+    "id": "sok-6588",
+    "name": "Kızılpınar Istiklal",
+    "market": "sok",
+    "lat": 41.26778,
+    "lon": 27.971107
+  },
+  {
+    "id": "bim-V492",
+    "name": "Durmuşçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.261314,
+    "lon": 27.974117
+  },
+  {
+    "id": "a101-G696",
+    "name": "Küme Evleri Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.25821,
+    "lon": 28.02787
+  },
+  {
+    "id": "migros-7611",
+    "name": "Royallife Çerkezköy Tekirdağ M",
+    "market": "migros",
+    "lat": 41.263714,
+    "lon": 28.031485
+  },
+  {
+    "id": "a101-B167",
+    "name": "Çağlayan Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.264412,
+    "lon": 28.02952
+  },
+  {
+    "id": "bim-D215",
+    "name": "Tepe Konutlarıçerkezköytekir",
+    "market": "bim",
+    "lat": 41.264618,
+    "lon": 28.029085
+  },
+  {
+    "id": "migros-7170",
+    "name": "Temlak Konutları Çerkezköy M",
+    "market": "migros",
+    "lat": 41.265293,
+    "lon": 28.027353
+  },
+  {
+    "id": "tarim_kredi-5624",
+    "name": "Tekirdağ Çerkezköy Beyazgül",
+    "market": "tarim_kredi",
+    "lat": 41.26693,
+    "lon": 28.02823
+  },
+  {
+    "id": "a101-2887",
+    "name": "Cengiz Topel Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.267483,
+    "lon": 28.02779
+  },
+  {
+    "id": "sok-9073",
+    "name": "Çerkezköy Inci",
+    "market": "sok",
+    "lat": 41.267826,
+    "lon": 28.026812
+  },
+  {
+    "id": "a101-J449",
+    "name": "Martı Sokak Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.269794,
+    "lon": 28.017273
+  },
+  {
+    "id": "sok-4201",
+    "name": "Şok Mini  Demokrasi",
+    "market": "sok",
+    "lat": 41.250057,
+    "lon": 28.066687
+  },
+  {
+    "id": "bim-T263",
+    "name": "Ihsaniye  Çatalca",
+    "market": "bim",
+    "lat": 41.25388,
+    "lon": 28.361597
+  },
+  {
+    "id": "a101-I747",
+    "name": "Ihsaniye Çatalca Istanbul",
+    "market": "a101",
+    "lat": 41.254257,
+    "lon": 28.35917
+  },
+  {
+    "id": "sok-4543",
+    "name": "Şok Miniihsaniye",
+    "market": "sok",
+    "lat": 41.25454,
+    "lon": 28.358225
+  },
+  {
+    "id": "a101-9554",
+    "name": "Bahar Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.271362,
+    "lon": 27.970238
+  },
+  {
+    "id": "bim-G537",
+    "name": "Gültepekızılpınarçerkezköy",
+    "market": "bim",
+    "lat": 41.271473,
+    "lon": 27.971676
+  },
+  {
+    "id": "a101-G372",
+    "name": "Muhsin Yazıcıoğlu Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.27024,
+    "lon": 27.967785
+  },
+  {
+    "id": "bim-B681",
+    "name": "Durakkızılpınarçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.27006,
+    "lon": 27.966827
+  },
+  {
+    "id": "bim-8142",
+    "name": "Kızılpınarçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.26849,
+    "lon": 27.973137
+  },
+  {
+    "id": "sok-3203",
+    "name": "Kızılpınar Bahar Caddesi",
+    "market": "sok",
+    "lat": 41.269554,
+    "lon": 27.966251
+  },
+  {
+    "id": "tarim_kredi-7041",
+    "name": "Tekirdağ Çerkezköy Gültepe",
+    "market": "tarim_kredi",
+    "lat": 41.27225,
+    "lon": 27.97655
+  },
+  {
+    "id": "bim-P175",
+    "name": "Osmanlıkızılpınartekirdağ",
+    "market": "bim",
+    "lat": 41.271763,
+    "lon": 27.976702
+  },
+  {
+    "id": "sok-2197",
+    "name": "Çerkezköy Kızılpınar Çına",
+    "market": "sok",
+    "lat": 41.269165,
+    "lon": 27.963324
+  },
+  {
+    "id": "sok-1569",
+    "name": "Tekirdağ Çerkezköy Uyrum",
+    "market": "sok",
+    "lat": 41.276695,
+    "lon": 28.003538
+  },
+  {
+    "id": "tarim_kredi-5427",
+    "name": "Tekirdağ Çerkezköy Y Beyazıd",
+    "market": "tarim_kredi",
+    "lat": 41.28586,
+    "lon": 27.98589
+  },
+  {
+    "id": "migros-7250",
+    "name": "Çerkezköy Fevzipaşa Mah M",
+    "market": "migros",
+    "lat": 41.286743,
+    "lon": 27.992771
+  },
+  {
+    "id": "tarim_kredi-5842",
+    "name": "Tekirdağ Çerkezköy Gop",
+    "market": "tarim_kredi",
+    "lat": 41.28394,
+    "lon": 27.99848
+  },
+  {
+    "id": "tarim_kredi-5567",
+    "name": "Tekirdağ Çerkezköy Istasyon",
+    "market": "tarim_kredi",
+    "lat": 41.27423,
+    "lon": 28.00464
+  },
+  {
+    "id": "sok-5941",
+    "name": "Çerkezköy Istasyon",
+    "market": "sok",
+    "lat": 41.274796,
+    "lon": 28.004547
+  },
+  {
+    "id": "a101-C181",
+    "name": "Fidan Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.275997,
+    "lon": 28.003357
+  },
+  {
+    "id": "bim-C224",
+    "name": "Cengiz Topelçerkezköytekirda",
+    "market": "bim",
+    "lat": 41.275654,
+    "lon": 28.003925
+  },
+  {
+    "id": "carrefour-3756",
+    "name": "Tekırdağ Çerkezköy",
+    "market": "carrefour",
+    "lat": 41.27227,
+    "lon": 28.00812
+  },
+  {
+    "id": "a101-H173",
+    "name": "Anadolu Lisesi Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.2772,
+    "lon": 28.004837
+  },
+  {
+    "id": "sok-8674",
+    "name": "Çerkezköy Cengiz Topel",
+    "market": "sok",
+    "lat": 41.272106,
+    "lon": 28.011124
+  },
+  {
+    "id": "bim-P851",
+    "name": "Günaydınçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.2727,
+    "lon": 28.011679
+  },
+  {
+    "id": "a101-J814",
+    "name": "Tuğba Sokak Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.280025,
+    "lon": 27.987936
+  },
+  {
+    "id": "migros-6872",
+    "name": "Çerkezköy Cumhuriyet Mah M",
+    "market": "migros",
+    "lat": 41.271248,
+    "lon": 28.012714
+  },
+  {
+    "id": "bim-T214",
+    "name": "Fevzipaşaçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.281227,
+    "lon": 27.989407
+  },
+  {
+    "id": "a101-8585",
+    "name": "Güveniş Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.281517,
+    "lon": 27.989414
+  },
+  {
+    "id": "sok-5867",
+    "name": "Çerkezköy Güveniş",
+    "market": "sok",
+    "lat": 41.283043,
+    "lon": 27.992271
+  },
+  {
+    "id": "bim-U964",
+    "name": "Güvenişçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.283386,
+    "lon": 27.99313
+  },
+  {
+    "id": "bim-A836",
+    "name": "Istasyonçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.278687,
+    "lon": 28.011206
+  },
+  {
+    "id": "a101-G271",
+    "name": "Ravalı Sokak Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.284157,
+    "lon": 27.998135
+  },
+  {
+    "id": "sok-13225",
+    "name": "Çerkezköy Başaran",
+    "market": "sok",
+    "lat": 41.27761,
+    "lon": 28.012827
+  },
+  {
+    "id": "tarim_kredi-6818",
+    "name": "Tekirdağ Çerkezköy Çakır",
+    "market": "tarim_kredi",
+    "lat": 41.27652,
+    "lon": 28.0136
+  },
+  {
+    "id": "migros-7397",
+    "name": "Çerkezköy Hastane Tekirdağ M",
+    "market": "migros",
+    "lat": 41.282715,
+    "lon": 28.008883
+  },
+  {
+    "id": "tarim_kredi-5424",
+    "name": "Tekirdağ Çerkezköy Turgut",
+    "market": "tarim_kredi",
+    "lat": 41.28318,
+    "lon": 28.00959
+  },
+  {
+    "id": "tarim_kredi-5678",
+    "name": "Tekirdağ Çerkezköy Malkoçoğlu",
+    "market": "tarim_kredi",
+    "lat": 41.28511,
+    "lon": 28.00685
+  },
+  {
+    "id": "migros-4172",
+    "name": "Çerkezköy M Migros",
+    "market": "migros",
+    "lat": 41.292027,
+    "lon": 28.001274
+  },
+  {
+    "id": "bim-R722",
+    "name": "Poyrazçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.276638,
+    "lon": 28.019342
+  },
+  {
+    "id": "a101-2886",
+    "name": "Istasyon Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.278046,
+    "lon": 28.014029
+  },
+  {
+    "id": "sok-9868",
+    "name": "Çerkezköy Ortanca",
+    "market": "sok",
+    "lat": 41.276684,
+    "lon": 28.017294
+  },
+  {
+    "id": "bim-A703",
+    "name": "Hastaneçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.2832,
+    "lon": 28.010017
+  },
+  {
+    "id": "sok-5963",
+    "name": "Çerkezköy Hastane",
+    "market": "sok",
+    "lat": 41.28499,
+    "lon": 28.009455
+  },
+  {
+    "id": "a101-I351",
+    "name": "Mercan Sokak Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.277718,
+    "lon": 28.018795
+  },
+  {
+    "id": "sok-4814",
+    "name": "Şok Miniçayırdere Yeni",
+    "market": "sok",
+    "lat": 41.2818,
+    "lon": 28.1451
+  },
+  {
+    "id": "a101-4656",
+    "name": "Barbaros Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.28845,
+    "lon": 27.98758
+  },
+  {
+    "id": "sok-5102",
+    "name": "Çerkezköy Yıldırım Beyazı",
+    "market": "sok",
+    "lat": 41.285877,
+    "lon": 27.984867
+  },
+  {
+    "id": "a101-E446",
+    "name": "Turna Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.286285,
+    "lon": 27.985725
+  },
+  {
+    "id": "a101-I003",
+    "name": "Kalyoncu Sokak Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.28999,
+    "lon": 27.98998
+  },
+  {
+    "id": "sok-11217",
+    "name": "Çerkezköy Yüksel",
+    "market": "sok",
+    "lat": 41.285725,
+    "lon": 27.986376
+  },
+  {
+    "id": "bim-U986",
+    "name": "Fidançerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.301224,
+    "lon": 27.948784
+  },
+  {
+    "id": "a101-1633",
+    "name": "Karaağaç Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.29392,
+    "lon": 27.94825
+  },
+  {
+    "id": "bim-U923",
+    "name": "Neslihançerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.285164,
+    "lon": 27.986828
+  },
+  {
+    "id": "sok-9442",
+    "name": "Karaağaç Uğur Mumcu",
+    "market": "sok",
+    "lat": 41.30017,
+    "lon": 27.94774
+  },
+  {
+    "id": "a101-D622",
+    "name": "Yıldırım Beyazıt Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.28182,
+    "lon": 27.980198
+  },
+  {
+    "id": "bim-A702",
+    "name": "Yıldırım Beyazıtçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.28654,
+    "lon": 27.98908
+  },
+  {
+    "id": "bim-B976",
+    "name": "Karaağaçkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.293423,
+    "lon": 27.947937
+  },
+  {
+    "id": "bim-A947",
+    "name": "Kumlu Geçitçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.28252,
+    "lon": 27.983492
+  },
+  {
+    "id": "sok-3413",
+    "name": "Çerkezköy Şengül",
+    "market": "sok",
+    "lat": 41.287876,
+    "lon": 27.991295
+  },
+  {
+    "id": "sok-2896",
+    "name": "Çerkezköy Fevzipaşa",
+    "market": "sok",
+    "lat": 41.29248,
+    "lon": 27.994326
+  },
+  {
+    "id": "tarim_kredi-5229",
+    "name": "Tekirdağ Çerkezköy Market",
+    "market": "tarim_kredi",
+    "lat": 41.28965,
+    "lon": 27.99813
+  },
+  {
+    "id": "migros-6449",
+    "name": "5m Çerkezköy Center Avm",
+    "market": "migros",
+    "lat": 41.2963,
+    "lon": 28.0004
+  },
+  {
+    "id": "migros-8208",
+    "name": "Corner Avm Kapaklı Tdağ M",
+    "market": "migros",
+    "lat": 41.319473,
+    "lon": 27.97911
+  },
+  {
+    "id": "migros-4244",
+    "name": "Mjet Kapaklı Çerkezköy",
+    "market": "migros",
+    "lat": 41.320786,
+    "lon": 27.972952
+  },
+  {
+    "id": "migros-3903",
+    "name": "Kapaklı Emlak Konutları Mm",
+    "market": "migros",
+    "lat": 41.31972,
+    "lon": 27.980276
+  },
+  {
+    "id": "tarim_kredi-7092",
+    "name": "Tekirdağ Kapaklı Yıldızkent",
+    "market": "tarim_kredi",
+    "lat": 41.32219,
+    "lon": 27.96957
+  },
+  {
+    "id": "bim-C142",
+    "name": "Uğurluçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.294796,
+    "lon": 27.999083
+  },
+  {
+    "id": "sok-9330",
+    "name": "Tekirdağ Çerkezköy Ergin",
+    "market": "sok",
+    "lat": 41.293438,
+    "lon": 27.99593
+  },
+  {
+    "id": "migros-7613",
+    "name": "Çerkezköy Cadde Tekirdağ M",
+    "market": "migros",
+    "lat": 41.298187,
+    "lon": 28.003883
+  },
+  {
+    "id": "a101-I245",
+    "name": "Kahraman Sokak Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.29309,
+    "lon": 28.000149
+  },
+  {
+    "id": "bim-A047",
+    "name": "Bağlıkçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.29674,
+    "lon": 28.005293
+  },
+  {
+    "id": "a101-F428",
+    "name": "Alparslan Türkeş Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.295914,
+    "lon": 28.005173
+  },
+  {
+    "id": "bim-4174",
+    "name": "Öztrakçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.291668,
+    "lon": 27.998714
+  },
+  {
+    "id": "bim-T356",
+    "name": "Narinçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.30146,
+    "lon": 28.004538
+  },
+  {
+    "id": "a101-1984",
+    "name": "Kartal Çerkezköy  Tekirdağ",
+    "market": "a101",
+    "lat": 41.29256,
+    "lon": 28.0033
+  },
+  {
+    "id": "a101-J190",
+    "name": "Narin Cad Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.301807,
+    "lon": 28.005066
+  },
+  {
+    "id": "a101-C543",
+    "name": "Gop Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.29063,
+    "lon": 27.995565
+  },
+  {
+    "id": "sok-742",
+    "name": "Çerkezköy Kirazlı",
+    "market": "sok",
+    "lat": 41.297874,
+    "lon": 28.00727
+  },
+  {
+    "id": "bim-1225",
+    "name": "Çerkezköy 1çerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.29057,
+    "lon": 27.999031
+  },
+  {
+    "id": "sok-5938",
+    "name": "Çerkezköy Bağlık",
+    "market": "sok",
+    "lat": 41.291996,
+    "lon": 28.004377
+  },
+  {
+    "id": "tarim_kredi-5340",
+    "name": "Tekirdağ Çerkezköy Etiler",
+    "market": "tarim_kredi",
+    "lat": 41.2918,
+    "lon": 28.00487
+  },
+  {
+    "id": "sok-5779",
+    "name": "Çerkezköy Gaziosmanpaşa",
+    "market": "sok",
+    "lat": 41.289345,
+    "lon": 27.994438
+  },
+  {
+    "id": "bim-O635",
+    "name": "Hanımeliçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.29491,
+    "lon": 28.01297
+  },
+  {
+    "id": "bim-D836",
+    "name": "Tevfik Fikretçerkezköytekird",
+    "market": "bim",
+    "lat": 41.300854,
+    "lon": 28.012135
+  },
+  {
+    "id": "sok-13841",
+    "name": "Çerkezköy Ardıç Sok",
+    "market": "sok",
+    "lat": 41.3027,
+    "lon": 28.0092
+  },
+  {
+    "id": "a101-D970",
+    "name": "Sedef Sokak Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.289104,
+    "lon": 28.012056
+  },
+  {
+    "id": "a101-4896",
+    "name": "Bağlık Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.29967,
+    "lon": 28.007008
+  },
+  {
+    "id": "bim-K507",
+    "name": "Alparslançerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.301598,
+    "lon": 28.006487
+  },
+  {
+    "id": "a101-E997",
+    "name": "Kosova Çerkezköy Tekirdağ",
+    "market": "a101",
+    "lat": 41.2913,
+    "lon": 28.006664
+  },
+  {
+    "id": "bim-8291",
+    "name": "Mevlanaçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.287888,
+    "lon": 28.009266
+  },
+  {
+    "id": "sok-4242",
+    "name": "Şok Mini Halaçlı",
+    "market": "sok",
+    "lat": 41.32061,
+    "lon": 28.099749
+  },
+  {
+    "id": "sok-4753",
+    "name": "Şok Minibaşkumandan",
+    "market": "sok",
+    "lat": 41.321808,
+    "lon": 28.10065
+  },
+  {
+    "id": "sok-4548",
+    "name": "Şok Minisayalar",
+    "market": "sok",
+    "lat": 41.315105,
+    "lon": 28.176023
+  },
+  {
+    "id": "sok-4765",
+    "name": "Şok Mini Altay",
+    "market": "sok",
+    "lat": 41.30636,
+    "lon": 28.240599
+  },
+  {
+    "id": "sok-4604",
+    "name": "Şok Minigümüşpınar Köyü",
+    "market": "sok",
+    "lat": 41.314484,
+    "lon": 28.284288
+  },
+  {
+    "id": "bim-3543",
+    "name": "Yıldızkentkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.323605,
+    "lon": 27.974165
+  },
+  {
+    "id": "bim-P227",
+    "name": "Ortancakapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.321995,
+    "lon": 27.972685
+  },
+  {
+    "id": "a101-F466",
+    "name": "Mevlana Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.325672,
+    "lon": 27.993652
+  },
+  {
+    "id": "a101-I847",
+    "name": "Aladdin Cad Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.327164,
+    "lon": 27.99446
+  },
+  {
+    "id": "a101-E590",
+    "name": "Krempark Avm Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.321213,
+    "lon": 27.967236
+  },
+  {
+    "id": "bim-Q602",
+    "name": "Süleymanoğlukapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.322548,
+    "lon": 27.976645
+  },
+  {
+    "id": "bim-1357",
+    "name": "Kapaklıçerkezköytekirdağ",
+    "market": "bim",
+    "lat": 41.329876,
+    "lon": 27.973372
+  },
+  {
+    "id": "a101-H176",
+    "name": "Dikilitaş Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.32933,
+    "lon": 27.991438
+  },
+  {
+    "id": "a101-I127",
+    "name": "Ibni Sina Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.32169,
+    "lon": 27.989092
+  },
+  {
+    "id": "sok-4803",
+    "name": "Şok Minikapaklı Anafarta",
+    "market": "sok",
+    "lat": 41.3235,
+    "lon": 27.9883
+  },
+  {
+    "id": "bim-2336",
+    "name": "Organizekapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.320457,
+    "lon": 27.979124
+  },
+  {
+    "id": "sok-1144",
+    "name": "Tekirdağ Kapaklı H Edip",
+    "market": "sok",
+    "lat": 41.32618,
+    "lon": 27.98738
+  },
+  {
+    "id": "sok-14296",
+    "name": "Kapaklı Mevlana Cad",
+    "market": "sok",
+    "lat": 41.321,
+    "lon": 27.9876
+  },
+  {
+    "id": "tarim_kredi-5571",
+    "name": "Tekirdağ Kapaklı",
+    "market": "tarim_kredi",
+    "lat": 41.33369,
+    "lon": 27.97523
+  },
+  {
+    "id": "tarim_kredi-5675",
+    "name": "Tekirdağ Kapaklı Vatan",
+    "market": "tarim_kredi",
+    "lat": 41.33092,
+    "lon": 27.98156
+  },
+  {
+    "id": "sok-4794",
+    "name": "Şok Minikapaklı Dilara",
+    "market": "sok",
+    "lat": 41.3286,
+    "lon": 27.9836
+  },
+  {
+    "id": "sok-8232",
+    "name": "Kapaklı Erbay",
+    "market": "sok",
+    "lat": 41.33194,
+    "lon": 27.985025
+  },
+  {
+    "id": "migros-8190",
+    "name": "Mjet Vatan Cd Kapaklı Tdağ",
+    "market": "migros",
+    "lat": 41.33372,
+    "lon": 27.986654
+  },
+  {
+    "id": "tarim_kredi-5982",
+    "name": "Tekirdağ Kapaklı Bahçelievler",
+    "market": "tarim_kredi",
+    "lat": 41.32643,
+    "lon": 27.98781
+  },
+  {
+    "id": "migros-8467",
+    "name": "Atatürk Mh Kapaklı Tekirdağ M",
+    "market": "migros",
+    "lat": 41.335865,
+    "lon": 27.979239
+  },
+  {
+    "id": "bim-U093",
+    "name": "Necip Fazılkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.327427,
+    "lon": 27.994272
+  },
+  {
+    "id": "bim-U999",
+    "name": "Damlakapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.322826,
+    "lon": 27.989447
+  },
+  {
+    "id": "a101-8500",
+    "name": "Güvercin Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.327232,
+    "lon": 27.988876
+  },
+  {
+    "id": "bim-K011",
+    "name": "Çayelikapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.329185,
+    "lon": 27.9905
+  },
+  {
+    "id": "bim-Q085",
+    "name": "Kaymakamlıkkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.327618,
+    "lon": 27.988415
+  },
+  {
+    "id": "bim-O226",
+    "name": "Karanfilkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.32588,
+    "lon": 27.986975
+  },
+  {
+    "id": "bim-C624",
+    "name": "Faruk Ilgazkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.332203,
+    "lon": 27.994837
+  },
+  {
+    "id": "a101-F967",
+    "name": "Pınarça Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.33693,
+    "lon": 28.02008
+  },
+  {
+    "id": "a101-J859",
+    "name": "19 Mayıs Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.335117,
+    "lon": 27.99527
+  },
+  {
+    "id": "a101-B230",
+    "name": "Şenlik Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.33185,
+    "lon": 27.994389
+  },
+  {
+    "id": "a101-I731",
+    "name": "Nasrettin Hoca Cad Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.34191,
+    "lon": 27.97648
+  },
+  {
+    "id": "a101-H413",
+    "name": "Mert Sokak Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.33842,
+    "lon": 27.971018
+  },
+  {
+    "id": "sok-10964",
+    "name": "Kapaklı Çeken Cad",
+    "market": "sok",
+    "lat": 41.338287,
+    "lon": 27.972181
+  },
+  {
+    "id": "a101-J428",
+    "name": "Koşucu Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.339214,
+    "lon": 27.97829
+  },
+  {
+    "id": "sok-4780",
+    "name": "Şokmini Atatürk Mah",
+    "market": "sok",
+    "lat": 41.3378,
+    "lon": 27.9763
+  },
+  {
+    "id": "sok-5084",
+    "name": "Tekirdağ Kapaklı Yuvam",
+    "market": "sok",
+    "lat": 41.336655,
+    "lon": 27.971825
+  },
+  {
+    "id": "a101-H230",
+    "name": "Aşıklar Cad Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.3367,
+    "lon": 27.976887
+  },
+  {
+    "id": "a101-G691",
+    "name": "Müjde Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.33535,
+    "lon": 27.97096
+  },
+  {
+    "id": "sok-13412",
+    "name": "Kapaklı Kalender Sokak",
+    "market": "sok",
+    "lat": 41.3369,
+    "lon": 27.9802
+  },
+  {
+    "id": "sok-4344",
+    "name": "Şok Miniıstıklal3",
+    "market": "sok",
+    "lat": 41.334778,
+    "lon": 27.974573
+  },
+  {
+    "id": "bim-R051",
+    "name": "Baylanlarkapaklıtekirda",
+    "market": "bim",
+    "lat": 41.33247,
+    "lon": 27.990698
+  },
+  {
+    "id": "bim-T094",
+    "name": "Yakamozkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.337357,
+    "lon": 27.987663
+  },
+  {
+    "id": "bim-7776",
+    "name": "Vatankapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.33501,
+    "lon": 27.984917
+  },
+  {
+    "id": "migros-7395",
+    "name": "Mjet Kapaklı Yuvam Tekirdağ",
+    "market": "migros",
+    "lat": 41.336327,
+    "lon": 27.97148
+  },
+  {
+    "id": "bim-U711",
+    "name": "Kılıçkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.340157,
+    "lon": 27.982048
+  },
+  {
+    "id": "bim-L904",
+    "name": "Sadık Ahmetkapaklıtekirdağ",
+    "market": "bim",
+    "lat": 41.33245,
+    "lon": 27.98362
+  },
+  {
+    "id": "sok-12151",
+    "name": "Kapaklı Arıtürk",
+    "market": "sok",
+    "lat": 41.33847,
+    "lon": 27.988062
+  },
+  {
+    "id": "a101-K117",
+    "name": "Kazak Gölü Kapaklı Tekirdağ",
+    "market": "a101",
+    "lat": 41.34113,
+    "lon": 27.987019
+  },
+  {
+    "id": "sok-394",
+    "name": "Kapaklı Vatan Caddesi",
+    "market": "sok",
+    "lat": 41.33594,
+    "lon": 27.98606
+  },
+  {
+    "id": "sok-5405",
+    "name": "Kapaklı Cumhuriyet",
+    "market": "sok",
+    "lat": 41.335243,
+    "lon": 27.984283
+  },
+  {
+    "id": "sok-4313",
+    "name": "Şok Minikuyu Cıkmaz",
+    "market": "sok",
+    "lat": 41.37426,
+    "lon": 28.207129
+  }
+]

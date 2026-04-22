@@ -1,0 +1,2088 @@
+[
+  {
+    "id": "sok-14051",
+    "name": "Bahçelievler Ziyapaşa Sok",
+    "market": "sok",
+    "lat": 41.0872,
+    "lon": 28.8687
+  },
+  {
+    "id": "a101-6752",
+    "name": "Muhsin Yazıcıoğlu Sultangazi",
+    "market": "a101",
+    "lat": 41.089176,
+    "lon": 28.866714
+  },
+  {
+    "id": "bim-P623",
+    "name": "Baştabya  Sultangazi",
+    "market": "bim",
+    "lat": 41.087765,
+    "lon": 28.868067
+  },
+  {
+    "id": "a101-0551",
+    "name": "50yıl Mah Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.088135,
+    "lon": 28.87044
+  },
+  {
+    "id": "a101-2007",
+    "name": "Necip Fazıl Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.087337,
+    "lon": 28.875399
+  },
+  {
+    "id": "tarim_kredi-7122",
+    "name": "Istanbul Sultangazi 50yıl Konteyner",
+    "market": "tarim_kredi",
+    "lat": 41.08952,
+    "lon": 28.87136
+  },
+  {
+    "id": "carrefour-3553",
+    "name": "Istanbul Vıa Venezıa Süper",
+    "market": "carrefour",
+    "lat": 41.08091,
+    "lon": 28.879107
+  },
+  {
+    "id": "bim-T813",
+    "name": "Kerem mini  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.082993,
+    "lon": 28.878254
+  },
+  {
+    "id": "tarim_kredi-7641",
+    "name": "Istanbul Gop Buğra",
+    "market": "tarim_kredi",
+    "lat": 41.07881,
+    "lon": 28.88113
+  },
+  {
+    "id": "tarim_kredi-6260",
+    "name": "Istanbul Gop Karadeniz",
+    "market": "tarim_kredi",
+    "lat": 41.07944,
+    "lon": 28.88246
+  },
+  {
+    "id": "bim-K798",
+    "name": "Mimarsinan  Sultangazi",
+    "market": "bim",
+    "lat": 41.089115,
+    "lon": 28.87482
+  },
+  {
+    "id": "sok-6336",
+    "name": "Sultangazi Siteler",
+    "market": "sok",
+    "lat": 41.086876,
+    "lon": 28.877995
+  },
+  {
+    "id": "a101-K120",
+    "name": "Avm Gaziosmanpaşa Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.08196,
+    "lon": 28.880198
+  },
+  {
+    "id": "a101-9714",
+    "name": "Çakırlı Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.078426,
+    "lon": 28.881235
+  },
+  {
+    "id": "bim-B861",
+    "name": "Selanik  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.07916,
+    "lon": 28.881742
+  },
+  {
+    "id": "a101-H315",
+    "name": "Venezia Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.079662,
+    "lon": 28.88216
+  },
+  {
+    "id": "sok-6483",
+    "name": "Gop Namık Kemal",
+    "market": "sok",
+    "lat": 41.07704,
+    "lon": 28.881231
+  },
+  {
+    "id": "bim-B503",
+    "name": "Karadeniz gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.07637,
+    "lon": 28.882488
+  },
+  {
+    "id": "sok-12769",
+    "name": "Gaziosmanpaşa Karadeniz",
+    "market": "sok",
+    "lat": 41.07801,
+    "lon": 28.88351
+  },
+  {
+    "id": "bim-B504",
+    "name": "Topçuoğlu  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.083515,
+    "lon": 28.885042
+  },
+  {
+    "id": "tarim_kredi-7547",
+    "name": "Istanbul Gop General Aldoğan",
+    "market": "tarim_kredi",
+    "lat": 41.07983,
+    "lon": 28.88593
+  },
+  {
+    "id": "a101-2667",
+    "name": "Karadeniz Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.0816,
+    "lon": 28.889729
+  },
+  {
+    "id": "bim-U806",
+    "name": "Savcı  Gazıosmanpasa",
+    "market": "bim",
+    "lat": 41.078316,
+    "lon": 28.890753
+  },
+  {
+    "id": "bim-B505",
+    "name": "Aldoğan  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.07969,
+    "lon": 28.889618
+  },
+  {
+    "id": "a101-7694",
+    "name": "General Aldoğan Gaziosmanpaşa",
+    "market": "a101",
+    "lat": 41.07948,
+    "lon": 28.889174
+  },
+  {
+    "id": "bim-J626",
+    "name": "Bereket  Sultangazi",
+    "market": "bim",
+    "lat": 41.088856,
+    "lon": 28.882349
+  },
+  {
+    "id": "a101-B145",
+    "name": "Mimarsinan Gop Istanbul",
+    "market": "a101",
+    "lat": 41.077236,
+    "lon": 28.88908
+  },
+  {
+    "id": "bim-P832",
+    "name": "Mına  Gazıosmanpaşa",
+    "market": "bim",
+    "lat": 41.082386,
+    "lon": 28.887156
+  },
+  {
+    "id": "a101-G703",
+    "name": "Gazipaşa Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.082314,
+    "lon": 28.88695
+  },
+  {
+    "id": "a101-J896",
+    "name": "Inönü Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.079926,
+    "lon": 28.886139
+  },
+  {
+    "id": "sok-13565",
+    "name": "Karadeniz Tramway",
+    "market": "sok",
+    "lat": 41.0757,
+    "lon": 28.8834
+  },
+  {
+    "id": "bim-B500",
+    "name": "Karayolları  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.083324,
+    "lon": 28.895
+  },
+  {
+    "id": "sok-8815",
+    "name": "Gaziosmanpaşa Karayolları",
+    "market": "sok",
+    "lat": 41.083668,
+    "lon": 28.89499
+  },
+  {
+    "id": "a101-F348",
+    "name": "Miraç Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.083954,
+    "lon": 28.894974
+  },
+  {
+    "id": "bim-K296",
+    "name": "Itfaiye  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.079403,
+    "lon": 28.892826
+  },
+  {
+    "id": "sok-11351",
+    "name": "Gaziosmanpaşa Itfaiye",
+    "market": "sok",
+    "lat": 41.07915,
+    "lon": 28.89301
+  },
+  {
+    "id": "bim-D910",
+    "name": "Elma Bahçesi  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.083317,
+    "lon": 28.891989
+  },
+  {
+    "id": "bim-U935",
+    "name": "Miraç  Gazıosmanpaşa",
+    "market": "bim",
+    "lat": 41.08657,
+    "lon": 28.89353
+  },
+  {
+    "id": "sok-4772",
+    "name": "Şok Minikarayolları",
+    "market": "sok",
+    "lat": 41.0881,
+    "lon": 28.8931
+  },
+  {
+    "id": "sok-6448",
+    "name": "Barbaros Hayrettin Paşa",
+    "market": "sok",
+    "lat": 41.074924,
+    "lon": 28.888195
+  },
+  {
+    "id": "a101-C838",
+    "name": "Galeri Caddesi Gaziosmanpaşa Istanb",
+    "market": "a101",
+    "lat": 41.081657,
+    "lon": 28.8993
+  },
+  {
+    "id": "bim-L943",
+    "name": "Önalan  Gazıosmanpasa",
+    "market": "bim",
+    "lat": 41.083534,
+    "lon": 28.898262
+  },
+  {
+    "id": "a101-D715",
+    "name": "Paşa Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.078575,
+    "lon": 28.8994
+  },
+  {
+    "id": "bim-B501",
+    "name": "Beşyol  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.07819,
+    "lon": 28.89889
+  },
+  {
+    "id": "sok-6493",
+    "name": "Paşacami",
+    "market": "sok",
+    "lat": 41.078716,
+    "lon": 28.901245
+  },
+  {
+    "id": "sok-9788",
+    "name": "Gaziosmanpaşa Yenimahalle",
+    "market": "sok",
+    "lat": 41.08439,
+    "lon": 28.902842
+  },
+  {
+    "id": "a101-F646",
+    "name": "Osman Bey Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.086266,
+    "lon": 28.901379
+  },
+  {
+    "id": "a101-B059",
+    "name": "Tepebaşı Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.0868,
+    "lon": 28.897087
+  },
+  {
+    "id": "tarim_kredi-6269",
+    "name": "Istanbul Gop Küçükköy Beşyol",
+    "market": "tarim_kredi",
+    "lat": 41.07644,
+    "lon": 28.90139
+  },
+  {
+    "id": "sok-13294",
+    "name": "Karayolları Fatih Caddesi",
+    "market": "sok",
+    "lat": 41.08745,
+    "lon": 28.894972
+  },
+  {
+    "id": "tarim_kredi-5423",
+    "name": "Istanbul Gop Karayolları",
+    "market": "tarim_kredi",
+    "lat": 41.08899,
+    "lon": 28.8986
+  },
+  {
+    "id": "migros-3244",
+    "name": "Gop Avrupa Konutları Mm Migros",
+    "market": "migros",
+    "lat": 41.088017,
+    "lon": 28.902027
+  },
+  {
+    "id": "sok-9147",
+    "name": "Gop Kardelen",
+    "market": "sok",
+    "lat": 41.081062,
+    "lon": 28.91074
+  },
+  {
+    "id": "a101-I640",
+    "name": "Dede Korkut Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.080753,
+    "lon": 28.914457
+  },
+  {
+    "id": "sok-6473",
+    "name": "Karabekir Mevlana",
+    "market": "sok",
+    "lat": 41.081577,
+    "lon": 28.9133
+  },
+  {
+    "id": "bim-H601",
+    "name": "Evliya Çelebi  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.079567,
+    "lon": 28.912224
+  },
+  {
+    "id": "a101-C403",
+    "name": "Valide Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.08122,
+    "lon": 28.913656
+  },
+  {
+    "id": "a101-B354",
+    "name": "Mevlana Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.08371,
+    "lon": 28.91462
+  },
+  {
+    "id": "bim-O122",
+    "name": "Ipek Sokak  Eyüpsultan",
+    "market": "bim",
+    "lat": 41.078964,
+    "lon": 28.91571
+  },
+  {
+    "id": "sok-6508",
+    "name": "Gop Kazım Karabekir",
+    "market": "sok",
+    "lat": 41.079876,
+    "lon": 28.907425
+  },
+  {
+    "id": "bim-B534",
+    "name": "Dedekorkut  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.080685,
+    "lon": 28.912867
+  },
+  {
+    "id": "sok-5398",
+    "name": "Mevlana Su Deposu",
+    "market": "sok",
+    "lat": 41.084095,
+    "lon": 28.91343
+  },
+  {
+    "id": "a101-1630",
+    "name": "Kazım Karabekir Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.082012,
+    "lon": 28.912485
+  },
+  {
+    "id": "bim-B529",
+    "name": "Kazım Karabekir gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.083107,
+    "lon": 28.91289
+  },
+  {
+    "id": "bim-B528",
+    "name": "Kardelen  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.08128,
+    "lon": 28.911242
+  },
+  {
+    "id": "a101-K410",
+    "name": "Şerife Bacı Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.081596,
+    "lon": 28.911219
+  },
+  {
+    "id": "sok-11621",
+    "name": "Gaziosmanpaşa Güler",
+    "market": "sok",
+    "lat": 41.077755,
+    "lon": 28.913528
+  },
+  {
+    "id": "migros-9046",
+    "name": "Gop Plevne Çarşı Istanbul Mm",
+    "market": "migros",
+    "lat": 41.085808,
+    "lon": 28.910086
+  },
+  {
+    "id": "tarim_kredi-7567",
+    "name": "Istanbul Gop Mevlana",
+    "market": "tarim_kredi",
+    "lat": 41.08656,
+    "lon": 28.91163
+  },
+  {
+    "id": "carrefour-3092",
+    "name": "Istanbul Küçükköy Süper",
+    "market": "carrefour",
+    "lat": 41.074165,
+    "lon": 28.905384
+  },
+  {
+    "id": "bim-P823",
+    "name": "Özlem Sokakeyüpsultan",
+    "market": "bim",
+    "lat": 41.08116,
+    "lon": 28.91737
+  },
+  {
+    "id": "bim-T351",
+    "name": "Pamuk  Eyüpsultan",
+    "market": "bim",
+    "lat": 41.081882,
+    "lon": 28.918356
+  },
+  {
+    "id": "bim-B538",
+    "name": "Mevlana  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.083313,
+    "lon": 28.917019
+  },
+  {
+    "id": "bim-J226",
+    "name": "Çeşme Arkası  Eyüp",
+    "market": "bim",
+    "lat": 41.0806,
+    "lon": 28.91892
+  },
+  {
+    "id": "tarim_kredi-7251",
+    "name": "Istanbul Eyüpsultan Köşk",
+    "market": "tarim_kredi",
+    "lat": 41.08023,
+    "lon": 28.91921
+  },
+  {
+    "id": "a101-E079",
+    "name": "Girne Caddesi Eyüpsultan Istanbul",
+    "market": "a101",
+    "lat": 41.079784,
+    "lon": 28.918919
+  },
+  {
+    "id": "migros-3924",
+    "name": "Vialand Avm Mmm Migros",
+    "market": "migros",
+    "lat": 41.0759,
+    "lon": 28.9233
+  },
+  {
+    "id": "sok-5728",
+    "name": "Sultangazi Mesut Tezcan",
+    "market": "sok",
+    "lat": 41.090935,
+    "lon": 28.86571
+  },
+  {
+    "id": "bim-R221",
+    "name": "Eşref Bitlis  Sultangazi",
+    "market": "bim",
+    "lat": 41.094406,
+    "lon": 28.861374
+  },
+  {
+    "id": "sok-986",
+    "name": "Sultangazi Özer",
+    "market": "sok",
+    "lat": 41.090664,
+    "lon": 28.86946
+  },
+  {
+    "id": "sok-13767",
+    "name": "Sultangazi Hacı Şükrü",
+    "market": "sok",
+    "lat": 41.0934,
+    "lon": 28.8656
+  },
+  {
+    "id": "bim-J189",
+    "name": "Sultançiftliği Sultangazi",
+    "market": "bim",
+    "lat": 41.093616,
+    "lon": 28.865334
+  },
+  {
+    "id": "a101-B564",
+    "name": "Hacı Şükrü Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09413,
+    "lon": 28.864363
+  },
+  {
+    "id": "migros-7473",
+    "name": "Sultangazi Istanbul M Migros",
+    "market": "migros",
+    "lat": 41.094475,
+    "lon": 28.863926
+  },
+  {
+    "id": "bim-J159",
+    "name": "50yıl Mah  Sultangazi",
+    "market": "bim",
+    "lat": 41.090946,
+    "lon": 28.869791
+  },
+  {
+    "id": "a101-I320",
+    "name": "Şafak Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09201,
+    "lon": 28.87011
+  },
+  {
+    "id": "a101-9158",
+    "name": "Eşref Bitlis Sultang",
+    "market": "a101",
+    "lat": 41.0963,
+    "lon": 28.862839
+  },
+  {
+    "id": "bim-J982",
+    "name": "Orhangazi  Sultangazi",
+    "market": "bim",
+    "lat": 41.09291,
+    "lon": 28.87065
+  },
+  {
+    "id": "sok-4628",
+    "name": "Şok Minisultangazi",
+    "market": "sok",
+    "lat": 41.09581,
+    "lon": 28.862364
+  },
+  {
+    "id": "sok-6510",
+    "name": "Sultangazi 50 Yıl",
+    "market": "sok",
+    "lat": 41.09224,
+    "lon": 28.873747
+  },
+  {
+    "id": "a101-C887",
+    "name": "C Caddesi Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.092567,
+    "lon": 28.874763
+  },
+  {
+    "id": "tarim_kredi-5421",
+    "name": "Istanbul Sultangazi Uğur Mumcu",
+    "market": "tarim_kredi",
+    "lat": 41.09548,
+    "lon": 28.86748
+  },
+  {
+    "id": "sok-9952",
+    "name": "Istanbul Adil Park",
+    "market": "sok",
+    "lat": 41.09457,
+    "lon": 28.872597
+  },
+  {
+    "id": "bim-T864",
+    "name": "Ertuğrul Gazi  Sultangazi",
+    "market": "bim",
+    "lat": 41.087852,
+    "lon": 28.877348
+  },
+  {
+    "id": "bim-U575",
+    "name": "Şelale  Sultangazi",
+    "market": "bim",
+    "lat": 41.09109,
+    "lon": 28.873901
+  },
+  {
+    "id": "a101-E136",
+    "name": "Hüdai Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09285,
+    "lon": 28.871342
+  },
+  {
+    "id": "bim-H713",
+    "name": "Cumhuriyet  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.085743,
+    "lon": 28.882397
+  },
+  {
+    "id": "bim-J176",
+    "name": "A Cad  Sultangazi",
+    "market": "bim",
+    "lat": 41.090794,
+    "lon": 28.878843
+  },
+  {
+    "id": "a101-7918",
+    "name": "Muhtar Gaziosmanpaşa",
+    "market": "a101",
+    "lat": 41.08495,
+    "lon": 28.8832
+  },
+  {
+    "id": "a101-I081",
+    "name": "Ertuğrul Gazi Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.083317,
+    "lon": 28.88506
+  },
+  {
+    "id": "a101-9416",
+    "name": "Mina Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.085022,
+    "lon": 28.886621
+  },
+  {
+    "id": "bim-K459",
+    "name": "Cebeci  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.08885,
+    "lon": 28.887087
+  },
+  {
+    "id": "a101-5233",
+    "name": "Danışmaz Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.081352,
+    "lon": 28.884172
+  },
+  {
+    "id": "sok-1244",
+    "name": "Sultangazi Akın",
+    "market": "sok",
+    "lat": 41.09372,
+    "lon": 28.892267
+  },
+  {
+    "id": "sok-4764",
+    "name": "Şok Minişafak Bagcılar",
+    "market": "sok",
+    "lat": 41.092052,
+    "lon": 28.896286
+  },
+  {
+    "id": "a101-D428",
+    "name": "Abdi Ipekçi Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.088463,
+    "lon": 28.89475
+  },
+  {
+    "id": "bim-T687",
+    "name": "Hüma  Gazıosmanpasa",
+    "market": "bim",
+    "lat": 41.08616,
+    "lon": 28.901402
+  },
+  {
+    "id": "bim-L942",
+    "name": "Tem Avrasya  Gazıosmanpasa",
+    "market": "bim",
+    "lat": 41.08941,
+    "lon": 28.898376
+  },
+  {
+    "id": "bim-T324",
+    "name": "Hızır  Gazıosmanpasa",
+    "market": "bim",
+    "lat": 41.084034,
+    "lon": 28.89661
+  },
+  {
+    "id": "a101-B858",
+    "name": "Dostluk Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.092945,
+    "lon": 28.898806
+  },
+  {
+    "id": "sok-4735",
+    "name": "Şok Miniaraştırma",
+    "market": "sok",
+    "lat": 41.08807,
+    "lon": 28.898483
+  },
+  {
+    "id": "migros-6461",
+    "name": "Vega Avm Sultangazi Mmm Migros",
+    "market": "migros",
+    "lat": 41.09288,
+    "lon": 28.903269
+  },
+  {
+    "id": "a101-I450",
+    "name": "Zarifoğlu Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.087475,
+    "lon": 28.91228
+  },
+  {
+    "id": "bim-B533",
+    "name": "Gazikentgaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.0874,
+    "lon": 28.91292
+  },
+  {
+    "id": "sok-7174",
+    "name": "Gop Mevlana Mah",
+    "market": "sok",
+    "lat": 41.087227,
+    "lon": 28.913177
+  },
+  {
+    "id": "bim-J325",
+    "name": "23nisan  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.086296,
+    "lon": 28.902445
+  },
+  {
+    "id": "a101-E809",
+    "name": "Sefa Gaziosmanpaşa Istanbul",
+    "market": "a101",
+    "lat": 41.085743,
+    "lon": 28.915657
+  },
+  {
+    "id": "bim-U718",
+    "name": "Plevne  Gazıosmanpasa",
+    "market": "bim",
+    "lat": 41.085625,
+    "lon": 28.91029
+  },
+  {
+    "id": "sok-13918",
+    "name": "Eyüp Pınar Cad",
+    "market": "sok",
+    "lat": 41.0927,
+    "lon": 28.9127
+  },
+  {
+    "id": "sok-14027",
+    "name": "Yeşilpınar 910 Sokak",
+    "market": "sok",
+    "lat": 41.0878,
+    "lon": 28.9165
+  },
+  {
+    "id": "bim-P983",
+    "name": "Sefa  Gaziosmanpaşa",
+    "market": "bim",
+    "lat": 41.08634,
+    "lon": 28.913433
+  },
+  {
+    "id": "bim-J200",
+    "name": "Ismet Pilgeeyüp",
+    "market": "bim",
+    "lat": 41.08504,
+    "lon": 28.921228
+  },
+  {
+    "id": "bim-J205",
+    "name": "Ihlas  Eyüp",
+    "market": "bim",
+    "lat": 41.090565,
+    "lon": 28.921967
+  },
+  {
+    "id": "migros-9226",
+    "name": "Akşemsettin  Eyüp Istanbul M",
+    "market": "migros",
+    "lat": 41.08962,
+    "lon": 28.92534
+  },
+  {
+    "id": "sok-14070",
+    "name": "Bahçelievler Bilge Sok",
+    "market": "sok",
+    "lat": 41.1002,
+    "lon": 28.8487
+  },
+  {
+    "id": "bim-V494",
+    "name": "Şifa  Sultangazi",
+    "market": "bim",
+    "lat": 41.097107,
+    "lon": 28.858328
+  },
+  {
+    "id": "bim-J198",
+    "name": "Sultanpark  Sultangazi",
+    "market": "bim",
+    "lat": 41.097347,
+    "lon": 28.863838
+  },
+  {
+    "id": "bim-J178",
+    "name": "20 Sokak  Sultangazi",
+    "market": "bim",
+    "lat": 41.097813,
+    "lon": 28.862131
+  },
+  {
+    "id": "a101-6355",
+    "name": "Sultançiftliği Sultangazi",
+    "market": "a101",
+    "lat": 41.098797,
+    "lon": 28.861126
+  },
+  {
+    "id": "a101-E077",
+    "name": "Sultan Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.098045,
+    "lon": 28.865047
+  },
+  {
+    "id": "tarim_kredi-7110",
+    "name": "Istanbul Sultan Çiftliği Konteyner",
+    "market": "tarim_kredi",
+    "lat": 41.10271,
+    "lon": 28.85666
+  },
+  {
+    "id": "a101-E149",
+    "name": "Turhan Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.100605,
+    "lon": 28.861681
+  },
+  {
+    "id": "sok-6232",
+    "name": "Sultangazi Ordu Cad",
+    "market": "sok",
+    "lat": 41.1019,
+    "lon": 28.8603
+  },
+  {
+    "id": "bim-J177",
+    "name": "I Caddesi  Sultangazi",
+    "market": "bim",
+    "lat": 41.09529,
+    "lon": 28.867548
+  },
+  {
+    "id": "a101-6411",
+    "name": "Hastane Sultangazi",
+    "market": "a101",
+    "lat": 41.095757,
+    "lon": 28.867634
+  },
+  {
+    "id": "a101-E612",
+    "name": "E Caddesi Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.094406,
+    "lon": 28.87223
+  },
+  {
+    "id": "bim-J166",
+    "name": "G Caddesi  Sultangazi",
+    "market": "bim",
+    "lat": 41.09668,
+    "lon": 28.871778
+  },
+  {
+    "id": "sok-5606",
+    "name": "Sultangazi Uğur Mumcu",
+    "market": "sok",
+    "lat": 41.09689,
+    "lon": 28.868723
+  },
+  {
+    "id": "bim-R118",
+    "name": "Palmiye Caddesi  Sultangazi",
+    "market": "bim",
+    "lat": 41.096622,
+    "lon": 28.86999
+  },
+  {
+    "id": "a101-2101",
+    "name": "Nene Hatun Sultangazi",
+    "market": "a101",
+    "lat": 41.095417,
+    "lon": 28.87517
+  },
+  {
+    "id": "sok-4569",
+    "name": "Şok Mini Esentepe",
+    "market": "sok",
+    "lat": 41.097607,
+    "lon": 28.878681
+  },
+  {
+    "id": "a101-5921",
+    "name": "Öztürk Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09243,
+    "lon": 28.878815
+  },
+  {
+    "id": "bim-J174",
+    "name": "Avizeciler  Sultangazi",
+    "market": "bim",
+    "lat": 41.096222,
+    "lon": 28.879566
+  },
+  {
+    "id": "bim-U889",
+    "name": "Mavi Marmara  Sultangazi",
+    "market": "bim",
+    "lat": 41.096893,
+    "lon": 28.881155
+  },
+  {
+    "id": "bim-O476",
+    "name": "C Caddesi  Sultangazi",
+    "market": "bim",
+    "lat": 41.092773,
+    "lon": 28.8756
+  },
+  {
+    "id": "a101-F528",
+    "name": "Esentepe Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.097168,
+    "lon": 28.88076
+  },
+  {
+    "id": "a101-H432",
+    "name": "Sanko Sultangazi Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.0979,
+    "lon": 28.879723
+  },
+  {
+    "id": "bim-P748",
+    "name": "Gönen Caddesi  Sultangazi",
+    "market": "bim",
+    "lat": 41.098892,
+    "lon": 28.877914
+  },
+  {
+    "id": "sok-7832",
+    "name": "Sultangazi Esentepe",
+    "market": "sok",
+    "lat": 41.098133,
+    "lon": 28.885555
+  },
+  {
+    "id": "sok-11519",
+    "name": "Esentepe Çarşı",
+    "market": "sok",
+    "lat": 41.10058,
+    "lon": 28.880087
+  },
+  {
+    "id": "tarim_kredi-7406",
+    "name": "Istanbul Sultangazi Esentepe Konteyner",
+    "market": "tarim_kredi",
+    "lat": 41.10277,
+    "lon": 28.88057
+  },
+  {
+    "id": "bim-T712",
+    "name": "Dost  Sultangazi",
+    "market": "bim",
+    "lat": 41.093964,
+    "lon": 28.895626
+  },
+  {
+    "id": "bim-J163",
+    "name": "Yunus Emre  Sultangazi",
+    "market": "bim",
+    "lat": 41.095165,
+    "lon": 28.893375
+  },
+  {
+    "id": "bim-J192",
+    "name": "Mekke Konutları  Sultangazi",
+    "market": "bim",
+    "lat": 41.09212,
+    "lon": 28.891838
+  },
+  {
+    "id": "bim-J191",
+    "name": "Aşık Veysel  Sultangazi",
+    "market": "bim",
+    "lat": 41.09954,
+    "lon": 28.892797
+  },
+  {
+    "id": "a101-B389",
+    "name": "Arafat Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09736,
+    "lon": 28.888758
+  },
+  {
+    "id": "a101-F469",
+    "name": "Ismail Ağa Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09538,
+    "lon": 28.893583
+  },
+  {
+    "id": "sok-9513",
+    "name": "Istanbul Sultangazi Park",
+    "market": "sok",
+    "lat": 41.09662,
+    "lon": 28.89376
+  },
+  {
+    "id": "a101-E137",
+    "name": "Yunus Emre Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09439,
+    "lon": 28.892088
+  },
+  {
+    "id": "sok-6494",
+    "name": "Sondurak",
+    "market": "sok",
+    "lat": 41.097015,
+    "lon": 28.891787
+  },
+  {
+    "id": "a101-0566",
+    "name": "Cumartesi Pazarı Sultangazi Istanbu",
+    "market": "a101",
+    "lat": 41.098667,
+    "lon": 28.89151
+  },
+  {
+    "id": "bim-J179",
+    "name": "Çavuşbaşı  Sultangazi",
+    "market": "bim",
+    "lat": 41.097458,
+    "lon": 28.897783
+  },
+  {
+    "id": "bim-R146",
+    "name": "Iklim  Sultangazi",
+    "market": "bim",
+    "lat": 41.096878,
+    "lon": 28.889166
+  },
+  {
+    "id": "bim-J170",
+    "name": "Dört Yol  Sultangazi",
+    "market": "bim",
+    "lat": 41.097683,
+    "lon": 28.901518
+  },
+  {
+    "id": "a101-8286",
+    "name": "Murat Celep",
+    "market": "a101",
+    "lat": 41.097256,
+    "lon": 28.897839
+  },
+  {
+    "id": "a101-0480",
+    "name": "Istiklal Caddesi Sultangazi Istanbu",
+    "market": "a101",
+    "lat": 41.09528,
+    "lon": 28.90764
+  },
+  {
+    "id": "sok-10192",
+    "name": "Sultangazi Sencer",
+    "market": "sok",
+    "lat": 41.094505,
+    "lon": 28.907246
+  },
+  {
+    "id": "sok-5463",
+    "name": "Sultangazi 75yıl",
+    "market": "sok",
+    "lat": 41.09583,
+    "lon": 28.906397
+  },
+  {
+    "id": "sok-8226",
+    "name": "Sultangazi Zübeyde Hanım",
+    "market": "sok",
+    "lat": 41.098343,
+    "lon": 28.906693
+  },
+  {
+    "id": "a101-8658",
+    "name": "75yıl Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.100143,
+    "lon": 28.901056
+  },
+  {
+    "id": "sok-10772",
+    "name": "Sultangazi Gazi Cad",
+    "market": "sok",
+    "lat": 41.099167,
+    "lon": 28.904171
+  },
+  {
+    "id": "a101-I303",
+    "name": "Huzur Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09909,
+    "lon": 28.903862
+  },
+  {
+    "id": "a101-F757",
+    "name": "Millet Caddesi Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.10124,
+    "lon": 28.902735
+  },
+  {
+    "id": "bim-L965",
+    "name": "75yıl  Sultangazi",
+    "market": "bim",
+    "lat": 41.096153,
+    "lon": 28.906412
+  },
+  {
+    "id": "a101-H122",
+    "name": "Çakmak Caddesi Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.09786,
+    "lon": 28.910645
+  },
+  {
+    "id": "sok-6507",
+    "name": "Gazi Mahallesi",
+    "market": "sok",
+    "lat": 41.098362,
+    "lon": 28.908827
+  },
+  {
+    "id": "bim-Q142",
+    "name": "Kardelensultangazi",
+    "market": "bim",
+    "lat": 41.097668,
+    "lon": 28.909147
+  },
+  {
+    "id": "bim-J158",
+    "name": "Zübeyde Hanım  Sultangazi",
+    "market": "bim",
+    "lat": 41.098824,
+    "lon": 28.907045
+  },
+  {
+    "id": "a101-6244",
+    "name": "Zübeyde Hanım Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.099934,
+    "lon": 28.910137
+  },
+  {
+    "id": "bim-J190",
+    "name": "Sekizevler  Sultangazi",
+    "market": "bim",
+    "lat": 41.10014,
+    "lon": 28.911999
+  },
+  {
+    "id": "a101-J282",
+    "name": "Mustafa Kemal Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.101765,
+    "lon": 28.860203
+  },
+  {
+    "id": "a101-E674",
+    "name": "Mahmut Bey Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.103085,
+    "lon": 28.856552
+  },
+  {
+    "id": "a101-H043",
+    "name": "Hikmet Baysal Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.106342,
+    "lon": 28.855343
+  },
+  {
+    "id": "bim-R174",
+    "name": "Eylül  Sultangazi",
+    "market": "bim",
+    "lat": 41.103096,
+    "lon": 28.856783
+  },
+  {
+    "id": "bim-J195",
+    "name": "Şahtepe  Sultangazi",
+    "market": "bim",
+    "lat": 41.106396,
+    "lon": 28.855343
+  },
+  {
+    "id": "bim-J157",
+    "name": "Ordu  Sultangazi",
+    "market": "bim",
+    "lat": 41.101864,
+    "lon": 28.86048
+  },
+  {
+    "id": "bim-J161",
+    "name": "M Caddesi  Sultangazi",
+    "market": "bim",
+    "lat": 41.101887,
+    "lon": 28.864649
+  },
+  {
+    "id": "a101-H640",
+    "name": "Fatih Caddesi Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.101177,
+    "lon": 28.864355
+  },
+  {
+    "id": "sok-140",
+    "name": "Istanbul Sultangazi Onur",
+    "market": "sok",
+    "lat": 41.108963,
+    "lon": 28.852568
+  },
+  {
+    "id": "a101-1589",
+    "name": "Uğur Mumcu Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.100105,
+    "lon": 28.867414
+  },
+  {
+    "id": "sok-6486",
+    "name": "Sultankent",
+    "market": "sok",
+    "lat": 41.102116,
+    "lon": 28.869308
+  },
+  {
+    "id": "a101-4340",
+    "name": "Orhangazi Sultangazi",
+    "market": "a101",
+    "lat": 41.09699,
+    "lon": 28.869719
+  },
+  {
+    "id": "bim-J167",
+    "name": "Uğurmumcu  Sultangazi",
+    "market": "bim",
+    "lat": 41.10054,
+    "lon": 28.868326
+  },
+  {
+    "id": "bim-K229",
+    "name": "Uluçam  Sultangazi",
+    "market": "bim",
+    "lat": 41.09859,
+    "lon": 28.867523
+  },
+  {
+    "id": "tarim_kredi-7112",
+    "name": "Istanbul Uğur Mumcu 2278 Sokak",
+    "market": "tarim_kredi",
+    "lat": 41.10337,
+    "lon": 28.86673
+  },
+  {
+    "id": "bim-T470",
+    "name": "Necip Fazılsultangazi",
+    "market": "bim",
+    "lat": 41.10193,
+    "lon": 28.86331
+  },
+  {
+    "id": "bim-T621",
+    "name": "Sgk  Sultangazı",
+    "market": "bim",
+    "lat": 41.100983,
+    "lon": 28.872025
+  },
+  {
+    "id": "bim-J718",
+    "name": "Şehirpark  Sultangazi",
+    "market": "bim",
+    "lat": 41.09979,
+    "lon": 28.874382
+  },
+  {
+    "id": "bim-T886",
+    "name": "Esentepe  Sultangazi",
+    "market": "bim",
+    "lat": 41.10034,
+    "lon": 28.879343
+  },
+  {
+    "id": "bim-J175",
+    "name": "Sanko  Sultangaz",
+    "market": "bim",
+    "lat": 41.098953,
+    "lon": 28.884165
+  },
+  {
+    "id": "bim-J184",
+    "name": "Mehmetçiksultangazi",
+    "market": "bim",
+    "lat": 41.10001,
+    "lon": 28.889935
+  },
+  {
+    "id": "bim-J188",
+    "name": "Mevlana  Sultangazı",
+    "market": "bim",
+    "lat": 41.09988,
+    "lon": 28.881151
+  },
+  {
+    "id": "a101-E905",
+    "name": "Aşık Veysel Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.097244,
+    "lon": 28.889347
+  },
+  {
+    "id": "a101-H921",
+    "name": "Ahmediye Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.101803,
+    "lon": 28.881277
+  },
+  {
+    "id": "a101-J650",
+    "name": "Evren Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.10035,
+    "lon": 28.879358
+  },
+  {
+    "id": "bim-L939",
+    "name": "Nene Hatun  Sultangazi",
+    "market": "bim",
+    "lat": 41.102573,
+    "lon": 28.884586
+  },
+  {
+    "id": "a101-B171",
+    "name": "Emirsultan Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.10471,
+    "lon": 28.892227
+  },
+  {
+    "id": "bim-J185",
+    "name": "Kıbrıs  Sultangazi",
+    "market": "bim",
+    "lat": 41.10363,
+    "lon": 28.892035
+  },
+  {
+    "id": "tarim_kredi-7332",
+    "name": "Istanbul Sultangazi Gazi",
+    "market": "tarim_kredi",
+    "lat": 41.10333,
+    "lon": 28.89296
+  },
+  {
+    "id": "a101-E473",
+    "name": "Tuz Deposu Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.10398,
+    "lon": 28.88438
+  },
+  {
+    "id": "sok-13127",
+    "name": "Sultangazi Kıbrıs Caddesi",
+    "market": "sok",
+    "lat": 41.10182,
+    "lon": 28.893663
+  },
+  {
+    "id": "a101-H979",
+    "name": "Kıbrıs Caddesi Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.101913,
+    "lon": 28.893232
+  },
+  {
+    "id": "sok-379",
+    "name": "Sultangazi Mehmetçik",
+    "market": "sok",
+    "lat": 41.09939,
+    "lon": 28.89216
+  },
+  {
+    "id": "a101-I719",
+    "name": "Süleyman Şah Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.10064,
+    "lon": 28.899183
+  },
+  {
+    "id": "bim-J164",
+    "name": "Gazi Mahallesi  Sultan Gazi",
+    "market": "bim",
+    "lat": 41.103172,
+    "lon": 28.898165
+  },
+  {
+    "id": "bim-J199",
+    "name": "Aslangazi  Sultangazi",
+    "market": "bim",
+    "lat": 41.104977,
+    "lon": 28.900547
+  },
+  {
+    "id": "sok-7737",
+    "name": "Millet Cad",
+    "market": "sok",
+    "lat": 41.10549,
+    "lon": 28.900545
+  },
+  {
+    "id": "sok-8700",
+    "name": "Gazi Mah Ismetpaşa Cad",
+    "market": "sok",
+    "lat": 41.1053,
+    "lon": 28.896461
+  },
+  {
+    "id": "bim-V215",
+    "name": "Tuz Deposu  Sultangazi",
+    "market": "bim",
+    "lat": 41.10302,
+    "lon": 28.889765
+  },
+  {
+    "id": "bim-L505",
+    "name": "Huzurevi  Sultangazi",
+    "market": "bim",
+    "lat": 41.09932,
+    "lon": 28.904095
+  },
+  {
+    "id": "a101-J025",
+    "name": "Molla Gürani Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.110626,
+    "lon": 28.851055
+  },
+  {
+    "id": "bim-J187",
+    "name": "Molla Gürani  Sultangazi",
+    "market": "bim",
+    "lat": 41.110962,
+    "lon": 28.850985
+  },
+  {
+    "id": "tarim_kredi-7301",
+    "name": "Istanbul Sultangazi Malkoçoğlu",
+    "market": "tarim_kredi",
+    "lat": 41.112,
+    "lon": 28.84755
+  },
+  {
+    "id": "a101-9808",
+    "name": "Ismetpaşa Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.11009,
+    "lon": 28.853296
+  },
+  {
+    "id": "a101-F238",
+    "name": "Ersu Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.11289,
+    "lon": 28.847431
+  },
+  {
+    "id": "sok-5461",
+    "name": "Sultangazi Malkoçoğlu",
+    "market": "sok",
+    "lat": 41.11338,
+    "lon": 28.849895
+  },
+  {
+    "id": "sok-11166",
+    "name": "Sultangazi Okul",
+    "market": "sok",
+    "lat": 41.111443,
+    "lon": 28.85116
+  },
+  {
+    "id": "bim-O121",
+    "name": "Yurtseven  Sultangazi",
+    "market": "bim",
+    "lat": 41.10449,
+    "lon": 28.859165
+  },
+  {
+    "id": "a101-E013",
+    "name": "Çiftlik Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.109158,
+    "lon": 28.857254
+  },
+  {
+    "id": "bim-J183",
+    "name": "Osmangazisultangazi",
+    "market": "bim",
+    "lat": 41.108925,
+    "lon": 28.857143
+  },
+  {
+    "id": "tarim_kredi-5572",
+    "name": "Istanbul Sultangazi Cebeci",
+    "market": "tarim_kredi",
+    "lat": 41.1105,
+    "lon": 28.8585
+  },
+  {
+    "id": "bim-J168",
+    "name": "Okul  Sultangazi",
+    "market": "bim",
+    "lat": 41.109806,
+    "lon": 28.855091
+  },
+  {
+    "id": "a101-6751",
+    "name": "Akyıldız Sultangazi",
+    "market": "a101",
+    "lat": 41.111813,
+    "lon": 28.852787
+  },
+  {
+    "id": "a101-E798",
+    "name": "Kunduracı Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.10826,
+    "lon": 28.859272
+  },
+  {
+    "id": "sok-6735",
+    "name": "Sultangazi Ismetpaşa",
+    "market": "sok",
+    "lat": 41.11199,
+    "lon": 28.854322
+  },
+  {
+    "id": "bim-R092",
+    "name": "Şehitler Caddesi  Sultangazi",
+    "market": "bim",
+    "lat": 41.10705,
+    "lon": 28.862337
+  },
+  {
+    "id": "bim-T331",
+    "name": "Piri Reis  Sultangazi",
+    "market": "bim",
+    "lat": 41.113243,
+    "lon": 28.858713
+  },
+  {
+    "id": "bim-T255",
+    "name": "Yıldız  Sultangazi",
+    "market": "bim",
+    "lat": 41.100456,
+    "lon": 28.861177
+  },
+  {
+    "id": "tarim_kredi-7244",
+    "name": "Istanbul Sultangazi Edirne Asfaltı",
+    "market": "tarim_kredi",
+    "lat": 41.11456,
+    "lon": 28.85497
+  },
+  {
+    "id": "sok-11526",
+    "name": "Sultangazi Tramvay",
+    "market": "sok",
+    "lat": 41.112377,
+    "lon": 28.85783
+  },
+  {
+    "id": "a101-6893",
+    "name": "Çanakkale Şehitleri Sultangazi",
+    "market": "a101",
+    "lat": 41.111683,
+    "lon": 28.86011
+  },
+  {
+    "id": "bim-J156",
+    "name": "Ismetpaşa  Sultangazi",
+    "market": "bim",
+    "lat": 41.10529,
+    "lon": 28.860943
+  },
+  {
+    "id": "bim-R731",
+    "name": "Yaşam  Sultangazi",
+    "market": "bim",
+    "lat": 41.105274,
+    "lon": 28.860825
+  },
+  {
+    "id": "a101-E294",
+    "name": "Atatürk Bulvarı Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.10731,
+    "lon": 28.867666
+  },
+  {
+    "id": "sok-1357",
+    "name": "Sultangazi Cebeci",
+    "market": "sok",
+    "lat": 41.110046,
+    "lon": 28.860954
+  },
+  {
+    "id": "bim-J172",
+    "name": "Bulvar  Sultangazi",
+    "market": "bim",
+    "lat": 41.106304,
+    "lon": 28.86696
+  },
+  {
+    "id": "bim-O177",
+    "name": "Çimensultangazi",
+    "market": "bim",
+    "lat": 41.10874,
+    "lon": 28.866934
+  },
+  {
+    "id": "a101-D332",
+    "name": "Şehit Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.10936,
+    "lon": 28.867752
+  },
+  {
+    "id": "a101-9236",
+    "name": "Konak Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.110428,
+    "lon": 28.872627
+  },
+  {
+    "id": "sok-3361",
+    "name": "Sultangazi S Caddesi",
+    "market": "sok",
+    "lat": 41.11055,
+    "lon": 28.865759
+  },
+  {
+    "id": "bim-J197",
+    "name": "Atatürk  Sultangazi",
+    "market": "bim",
+    "lat": 41.10861,
+    "lon": 28.875666
+  },
+  {
+    "id": "bim-J186",
+    "name": "Cebeci  Sultangazi",
+    "market": "bim",
+    "lat": 41.11079,
+    "lon": 28.873035
+  },
+  {
+    "id": "a101-4443",
+    "name": "Cebeci Sultangazi",
+    "market": "a101",
+    "lat": 41.111095,
+    "lon": 28.865719
+  },
+  {
+    "id": "a101-H270",
+    "name": "Şehir Parkı Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.104027,
+    "lon": 28.88019
+  },
+  {
+    "id": "bim-V556",
+    "name": "Durak  Sultangazi",
+    "market": "bim",
+    "lat": 41.10504,
+    "lon": 28.88147
+  },
+  {
+    "id": "bim-P964",
+    "name": "Göçmenlersultangazi",
+    "market": "bim",
+    "lat": 41.103867,
+    "lon": 28.880144
+  },
+  {
+    "id": "a101-E508",
+    "name": "Eyüp Gönen Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.104336,
+    "lon": 28.879162
+  },
+  {
+    "id": "a101-0835",
+    "name": "Göçmenler Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.101986,
+    "lon": 28.878534
+  },
+  {
+    "id": "a101-B111",
+    "name": "Avizeciler Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.098118,
+    "lon": 28.880589
+  },
+  {
+    "id": "bim-U028",
+    "name": "Bahar  Sultangazi",
+    "market": "bim",
+    "lat": 41.106503,
+    "lon": 28.896046
+  },
+  {
+    "id": "sok-5560",
+    "name": "Sultangazi Zeynep Barış",
+    "market": "sok",
+    "lat": 41.10745,
+    "lon": 28.895805
+  },
+  {
+    "id": "bim-J180",
+    "name": "Çanakkale  Sultangazi",
+    "market": "bim",
+    "lat": 41.105915,
+    "lon": 28.89475
+  },
+  {
+    "id": "bim-U847",
+    "name": "Doğa  Sultangazi",
+    "market": "bim",
+    "lat": 41.106995,
+    "lon": 28.8985
+  },
+  {
+    "id": "a101-4963",
+    "name": "Malkoçoğlu Sultangazi",
+    "market": "a101",
+    "lat": 41.1158,
+    "lon": 28.850477
+  },
+  {
+    "id": "bim-K284",
+    "name": "Nefes  Sultangazi",
+    "market": "bim",
+    "lat": 41.11358,
+    "lon": 28.849995
+  },
+  {
+    "id": "bim-J171",
+    "name": "Malkoçoğlu  Sultangazi",
+    "market": "bim",
+    "lat": 41.11661,
+    "lon": 28.850266
+  },
+  {
+    "id": "bim-U032",
+    "name": "Zeytindalı  Sultangazi",
+    "market": "bim",
+    "lat": 41.11399,
+    "lon": 28.854733
+  },
+  {
+    "id": "bim-J155",
+    "name": "Cordial  Sultangazi",
+    "market": "bim",
+    "lat": 41.112656,
+    "lon": 28.85625
+  },
+  {
+    "id": "a101-I692",
+    "name": "Balkan Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.113007,
+    "lon": 28.863043
+  },
+  {
+    "id": "bim-J196",
+    "name": "Edırne Asfaltı  Sultangazi",
+    "market": "bim",
+    "lat": 41.111538,
+    "lon": 28.85791
+  },
+  {
+    "id": "bim-Q908",
+    "name": "Pazaryeri  Sultangazi",
+    "market": "bim",
+    "lat": 41.11296,
+    "lon": 28.862934
+  },
+  {
+    "id": "bim-J154",
+    "name": "2cebeci  Sultangazi",
+    "market": "bim",
+    "lat": 41.11034,
+    "lon": 28.860167
+  },
+  {
+    "id": "bim-U768",
+    "name": "Orkide  Sultangazi",
+    "market": "bim",
+    "lat": 41.12979,
+    "lon": 28.832464
+  },
+  {
+    "id": "sok-6937",
+    "name": "Sultangazi Vefa Poyraz",
+    "market": "sok",
+    "lat": 41.133366,
+    "lon": 28.827896
+  },
+  {
+    "id": "a101-9051",
+    "name": "Habibler Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.130302,
+    "lon": 28.836971
+  },
+  {
+    "id": "tarim_kredi-7309",
+    "name": "Istanbul Sultangazi Vefa",
+    "market": "tarim_kredi",
+    "lat": 41.13249,
+    "lon": 28.83482
+  },
+  {
+    "id": "bim-T256",
+    "name": "Habipler  Sultangazi",
+    "market": "bim",
+    "lat": 41.132748,
+    "lon": 28.834711
+  },
+  {
+    "id": "a101-B284",
+    "name": "Vefa Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.132133,
+    "lon": 28.834759
+  },
+  {
+    "id": "a101-I024",
+    "name": "Selçuklu Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.133453,
+    "lon": 28.833696
+  },
+  {
+    "id": "a101-9071",
+    "name": "Yıldızlar Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.13367,
+    "lon": 28.831402
+  },
+  {
+    "id": "bim-J194",
+    "name": "Lalezar  Sultangazi",
+    "market": "bim",
+    "lat": 41.132042,
+    "lon": 28.832472
+  },
+  {
+    "id": "bim-J182",
+    "name": "Vefa  Sultangazi",
+    "market": "bim",
+    "lat": 41.133244,
+    "lon": 28.83019
+  },
+  {
+    "id": "tarim_kredi-7116",
+    "name": "Istanbul Bağcılar Mahmutbey",
+    "market": "tarim_kredi",
+    "lat": 41.12856,
+    "lon": 28.84183
+  },
+  {
+    "id": "sok-10130",
+    "name": "Habipler Ihlamur",
+    "market": "sok",
+    "lat": 41.13427,
+    "lon": 28.830864
+  },
+  {
+    "id": "bim-V654",
+    "name": "Aslanbey  Kağıthane",
+    "market": "bim",
+    "lat": 41.137173,
+    "lon": 28.814238
+  },
+  {
+    "id": "a101-E488",
+    "name": "Yayla Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.145107,
+    "lon": 28.857513
+  },
+  {
+    "id": "bim-R642",
+    "name": "Ferahsultangazı",
+    "market": "bim",
+    "lat": 41.14822,
+    "lon": 28.85173
+  },
+  {
+    "id": "bim-O204",
+    "name": "Yayla  Sultangazi",
+    "market": "bim",
+    "lat": 41.147984,
+    "lon": 28.85597
+  },
+  {
+    "id": "tarim_kredi-7111",
+    "name": "Istanbul Sultangazi Yayla",
+    "market": "tarim_kredi",
+    "lat": 41.14839,
+    "lon": 28.8532
+  },
+  {
+    "id": "a101-4528",
+    "name": "Kimsesizler Sultangazi Istanbul",
+    "market": "a101",
+    "lat": 41.147945,
+    "lon": 28.855083
+  },
+  {
+    "id": "sok-4263",
+    "name": "Şok Minisarnıç Yeni",
+    "market": "sok",
+    "lat": 41.148235,
+    "lon": 28.852942
+  },
+  {
+    "id": "carrefour-2056",
+    "name": "Kemerburgaz Arıum Resıdence",
+    "market": "carrefour",
+    "lat": 41.155575,
+    "lon": 28.918566
+  },
+  {
+    "id": "migros-9352",
+    "name": "Mithatpaşa Mh Istanbul M",
+    "market": "migros",
+    "lat": 41.15846,
+    "lon": 28.91217
+  },
+  {
+    "id": "sok-3951",
+    "name": "Istanbul Kemerburgaz",
+    "market": "sok",
+    "lat": 41.158676,
+    "lon": 28.912384
+  },
+  {
+    "id": "a101-9195",
+    "name": "Mithatpaşa Eyüp Ista",
+    "market": "a101",
+    "lat": 41.156616,
+    "lon": 28.914911
+  },
+  {
+    "id": "bim-K309",
+    "name": "Mithatpaşa  Eyüpsultan",
+    "market": "bim",
+    "lat": 41.160706,
+    "lon": 28.911213
+  },
+  {
+    "id": "bim-J210",
+    "name": "Kemerburgaz  Eyüp",
+    "market": "bim",
+    "lat": 41.160267,
+    "lon": 28.916475
+  },
+  {
+    "id": "a101-B783",
+    "name": "Orman Yolu Eyüp Istanbul",
+    "market": "a101",
+    "lat": 41.16051,
+    "lon": 28.91897
+  }
+]
