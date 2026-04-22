@@ -15,7 +15,7 @@ import os
 from datetime import datetime, timezone
 from config import STALE_HOURS
 
-STATE_PATH = os.path.join(os.path.dirname(__file__), "..", "state.json")
+STATE_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "state.json")
 
 
 def load_state() -> dict:

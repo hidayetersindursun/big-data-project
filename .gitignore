@@ -1,5 +1,6 @@
 # Ham veri — S3'e gidecek
 ingestion/data/
+ingestion/*/data/
 
 # Python
 __pycache__/
@@ -33,6 +34,7 @@ market_data.json
 .idea/
 
 # Üretilen plot çıktıları
-tcmb/plots/
+ingestion/*/plots/
+ingestion/*/state.json
 *.png
 *.html
