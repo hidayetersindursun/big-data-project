@@ -42,9 +42,18 @@ Output: `ingestion/tcmb/data/*.jsonl`, dashboards: `ingestion/tcmb/plots/`
 ### Hal wholesale prices
 
 ```bash
-python ingestion/hal/istanbul/ist_gunluk_hal_fiyat_scraber.py   # Istanbul Hal
-python ingestion/hal/harman/harman_gunluk_hal_fiyat_scraber.py  # Harman Hal
+# İstanbul Hal (İBB tarim.ibb.istanbul — Selenium + headless Chrome)
+python ingestion/hal/istanbul/ist_gunluk_hal_fiyat_scraber.py
+
+# Harman Hal (harmanapps.com — curl_cffi, Cloudflare atlatma)
+python ingestion/hal/harman/harman_gunluk_hal_fiyat_scraber.py
 ```
+
+Çıktı: çalıştırıldığı klasöre `*_hal_fiyat_gg_aa_yyyy.csv` (Kategori, Ürün, Birim, En Düşük, En Yüksek, Tarih)
+
+Bağımlılıklar:
+- Istanbul: `pip install pandas selenium` + Chrome kurulu olmalı
+- Harman: `pip install pandas curl_cffi beautifulsoup4`
 
 ### Adding a new city (market scraper)
 Edit `ingestion/market/config.py` → `CITIES` dict only. No other file changes needed.
@@ -104,15 +113,16 @@ Aynı gün iki kez çalışırsa üzerine yazar. Farklı günlerde yeni klasör 
 ## Architecture
 
 ### Data Sources
-| Source | Method | Frequency |
-|---|---|---|
-| marketfiyati.org.tr (retail prices) | REST API (scraper.py) | Daily / Intraday |
-| İBB Hal prices | Swagger REST API | Daily |
-| İzmir Hal prices | API + CSV | Daily |
-| Open-Meteo (weather) | REST API | Hourly stream |
-| GDELT (news) | S3 / API | 15-min stream |
-| EPİAŞ (electricity) | Transparency API | Hourly stream |
-| TCMB EVDS (FX + indices) | EVDS API | Daily/Monthly |
+| Source | Klasör | Method | Sıklık | Durum |
+|---|---|---|---|---|
+| marketfiyati.org.tr (perakende) | `ingestion/market/` | REST API async | Günlük/Gün içi | Hazır |
+| İBB İstanbul Hal | `ingestion/hal/istanbul/` | Selenium | Günlük | Hazır |
+| Harman Hal | `ingestion/hal/harman/` | curl_cffi | Günlük | Hazır |
+| TCMB EVDS (kur + enflasyon) | `ingestion/tcmb/` | EVDS REST API | Günlük/Aylık | Hazır |
+| Open-Meteo (hava) | `ingestion/weather/` | REST API | Saatlik stream | Planlandı |
+| GDELT (haber) | `ingestion/gdelt/` | S3 / API | 15 dk stream | Planlandı |
+| EPİAŞ (elektrik) | `ingestion/epias/` | Transparency API | Saatlik stream | Planlandı |
+| İzmir Hal | `ingestion/hal/izmir/` | API + CSV | Günlük | Planlandı |
 
 ### Pipeline Architecture (Medallion)
 - **Bronze Layer**: Raw data from Kafka topics (`raw_weather`, `raw_gdelt`, `raw_market_prices`) and Airflow batch pulls → Delta Lake, no transformation

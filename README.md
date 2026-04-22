@@ -1,47 +1,101 @@
-# Günlük Hal Fiyatları Scraper Projesi
+# Türkiye Gıda Tedarik Zinciri Şeffaflık Motoru
 
-Bu proje, İstanbul Büyükşehir Belediyesi ve Harmanapps web sitelerinden günlük sebze ve meyve hal fiyatlarını otomatik olarak çekmek (scrape etmek) için tasarlanmış iki ayrı Python betiğini içerir.
+Türkiye'de hal (toptancı) ile perakende fiyatları arasındaki marjı analiz eden Big Data projesi. Temel araştırma soruları: asimetrik fiyat geçişkenliği ("Rockets & Feathers"), hava şokları → raf fiyatı gecikme süresi ve bölgesel marj farklılıkları.
 
 ## Proje Yapısı
 
-### 1. `Istanbul_Hal`
-Bu klasörde İBB Hal Kayıt Sisteminden verileri otomatik çeken script yer alır.
-- **`ist_gunluk_hal_fiyat_scraber.py`**: Selenium kütüphanesini kullanarak `tarim.ibb.istanbul` adresine bağlanır. Arka planda Chrome'u çalıştırarak (headless mod) "Meyve", "Sebze" ve "İthal Ürünler" kategorilerini seçer, gelen tablo değerlerini ayrıştırır.
-- **Çıktı**: `istanbul_hal_fiyat_gg_aa_yyyy.csv` (Örn: `istanbul_hal_fiyat_10_04_2026.csv`). Veriler oluşturulduğu günün tarihi ile kaydedilir. İçerisinde Kategori, Ürün Adı, Birim, En Düşük Fiyat, En Yüksek Fiyat ve Tarih sütunları yer alır.
+```
+ingestion/
+├── market/          # marketfiyati.org.tr perakende fiyat scraperi
+├── tcmb/            # TCMB EVDS: döviz kurları + enflasyon endeksleri
+├── hal/
+│   ├── istanbul/    # İBB İstanbul Hal fiyatları (Selenium)
+│   └── harman/      # Harmanapps hal fiyatları (curl_cffi)
+├── weather/         # Open-Meteo — yakında
+├── gdelt/           # GDELT haber verisi — yakında
+└── epias/           # EPİAŞ elektrik fiyatları — yakında
 
-### 2. `Harman_Hal`
-Bu klasörde, Cloudflare güvenlik sistemine sahip olan `harmanapps.com` sitesinden verileri hızlıca çeken script bulunur.
-- **`harman_gunluk_hal_fiyat_scraber.py`**: Selenium (tarayıcı) kullanmak yerine hız ve Cloudflare atlatabilmesi için `curl_cffi` kütüphanesini kullanır. Tüm şehir linklerini analiz edip ilgili sayfalardan veriyi ayrıştırır. Pagination (sayfalama) mantığını otomatik olarak izler.
-- **Çıktı**: `harman_hal_fiyat_gg_aa_yyyy.csv` (Örn: `harman_hal_fiyat_10_04_2026.csv`). Veriler içerisinde Şehir, Ürün, Konum, En Düşük, En Yüksek ve Tarih sütunları bulunur.
+infrastructure/      # Docker, Kafka, Airflow konfigürasyonları
+processing/          # Flink / Spark job'ları
+orchestration/       # Airflow DAG'ları
+```
 
-## Kurulum ve Gereksinimler
+## Scraperlar
 
-Projeyi çalıştırmadan önce aşağıdaki kütüphanelerin Python (veya Anaconda) ortamınıza kurulu olduğundan emin olun:
+### Market perakende fiyatları (`ingestion/market/`)
+
+`marketfiyati.org.tr` API'sini asenkron olarak sorgular; ilçe × kategori × sayfalama.
 
 ```bash
-# İstanbul Hal Scraper için gerekenler:
+pip install aiohttp
+
+# Proje kökünden
+python ingestion/market/scraper.py                              # sadece bayat veri
+python ingestion/market/scraper.py --force                      # tüm veriyi yeniden çek
+python ingestion/market/scraper.py --city İstanbul --category Meyve
+```
+
+Çıktı: `ingestion/market/data/{şehir}_{ilçe}/YYYY-MM-DD/{kategori}.jsonl`
+State: proje kökündeki `state.json`
+
+### TCMB EVDS (`ingestion/tcmb/`)
+
+T.C. Merkez Bankası EVDS API'sinden döviz kurları (USD/EUR/GBP) ve enflasyon endeksleri çeker.
+
+```bash
+python ingestion/tcmb/tcmb_evds.py            # bayat serileri güncelle
+python ingestion/tcmb/tcmb_evds.py --force    # tüm geçmişi yeniden çek
+python ingestion/tcmb/tcmb_evds.py --discover # mevcut serileri listele
+python ingestion/tcmb/plot_tcmb.py            # HTML dashboard oluştur
+```
+
+Çıktı: `ingestion/tcmb/data/*.jsonl`, dashboard: `ingestion/tcmb/plots/`
+
+### İstanbul Hal fiyatları (`ingestion/hal/istanbul/`)
+
+`tarim.ibb.istanbul` adresinden Selenium ile günlük hal fiyatlarını çeker (headless Chrome, "Meyve", "Sebze", "İthal Ürünler" kategorileri).
+
+```bash
 pip install pandas selenium
 
-# Harmanapps Hal Scraper için gerekenler:
+python ingestion/hal/istanbul/ist_gunluk_hal_fiyat_scraber.py
+```
+
+Çıktı: `ingestion/hal/istanbul/istanbul_hal_fiyat_gg_aa_yyyy.csv`
+
+### Harman hal fiyatları (`ingestion/hal/harman/`)
+
+`harmanapps.com` sitesinden `curl_cffi` ile Cloudflare atlatarak hal fiyatlarını çeker. Tüm şehirleri ve sayfalamayı otomatik izler.
+
+```bash
 pip install pandas curl_cffi beautifulsoup4
+
+python ingestion/hal/harman/harman_gunluk_hal_fiyat_scraber.py
 ```
 
-## Nasıl Çalıştırılır?
+Çıktı: `ingestion/hal/harman/harman_hal_fiyat_gg_aa_yyyy.csv`
 
-Her iki script de bağlı bulundukları klasör dizini gözetilmeksizin terminal üzerinden çalıştırılabilir. Verilen csv çıktısı çalıştırıldığı klasöre çıkartılır.
+## Gereksinimler
 
-**İstanbul Hal Kodu:**
-```bash
-cd Istanbul_Hal
-python ist_gunluk_hal_fiyat_scraber.py
+| Scraper | Kütüphaneler |
+|---|---|
+| market | `aiohttp` |
+| tcmb | standart kütüphane |
+| hal/istanbul | `pandas`, `selenium`, Chrome |
+| hal/harman | `pandas`, `curl_cffi`, `beautifulsoup4` |
+
+## Mimari
+
+```
+Ham Kaynak → Bronze (Delta Lake) → Silver (Flink/Spark) → Gold → Superset
 ```
 
-**Harmanapps Kodu:**
-```bash
-cd Harman_Hal
-python harman_gunluk_hal_fiyat_scraber.py
-```
+- **Bronze**: Kafka topic'lerinden ham veri; dönüşüm yok
+- **Silver**: Entity resolution (hal ↔ market eşleştirme), birim normalizasyonu (kg)
+- **Gold**: `daily_margin_by_city`, `shock_propagation_index`
 
-## Notlar
-- Selenium betiği (İstanbul) çalışırken Chrome'a ihtiyaç duyar, gizli (`headless`) çalışır. Sisteminizde Chrome'un bir versiyonu yüklü olmalıdır.
-- Harmanapps betiğinde (`curl_cffi` ile) Chrome açılmaz, TLS fingerprinting ile doğrudan istek atılarak işlem saniyeler içerisinde tamamlanır.
+**Tech stack:** Kafka · Apache Flink · Delta Lake (MinIO/S3) · Airflow · Trino · Superset · Docker
+
+## Ekip
+
+Azmi Yağlı · Abdullah Zengin · Hidayet Ersin Dursun
