@@ -17,3 +17,10 @@ state.json
 
 # Ham veri JSON'ları
 market_data.json
+
+# IDE / editor
+.vscode/
+.idea/
+
+# TCMB local plot outputs
+tcmb/plots/

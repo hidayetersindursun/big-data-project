@@ -7,6 +7,8 @@
 
 > **Disclaimer:** Bu projede içerik üretimi ve mimari tasarım aşamalarında yapay zeka araçlarından yararlanılmıştır.
 
+proje detayları için @project.md ye bak
+
 ## 1\. Business Problemi
 
 Türkiye'de tarım ürünlerinin tarladan çıkış fiyatı ile büyükşehirlerdeki market raflarına ulaşan fiyatı arasındaki uçurum, sürekli tartışılan ancak **sistematik ve veri odaklı ölçülemeyen** bir "kara kutudur".
