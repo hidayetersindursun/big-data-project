@@ -1,0 +1,8 @@
+pandas
+requests
+beautifulsoup4
+curl_cffi
+selenium
+httpcore>=1.0.9
+h11>=0.16.0
+tenacity
