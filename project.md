@@ -5,6 +5,8 @@
 
 *(Turkey Food Supply Chain Transparency and Spatial Margin Analysis Engine)*
 
+proje detayları için @project.md ye bak
+
 ## 1\. Business Problemi
 
 Türkiye'de tarım ürünlerinin tarladan çıkış fiyatı ile büyükşehirlerdeki market raflarına ulaşan fiyatı arasındaki uçurum, sürekli tartışılan ancak **sistematik ve veri odaklı ölçülemeyen** bir "kara kutudur".
