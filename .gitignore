@@ -5,8 +5,18 @@ ingestion/data/
 __pycache__/
 *.pyc
 *.pyo
+*.py[cod]
+*$py.class
 .venv/
 venv/
+big_data_env/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Ortam değişkenleri
+.env
 
 # Mac
 .DS_Store
@@ -22,5 +32,7 @@ market_data.json
 .vscode/
 .idea/
 
-# TCMB local plot outputs
+# Üretilen plot çıktıları
 tcmb/plots/
+*.png
+*.html
