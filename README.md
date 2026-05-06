@@ -2,6 +2,32 @@
 
 Türkiye'de hal (toptancı) ile perakende fiyatları arasındaki marjı analiz eden Big Data projesi. Temel araştırma soruları: asimetrik fiyat geçişkenliği ("Rockets & Feathers"), hava şokları → raf fiyatı gecikme süresi ve bölgesel marj farklılıkları.
 
+## Hızlı Başlangıç (Local Stack)
+
+Repo'yu klonladıktan sonra tek komutla bütün NiFi + Kafka + MinIO stack'i ayağa kalkar:
+
+```bash
+git clone <repo>
+cd big-data-project/infrastructure
+./setup.sh
+```
+
+Gereksinimler: **Docker + Docker Compose v2** (Docker Desktop Mac/Win, `sudo apt install docker.io docker-compose` Linux), **8 GB RAM**, **10 GB disk**.
+
+Açılan arayüzler:
+
+| Servis | URL | Login |
+|---|---|---|
+| **NiFi UI** | http://localhost:8080/nifi | yok (HTTP modu) |
+| **Kafka UI** | http://localhost:8090 | — |
+| **MinIO** | http://localhost:9001 | `admin` / `admin12345` |
+
+Detaylı kullanım + NiFi flow template import + troubleshooting: [`infrastructure/README.md`](infrastructure/README.md).
+
+Ödev (Apache NiFi + Kafka): [`HW_NiFi_Kafka.md`](HW_NiFi_Kafka.md).
+
+Stack'i durdur: `cd infrastructure && ./teardown.sh`.
+
 ## Proje Yapısı
 
 ```
@@ -15,7 +41,8 @@ ingestion/
 ├── gdelt/           # GDELT haber verisi — yakında
 └── epias/           # EPİAŞ saatlik elektrik verileri (eptr2)
 
-infrastructure/      # Docker, Kafka, Airflow konfigürasyonları
+infrastructure/      # Docker stack (NiFi, Kafka, MinIO) + setup.sh / teardown.sh
+                     # + nifi_flow_template.xml (import-edilebilir NiFi flow)
 processing/          # Flink / Spark job'ları
 orchestration/       # Airflow DAG'ları
 ```

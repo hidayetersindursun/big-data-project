@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  ============================================================================
+  Apache NiFi Flow Template — Turkey Food Supply Chain Transparency Engine
+  ============================================================================
+  Import: NiFi UI → Operate palette → Upload Template → Drag onto canvas.
+  Tested against: Apache NiFi 1.23+ (record-oriented processors required).
+
+  Topology: one Process Group per data source, all publishing to Kafka topics
+  that match `docker-setup.md §3` (raw_market_prices, raw_hal_prices,
+  raw_weather, raw_gdelt, raw_epias, raw_tcmb, raw_akaryakit).
+
+  Parameter context `project_ctx`:
+    - kafka_brokers            = kafka:9092
+    - schema_registry_url      = http://schema-registry:8081
+    - s3_bronze_bucket         = bronze
+    - s3_endpoint              = http://minio:9000
+    - marketfiyati_api_base    = https://api.marketfiyati.org.tr/api/v2
+    - evds_api_key             = (secret)
+    - eptr_username / password = (secret)
+  ============================================================================
+-->
+<template encoding-version="1.4">
+    <description>Turkey Food Supply Chain ingestion — 8 sources into Kafka + S3 Bronze</description>
+    <groupId>root</groupId>
+    <name>turkey_food_supply_chain_ingest</name>
+    <snippet>
+
+        <!-- =========================================================== -->
+        <!-- CONTROLLER SERVICES (shared across process groups)          -->
+        <!-- =========================================================== -->
+        <controllerServices>
+            <id>cs-avro-reader</id>
+            <name>AvroReader</name>
+            <type>org.apache.nifi.avro.AvroReader</type>
+            <properties>
+                <entry><key>schema-access-strategy</key><value>schema-name</value></entry>
+                <entry><key>schema-registry</key><value>cs-confluent-schema-registry</value></entry>
+            </properties>
+        </controllerServices>
+        <controllerServices>
+            <id>cs-avro-writer</id>
+            <name>AvroRecordSetWriter</name>
+            <type>org.apache.nifi.avro.AvroRecordSetWriter</type>
+        </controllerServices>
+        <controllerServices>
+            <id>cs-json-reader</id>
+            <name>JsonTreeReader</name>
+            <type>org.apache.nifi.json.JsonTreeReader</type>
+        </controllerServices>
+        <controllerServices>
+            <id>cs-csv-reader</id>
+            <name>CSVReader</name>
+            <type>org.apache.nifi.csv.CSVReader</type>
+            <properties>
+                <entry><key>csv-header-line-skip-count</key><value>0</value></entry>
+                <entry><key>treat-first-line-as-header</key><value>true</value></entry>
+            </properties>
+        </controllerServices>
+        <controllerServices>
+            <id>cs-confluent-schema-registry</id>
+            <name>ConfluentSchemaRegistry</name>
+            <type>org.apache.nifi.schemaregistry.services.ConfluentSchemaRegistry</type>
+            <properties>
+                <entry><key>url</key><value>#{schema_registry_url}</value></entry>
+            </properties>
+        </controllerServices>
+
+        <!-- =========================================================== -->
+        <!-- PROCESS GROUP 1 — marketfiyati.org.tr (intraday stream)     -->
+        <!-- =========================================================== -->
+        <processGroups>
+            <id>pg-market</id>
+            <name>market_prices_stream</name>
+            <comments>
+                Source: marketfiyati.org.tr API v2.
+                Cadence: every 2 hours (staleness threshold from config.py STALE_HOURS=24).
+                Kafka topic: raw_market_prices
+                Bronze key:  market/{yyyy-MM-dd}/{district}_{category}.parquet
+            </comments>
+
+            <!-- 1. Seed FlowFile: one per (city, district, category) tuple -->
+            <processors>
+                <id>p-m-01-generate</id>
+                <name>01_GenerateFlowFile_seed</name>
+                <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                <schedulingStrategy>CRON_DRIVEN</schedulingStrategy>
+                <schedulingPeriod>0 0 */2 * * ?</schedulingPeriod>
+                <properties>
+                    <entry><key>Custom Text</key>
+                        <value>{"city":"${city}","district":"${district}","category":"${category}"}</value></entry>
+                </properties>
+            </processors>
+
+            <!-- 2. Fan out tuples from districts.json -->
+            <processors>
+                <id>p-m-02-lookup</id>
+                <name>02_LookupDistrictCoords</name>
+                <type>org.apache.nifi.processors.standard.LookupRecord</type>
+            </processors>
+
+            <!-- 3. Resolve nearby depots via /nearest -->
+            <processors>
+                <id>p-m-03-depots</id>
+                <name>03_InvokeHTTP_nearest_depots</name>
+                <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                <properties>
+                    <entry><key>HTTP Method</key><value>GET</value></entry>
+                    <entry><key>Remote URL</key>
+                        <value>#{marketfiyati_api_base}/nearest?lat=${lat}&amp;lon=${lon}&amp;radius=1000</value></entry>
+                    <entry><key>Read Timeout</key><value>30 sec</value></entry>
+                </properties>
+            </processors>
+
+            <!-- 4. Paginated product fetch with exponential backoff -->
+            <processors>
+                <id>p-m-04-search</id>
+                <name>04_InvokeHTTP_searchByCategories</name>
+                <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                <properties>
+                    <entry><key>HTTP Method</key><value>POST</value></entry>
+                    <entry><key>Remote URL</key>
+                        <value>#{marketfiyati_api_base}/searchByCategories</value></entry>
+                    <entry><key>Content-Type</key><value>application/json</value></entry>
+                </properties>
+                <retriedRelationships>Retry</retriedRelationships>
+                <retryCount>5</retryCount>
+                <backoffMechanism>YIELD_PROCESSOR</backoffMechanism>
+                <maxBackoffPeriod>160 sec</maxBackoffPeriod>
+            </processors>
+
+            <!-- 5. Split JSON array → 1 product per FlowFile -->
+            <processors>
+                <id>p-m-05-split</id>
+                <name>05_SplitRecord_per_product</name>
+                <type>org.apache.nifi.processors.standard.SplitRecord</type>
+                <properties>
+                    <entry><key>record-reader</key><value>cs-json-reader</value></entry>
+                    <entry><key>record-writer</key><value>cs-avro-writer</value></entry>
+                    <entry><key>records-per-split</key><value>1</value></entry>
+                </properties>
+            </processors>
+
+            <!-- 6. Set Kafka key + partition date attributes -->
+            <processors>
+                <id>p-m-06-attr</id>
+                <name>06_UpdateAttribute_partition_keys</name>
+                <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+                <properties>
+                    <entry><key>kafka.key</key>         <value>${productId}</value></entry>
+                    <entry><key>partition_date</key>    <value>${now():format('yyyy-MM-dd')}</value></entry>
+                </properties>
+            </processors>
+
+            <!-- 7. Publish to Kafka -->
+            <processors>
+                <id>p-m-07-kafka</id>
+                <name>07_PublishKafkaRecord_2_6</name>
+                <type>org.apache.nifi.processors.kafka.pubsub.PublishKafkaRecord_2_6</type>
+                <properties>
+                    <entry><key>bootstrap.servers</key><value>#{kafka_brokers}</value></entry>
+                    <entry><key>topic</key><value>raw_market_prices</value></entry>
+                    <entry><key>record-reader</key><value>cs-avro-reader</value></entry>
+                    <entry><key>record-writer</key><value>cs-avro-writer</value></entry>
+                    <entry><key>acks</key><value>all</value></entry>
+                    <entry><key>use-transactions</key><value>true</value></entry>
+                    <entry><key>message-header-encoding</key><value>UTF-8</value></entry>
+                    <entry><key>kafka-key</key><value>${kafka.key}</value></entry>
+                </properties>
+            </processors>
+
+            <!-- 8. Parallel sink to S3/MinIO Bronze -->
+            <processors>
+                <id>p-m-08-s3</id>
+                <name>08_PutS3Object_bronze</name>
+                <type>org.apache.nifi.processors.aws.s3.PutS3Object</type>
+                <properties>
+                    <entry><key>Bucket</key><value>#{s3_bronze_bucket}</value></entry>
+                    <entry><key>Object Key</key>
+                        <value>market/${partition_date}/${district}_${category}_${filename}.parquet</value></entry>
+                    <entry><key>Endpoint Override URL</key><value>#{s3_endpoint}</value></entry>
+                </properties>
+            </processors>
+
+            <connections>
+                <id>c-m-1</id><source><id>p-m-01-generate</id></source><destination><id>p-m-02-lookup</id></destination><selectedRelationships>success</selectedRelationships></connections>
+            <connections>
+                <id>c-m-2</id><source><id>p-m-02-lookup</id></source><destination><id>p-m-03-depots</id></destination><selectedRelationships>matched</selectedRelationships></connections>
+            <connections>
+                <id>c-m-3</id><source><id>p-m-03-depots</id></source><destination><id>p-m-04-search</id></destination><selectedRelationships>Response</selectedRelationships></connections>
+            <connections>
+                <id>c-m-4</id><source><id>p-m-04-search</id></source><destination><id>p-m-05-split</id></destination><selectedRelationships>Response</selectedRelationships></connections>
+            <connections>
+                <id>c-m-5</id><source><id>p-m-05-split</id></source><destination><id>p-m-06-attr</id></destination><selectedRelationships>splits</selectedRelationships></connections>
+            <connections>
+                <id>c-m-6</id><source><id>p-m-06-attr</id></source><destination><id>p-m-07-kafka</id></destination><selectedRelationships>success</selectedRelationships>
+                <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold></connections>
+            <connections>
+                <id>c-m-7</id><source><id>p-m-06-attr</id></source><destination><id>p-m-08-s3</id></destination><selectedRelationships>success</selectedRelationships></connections>
+        </processGroups>
+
+        <!-- =========================================================== -->
+        <!-- PROCESS GROUP 2 — İBB Hal + Harman Hal (daily 02:00)       -->
+        <!-- =========================================================== -->
+        <processGroups>
+            <id>pg-hal</id>
+            <name>hal_prices_batch</name>
+            <comments>
+                Two sources: İBB (Selenium) + Harman (curl_cffi). Both emit CSV.
+                NiFi shells out to the existing Python scrapers, then ingests stdout.
+                Kafka topic: raw_hal_prices
+            </comments>
+
+            <processors>
+                <id>p-h-01-cron</id>
+                <name>01_GenerateFlowFile_daily_0200</name>
+                <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                <schedulingStrategy>CRON_DRIVEN</schedulingStrategy>
+                <schedulingPeriod>0 0 2 * * ?</schedulingPeriod>
+            </processors>
+
+            <processors>
+                <id>p-h-02-ibb</id>
+                <name>02a_ExecuteStreamCommand_ibb</name>
+                <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
+                <properties>
+                    <entry><key>Command Path</key><value>python3</value></entry>
+                    <entry><key>Command Arguments</key>
+                        <value>ingestion/hal/istanbul/ist_gunluk_hal_fiyat_scraber.py;--stdout</value></entry>
+                    <entry><key>Working Directory</key><value>/app</value></entry>
+                </properties>
+            </processors>
+
+            <processors>
+                <id>p-h-03-harman</id>
+                <name>02b_ExecuteStreamCommand_harman</name>
+                <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
+                <properties>
+                    <entry><key>Command Path</key><value>python3</value></entry>
+                    <entry><key>Command Arguments</key>
+                        <value>ingestion/hal/harman/harman_gunluk_hal_fiyat_scraber.py;--stdout</value></entry>
+                </properties>
+            </processors>
+
+            <processors>
+                <id>p-h-04-convert</id>
+                <name>03_ConvertRecord_csv_to_avro</name>
+                <type>org.apache.nifi.processors.standard.ConvertRecord</type>
+                <properties>
+                    <entry><key>record-reader</key><value>cs-csv-reader</value></entry>
+                    <entry><key>record-writer</key><value>cs-avro-writer</value></entry>
+                </properties>
+            </processors>
+
+            <processors>
+                <id>p-h-05-validate</id>
+                <name>04_ValidateRecord_schema</name>
+                <type>org.apache.nifi.processors.standard.ValidateRecord</type>
+            </processors>
+
+            <processors>
+                <id>p-h-06-kafka</id>
+                <name>05_PublishKafkaRecord_hal</name>
+                <type>org.apache.nifi.processors.kafka.pubsub.PublishKafkaRecord_2_6</type>
+                <properties>
+                    <entry><key>bootstrap.servers</key><value>#{kafka_brokers}</value></entry>
+                    <entry><key>topic</key><value>raw_hal_prices</value></entry>
+                    <entry><key>kafka-key</key><value>${urun}</value></entry>
+                </properties>
+            </processors>
+
+            <connections><id>c-h-1</id><source><id>p-h-01-cron</id></source><destination><id>p-h-02-ibb</id></destination></connections>
+            <connections><id>c-h-2</id><source><id>p-h-01-cron</id></source><destination><id>p-h-03-harman</id></destination></connections>
+            <connections><id>c-h-3</id><source><id>p-h-02-ibb</id></source><destination><id>p-h-04-convert</id></destination></connections>
+            <connections><id>c-h-4</id><source><id>p-h-03-harman</id></source><destination><id>p-h-04-convert</id></destination></connections>
+            <connections><id>c-h-5</id><source><id>p-h-04-convert</id></source><destination><id>p-h-05-validate</id></destination></connections>
+            <connections><id>c-h-6</id><source><id>p-h-05-validate</id></source><destination><id>p-h-06-kafka</id></destination></connections>
+        </processGroups>
+
+        <!-- =========================================================== -->
+        <!-- PROCESS GROUP 3 — EPİAŞ (hourly electricity)                -->
+        <!-- =========================================================== -->
+        <processGroups>
+            <id>pg-epias</id>
+            <name>epias_hourly_stream</name>
+            <comments>Kafka topic: raw_epias — 12 datasets × 24 h/day</comments>
+            <processors>
+                <id>p-e-01-cron</id>
+                <name>01_GenerateFlowFile_hourly</name>
+                <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                <schedulingStrategy>CRON_DRIVEN</schedulingStrategy>
+                <schedulingPeriod>0 5 * * * ?</schedulingPeriod>
+            </processors>
+            <processors>
+                <id>p-e-02-http</id>
+                <name>02_InvokeHTTP_eptr2_passthrough</name>
+                <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                <properties>
+                    <entry><key>HTTP Method</key><value>POST</value></entry>
+                    <entry><key>Remote URL</key>
+                        <value>https://seffaflik.epias.com.tr/electricity-service/v1/markets/dam/data/${dataset}</value></entry>
+                    <entry><key>Basic Authentication Username</key><value>#{eptr_username}</value></entry>
+                    <entry><key>Basic Authentication Password</key><value>#{eptr_password}</value></entry>
+                </properties>
+            </processors>
+            <processors>
+                <id>p-e-03-kafka</id>
+                <name>03_PublishKafkaRecord_epias</name>
+                <type>org.apache.nifi.processors.kafka.pubsub.PublishKafkaRecord_2_6</type>
+                <properties>
+                    <entry><key>bootstrap.servers</key><value>#{kafka_brokers}</value></entry>
+                    <entry><key>topic</key><value>raw_epias</value></entry>
+                    <entry><key>kafka-key</key><value>${dataset}:${hour}</value></entry>
+                </properties>
+            </processors>
+            <connections><id>c-e-1</id><source><id>p-e-01-cron</id></source><destination><id>p-e-02-http</id></destination></connections>
+            <connections><id>c-e-2</id><source><id>p-e-02-http</id></source><destination><id>p-e-03-kafka</id></destination></connections>
+        </processGroups>
+
+        <!-- =========================================================== -->
+        <!-- PROCESS GROUP 4 — TCMB EVDS (daily FX + monthly CPI)       -->
+        <!-- =========================================================== -->
+        <processGroups>
+            <id>pg-tcmb</id>
+            <name>tcmb_evds_batch</name>
+            <comments>Kafka topic: raw_tcmb — FX daily + CPI/PPI monthly</comments>
+            <processors>
+                <id>p-t-01-cron</id>
+                <name>01_GenerateFlowFile_daily_0300</name>
+                <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                <schedulingStrategy>CRON_DRIVEN</schedulingStrategy>
+                <schedulingPeriod>0 0 3 * * ?</schedulingPeriod>
+            </processors>
+            <processors>
+                <id>p-t-02-http</id>
+                <name>02_InvokeHTTP_evds</name>
+                <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                <properties>
+                    <entry><key>HTTP Method</key><value>GET</value></entry>
+                    <entry><key>Remote URL</key>
+                        <value>https://evds3.tcmb.gov.tr/igmevdsms-dis/service/api/EvdsServlet?series=${series}&amp;key=#{evds_api_key}&amp;type=json</value></entry>
+                </properties>
+            </processors>
+            <processors>
+                <id>p-t-03-kafka</id>
+                <name>03_PublishKafkaRecord_tcmb</name>
+                <type>org.apache.nifi.processors.kafka.pubsub.PublishKafkaRecord_2_6</type>
+                <properties>
+                    <entry><key>bootstrap.servers</key><value>#{kafka_brokers}</value></entry>
+                    <entry><key>topic</key><value>raw_tcmb</value></entry>
+                    <entry><key>kafka-key</key><value>${series}</value></entry>
+                </properties>
+            </processors>
+            <connections><id>c-t-1</id><source><id>p-t-01-cron</id></source><destination><id>p-t-02-http</id></destination></connections>
+            <connections><id>c-t-2</id><source><id>p-t-02-http</id></source><destination><id>p-t-03-kafka</id></destination></connections>
+        </processGroups>
+
+        <!-- =========================================================== -->
+        <!-- PROCESS GROUP 5 — GDELT (15-min S3 bucket poll)            -->
+        <!-- =========================================================== -->
+        <processGroups>
+            <id>pg-gdelt</id>
+            <name>gdelt_stream</name>
+            <comments>Kafka topic: raw_gdelt — filter rows WHERE Locations LIKE '%Turkey%'</comments>
+            <processors>
+                <id>p-g-01-list</id>
+                <name>01_ListS3_gdeltv2</name>
+                <type>org.apache.nifi.processors.aws.s3.ListS3</type>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <schedulingPeriod>15 min</schedulingPeriod>
+                <properties>
+                    <entry><key>Bucket</key><value>gdeltv2</value></entry>
+                    <entry><key>Prefix</key><value>${now():format('yyyyMMdd')}</value></entry>
+                </properties>
+            </processors>
+            <processors>
+                <id>p-g-02-fetch</id>
+                <name>02_FetchS3Object</name>
+                <type>org.apache.nifi.processors.aws.s3.FetchS3Object</type>
+            </processors>
+            <processors>
+                <id>p-g-03-unpack</id>
+                <name>03_UnpackContent_zip</name>
+                <type>org.apache.nifi.processors.standard.UnpackContent</type>
+                <properties>
+                    <entry><key>Packaging Format</key><value>zip</value></entry>
+                </properties>
+            </processors>
+            <processors>
+                <id>p-g-04-filter</id>
+                <name>04_QueryRecord_TR_only</name>
+                <type>org.apache.nifi.processors.standard.QueryRecord</type>
+                <properties>
+                    <entry><key>tr_food_events</key>
+                        <value>SELECT * FROM FLOWFILE WHERE Locations LIKE '%Turkey%' AND Themes LIKE '%AGRICULTURE%'</value></entry>
+                </properties>
+            </processors>
+            <processors>
+                <id>p-g-05-kafka</id>
+                <name>05_PublishKafkaRecord_gdelt</name>
+                <type>org.apache.nifi.processors.kafka.pubsub.PublishKafkaRecord_2_6</type>
+                <properties>
+                    <entry><key>bootstrap.servers</key><value>#{kafka_brokers}</value></entry>
+                    <entry><key>topic</key><value>raw_gdelt</value></entry>
+                    <entry><key>kafka-key</key><value>${GLOBALEVENTID}</value></entry>
+                </properties>
+            </processors>
+            <connections><id>c-g-1</id><source><id>p-g-01-list</id></source><destination><id>p-g-02-fetch</id></destination></connections>
+            <connections><id>c-g-2</id><source><id>p-g-02-fetch</id></source><destination><id>p-g-03-unpack</id></destination></connections>
+            <connections><id>c-g-3</id><source><id>p-g-03-unpack</id></source><destination><id>p-g-04-filter</id></destination></connections>
+            <connections><id>c-g-4</id><source><id>p-g-04-filter</id></source><destination><id>p-g-05-kafka</id></destination><selectedRelationships>tr_food_events</selectedRelationships></connections>
+        </processGroups>
+
+        <!-- =========================================================== -->
+        <!-- PROCESS GROUP 6 — Open-Meteo (hourly weather per agriculture region) -->
+        <!-- =========================================================== -->
+        <processGroups>
+            <id>pg-weather</id>
+            <name>open_meteo_stream</name>
+            <comments>Kafka topic: raw_weather — per agriculture region (lat, lon)</comments>
+            <processors>
+                <id>p-w-01-cron</id>
+                <name>01_GenerateFlowFile_hourly_weather</name>
+                <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                <schedulingStrategy>CRON_DRIVEN</schedulingStrategy>
+                <schedulingPeriod>0 10 * * * ?</schedulingPeriod>
+            </processors>
+            <processors>
+                <id>p-w-02-http</id>
+                <name>02_InvokeHTTP_open_meteo</name>
+                <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                <properties>
+                    <entry><key>HTTP Method</key><value>GET</value></entry>
+                    <entry><key>Remote URL</key>
+                        <value>https://api.open-meteo.com/v1/forecast?latitude=${lat}&amp;longitude=${lon}&amp;hourly=temperature_2m,precipitation,soil_moisture_0_to_1cm</value></entry>
+                </properties>
+            </processors>
+            <processors>
+                <id>p-w-03-kafka</id>
+                <name>03_PublishKafkaRecord_weather</name>
+                <type>org.apache.nifi.processors.kafka.pubsub.PublishKafkaRecord_2_6</type>
+                <properties>
+                    <entry><key>bootstrap.servers</key><value>#{kafka_brokers}</value></entry>
+                    <entry><key>topic</key><value>raw_weather</value></entry>
+                    <entry><key>kafka-key</key><value>${lat},${lon}</value></entry>
+                </properties>
+            </processors>
+            <connections><id>c-w-1</id><source><id>p-w-01-cron</id></source><destination><id>p-w-02-http</id></destination></connections>
+            <connections><id>c-w-2</id><source><id>p-w-02-http</id></source><destination><id>p-w-03-kafka</id></destination></connections>
+        </processGroups>
+
+        <!-- =========================================================== -->
+        <!-- PROCESS GROUP 7 — Akaryakıt (EPDK daily fuel prices)       -->
+        <!-- =========================================================== -->
+        <processGroups>
+            <id>pg-akaryakit</id>
+            <name>akaryakit_batch</name>
+            <comments>Kafka topic: raw_akaryakit</comments>
+            <processors>
+                <id>p-a-01-cron</id>
+                <name>01_GenerateFlowFile_daily_0400</name>
+                <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                <schedulingStrategy>CRON_DRIVEN</schedulingStrategy>
+                <schedulingPeriod>0 0 4 * * ?</schedulingPeriod>
+            </processors>
+            <processors>
+                <id>p-a-02-exec</id>
+                <name>02_ExecuteStreamCommand_akaryakit</name>
+                <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
+                <properties>
+                    <entry><key>Command Path</key><value>python3</value></entry>
+                    <entry><key>Command Arguments</key>
+                        <value>ingestion/akaryakit/gunluk_akaryakit_scraper.py;--stdout</value></entry>
+                </properties>
+            </processors>
+            <processors>
+                <id>p-a-03-kafka</id>
+                <name>03_PublishKafkaRecord_akaryakit</name>
+                <type>org.apache.nifi.processors.kafka.pubsub.PublishKafkaRecord_2_6</type>
+                <properties>
+                    <entry><key>bootstrap.servers</key><value>#{kafka_brokers}</value></entry>
+                    <entry><key>topic</key><value>raw_akaryakit</value></entry>
+                    <entry><key>kafka-key</key><value>${il}:${urun}</value></entry>
+                </properties>
+            </processors>
+            <connections><id>c-a-1</id><source><id>p-a-01-cron</id></source><destination><id>p-a-02-exec</id></destination></connections>
+            <connections><id>c-a-2</id><source><id>p-a-02-exec</id></source><destination><id>p-a-03-kafka</id></destination></connections>
+        </processGroups>
+
+    </snippet>
+    <timestamp>2026-04-23 00:00:00 UTC</timestamp>
+</template>

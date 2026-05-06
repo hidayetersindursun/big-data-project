@@ -18,6 +18,7 @@ venv.bak/
 
 # Ortam değişkenleri
 .env
+infrastructure/.env
 
 # Mac
 .DS_Store
