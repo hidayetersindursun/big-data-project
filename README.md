@@ -39,6 +39,7 @@ ingestion/
 │   └── harman/      # Harmanapps hal fiyatları (curl_cffi)
 ├── weather/         # Open-Meteo — yakında
 ├── gdelt/           # GDELT haber verisi — yakında
+├── commodities/     # Küresel Emtia (Yahoo Finance) verisi
 └── epias/           # EPİAŞ saatlik elektrik verileri (eptr2)
 
 infrastructure/      # Docker stack (NiFi, Kafka, MinIO) + setup.sh / teardown.sh
@@ -146,6 +147,22 @@ python ingestion/hal/harman/harman_gunluk_hal_fiyat_scraber.py
 
 Çıktı: `ingestion/hal/harman/harman_hal_fiyat_gg_aa_yyyy.csv`
 
+### Küresel Emtia Borsaları (`ingestion/commodities/`)
+
+Tedarik zinciri maliyet şoklarını ölçmek için `yfinance` üzerinden küresel emtia (Buğday, Mısır, Brent Petrol, Gübre gazı vb.) kapanış fiyatlarını çeker.
+
+```bash
+pip install yfinance pandas
+
+# Dünün kapanış verisini çekmek için
+python ingestion/commodities/commodities_ingest.py
+
+# Belirli bir tarihi çekmek için
+python ingestion/commodities/commodities_ingest.py --start-date 2026-05-10 --end-date 2026-05-15
+```
+
+Çıktı: `ingestion/commodities/data/YYYY-MM-DD.jsonl`
+
 ## Gereksinimler
 
 | Scraper | Kütüphaneler |
@@ -155,6 +172,7 @@ python ingestion/hal/harman/harman_gunluk_hal_fiyat_scraber.py
 | epias | `eptr2`, `pandas` |
 | hal/istanbul | `pandas`, `selenium`, Chrome |
 | hal/harman | `pandas`, `curl_cffi`, `beautifulsoup4` |
+| commodities | `yfinance`, `pandas` |
 
 ## Mimari
 

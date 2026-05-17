@@ -9,3 +9,4 @@ tenacity
 eptr2
 google-cloud-bigquery
 db-dtypes
+yfinance
