@@ -12,8 +12,7 @@ State file schema:
 """
 import json
 import os
-from datetime import datetime, timezone
-from config import STALE_HOURS
+from datetime import date, datetime
 
 STATE_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "state.json")
 
@@ -31,16 +30,12 @@ def save_state(state: dict) -> None:
 
 
 def is_stale(state: dict, location_key: str, category: str) -> bool:
-    """Return True if the data is older than STALE_HOURS or has never been fetched."""
+    """Return True if this (location, category) was not scraped today."""
     entry = state.get(location_key, {}).get(category)
     if not entry:
         return True
-    last = datetime.fromisoformat(entry["last_scraped_at"])
-    # Make offset-naive for comparison
-    if last.tzinfo is not None:
-        last = last.replace(tzinfo=None)
-    age_hours = (datetime.now() - last).total_seconds() / 3600
-    return age_hours >= STALE_HOURS
+    last_date = datetime.fromisoformat(entry["last_scraped_at"]).date()
+    return last_date < date.today()
 
 
 def update_state(state: dict, location_key: str, category: str, product_count: int) -> None:

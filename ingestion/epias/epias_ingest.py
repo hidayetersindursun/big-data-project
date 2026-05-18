@@ -21,6 +21,7 @@ import argparse
 import calendar
 import json
 import logging
+import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
@@ -291,6 +292,143 @@ def fetch_secondary_frequency_capacity(
     return merge_frames_on_time(qty_df, price_df)
 
 
+def fetch_mcp_smp_imbalance(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return fetch_eptr_call(eptr, "mcp-smp-imb", start_date, end_date, timeout)
+
+
+def fetch_natural_gas_spot(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return fetch_eptr_call(eptr, "ng-spot-prices", start_date, end_date, timeout)
+
+
+def fetch_natural_gas_balancing(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return fetch_eptr_call(eptr, "ng-balancing-price", start_date, end_date, timeout)
+
+
+def _parse_idm_contract_timestamp(df: pd.DataFrame) -> pd.DataFrame:
+    """kontratAdi → date kolonu üret. PH/PB/GH... YYMMDDHR formatını destekler."""
+    if df.empty or "kontratAdi" not in df.columns:
+        return df
+    # P[HBG]YYMMDDHR veya P[HBG]YYMMDDHR-xx  (saatlik ve blok kontratlar)
+    extracted = df["kontratAdi"].str.extract(r"P[A-Z](\d{2})(\d{2})(\d{2})(\d{2})")
+    matched = extracted.notna().all(axis=1)
+    if not matched.any():
+        return df
+    df = df.copy()
+    df["date"] = None
+    df.loc[matched, "date"] = (
+        "20" + extracted.loc[matched, 0]
+        + "-" + extracted.loc[matched, 1]
+        + "-" + extracted.loc[matched, 2]
+        + "T" + extracted.loc[matched, 3] + ":00:00"
+    )
+    # Eşleşmeyen satırları düşür
+    df = df[matched].reset_index(drop=True)
+    return df
+
+
+def fetch_intraday_market(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    qty_df = fetch_eptr_call(eptr, "idm-qty", start_date, end_date, timeout)
+    vol_df = fetch_eptr_call(eptr, "idm-volume", start_date, end_date, timeout)
+    qty_df = _parse_idm_contract_timestamp(qty_df)
+    vol_df = _parse_idm_contract_timestamp(vol_df)
+    if not qty_df.empty and not vol_df.empty:
+        merge_keys = [c for c in ("date", "kontratTuru", "kontratAdi") if c in qty_df.columns and c in vol_df.columns]
+        merged = qty_df.merge(vol_df, on=merge_keys, how="outer")
+        return merged.drop_duplicates(subset=merge_keys)
+    return merge_frames_on_time(qty_df, vol_df)
+
+
+def fetch_dam_daily_level(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return eptr.call(
+        "dams-daily-level",
+        request_kwargs={"timeout": timeout},
+        retry_attempts=3,
+        retry_backoff=1.0,
+        retry_backoff_max=4.0,
+        retry_jitter=0.1,
+    )
+
+
+def fetch_dam_active_fullness(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return eptr.call(
+        "dams-active-fullness",
+        request_kwargs={"timeout": timeout},
+        retry_attempts=3,
+        retry_backoff=1.0,
+        retry_backoff_max=4.0,
+        retry_jitter=0.1,
+    )
+
+
+def _normalize_outage_timestamp(df: pd.DataFrame) -> pd.DataFrame:
+    """startTime → timestamp sütununa taşı; date (=ay periyodu) kolonunu kaldır."""
+    if df.empty:
+        return df
+    if "startTime" in df.columns:
+        df = df.copy()
+        df["timestamp"] = df["startTime"]
+        df = df.drop(columns=[c for c in ("date", "startTime") if c in df.columns])
+    return df
+
+
+def fetch_planned_outages(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    # eptr2 converts period via format_date_epias_hour; full ISO date required
+    df = eptr.call(
+        "planned-outages",
+        period=start_date,
+        request_kwargs={"timeout": timeout},
+        retry_attempts=3,
+        retry_backoff=1.0,
+        retry_backoff_max=4.0,
+        retry_jitter=0.1,
+    )
+    return _normalize_outage_timestamp(df)
+
+
+def fetch_unplanned_outages(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    df = eptr.call(
+        "unplanned-outages",
+        period=start_date,
+        request_kwargs={"timeout": timeout},
+        retry_attempts=3,
+        retry_backoff=1.0,
+        retry_backoff_max=4.0,
+        retry_jitter=0.1,
+    )
+    return _normalize_outage_timestamp(df)
+
+
+def fetch_dam_volume(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return fetch_eptr_call(eptr, "dam-volume", start_date, end_date, timeout)
+
+
+def fetch_realtime_consumption(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return fetch_eptr_call(eptr, "rt-cons", start_date, end_date, timeout)
+
+
+def fetch_renewable_realtime_generation(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return fetch_eptr_call(eptr, "ren-rt-gen", start_date, end_date, timeout)
+
+
+def fetch_kgup(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return fetch_eptr_call(eptr, "kgup", start_date, end_date, timeout)
+
+
+def fetch_dam_active_volume(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return eptr.call(
+        "dams-active-volume",
+        request_kwargs={"timeout": timeout},
+        retry_attempts=3,
+        retry_backoff=1.0,
+        retry_backoff_max=4.0,
+        retry_jitter=0.1,
+    )
+
+
+def fetch_natural_gas_daily_transmission(eptr: EPTR2, start_date: str, end_date: str, timeout: int) -> pd.DataFrame:
+    return fetch_eptr_call(eptr, "ng-tr-daily-transmission", start_date, end_date, timeout)
+
+
 FETCHERS: dict[str, Callable[[EPTR2, str, str, int], pd.DataFrame]] = {
     "price_and_cost": fetch_price_and_cost,
     "consumption": fetch_consumption,
@@ -304,16 +442,30 @@ FETCHERS: dict[str, Callable[[EPTR2, str, str, int], pd.DataFrame]] = {
     "transmission_loss_factor": fetch_transmission_loss_factor,
     "primary_frequency_capacity": fetch_primary_frequency_capacity,
     "secondary_frequency_capacity": fetch_secondary_frequency_capacity,
+    "mcp_smp_imbalance": fetch_mcp_smp_imbalance,
+    "natural_gas_spot": fetch_natural_gas_spot,
+    "natural_gas_balancing": fetch_natural_gas_balancing,
+    "intraday_market": fetch_intraday_market,
+    "dam_daily_level": fetch_dam_daily_level,
+    "dam_active_fullness": fetch_dam_active_fullness,
+    "planned_outages": fetch_planned_outages,
+    "unplanned_outages": fetch_unplanned_outages,
+    "dam_volume": fetch_dam_volume,
+    "realtime_consumption": fetch_realtime_consumption,
+    "renewable_realtime_generation": fetch_renewable_realtime_generation,
+    "kgup": fetch_kgup,
+    "dam_active_volume": fetch_dam_active_volume,
+    "natural_gas_daily_transmission": fetch_natural_gas_daily_transmission,
 }
 
 
 def get_timestamp_column(df: pd.DataFrame) -> str:
-    for candidate in ("timestamp", "dt", "date", "period"):
+    for candidate in ("timestamp", "dt", "date", "gasDay", "period"):
         if candidate in df.columns:
             return candidate
     raise ValueError(
         "Timestamp kolonu bulunamadi. Beklenen kolonlardan biri yok: "
-        "timestamp, dt, date, period"
+        "timestamp, dt, date, gasDay, period"
     )
 
 
@@ -345,7 +497,8 @@ def normalize_frame(df: pd.DataFrame, dataset: str) -> list[dict]:
         column for column in working.columns if column not in preferred_order
     ]
     working = working[ordered_columns]
-    working = working.sort_values("timestamp").drop_duplicates(subset=["timestamp"], keep="last")
+    dedup_cols = ["timestamp"] if "id" not in working.columns else ["timestamp", "id"]
+    working = working.sort_values("timestamp").drop_duplicates(subset=dedup_cols, keep="last")
     working = working.where(pd.notna(working), None)
     return working.to_dict(orient="records")
 
@@ -424,8 +577,11 @@ def fetch_dataset_rows(
     max_range_months = dataset_config.get("max_range_months", 12)
     all_rows: list[dict] = []
 
+    inter_chunk_delay = dataset_config.get("inter_chunk_delay", 0.0)
     windows = list(iter_windows(start_date, end_date, max_range_months))
     for index, (window_start, window_end) in enumerate(windows, start=1):
+        if index > 1 and inter_chunk_delay > 0:
+            time.sleep(inter_chunk_delay)
         logger.info(
             "    chunk %s/%s  %s -> %s",
             index,

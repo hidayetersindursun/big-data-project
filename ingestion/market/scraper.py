@@ -26,12 +26,12 @@ from client import (
     get_nearest_depots_async,
     scrape_all_pages_async,
 )
-from config import CATEGORIES, CATEGORY_DELAY, CITIES
-from depot_grid import fetch_depots_grid
+from config import CATEGORIES, CATEGORY_API_KEYWORD, CATEGORY_DELAY, CITIES
+from depot_grid import fetch_depots_grid, fetch_depots_grid_async
 from state import is_stale, load_state, save_state, update_state
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
-DEPOTS_DIR = os.path.join(os.path.dirname(__file__), "depots")
+DEPOTS_DIR = os.path.join(DATA_DIR, "depots")
 FETCH_LOG = os.path.join(DEPOTS_DIR, "fetch_log.json")
 
 
@@ -63,6 +63,7 @@ class _RateLimiter:
         """Hata oranı yüksekse istek öncesi bekle."""
         if self._count >= self._threshold:
             delay = min(self._count * 3.0, self._max_delay)
+            print(f"  [RATE LIMIT] Hata sayısı={self._count}, {delay:.0f}s bekleniyor...")
             await asyncio.sleep(delay + random.uniform(0, delay * 0.2))
 
     @property
@@ -138,10 +139,19 @@ async def _scrape_category(
     # Hata oranı yüksekse istek öncesi bekle (adaptive rate limit)
     await rate_limiter.wait()
 
+    api_keyword = CATEGORY_API_KEYWORD.get(category, category)
     products, total_expected = await scrape_all_pages_async(
-        category, lat, lon, depot_ids, sem, label=label
+        api_keyword, lat, lon, depot_ids, sem, label=label
     )
     fetched = len(products)
+
+    # -1: tüm retry'lar tükendi, API tamamen ulaşılamaz — INCOMPLETE'e at, state'e yazma
+    if total_expected == -1:
+        await rate_limiter.error()
+        print(f"  {label} → request failed entirely — INCOMPLETE, will retry")
+        async with incomplete_lock:
+            incomplete.append((district, city, category, lat, lon, depot_ids, known_total))
+        return
 
     # Retry sırasında API tamamen kapalıysa total_expected=0 döner.
     # known_total ile gerçek beklenen sayıyı koru.
@@ -189,14 +199,20 @@ async def _scrape_district(
     city: str,
     stale_cats: list[str],
     sem: asyncio.Semaphore,
+    grid_sem: asyncio.Semaphore,
     state: dict,
     state_lock: asyncio.Lock,
     counters: dict,
     incomplete: list,
     incomplete_lock: asyncio.Lock,
     rate_limiter: _RateLimiter,
+    progress: dict,
+    progress_lock: asyncio.Lock,
+    no_grid: bool = True,
 ) -> None:
     tag = f"[{city}/{district}]"
+    t0 = time.time()
+    scraped_before = counters["scraped"]
 
     depot_json = os.path.join(DEPOTS_DIR, f"{city}_{district}.json")
     if os.path.exists(depot_json):
@@ -205,33 +221,50 @@ async def _scrape_district(
         lat, lon = await get_coordinates_async(district, city, sem)
         if lat is None and depots:
             lat, lon = depots[0]["lat"], depots[0]["lon"]
-        print(f"  {tag} depots: {len(depots)} (from depot JSON)")
     else:
         lat, lon = await get_coordinates_async(district, city, sem)
         if lat is None:
             print(f"  {tag} [WARN] coordinates not found, skipping")
+            async with progress_lock:
+                progress["done"] += 1
             return
 
-        print(f"  {tag} depot JSON not found — running grid search...")
-        depots_dict, grid_errors = await asyncio.to_thread(fetch_depots_grid, district, city)
-
-        if depots_dict:
-            depot_json_path = os.path.join(DEPOTS_DIR, f"{city}_{district}.json")
-            with open(depot_json_path, "w", encoding="utf-8") as f:
-                json.dump(list(depots_dict.values()), f, ensure_ascii=False, indent=2)
-            depots = list(depots_dict.values())
-            print(f"  {tag} depots: {len(depots)} (grid search — saved to depot JSON)")
-        else:
+        if no_grid:
             depots = await get_nearest_depots_async(lat, lon, sem)
             if not depots:
-                print(f"  {tag} [WARN] no depots found, skipping")
-                if grid_errors:
-                    _append_fetch_log(city, district, grid_errors)
+                # Kırsal ilçelerde 10km yetmeyebilir — 25km ve 50km ile dene
+                for fallback_radius in (25, 50):
+                    depots = await get_nearest_depots_async(lat, lon, sem, radius_km=fallback_radius)
+                    if depots:
+                        print(f"  {tag} nearest: {fallback_radius}km radius ile {len(depots)} depot bulundu")
+                        break
+            if not depots:
+                print(f"  {tag} [WARN] no depots found (10/25/50km), skipping")
+                async with progress_lock:
+                    progress["done"] += 1
                 return
-            print(f"  {tag} depots: {len(depots)} (API fallback — grid failed)")
+        else:
+            print(f"  {tag} depot JSON not found — running grid search...")
+            async with grid_sem:  # tek seferde bir ilçe grid search yapar
+                depots_dict, grid_errors = await fetch_depots_grid_async(district, city, asyncio.Semaphore(1))
 
-        if grid_errors:
-            _append_fetch_log(city, district, grid_errors)
+            if depots_dict:
+                depot_json_path = os.path.join(DEPOTS_DIR, f"{city}_{district}.json")
+                with open(depot_json_path, "w", encoding="utf-8") as f:
+                    json.dump(list(depots_dict.values()), f, ensure_ascii=False, indent=2)
+                depots = list(depots_dict.values())
+            else:
+                depots = await get_nearest_depots_async(lat, lon, sem)
+                if not depots:
+                    print(f"  {tag} [WARN] no depots found, skipping")
+                    if grid_errors:
+                        _append_fetch_log(city, district, grid_errors)
+                    async with progress_lock:
+                        progress["done"] += 1
+                    return
+
+            if grid_errors:
+                _append_fetch_log(city, district, grid_errors)
 
     depot_ids = [d["id"] for d in depots]
     await asyncio.gather(*[
@@ -243,6 +276,17 @@ async def _scrape_district(
         for cat in stale_cats
     ])
 
+    elapsed = time.time() - t0
+    district_products = counters["scraped"] - scraped_before
+    async with progress_lock:
+        progress["done"] += 1
+        done = progress["done"]
+        total = progress["total"]
+    pct = done / total * 100
+    mins, secs = divmod(int(elapsed), 60)
+    dur = f"{mins}dk {secs}sn" if mins else f"{secs}sn"
+    print(f"[{done}/{total} | %{pct:.0f}] ✓ {city}/{district} — {district_products} ürün, {len(stale_cats)} kat, {dur}")
+
 
 async def run_async(
     force: bool = False,
@@ -250,19 +294,27 @@ async def run_async(
     district_filter: str | None = None,
     category_filter: str | None = None,
     concurrency: int = 10,
+    exclude_cities: list[str] | None = None,
+    no_grid: bool = True,
 ) -> None:
     state = load_state()
+    exclude_cities = exclude_cities or []
     categories = [c for c in CATEGORIES if not category_filter or c == category_filter]
-    cities = {k: v for k, v in CITIES.items() if not city_filter or k == city_filter}
+    cities = {
+        k: v for k, v in CITIES.items()
+        if (not city_filter or k == city_filter) and k not in exclude_cities
+    }
 
     sem = asyncio.Semaphore(concurrency)
+    grid_sem = asyncio.Semaphore(1)  # aynı anda sadece 1 ilçe grid search yapar
     state_lock = asyncio.Lock()
     counters = {"scraped": 0, "skipped": 0}
     incomplete: list = []
     incomplete_lock = asyncio.Lock()
     rate_limiter = _RateLimiter(threshold=3, max_delay=60.0)
+    progress_lock = asyncio.Lock()
 
-    tasks = []
+    task_args = []
     for city, districts in cities.items():
         if district_filter:
             districts = [d for d in districts if d == district_filter]
@@ -271,17 +323,30 @@ async def run_async(
             loc_key = location_key(district, city)
             stale_cats = [c for c in categories if force or is_stale(state, loc_key, c)]
             if not stale_cats:
-                print(f"[SKIP] {loc_key} — all categories fresh")
                 counters["skipped"] += len(categories)
                 continue
-            tasks.append(
-                _scrape_district(
-                    district, city, stale_cats, sem, state, state_lock,
-                    counters, incomplete, incomplete_lock, rate_limiter,
-                )
-            )
+            task_args.append((district, city, stale_cats))
 
-    print(f"\nStarting {len(tasks)} district tasks (concurrency={concurrency})...\n")
+    progress = {"done": 0, "total": len(task_args)}
+    total_cats = sum(len(cats) for _, _, cats in task_args)
+
+    print(f"\n{'='*60}")
+    print(f"  {len(task_args)} ilçe | {total_cats} kategori görevi | concurrency={concurrency}")
+    city_summary = {}
+    for _, city, cats in task_args:
+        city_summary[city] = city_summary.get(city, 0) + 1
+    for city, cnt in city_summary.items():
+        print(f"    {city}: {cnt} ilçe")
+    print(f"{'='*60}\n")
+
+    tasks = [
+        _scrape_district(
+            district, city, stale_cats, sem, grid_sem, state, state_lock,
+            counters, incomplete, incomplete_lock, rate_limiter,
+            progress, progress_lock, no_grid=no_grid,
+        )
+        for district, city, stale_cats in task_args
+    ]
     await asyncio.gather(*tasks)
 
     # ------------------------------------------------------------------
@@ -331,11 +396,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="marketfiyati.org.tr async scraper")
     parser.add_argument("--force", action="store_true", help="Re-scrape even fresh data")
     parser.add_argument("--city", metavar="NAME", help="Only scrape this city")
+    parser.add_argument("--exclude", nargs="+", default=[], metavar="CITY",
+                        help="Skip these cities (space-separated)")
     parser.add_argument("--district", metavar="NAME", help="Only scrape this district")
     parser.add_argument("--category", metavar="NAME", help="Only scrape this category")
     parser.add_argument(
         "--concurrency", metavar="N", type=int, default=5,
         help="Max concurrent HTTP requests (default: 5, lower if rate-limited)",
+    )
+    parser.add_argument(
+        "--grid", action="store_true",
+        help="Run grid search for cities without a pre-built depot file (yavaş, daha fazla depot)",
     )
     args = parser.parse_args()
 
@@ -345,6 +416,8 @@ def main() -> None:
         district_filter=args.district,
         category_filter=args.category,
         concurrency=args.concurrency,
+        exclude_cities=args.exclude,
+        no_grid=not args.grid,
     ))
 
 

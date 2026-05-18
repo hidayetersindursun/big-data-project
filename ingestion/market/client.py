@@ -27,8 +27,21 @@ from config import (
     HARITA_API_URL,
     PAGE_DELAY,
     PAGE_SIZE,
+    PROXY,
+    PROXY_LIST,
     USER_AGENTS,
 )
+
+# Proxy seçimi: MFR_PROXY varsa onu kullan, yoksa MFR_PROXY_LIST'ten round-robin
+def _proxy_kwarg() -> dict:
+    if PROXY:
+        return {"proxies": {"http": PROXY, "https": PROXY}}
+    if PROXY_LIST:
+        # round-robin için global counter
+        idx = _proxy_kwarg._i = (getattr(_proxy_kwarg, "_i", -1) + 1) % len(PROXY_LIST)
+        p = PROXY_LIST[idx]
+        return {"proxies": {"http": p, "https": p}}
+    return {}
 
 # AutoSuggestion response array field indices
 _IDX_FULL_ADDRESS = 0
@@ -45,11 +58,18 @@ if os.path.exists(_DISTRICTS_PATH):
         _DISTRICTS = json.load(_f)
 
 # Sync session — used by depot_grid.py
-_SESSION = curl_requests.Session(impersonate="chrome124")
+# Sabit tek proxy varsa session'a bağla; rotating list varsa per-request enjekte edilir
+_session_kwargs = {"impersonate": "chrome124"}
+if PROXY:
+    _session_kwargs["proxies"] = {"http": PROXY, "https": PROXY}
+_SESSION = curl_requests.Session(**_session_kwargs)
 
 # Async session — used by scraper.py
 # pool_connections=3: sunucu tarafında tek IP'den çok bağlantı açılmasını önler
-_ASYNC_SESSION = AsyncSession(impersonate="chrome124", max_clients=3)
+_async_kwargs = {"impersonate": "chrome124", "max_clients": 3}
+if PROXY:
+    _async_kwargs["proxies"] = {"http": PROXY, "https": PROXY}
+_ASYNC_SESSION = AsyncSession(**_async_kwargs)
 
 
 def _headers() -> dict:
@@ -69,6 +89,9 @@ def _headers() -> dict:
 )
 def _request(method: str, url: str, **kwargs):
     """HTTP request with tenacity exponential backoff on any error."""
+    # PROXY_LIST varsa her istekte rotating proxy enjekte et
+    if PROXY_LIST and not PROXY:
+        kwargs.update(_proxy_kwarg())
     r = _SESSION.request(method, url, headers=_headers(), **kwargs)
     if r.status_code >= 500:
         raise Exception(f"HTTP {r.status_code}")
@@ -107,11 +130,11 @@ def get_coordinates(district: str, city: str) -> tuple[float, float] | tuple[Non
     return None, None
 
 
-def get_nearest_depots(lat: float, lon: float) -> list[dict]:
+def get_nearest_depots(lat: float, lon: float, radius_km: float = DEPOT_RADIUS_KM) -> list[dict]:
     """Return list of depot dicts near (lat, lon)."""
     url = f"{BASE_API_URL}/nearest"
     r = _safe_request("POST", url,
-                      json={"latitude": lat, "longitude": lon, "distance": DEPOT_RADIUS_KM},
+                      json={"latitude": lat, "longitude": lon, "distance": radius_km},
                       timeout=15)
     return r.json() if r else []
 
@@ -157,14 +180,24 @@ def scrape_all_pages(keywords: str, lat: float, lon: float, depot_ids: list[str]
 # Async HTTP — used by scraper.py for parallel district scraping
 # ---------------------------------------------------------------------------
 
+def _async_retry_log(retry_state):
+    err = retry_state.outcome.exception()
+    wait = getattr(retry_state.next_action, "sleep", 0)
+    attempt = retry_state.attempt_number
+    print(f"  [RETRY {attempt}/5] {str(err)[:80]} — {wait:.0f}s sonra tekrar")
+
+
 @retry(
     stop=stop_after_attempt(5),
     wait=wait_exponential(multiplier=1, min=3, max=60),
     retry=retry_if_exception_type(Exception),
     reraise=False,
+    after=_async_retry_log,
 )
 async def _async_request(method: str, url: str, **kwargs):
     """Async HTTP request with tenacity exponential backoff."""
+    if PROXY_LIST and not PROXY:
+        kwargs.update(_proxy_kwarg())
     r = await _ASYNC_SESSION.request(method, url, headers=_headers(), **kwargs)
     if r.status_code == 429:
         raise Exception("HTTP 429 rate limited")
@@ -178,12 +211,11 @@ async def _async_safe_request(method: str, url: str, sem: asyncio.Semaphore, **k
     """Throttled async request — acquires semaphore, returns None on total failure."""
     try:
         async with sem:
-            # Semaphore içinde küçük jitter: aynı anda birden fazla istek olsa bile
-            # sunucuya tam aynı milisaniyede ulaşmaz → burst azalır
             await asyncio.sleep(random.uniform(0.1, 0.4))
             return await _async_request(method, url, **kwargs)
     except Exception as e:
-        print(f"  [ERROR] Giving up: {e}")
+        short = str(e)[:120]
+        print(f"  [ERROR] Giving up ({short})")
         return None
 
 
@@ -210,11 +242,13 @@ async def get_coordinates_async(
     return None, None
 
 
-async def get_nearest_depots_async(lat: float, lon: float, sem: asyncio.Semaphore) -> list[dict]:
+async def get_nearest_depots_async(
+    lat: float, lon: float, sem: asyncio.Semaphore, radius_km: float = DEPOT_RADIUS_KM
+) -> list[dict]:
     url = f"{BASE_API_URL}/nearest"
     r = await _async_safe_request(
         "POST", url, sem,
-        json={"latitude": lat, "longitude": lon, "distance": DEPOT_RADIUS_KM},
+        json={"latitude": lat, "longitude": lon, "distance": radius_km},
         timeout=15,
     )
     return r.json() if r else []
@@ -240,7 +274,7 @@ async def _scrape_page_async(
         timeout=20,
     )
     if r is None:
-        return [], 0
+        return [], -1  # -1 = request failed (not an empty category)
     data = r.json()
     return data.get("content", []), data.get("numberOfFound", 0)
 
@@ -251,12 +285,16 @@ async def scrape_all_pages_async(
     label: str = "",
 ) -> tuple[list[dict], int]:
     """Async version: fetch every page until all products retrieved.
-    Returns (products, total_expected)."""
+    Returns (products, total_expected).
+    total_expected=-1 means the request failed entirely (not an empty category)."""
     all_products: list[dict] = []
     total_expected = 0
     page = 0
     while True:
         products, total = await _scrape_page_async(keywords, lat, lon, depot_ids, page, sem)
+        if total == -1:
+            # Request failed — propagate failure signal
+            return all_products, -1
         if total:
             total_expected = total
         all_products.extend(products)

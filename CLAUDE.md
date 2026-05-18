@@ -53,10 +53,24 @@ python ingestion/epias/epias_ingest.py --start-date 2026-01-01 --end-date 2026-0
 
 # Force full backfill from default historical start
 python ingestion/epias/epias_ingest.py --force
+
+# List all supported datasets (26 total)
+python ingestion/epias/epias_ingest.py --list-datasets
 ```
 
 Output: `ingestion/epias/data/{dataset}/YYYY-MM-DD.jsonl`
 State: `ingestion/epias/state.json`
+
+26 dataset desteklenmektedir. Temel gruplar:
+- **Fiyat**: `price_and_cost`, `mcp_smp_imbalance`, `zero_balance_adjustment`
+- **Üretim/Tüketim**: `real_time_generation`, `realtime_consumption`, `kgup`, `consumption`, `injection_quantity`
+- **Yenilenebilir**: `renewable_realtime_generation`, `renewable_injection_quantity`, `wind_forecast`, `renewable_unit_cost`, `renewable_total_cost`
+- **Piyasa Hacmi**: `dam_volume`, `intraday_market`, `primary_frequency_capacity`, `secondary_frequency_capacity`, `transmission_loss_factor`
+- **Barajlar**: `dam_daily_level`, `dam_active_fullness`, `dam_active_volume`
+- **Doğal Gaz**: `natural_gas_spot`, `natural_gas_balancing`, `natural_gas_daily_transmission`
+- **Kesintiler**: `planned_outages`, `unplanned_outages`
+
+Not: `renewable_realtime_generation` API'si max 1 aylık aralık destekler.
 
 ### Hal wholesale prices
 

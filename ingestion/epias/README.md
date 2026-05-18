@@ -36,45 +36,80 @@ python ingestion/epias/epias_ingest.py --list-datasets
 
 ## Çekebildiğimiz Veriler
 
-Şu an script ile veri alabildiğimiz dataset'ler:
+26 dataset desteklenmektedir. Tüm dataset'lerde ortak alanlar: `timestamp`, `_dataset`, `_source`, `_ingested_at`.
+
+### Fiyat & Maliyet
 
 - `price_and_cost` — PTF, SMF, WAP, sistem yönü ve dengesizlik maliyetleri
-  Örnek alanlar: `mcp`, `wap`, `smp`, `pos_imb_price`, `neg_imb_price`, `system_direction`, `kupst_cost`
-- `consumption` — yük tahmini, gerçek zamanlı tüketim ve UECM
-  Örnek alanlar: `load_plan`, `uecm`, `rt_cons`, `consumption`
-- `real_time_generation` — kaynak bazlı gerçek zamanlı üretim
-- `injection_quantity` — uzlaştırma esas veriş miktarı
-  Örnek alanlar: `total`, `naturalGas`, `dam`, `lignite`, `importedCoal`, `wind`, `sun`
-- `renewable_injection_quantity` — YEKDEM kapsamındaki lisanslı santrallerin kaynak bazlı verişi
-  Örnek alanlar: `toplam`, `ruzgar`, `jeotermal`, `rezervuarli`, `gunes`, `biyokutle`
-- `wind_forecast` — RES üretim ve tahmin verisi
-  Örnek alanlar: `generation`, `forecast`, `quarter1`, `quarter2`, `quarter3`, `quarter4`
-- `renewable_unit_cost` — YEKDEM birim maliyeti
-  Örnek alanlar: `supplierUnitCost`, `unitCost`, `ptf`, `version`
-- `renewable_total_cost` — YEKDEM toplam gideri
-  Örnek alanlar: `toplam`, `ruzgar`, `gunes`, `jeotermal`, `biyokutle`
+  Alanlar: `mcp`, `wap`, `smp`, `pos_imb_price`, `neg_imb_price`, `system_direction`, `kupst_cost`
+- `mcp_smp_imbalance` — PTF, SMF ve dengesizlik fiyat yönü (raporlama servisi)
 - `zero_balance_adjustment` — sıfır bakiye düzeltme tutarı
-  Örnek alanlar: `zeroBalanceAdjustment`, `downRegulation`, `upRegulation`, `negativeImbalance`, `kupst`
-- `transmission_loss_factor` — iletim sistemi kayıp katsayısı
-  Örnek alanlar: `firstVersionValue`, `lastVersionValue`, `difference`
+  Alanlar: `zeroBalanceAdjustment`, `downRegulation`, `upRegulation`, `negativeImbalance`, `kupst`
+
+### Üretim & Tüketim
+
+- `real_time_generation` — kaynak bazlı gerçek zamanlı üretim (saatlik)
+- `realtime_consumption` — gerçek zamanlı saatlik elektrik tüketimi
+  Alanlar: `consumption`
+- `kgup` — kesinleşmiş günlük üretim planı, kaynak bazlı (saatlik)
+  Alanlar: `toplam`, `dogalgaz`, `ruzgar`, `linyit`, `tasKomur`, `ithalKomur`, `fuelOil`, `jeotermal`, `barajli`, `nafta`, `biokutle`, `akarsu`, `gunes`, `diger`
+- `consumption` — yük tahmini, gerçek zamanlı tüketim ve UECM
+  Alanlar: `load_plan`, `uecm`, `rt_cons`, `consumption`
+- `injection_quantity` — uzlaştırma esas veriş miktarı (UEVM)
+  Alanlar: `total`, `naturalGas`, `dam`, `lignite`, `importedCoal`, `wind`, `sun`
+
+### Yenilenebilir Enerji & YEKDEM
+
+- `renewable_realtime_generation` — kaynak bazlı yenilenebilir gerçek zamanlı üretim (saatlik)
+  Alanlar: `toplam`, `ruzgar`, `jeotermal`, `rezervuarli`, `kanalTipi`, `nehirTipi`, `copGazi`, `biyogaz`, `gunes`, `biyokutle`, `diger`
+- `renewable_injection_quantity` — YEKDEM kapsamındaki lisanslı santrallerin verişi
+  Alanlar: `toplam`, `ruzgar`, `jeotermal`, `rezervuarli`, `gunes`, `biyokutle`
+- `wind_forecast` — RES üretim ve tahmin verisi
+  Alanlar: `generation`, `forecast`, `quarter1`, `quarter2`, `quarter3`, `quarter4`
+- `renewable_unit_cost` — YEKDEM birim maliyeti
+  Alanlar: `supplierUnitCost`, `unitCost`, `ptf`, `version`
+- `renewable_total_cost` — YEKDEM toplam gideri
+  Alanlar: `toplam`, `ruzgar`, `gunes`, `jeotermal`, `biyokutle`
+
+### Piyasa Hacmi & Dengeleme
+
+- `dam_volume` — GÖP günlük işlem hacmi (alış/satış teklif miktarları, saatlik)
+  Alanlar: `volumeOfAsk`
+- `intraday_market` — GİP eşleştirme miktarı ve işlem hacmi
 - `primary_frequency_capacity` — primer frekans rezerv miktarı ve fiyatı
-  Örnek alanlar: `amount`, `price`
+  Alanlar: `amount`, `price`
 - `secondary_frequency_capacity` — sekonder frekans rezerv miktarı ve fiyatı
-  Örnek alanlar: `amount`, `price`
+  Alanlar: `amount`, `price`
+- `transmission_loss_factor` — iletim sistemi kayıp katsayısı (ISKK)
+  Alanlar: `firstVersionValue`, `lastVersionValue`, `difference`
 
-Not:
+### Barajlar
 
-- Bazı servisler saatliktir ve günlük partition üretir.
-- Bazıları aylık / versiyonlu yayınlanır; bu yüzden kısa ve çok yeni aralıklarda boş dönebilir.
-- Özellikle `injection_quantity` gibi uzlaştırma bazlı servislerde en güncel günler henüz yayımlanmamış olabilir.
+- `dam_daily_level` — baraj günlük kot (su yüksekliği)
+- `dam_active_fullness` — baraj aktif doluluk oranı (%)
+- `dam_active_volume` — baraj aktif depolama hacmi, baraj bazlı (anlık snapshot)
+  Alanlar: `basinName`, `damName`, `activeVolume`
 
-Tüm dataset'lerde ortak alanlar:
+### Doğal Gaz
 
-- `timestamp`
-- `_dataset`
-- `_source`
-- `_ingested_at`
-- `contract`
+- `natural_gas_spot` — spot gaz fiyatları (SGP)
+- `natural_gas_balancing` — doğal gaz dengeleme fiyatı
+- `natural_gas_daily_transmission` — günlük doğal gaz iletim miktarı
+  Alanlar: `injection`, `reproduction`
+
+### Kesintiler
+
+- `planned_outages` — planlı kesinti bilgisi (aylık, period=YYYY-MM)
+- `unplanned_outages` — plansız kesinti bilgisi (aylık, period=YYYY-MM)
+
+---
+
+**Notlar:**
+
+- Saatlik veri üreten servisler günlük JSONL partition'a yazılır.
+- `injection_quantity` gibi uzlaştırma bazlı servislerde en güncel günler henüz yayımlanmamış olabilir.
+- `dam_active_volume` tarihe göre sorgulanamaz; her çalıştırmada anlık veriyi getirir.
+- `renewable_realtime_generation` API'si max 1 aylık aralık kabul eder (`max_range_months: 1`).
 
 ## Çıktı Formatı
 
@@ -82,15 +117,41 @@ Tüm dataset'lerde ortak alanlar:
 ingestion/epias/data/
 ├── consumption/
 │   └── YYYY-MM-DD.jsonl
+├── dam_active_fullness/
+│   └── YYYY-MM-DD.jsonl
+├── dam_active_volume/
+│   └── YYYY-MM-DD.jsonl
+├── dam_daily_level/
+│   └── YYYY-MM-DD.jsonl
+├── dam_volume/
+│   └── YYYY-MM-DD.jsonl
 ├── injection_quantity/
 │   └── YYYY-MM-DD.jsonl
-├── primary_frequency_capacity/
+├── intraday_market/
+│   └── YYYY-MM-DD.jsonl
+├── kgup/
+│   └── YYYY-MM-DD.jsonl
+├── mcp_smp_imbalance/
+│   └── YYYY-MM-DD.jsonl
+├── natural_gas_balancing/
+│   └── YYYY-MM-DD.jsonl
+├── natural_gas_daily_transmission/
+│   └── YYYY-MM-DD.jsonl
+├── natural_gas_spot/
+│   └── YYYY-MM-DD.jsonl
+├── planned_outages/
 │   └── YYYY-MM-DD.jsonl
 ├── price_and_cost/
 │   └── YYYY-MM-DD.jsonl
+├── primary_frequency_capacity/
+│   └── YYYY-MM-DD.jsonl
 ├── real_time_generation/
 │   └── YYYY-MM-DD.jsonl
+├── realtime_consumption/
+│   └── YYYY-MM-DD.jsonl
 ├── renewable_injection_quantity/
+│   └── YYYY-MM-DD.jsonl
+├── renewable_realtime_generation/
 │   └── YYYY-MM-DD.jsonl
 ├── renewable_total_cost/
 │   └── YYYY-MM-DD.jsonl
@@ -99,6 +160,8 @@ ingestion/epias/data/
 ├── secondary_frequency_capacity/
 │   └── YYYY-MM-DD.jsonl
 ├── transmission_loss_factor/
+│   └── YYYY-MM-DD.jsonl
+├── unplanned_outages/
 │   └── YYYY-MM-DD.jsonl
 ├── wind_forecast/
 │   └── YYYY-MM-DD.jsonl
