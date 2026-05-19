@@ -35,11 +35,11 @@ SOURCES = {
     "market":       (INGESTION_DIR / "market" / "data",      "jsonl", "per_file"),
     "hal_istanbul": (INGESTION_DIR / "hal" / "istanbul",     "csv",   "per_file"),
     "hal_harman":   (INGESTION_DIR / "hal" / "harman",       "csv",   "per_file"),
-    "tcmb":         (INGESTION_DIR / "tcmb" / "data",        "jsonl", "per_file"),
+    "tcmb":         (INGESTION_DIR / "tcmb" / "data",        "jsonl", "by_date_field"),
     "gdelt":        (INGESTION_DIR / "gdelt" / "data",       "jsonl", "per_file"),
-    "epias":        (INGESTION_DIR / "epias" / "data",       "jsonl", "by_subdir"),  # dataset bazında birleştir
+    "epias":        (INGESTION_DIR / "epias" / "data",       "jsonl", "by_filename_month"),
     "commodities":  (INGESTION_DIR / "commodities" / "data", "jsonl", "merge_all"),  # tek dosya
-    "akaryakit":    (INGESTION_DIR / "akaryakit" / "data",   "xls",   "by_subdir"),  # şehir bazında birleştir
+    "akaryakit":    (INGESTION_DIR / "akaryakit" / "data",   "xls",   "akaryakit_daily"),
 }
 
 # Bu dosyalar JSONL değil, atlanacak
@@ -155,6 +155,62 @@ def process_per_file(source_name: str, source_dir: Path, fmt: str,
     return total_orig, total_parquet
 
 
+def process_by_filename_month(source_name: str, source_dir: Path, fmt: str,
+                              bucket: str, s3_client, dry_run: bool) -> tuple[int, int]:
+    """Alt klasördeki dosyaları dosya adındaki YYYY-MM'ye göre gruplar → aylık Parquet.
+    S3 path: bronze/{source}/{subdir}/{YYYY-MM}.parquet
+    """
+    from botocore.exceptions import ClientError
+
+    def key_exists(key: str) -> bool:
+        if dry_run or not s3_client:
+            return False
+        try:
+            s3_client.head_object(Bucket=bucket, Key=key)
+            return True
+        except ClientError:
+            return False
+
+    subdirs = [d for d in source_dir.iterdir() if d.is_dir()]
+    total_orig, total_parquet = 0, 0
+
+    for subdir in sorted(subdirs):
+        files = collect_files(subdir, fmt)
+        # Dosya adından YYYY-MM çek (YYYY-MM-DD.jsonl formatı beklenir)
+        from collections import defaultdict
+        month_groups: dict[str, list[Path]] = defaultdict(list)
+        for f in files:
+            stem = f.stem  # YYYY-MM-DD
+            if len(stem) >= 7 and stem[4] == "-":
+                month = stem[:7]  # YYYY-MM
+                month_groups[month].append(f)
+
+        for month, month_files in sorted(month_groups.items()):
+            key = f"bronze/{source_name}/{subdir.name}/{month}.parquet"
+            if key_exists(key):
+                print(f"    ATILDI:  {subdir.name}/{month} (zaten mevcut)")
+                continue
+            dfs, orig_kb = [], 0
+            for f in month_files:
+                try:
+                    df = load_file(f, source_name, fmt)
+                    if not df.empty:
+                        dfs.append(df)
+                    orig_kb += f.stat().st_size // 1024
+                except Exception as e:
+                    print(f"    HATA ({f.name}): {e}")
+            if not dfs:
+                continue
+            merged = pd.concat(dfs, ignore_index=True)
+            parquet_kb = upload_parquet(merged, key, bucket, s3_client, dry_run)
+            total_orig += orig_kb
+            total_parquet += parquet_kb
+            tag = "[DRY-RUN] " if dry_run else "YÜKLENDI: "
+            print(f"    {tag}{subdir.name}/{month}.parquet  ({len(month_files)} gün, {orig_kb}KB → {parquet_kb}KB)")
+
+    return total_orig, total_parquet
+
+
 def process_by_subdir(source_name: str, source_dir: Path, fmt: str,
                       bucket: str, s3_client, dry_run: bool) -> tuple[int, int]:
     """Her alt klasördeki dosyaları birleştirip tek Parquet olarak yükler (EPİAŞ, akaryakıt için)."""
@@ -183,6 +239,134 @@ def process_by_subdir(source_name: str, source_dir: Path, fmt: str,
         tag = "[DRY-RUN] " if dry_run else "YÜKLENDI: "
         print(f"    {tag}{subdir.name}/ ({len(files)} dosya) → s3://{bucket}/{key}  ({orig_kb}KB → {parquet_kb}KB)")
     return total_orig, total_parquet
+
+
+def parse_period(date_str: str) -> str | None:
+    """Farklı TCMB tarih formatlarını YYYY-MM'ye çevirir."""
+    s = str(date_str).strip()
+    try:
+        # DD-MM-YYYY
+        if len(s) == 10 and s[2] == "-" and s[5] == "-":
+            return f"{s[6:10]}-{s[3:5]}"
+        # YYYY-MM-DD
+        if len(s) == 10 and s[4] == "-":
+            return s[:7]
+        # YYYY-M veya YYYY-MM
+        if "-" in s:
+            parts = s.split("-")
+            if len(parts) == 2:
+                return f"{parts[0]}-{int(parts[1]):02d}"
+    except Exception:
+        pass
+    return None
+
+
+def process_by_date_field(source_name: str, source_dir: Path, fmt: str,
+                           bucket: str, s3_client, dry_run: bool) -> tuple[int, int]:
+    """Her JSONL dosyasını içindeki date alanına göre ay bazlı Parquet'e böler.
+    S3 path: bronze/{source}/{stem}/{YYYY-MM}.parquet
+    Zaten yüklenen ayları atlar (resume destekli).
+    """
+    from botocore.exceptions import ClientError
+
+    def key_exists(key: str) -> bool:
+        if dry_run or not s3_client:
+            return False
+        try:
+            s3_client.head_object(Bucket=bucket, Key=key)
+            return True
+        except ClientError:
+            return False
+
+    files = collect_files(source_dir, fmt)
+    total_orig, total_parquet = 0, 0
+
+    for file_path in files:
+        if file_path.name in SKIP_FILES:
+            continue
+        try:
+            df = load_file(file_path, source_name, fmt)
+            if df.empty or "date" not in df.columns:
+                continue
+
+            df["_period"] = df["date"].astype(str).map(parse_period)
+            df = df.dropna(subset=["_period"])
+
+            orig_kb = file_path.stat().st_size // 1024
+            total_orig += orig_kb
+
+            for period, group in df.groupby("_period"):
+                group = group.drop(columns=["_period"])
+                key = f"bronze/{source_name}/{file_path.stem}/{period}.parquet"
+                if key_exists(key):
+                    print(f"    ATILDI:  {file_path.stem}/{period} (zaten mevcut)")
+                    continue
+                parquet_kb = upload_parquet(group, key, bucket, s3_client, dry_run)
+                total_parquet += parquet_kb
+                tag = "[DRY-RUN] " if dry_run else "YÜKLENDI: "
+                print(f"    {tag}{file_path.stem}/{period}.parquet  ({parquet_kb}KB)")
+        except Exception as e:
+            print(f"    HATA ({file_path.name}): {e}")
+
+    return total_orig, total_parquet
+
+
+def process_akaryakit_daily(source_dir: Path, bucket: str, s3_client, dry_run: bool) -> tuple[int, int]:
+    """Akaryakıt XLS dosyalarını Tarih kolonuna göre günlük Parquet'e böler.
+    S3 path: bronze/akaryakit/{YYYY-MM-DD}.parquet
+    """
+    from botocore.exceptions import ClientError
+
+    def key_exists(key: str) -> bool:
+        if dry_run or not s3_client:
+            return False
+        try:
+            s3_client.head_object(Bucket=bucket, Key=key)
+            return True
+        except ClientError:
+            return False
+
+    files = list(source_dir.rglob("*.xls"))
+    if not files:
+        return 0, 0
+
+    # Tüm XLS'leri tek DataFrame'e yükle
+    print(f"    {len(files)} XLS dosyası okunuyor...")
+    dfs, orig_kb = [], 0
+    for f in files:
+        try:
+            df = load_xls(f)
+            if not df.empty:
+                dfs.append(df)
+            orig_kb += f.stat().st_size // 1024
+        except Exception as e:
+            print(f"    HATA ({f.name}): {e}")
+
+    if not dfs:
+        return orig_kb, 0
+
+    merged = pd.concat(dfs, ignore_index=True)
+
+    # DD.MM.YYYY → YYYY-MM-DD
+    merged["_date"] = pd.to_datetime(merged["Tarih"], format="%d.%m.%Y", errors="coerce")
+    merged = merged.dropna(subset=["_date"])
+    merged["_date_str"] = merged["_date"].dt.strftime("%Y-%m-%d")
+
+    total_parquet = 0
+    dates = sorted(merged["_date_str"].unique())
+    print(f"    {len(dates)} gün bulundu ({dates[0]} → {dates[-1]})")
+
+    for date_str in dates:
+        key = f"bronze/akaryakit/{date_str}.parquet"
+        if key_exists(key):
+            continue
+        day_df = merged[merged["_date_str"] == date_str].drop(columns=["_date", "_date_str"])
+        parquet_kb = upload_parquet(day_df, key, bucket, s3_client, dry_run)
+        total_parquet += parquet_kb
+        tag = "[DRY-RUN] " if dry_run else "YÜKLENDI: "
+        print(f"    {tag}{date_str}.parquet  ({parquet_kb}KB)")
+
+    return orig_kb, total_parquet
 
 
 def process_merge_all(source_name: str, source_dir: Path,
@@ -218,6 +402,12 @@ def process_and_upload(source_name: str, source_dir: Path, fmt: str, mode: str,
         total_orig, total_parquet = process_per_file(source_name, source_dir, fmt, bucket, s3_client, dry_run)
     elif mode == "by_subdir":
         total_orig, total_parquet = process_by_subdir(source_name, source_dir, fmt, bucket, s3_client, dry_run)
+    elif mode == "by_date_field":
+        total_orig, total_parquet = process_by_date_field(source_name, source_dir, fmt, bucket, s3_client, dry_run)
+    elif mode == "by_filename_month":
+        total_orig, total_parquet = process_by_filename_month(source_name, source_dir, fmt, bucket, s3_client, dry_run)
+    elif mode == "akaryakit_daily":
+        total_orig, total_parquet = process_akaryakit_daily(source_dir, bucket, s3_client, dry_run)
     elif mode == "merge_all":
         total_orig, total_parquet = process_merge_all(source_name, source_dir, bucket, s3_client, dry_run)
     else:

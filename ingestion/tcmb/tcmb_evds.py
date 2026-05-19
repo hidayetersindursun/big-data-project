@@ -81,9 +81,10 @@ BATCHES = [
         "freq": 5,
         "series": [
             # TÜFE alt grupları — YoY (formula=3)
-            {"code": "TP.FE.OKTG10", "name": "tufe_gida_alkolsuz_yoy", "formula": 3, "agg": "avg", "start": DEFAULT_START},
-            {"code": "TP.FE.OKTG07", "name": "tufe_ulastirma_yoy",     "formula": 3, "agg": "avg", "start": DEFAULT_START},
-            {"code": "TP.FE.OKTG04", "name": "tufe_konut_enerji_yoy",  "formula": 3, "agg": "avg", "start": DEFAULT_START},
+            {"code": "TP.FE.OKTG10", "name": "tufe_gida_alkolsuz_yoy",   "formula": 3, "agg": "avg", "start": HISTORICAL_START},
+            {"code": "TP.FE.OKTG11", "name": "tufe_taze_meyve_sebze_yoy", "formula": 3, "agg": "avg", "start": HISTORICAL_START},
+            {"code": "TP.FE.OKTG07", "name": "tufe_ulastirma_yoy",       "formula": 3, "agg": "avg", "start": DEFAULT_START},
+            {"code": "TP.FE.OKTG04", "name": "tufe_konut_enerji_yoy",    "formula": 3, "agg": "avg", "start": DEFAULT_START},
             # Kredi faiz oranları — ham değer (formula=0)
             {"code": "TP.KTF10",     "name": "kredi_faiz_ticari",      "formula": 0, "agg": "avg", "start": DEFAULT_START},
             {"code": "TP.KTF11",     "name": "kredi_faiz_tuketici",    "formula": 0, "agg": "avg", "start": DEFAULT_START},
