@@ -11,9 +11,12 @@ Kullanım:
 import argparse
 import json
 import random
+import sys
 import tempfile
 from datetime import date, timedelta
 from pathlib import Path
+
+sys.stdout.reconfigure(encoding="utf-8")
 
 import boto3
 import pandas as pd
@@ -198,29 +201,58 @@ def load_base_jsonl(path: Path) -> list[dict]:
 
 def apply_synthetic_to_records(preloaded: list[tuple[str, list[dict]]],
                                base_date: date, target_date: date,
-                               inflation: dict) -> pd.DataFrame:
+                               inflation: dict,
+                               _cache: dict = {}) -> pd.DataFrame:
     """Bellekteki kayıtlara hedef tarih için sentetik fiyat uygular."""
+    # Deflasyon faktörü ay bazında cache'le (aynı ay için tekrar hesaplama)
+    cache_key = (base_date, target_date.year, target_date.month)
+    if cache_key not in _cache:
+        _cache[cache_key] = deflation_factor(base_date, target_date, inflation)
+    df_factor = _cache[cache_key]
+
+    scraped_at = f"{target_date}T08:00:00"
+    base_date_str = base_date.isoformat()
+    index_time = f"{target_date.strftime('%d.%m.%Y')} 08:00"
+    target_month = target_date.month
+    target_date_iso = target_date.isoformat()
+
     rows = []
     for file_stem, records in preloaded:
         for i, rec in enumerate(records):
-            new_rec = json.loads(json.dumps(rec))
-            new_rec["_scraped_at"] = f"{target_date}T08:00:00"
-            new_rec["_synthetic"] = True
-            new_rec["_base_date"] = base_date.isoformat()
             product_title = rec.get("title", "")
+            cats = rec.get("categories", [])
+            cats_str = ", ".join(cats) if isinstance(cats, list) else (cats or "")
 
-            for j, depot in enumerate(new_rec.get("productDepotInfoList", [])):
+            profile = get_seasonal_profile(product_title)
+            base_month = base_date.month
+            seasonal_adj = profile[target_month] / profile[base_month]
+
+            base_row = {
+                k: v for k, v in rec.items()
+                if k not in ("productDepotInfoList", "categories")
+            }
+            base_row["categories"] = cats_str
+            base_row["_scraped_at"] = scraped_at
+            base_row["_synthetic"] = True
+            base_row["_base_date"] = base_date_str
+
+            depots = rec.get("productDepotInfoList") or []
+            if not depots:
+                rows.append(base_row)
+                continue
+
+            for j, depot in enumerate(depots):
                 orig = depot.get("price")
-                if orig is None:
-                    continue
-                seed = hash((file_stem, target_date.isoformat(), i, j)) & 0xFFFFFFFF
-                new_p = synthetic_price(orig, base_date, target_date, inflation, product_title, seed)
-                depot["price"] = new_p
-                depot["unitPriceValue"] = new_p
-                depot["unitPrice"] = f"{new_p:.2f} ₺/Kg"
-                depot["indexTime"] = f"{target_date.strftime('%d.%m.%Y')} 08:00"
-
-            rows.extend(flatten_record(new_rec))
+                new_depot = dict(depot)
+                if orig is not None:
+                    seed = hash((file_stem, target_date_iso, i, j)) & 0xFFFFFFFF
+                    noise = 1.0 + random.Random(seed).uniform(-DAILY_VARIANCE, DAILY_VARIANCE)
+                    new_p = round(max(orig * df_factor * seasonal_adj * noise, 0.01), 2)
+                    new_depot["price"] = new_p
+                    new_depot["unitPriceValue"] = new_p
+                    new_depot["unitPrice"] = f"{new_p:.2f} ₺/Kg"
+                    new_depot["indexTime"] = index_time
+                rows.append({**base_row, **new_depot})
 
     return pd.DataFrame(rows) if rows else pd.DataFrame()
 
@@ -284,7 +316,7 @@ def main():
     base_files = [(p, bd) for p, bd in base_files if bd == base_date_str]
 
     print(f"Baz tarih: {base_date_str} | {len(base_files)} dosya")
-    print(f"Hedef: {base_date - timedelta(days=args.days)} → {base_date - timedelta(days=1)}")
+    print(f"Hedef: {base_date - timedelta(days=args.days)} -> {base_date - timedelta(days=1)}")
     print(f"{'[DRY-RUN] ' if args.dry_run else ''}S3: s3://{args.bucket}/bronze/market/\n")
 
     # Tüm JSONL dosyalarını bir kez belleğe al
@@ -298,22 +330,51 @@ def main():
 
     s3 = None if args.dry_run else boto3.client("s3")
 
+    # Tüm günleri ay bazında grupla: {(year, month): [date, ...]}
+    from collections import defaultdict
+    month_groups: dict[tuple, list[date]] = defaultdict(list)
     for day_offset in range(1, args.days + 1):
         target_date = base_date - timedelta(days=day_offset)
-        key = f"bronze/market/synthetic/{target_date.isoformat()}.parquet"
+        month_groups[(target_date.year, target_date.month)].append(target_date)
 
-        # Resume: S3'te zaten varsa atla
-        if not args.dry_run and key_exists(s3, args.bucket, key):
-            print(f"  ATILDI:   {target_date}  (zaten mevcut)")
-            continue
+    from datetime import date as date_cls
+    current_year, current_month = date_cls.today().year, date_cls.today().month
 
-        merged = apply_synthetic_to_records(preloaded, base_date, target_date, inflation)
-        if merged.empty:
-            continue
+    for (year, month), days in sorted(month_groups.items()):
+        y = f"{year:04d}"
+        m = f"{month:02d}"
+        # Cari ay (henüz bitmemiş) → günlük dosya; geçmiş aylar → aylık tek dosya
+        is_current_month = (year == current_year and month == current_month)
 
-        day_kb = upload_parquet(merged, key, args.bucket, s3, args.dry_run)
-        tag = "[DRY-RUN] " if args.dry_run else "YÜKLENDI: "
-        print(f"  {tag}{target_date}  {len(merged):>8,} satır  {day_kb:>6} KB")
+        if is_current_month:
+            for target_date in sorted(days):
+                d = f"{target_date.day:02d}"
+                key = f"bronze/market_synthetic/year={y}/month={m}/day={d}/part-0000.parquet"
+                if not args.dry_run and key_exists(s3, args.bucket, key):
+                    print(f"  ATILDI:   {target_date}  (zaten mevcut)")
+                    continue
+                df = apply_synthetic_to_records(preloaded, base_date, target_date, inflation)
+                if df.empty:
+                    continue
+                day_kb = upload_parquet(df, key, args.bucket, s3, args.dry_run)
+                tag = "[DRY-RUN] " if args.dry_run else "YÜKLENDI: "
+                print(f"  {tag}{target_date}  {len(df):>8,} satır  {day_kb:>6} KB")
+        else:
+            key = f"bronze/market_synthetic/year={y}/month={m}/part-0000.parquet"
+            if not args.dry_run and key_exists(s3, args.bucket, key):
+                print(f"  ATILDI:   {y}-{m}  (zaten mevcut)")
+                continue
+            month_dfs = []
+            for target_date in sorted(days):
+                df = apply_synthetic_to_records(preloaded, base_date, target_date, inflation)
+                if not df.empty:
+                    month_dfs.append(df)
+            if not month_dfs:
+                continue
+            merged = pd.concat(month_dfs, ignore_index=True)
+            month_kb = upload_parquet(merged, key, args.bucket, s3, args.dry_run)
+            tag = "[DRY-RUN] " if args.dry_run else "YÜKLENDI: "
+            print(f"  {tag}{y}-{m}  {len(days)} gün  {len(merged):>8,} satır  {month_kb:>6} KB")
 
     print("\nTamamlandı.")
 

@@ -20,6 +20,13 @@ venv.bak/
 .env
 infrastructure/.env
 
+# Credentials / Anahtarlar — asla commit edilmez
+gcp-credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+
 # Mac
 .DS_Store
 **/.DS_Store
@@ -29,6 +36,14 @@ state.json
 
 # Ham veri JSON'ları
 market_data.json
+
+# Log ve yükleme çıktıları
+*.log
+upload_log.jsonl
+exports.zip
+
+# Ham veri — S3'e gidiyor, repoda tutulmaz
+ingestion/hal/tum_hal_data/
 
 # IDE / editor
 .vscode/

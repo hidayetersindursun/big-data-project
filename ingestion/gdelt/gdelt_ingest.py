@@ -3,64 +3,56 @@ import sys
 import json
 import argparse
 import datetime
+from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from google.cloud import bigquery
 from dotenv import load_dotenv
 
-# Proje kök dizinini bulup .env dosyasını yükle
-# Bu script ingestion/gdelt altında çalışacak, proje kökü ../../
 project_root = Path(__file__).resolve().parent.parent.parent
-env_path = project_root / '.env'
-load_dotenv(env_path)
+load_dotenv(project_root / '.env')
 
 GDELT_DIR = project_root / 'ingestion' / 'gdelt'
 DATA_DIR = GDELT_DIR / 'data'
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 STATE_FILE = GDELT_DIR / 'state.json'
 
+
 def get_bq_client():
-    """BigQuery client'ı başlatır."""
     try:
-        client = bigquery.Client()
-        return client
+        return bigquery.Client()
     except Exception as e:
-        print(f"BigQuery Client başlatılamadı. GOOGLE_APPLICATION_CREDENTIALS ortam değişkenini kontrol edin: {e}", file=sys.stderr)
+        print(f"BigQuery Client başlatılamadı: {e}", file=sys.stderr)
         sys.exit(1)
 
-def query_gdelt_data(client, start_date, end_date):
-    """
-    Belirtilen tarih aralığında GDELT GKG_partitioned tablosundan
-    Türkiye odaklı ve belirli temaları içeren haber verilerini çeker.
-    """
-    start_str = start_date.strftime("%Y%m%d%H%M%S")
-    end_str = end_date.strftime("%Y%m%d%H%M%S")
 
-    # BigQuery sorgusu
+def query_gdelt_day(client, target_date: datetime.date):
+    """Tek bir gün için GDELT sorgusu — orijinal DATE filtresi korundu (BQ optimizasyonu)."""
+    date_prefix = target_date.strftime("%Y%m%d")
     query = f"""
-        SELECT 
+        SELECT
             GKGRECORDID,
             CAST(DATE AS STRING) as Date,
             SourceCollectionIdentifier,
             DocumentIdentifier,
             V2Themes,
             V2Tone
-        FROM 
-            `gdelt-bq.gdeltv2.gkg_partitioned`
-        WHERE 
-            (_PARTITIONTIME BETWEEN TIMESTAMP('{start_date.strftime("%Y-%m-%d")}') AND TIMESTAMP('{end_date.strftime("%Y-%m-%d")}'))
+        FROM `gdelt-bq.gdeltv2.gkg_partitioned`
+        WHERE
+            _PARTITIONTIME = TIMESTAMP('{target_date}')
             AND (
                 V2Locations LIKE '%Turkey%' OR V2Locations LIKE '%TU%' OR
                 V2Locations LIKE '%Russia%' OR V2Locations LIKE '%RS%' OR
                 V2Locations LIKE '%Ukraine%' OR V2Locations LIKE '%UP%' OR
                 V2Locations LIKE '%Germany%' OR V2Locations LIKE '%GM%' OR
-                V2Locations LIKE '%Iraq%' OR V2Locations LIKE '%IZ%' OR
-                V2Locations LIKE '%Syria%' OR V2Locations LIKE '%SY%' OR
-                V2Locations LIKE '%Iran%' OR V2Locations LIKE '%IR%' OR
-                V2Locations LIKE '%Brazil%' OR V2Locations LIKE '%BR%' OR
+                V2Locations LIKE '%Iraq%'    OR V2Locations LIKE '%IZ%' OR
+                V2Locations LIKE '%Syria%'   OR V2Locations LIKE '%SY%' OR
+                V2Locations LIKE '%Iran%'    OR V2Locations LIKE '%IR%' OR
+                V2Locations LIKE '%Brazil%'  OR V2Locations LIKE '%BR%' OR
                 V2Locations LIKE '%Argentina%' OR V2Locations LIKE '%AR%' OR
                 V2Locations LIKE '%Netherlands%' OR V2Locations LIKE '%NL%' OR
-                V2Locations LIKE '%Spain%' OR V2Locations LIKE '%SP%' OR
-                V2Locations LIKE '%Egypt%' OR V2Locations LIKE '%EG%'
+                V2Locations LIKE '%Spain%'   OR V2Locations LIKE '%SP%' OR
+                V2Locations LIKE '%Egypt%'   OR V2Locations LIKE '%EG%'
             )
             AND (
                 V2Themes LIKE '%FOOD_SECURITY%' OR
@@ -92,127 +84,142 @@ def query_gdelt_data(client, start_date, end_date):
                 V2Themes LIKE '%BLOCKADE%' OR
                 V2Themes LIKE '%SANCTIONS%'
             )
-            AND CAST(DATE AS STRING) LIKE '{start_str[:8]}%'
+            AND CAST(DATE AS STRING) LIKE '{date_prefix}%'
     """
-    
-    print(f"[{datetime.datetime.now()}] BigQuery sorgusu çalıştırılıyor: {start_date.date()} - {end_date.date()}")
-    
-    job_config = bigquery.QueryJobConfig()
-    query_job = client.query(query, job_config=job_config)
-    results = query_job.result()
-    
-    return results
+    print(f"  [{datetime.datetime.now().strftime('%H:%M:%S')}] BQ sorgusu: {target_date}")
+    return client.query(query).result()
+
 
 def parse_v2tone(tone_str):
-    """
-    V2Tone alanı virgüllerle ayrılmış değerler içerir.
-    Sadece ilk değeri (genel Tone) float olarak döndürür.
-    """
     if not tone_str:
         return None
     try:
-        parts = tone_str.split(',')
-        if parts:
-            return float(parts[0])
-    except:
-        pass
-    return None
+        return float(tone_str.split(',')[0])
+    except Exception:
+        return None
 
-def save_results(results, target_date):
-    """Sonuçları günlük JSONL dosyasına kaydeder."""
-    date_str = target_date.strftime("%Y-%m-%d")
-    out_file = DATA_DIR / f"{date_str}.jsonl"
-    
-    count = 0
-    with open(out_file, 'w', encoding='utf-8') as f:
-        for row in results:
-            record = dict(row)
-            
-            tone_val = parse_v2tone(record.get('V2Tone'))
-            
-            themes_str = record.get('V2Themes', '')
-            themes_list = [t for t in themes_str.split(';') if t] if themes_str else []
-            
-            item = {
-                'id': record.get('GKGRECORDID'),
-                'date': record.get('Date'),
-                'source': record.get('SourceCollectionIdentifier'),
-                'url': record.get('DocumentIdentifier'),
-                'tone': tone_val,
-                'themes': themes_list,
-                '_ingested_at': datetime.datetime.now().isoformat()
-            }
-            f.write(json.dumps(item, ensure_ascii=False) + "\n")
-            count += 1
-            
-    print(f"[{datetime.datetime.now()}] {count} kayıt {out_file} dosyasına kaydedildi.")
 
-def load_state():
+def save_day_results(results, date_str: str, state: dict, dry_run: bool) -> int:
+    """Tek günün sonuçlarını JSONL'e yaz, state güncelle."""
+    ingested_at = datetime.datetime.now().isoformat()
+    records = []
+    for row in results:
+        record = dict(row)
+        themes_str = record.get('V2Themes', '') or ''
+        records.append({
+            'id': record.get('GKGRECORDID'),
+            'date': record.get('Date'),
+            'source': record.get('SourceCollectionIdentifier'),
+            'url': record.get('DocumentIdentifier'),
+            'tone': parse_v2tone(record.get('V2Tone')),
+            'themes': [t for t in themes_str.split(';') if t],
+            '_ingested_at': ingested_at,
+        })
+    if not dry_run:
+        out_file = DATA_DIR / f"{date_str}.jsonl"
+        with open(out_file, 'w', encoding='utf-8') as f:
+            for item in records:
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        state[date_str] = {'status': 'success', 'timestamp': ingested_at}
+    return len(records)
+
+
+def load_state() -> dict:
     if STATE_FILE.exists():
-        with open(STATE_FILE, 'r') as f:
+        with open(STATE_FILE) as f:
             return json.load(f)
     return {}
 
-def save_state(state):
+
+def save_state(state: dict):
     with open(STATE_FILE, 'w') as f:
-        json.dump(state, f, indent=4)
+        json.dump(state, f, indent=2)
+
+
+def fetch_one_day(target_date: datetime.date, dry_run: bool):
+    """Tek gün için bağımsız BQ client ile çek — thread-safe."""
+    client = bigquery.Client()
+    date_str = str(target_date)
+    results = query_gdelt_day(client, target_date)
+    records = []
+    ingested_at = datetime.datetime.now().isoformat()
+    for row in results:
+        record = dict(row)
+        themes_str = record.get('V2Themes', '') or ''
+        records.append({
+            'id': record.get('GKGRECORDID'),
+            'date': record.get('Date'),
+            'source': record.get('SourceCollectionIdentifier'),
+            'url': record.get('DocumentIdentifier'),
+            'tone': parse_v2tone(record.get('V2Tone')),
+            'themes': [t for t in themes_str.split(';') if t],
+            '_ingested_at': ingested_at,
+        })
+    if not dry_run and records:
+        out_file = DATA_DIR / f"{date_str}.jsonl"
+        with open(out_file, 'w', encoding='utf-8') as f:
+            for item in records:
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+    return date_str, len(records)
+
 
 def main():
     parser = argparse.ArgumentParser(description="GDELT V2 GKG Veri Çekme Botu")
     parser.add_argument('--start-date', type=str, help='Başlangıç tarihi (YYYY-MM-DD)')
-    parser.add_argument('--end-date', type=str, help='Bitiş tarihi (YYYY-MM-DD)')
-    parser.add_argument('--dry-run', action='store_true', help='Veri kaydetmeden sadece çalışmayı test eder')
+    parser.add_argument('--end-date',   type=str, help='Bitiş tarihi (YYYY-MM-DD)')
+    parser.add_argument('--workers',    type=int, default=4, help='Paralel sorgu sayisi (default: 4)')
+    parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
 
-    client = get_bq_client()
-
-    if args.start_date and args.end_date:
-        start_date = datetime.datetime.strptime(args.start_date, "%Y-%m-%d")
-        end_date = datetime.datetime.strptime(args.end_date, "%Y-%m-%d")
+    if args.start_date:
+        start_date = datetime.date.fromisoformat(args.start_date)
     else:
-        end_date = datetime.datetime.now()
-        start_date = end_date - datetime.timedelta(days=1)
-        
-    print(f"Hedeflenen zaman aralığı: {start_date.date()} - {end_date.date()}")
-    
+        start_date = datetime.date.today() - datetime.timedelta(days=1)
+
+    if args.end_date:
+        end_date = datetime.date.fromisoformat(args.end_date)
+    else:
+        end_date = datetime.date.today() - datetime.timedelta(days=1)
+
+    print(f"Hedef: {start_date} -> {end_date} | workers: {args.workers}")
     if args.dry_run:
-        print("DRY RUN: Veri kaydedilmeyecek.")
-    
-    current_date = start_date
+        print("DRY RUN: dosya yazilmayacak.")
+
     state = load_state()
-    
-    while current_date <= end_date:
-        c_date_str = current_date.strftime("%Y-%m-%d")
-        
-        if c_date_str in state and state[c_date_str].get('status') == 'success' and not args.start_date:
-             print(f"{c_date_str} zaten çekilmiş, atlanıyor...")
-             current_date += datetime.timedelta(days=1)
-             continue
-        
-        c_start = current_date.replace(hour=0, minute=0, second=0)
-        c_end = current_date.replace(hour=23, minute=59, second=59)
-        
-        try:
-            results = query_gdelt_data(client, c_start, c_end)
-            if not args.dry_run:
-                save_results(results, current_date)
-                
-                state[c_date_str] = {
-                    'status': 'success',
-                    'timestamp': datetime.datetime.now().isoformat()
-                }
+
+    # Çekilmemiş günler
+    all_days = []
+    current = start_date
+    while current <= end_date:
+        date_str = str(current)
+        if state.get(date_str, {}).get('status') == 'success':
+            print(f"  ATILDI: {date_str} (zaten mevcut)")
+        else:
+            all_days.append(current)
+        current += datetime.timedelta(days=1)
+
+    print(f"Cekılecek: {len(all_days)} gun")
+
+    total_records = 0
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
+        futures = {executor.submit(fetch_one_day, d, args.dry_run): d for d in all_days}
+        for future in as_completed(futures):
+            target_date = futures[future]
+            date_str = str(target_date)
+            try:
+                date_str, cnt = future.result()
+                state[date_str] = {'status': 'success', 'timestamp': datetime.datetime.now().isoformat()}
                 save_state(state)
-        except Exception as e:
-            print(f"[{datetime.datetime.now()}] {c_date_str} tarihi için sorgu hatası: {e}")
-            if not args.dry_run:
-                state[c_date_str] = {
-                    'status': 'error',
-                    'error': str(e),
-                    'timestamp': datetime.datetime.now().isoformat()
-                }
+                tag = "[DRY] " if args.dry_run else ""
+                print(f"  {tag}KAYDEDILDI: {date_str}  {cnt:>6} kayit")
+                total_records += cnt
+            except Exception as e:
+                print(f"  HATA {date_str}: {e}")
+                state[date_str] = {'status': 'error', 'error': str(e), 'timestamp': datetime.datetime.now().isoformat()}
                 save_state(state)
-            
-        current_date += datetime.timedelta(days=1)
+
+    print(f"\nTamamlandi. Toplam: {total_records:,} kayit.")
+
 
 if __name__ == "__main__":
     main()
