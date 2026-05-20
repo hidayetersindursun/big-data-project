@@ -1,0 +1,1785 @@
+hal_product,market_product,product_canonical,confidence,unit_conversion_factor,reason
+Ispanak,Superfresh Ispanak 450 Gr,ispanak,kg_equivalent,1.0,Ayni urun taze ispanak
+Ispanak,Feast Ispanak 450 Gr,ispanak,kg_equivalent,1.0,Ayni urun taze ispanak
+Ispanak,Feast Organik Ispanak 450 Gr,ispanak,kg_equivalent,1.0,Ayni urun organik ispanak
+Ispanak,Ispanak 1 Kg,ispanak,exact,1.0,Ayni urun ve paket 1 kg
+Ispanak,Ispanak 700 Gr,ispanak,kg_equivalent,1.0,Ayni urun farkli paket 700 gr
+Ispanak,Eurofresh Ispanak 700 Gr,ispanak,kg_equivalent,1.0,Ayni urun farkli paket 700 gr
+Ispanak,Yıkanmış Ispanak 500 Gr,ispanak,kg_equivalent,1.0,Ayni urun yikanmis ispanak
+Ispanak,Ispanak Demet 250 Gr,ispanak,kg_equivalent,1.0,Ayni urun farkli paket demet
+Karnabahar,Karnabahar 1.5 Kg,karnabahar,kg_equivalent,1.0,Ayni urun farkli paket 1.5 kg
+Karnabahar,Karnabahar 1 Kg,karnabahar,exact,1.0,Ayni urun paket 1 kg
+Karnabahar,Feast Karnabahar 2.5 Kg,karnabahar,kg_equivalent,1.0,Ayni urun farkli paket 2.5 kg
+Havuç,Havuç 1 Kg,havuc,exact,1.0,Ayni urun paket 1 kg
+Havuç,Havuç Paket 350 Gr,havuc,kg_equivalent,1.0,Ayni urun farkli paket 350 gr
+Domates,Domates Pembe 1 Kg,domates_pembe,exact,1.0,Pembe domates varyete 1 kg
+Domates,Pembe Domates 500 Gr,domates_pembe,kg_equivalent,1.0,Pembe domates varyete farkli paket
+Domates,Eko Domates 1 Kg,domates_pembe,kg_equivalent,1.0,Eko pembe domates varyete
+Domates,Domates 1 Kg,domates_pembe,kg_equivalent,1.0,Genel domates pembe varyete
+Pancar,Pancar 1 Kg,pancar,exact,1.0,Ayni urun paket 1 kg
+Patates,Patates 1 Kg,patates,exact,1.0,Ayni urun paket 1 kg
+Patates,Superfresh Patates 1 Kg,patates,exact,1.0,Ayni urun paket 1 kg
+Greyfurt,Greyfurt 1 Kg,greyfurt,exact,1.0,Ayni urun paket 1 kg
+Karpuz,Karpuz 1 Kg,karpuz,exact,1.0,Ayni urun paket 1 kg
+Ayva,Ayva Kg,ayva,exact,1.0,Ayni urun paket 1 kg
+Ayva,Ayva Gurme 1 Kg,ayva,kg_equivalent,1.0,Gurme ayva paket 1 kg
+Ayva,Ayva 1 Kg,ayva,exact,1.0,Ayni urun paket 1 kg
+Brokoli,Feast Brokoli 500 Gr,brokoli,kg_equivalent,1.0,Ayni urun farkli paket 500 gr
+Brokoli,Feast Organik Brokoli 450 Gr,brokoli,kg_equivalent,1.0,Organik brokoli farkli paket 450 gr
+Brokoli,Feast Brokoli 70-100 Mm 2.5 Kg,brokoli,kg_equivalent,1.0,Ayni urun farkli paket 2.5 kg
+Brokoli,Brokoli 1 Kg,brokoli,exact,1.0,Ayni urun paket 1 kg
+Roka,Roka 1 Adet,roka,exact,1.0,Ayni urun paket 1 adet
+Roka,Roka 350 Gr,roka,kg_equivalent,1.0,Ayni urun farkli paket 350 gr
+Nar,Lavi Nar 400 Gr,nar,kg_equivalent,1.0,Ayni urun farkli paket 400 gr
+Nar,Nar 1 Kg,nar,exact,1.0,Ayni urun paket 1 kg
+Dereotu,Dereotu 1 Adet,dereotu,exact,1.0,Ayni urun paket 1 adet
+Dereotu,Dereotu 1 Demet,dereotu,exact,1.0,Ayni urun paket 1 demet
+Portakal,Portakal 1 Kg,portakal,exact,1.0,Ayni urun paket 1 kg
+Portakal,Finike Gurme Portakal 1 Kg,portakal,kg_equivalent,1.0,Finike gurme portakal paket 1 kg
+Kivi,Kivi 1 Kg,kivi,exact,1.0,Ayni urun paket 1 kg
+Kivi,Kivi 250 Gr,kivi,kg_equivalent,1.0,Ayni urun farkli paket 250 gr
+Kivi,Kivi İthal 1 Kg,kivi,kg_equivalent,1.0,Ithal kivi paket 1 kg
+Kivi,Kivi Paket 500 Gr,kivi,kg_equivalent,1.0,Ayni urun farkli paket 500 gr
+Kereviz,Kereviz 1 Kg,kereviz,exact,1.0,Ayni urun paket 1 kg
+Kereviz,Kereviz Sapı 250 Gr,kereviz,kg_equivalent,1.0,Kereviz sapi farkli paket 250 gr
+Kavun,Kavun 1 Kg,kavun,exact,1.0,Ayni urun paket 1 kg
+Kavun,Kırkağaç Kavun 1 Kg,kavun,kg_equivalent,1.0,Kirkagac kavun paket 1 kg
+Nane,Nane 1 Adet,nane,exact,1.0,Ayni urun paket 1 adet
+Nane,Nane 250 Gr,nane,kg_equivalent,1.0,Ayni urun farkli paket 250 gr
+Nane,Nane 1 Kg,nane,exact,1.0,Ayni urun paket 1 kg
+Lahana (Beyaz),Beyaz Lahana 1 Kg,lahana_beyaz,exact,1.0,Ayni urun paket 1 kg
+Maydanoz,Maydanoz 1 Adet,maydanoz,exact,1.0,Ayni urun paket 1 adet
+Maydanoz,Maydanoz Demet 1 Adet,maydanoz,exact,1.0,Ayni urun paket 1 demet
+Limon,Limon 1 Kg,limon,exact,1.0,Ayni urun paket 1 kg
+Limon,File Limon 1 Kg,limon,kg_equivalent,1.0,Limon file paket 1 kg
+Limon,Eko Limon 1 Kg,limon,kg_equivalent,1.0,Eko limon paket 1 kg
+Elma (Golden),Golden Elma 1 Kg,elma_golden,exact,1.0,Golden elma varyete 1 kg
+Elma (Golden),Golden Elma Atıştırmalık 1 Kg,elma_golden,kg_equivalent,1.0,Golden elma atistirmali paket 1 kg
+Elma (Golden),Golden Elma Gurme 1 Kg,elma_golden,kg_equivalent,1.0,Golden elma gurme paket 1 kg
+Elma (Golden),Golden Elma Eko 1 Kg,elma_golden,kg_equivalent,1.0,Golden elma eko paket 1 kg
+Kabak,Kabak 1 Kg,kabak,exact,1.0,Ayni urun paket 1 kg
+Bezelye,Superfresh Bezelye 450 Gr,bezelye,kg_equivalent,1.0,Ayni urun farkli paket 450 gr
+Bezelye,Bezelye 1 Kg,bezelye,exact,1.0,Ayni urun paket 1 kg
+Bezelye,Feast Organik Bezelye 450 Gr,bezelye,kg_equivalent,1.0,Organik bezelye paket 450 gr
+Bezelye,İnci Bezelye 450 Gr,bezelye,kg_equivalent,1.0,Ayni urun farkli paket 450 gr
+Bezelye,Superfresh Organik Bezelye 450 Gr,bezelye,kg_equivalent,1.0,Organik bezelye paket 450 gr
+Bezelye,Feast Bezelye 2.5 Kg,bezelye,kg_equivalent,1.0,Ayni urun farkli paket 2.5 kg
+Bezelye,Superfresh Bezelye 1 Kg,bezelye,exact,1.0,Ayni urun paket 1 kg
+Armut (Santamaria),Santa Maria Armut 1 Kg,armut_santa_maria,exact,1.0,Santa maria armut varyete 1 kg
+Armut (Santamaria),Armut Santa Maria Gurme 1 Kg,armut_santa_maria,kg_equivalent,1.0,Santa maria armut gurme paket 1 kg
+Pırasa,Pırasa 1 Kg,pirasa,exact,1.0,Ayni urun paket 1 kg
+Muz (Yerli),Yerli Muz 1 Kg,muz_yerli,exact,1.0,Yerli muz varyete 1 kg
+Muz (Yerli),Muz Saksı 1 Adet,muz_yerli,kg_equivalent,1.0,Muz saksi paket 1 adet
+Muz (Yerli),Eko Yerli Muz 1 Kg,muz_yerli,kg_equivalent,1.0,Eko yerli muz paket 1 kg
+Armut (Deveci),Deveci Armut 1 Kg,armut_deveci,exact,1.0,Deveci armut varyete 1 kg
+Armut (Deveci),Armut Deveci 1 Adet,armut_deveci,kg_equivalent,1.0,Deveci armut paket 1 adet
+Armut (Deveci),Deveci Armut Gurme 1 Kg,armut_deveci,kg_equivalent,1.0,Deveci armut gurme paket 1 kg
+Tere,Tere 1 Adet,tere,exact,1.0,Ayni urun paket 1 adet
+Semizotu,Semizotu 1 Adet,semizotu,exact,1.0,Ayni urun paket 1 adet
+Semizotu,Semizotu 150 Gr,semizotu,kg_equivalent,1.0,Ayni urun farkli paket 150 gr
+Şeftali,Şeftali 1 Kg,seftali,exact,1.0,Ayni urun paket 1 kg
+Lahana (Kırmızı),Kırmızı Lahana 1 Kg,lahana_kirmizi,exact,1.0,Kirmizi lahana varyete 1 kg
+Çilek,Çilek 1 Kg,cilek,exact,1.0,Ayni urun paket 1 kg
+Çilek,Çilek 400 Gr,cilek,kg_equivalent,1.0,Ayni urun farkli paket 400 gr
+Çilek,Feast Çilek 400 Gr,cilek,kg_equivalent,1.0,Ayni urun farkli paket 400 gr
+Çilek,Çilek 1 Adet,cilek,kg_equivalent,1.0,Ayni urun paket 1 adet
+Biber (Sivri),Sivri Biber Paket 300 Gr,biber_sivri,exact,1.0,Sivri biber paket 300 gr
+Biber (Sivri),Sivri Biber 1 Kg,biber_sivri,exact,1.0,Sivri biber paket 1 kg
+Biber (Sivri),Biber Sivri Gurme 1 Kg,biber_sivri,kg_equivalent,1.0,Sivri biber gurme paket 1 kg
+Patlıcan,Patlıcan 1 Kg,patlican,exact,1.0,Ayni urun paket 1 kg
+Patlıcan,Tagem Topak Patlıcan 1 Kg,patlican,kg_equivalent,1.0,Topak patlican paket 1 kg
+Patlıcan,Bostan Patlıcan 1 Kg,patlican,kg_equivalent,1.0,Bostan patlican paket 1 kg
+Patlıcan,Patlıcan Paket 1 Kg,patlican,exact,1.0,Ayni urun paket 1 kg
+Elma (Starking),Starking Elma 1 Kg,elma_starking,exact,1.0,Starking elma varyete 1 kg
+Elma (Starking),Atıştırmalık Starking Elma 1 Kg,elma_starking,kg_equivalent,1.0,Starking elma atistirmali paket 1 kg
+Elma (Starking),Eko Starking Elma 1 Kg,elma_starking,kg_equivalent,1.0,Starking elma eko paket 1 kg
+Portakal (Sıkmalık),Portakal Sıkmalık 1 Kg,portakal_sikmalik,exact,1.0,Sikmalik portakal varyete 1 kg
+Portakal (Sıkmalık),Sıkmalık Portakal File 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Sikmalik portakal file paket 1 kg
+Portakal (Sıkmalık),Finike Gurme Portakal 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Finike portakal sicmalik paket 1 kg
+Kiraz,Kiraz 1 Kg,kiraz,exact,1.0,Ayni urun paket 1 kg
+Soğan (Kırmızı),Kırmızı Soğan 1 Kg,sogan,exact,1.0,Kirmizi sogan varyete 1 kg
+Soğan (Kırmızı),Soğan 1 Kg,sogan,kg_equivalent,1.0,Genel sogan paket 1 kg
+Soğan (Kırmızı),Superfresh Soğan 450 Gr,sogan,kg_equivalent,1.0,Superfresh sogan paket 450 gr
+Soğan (Kırmızı),Taze Soğan 1 Demet,sogan,kg_equivalent,1.0,Taze sogan demet 1 paket
+Marul (Düz),Marul 1 Adet,marul,exact,1.0,Ayni urun paket 1 adet
+Marul (Düz),Eurofresh Yıkanmış Yaprak Marul 250 Gr,marul,kg_equivalent,1.0,Yikanmis yaprak marul paket 250 gr
+Mandalina,Mandalina 1 Kg,mandalina,exact,1.0,Ayni urun paket 1 kg
+Biber Kapya,Kapya Biber 1 Kg,biber_kapya,exact,1.0,Kapya biber varyete 1 kg
+Marul (Kıvırcık),Eurofresh Yıkanmış Kıvırcık Marul 150 Gr,marul_kivirik,exact,1.0,Kivirik marul yikanmis paket 150 gr
+Marul (Kıvırcık),Kıvırcık 1 Adet,marul_kivirik,exact,1.0,Ayni urun paket 1 adet
+Marul (Kıvırcık),Kıvırcık Salata 1 Adet,marul_kivirik,kg_equivalent,1.0,Kivirik salata paket 1 adet
+Marul (Kıvırcık),Kıvırcık Demet 1 Adet,marul_kivirik,kg_equivalent,1.0,Kivirik demet paket 1 adet
+Marul (Kıvırcık),Eurofresh Yıkanmış Yaprak Marul 250 Gr,marul_kivirik,kg_equivalent,1.0,Yikanmis yaprak marul paket 250 gr
+Sarımsak (Kuru),Kuru Sarımsak 1 Paket,sarimsak_kuru,exact,1.0,Kuru sarimsak paket 1 paket
+Sarımsak (Kuru),Kuru Sarımsak 1 Kg,sarimsak_kuru,exact,1.0,Kuru sarimsak paket 1 kg
+Sarımsak (Kuru),File Sarımsak 200 Gr,sarimsak_kuru,kg_equivalent,1.0,Kuru sarimsak file paket 200 gr
+Sarımsak (Kuru),Sarımsak 1 Kg,sarimsak_kuru,kg_equivalent,1.0,Taze sarimsak paket 1 kg
+Sarımsak (Kuru),Sarımsak File 250 Gr,sarimsak_kuru,kg_equivalent,1.0,Sarimsak file paket 250 gr
+Sarımsak (Kuru),Taze Sarımsak 250 Gr,sarimsak_kuru,kg_equivalent,1.0,Taze sarimsak paket 250 gr
+Sarımsak (Kuru),Taşköprü Sarımsak 1 Kg,sarimsak_kuru,kg_equivalent,1.0,Taskoprü sarimsak paket 1 kg
+Sarımsak (Kuru),Sarımsak Taze Baş 1 Kg,sarimsak_kuru,kg_equivalent,1.0,Taze sarimsak bas paket 1 kg
+Salatalık,Salatalık 1 Kg,salatali_cengelkoy,exact,1.0,Ayni urun paket 1 kg
+Salatalık,Çengelköy Salatalık 1 Kg,salatali_cengelkoy,kg_equivalent,1.0,Cengelkoy salatali paket 1 kg
+Salatalık,Çengelköy Salatalık 500 Gr,salatali_cengelkoy,kg_equivalent,1.0,Cengelkoy salatali paket 500 gr
+Salatalık,Çengel Salatalık Gurme 1 Paket,salatali_cengelkoy,kg_equivalent,1.0,Cengelkoy salatali gurme paket
+Salatalık,Eko Salatalık 1 Kg,salatali_cengelkoy,kg_equivalent,1.0,Eko salatali paket 1 kg
+Elma (Granny Smith),Granny Smith Elma 1 Kg,elma_granny_smith,exact,1.0,Granny smith elma varyete 1 kg
+Elma (Granny Smith),Elma Granny Smith Gurme 1 Kg,elma_granny_smith,kg_equivalent,1.0,Granny smith elma gurme paket 1 kg
+Kayısı,Kayısı 1 Kg,kayisi,exact,1.0,Ayni urun paket 1 kg
+Domates (Cherry),Cherry Domates 250 Gr,domates_cherry,exact,1.0,Cherry domates varyete 250 gr
+Marul (Aysberg),Eurofresh Yıkanmış Yaprak Marul 250 Gr,marul,kg_equivalent,1.0,Yikanmis yaprak marul paket 250 gr
+Soğan (Beyaz),Soğan 1 Kg,sogan,exact,1.0,Ayni urun paket 1 kg
+Soğan (Beyaz),Superfresh Soğan 450 Gr,sogan,kg_equivalent,1.0,Superfresh sogan paket 450 gr
+Soğan (Beyaz),Taze Soğan 1 Demet,sogan,kg_equivalent,1.0,Taze sogan demet 1 paket
+Soğan (Beyaz),Soğan Yeni Hasat 1 Kg,sogan,kg_equivalent,1.0,Yeni hasat sogan paket 1 kg
+Mantar (Kültür),Mantar Tabak 300 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 300 gr
+Mantar (Kültür),Mantar 400 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 400 gr
+Mantar (Kültür),Kültür Mantarı 400 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 400 gr
+Mantar (Kültür),Mantar Paket 400 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 400 gr
+Mantar (Kültür),Mantar 300 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 300 gr
+Üzüm (Beyaz),İthal Beyaz Üzüm 1 Kg,uzum_beyaz,kg_equivalent,1.0,Ithal beyaz uzum paket 1 kg
+Üzüm (Beyaz),Beyaz Üzüm 1 Kg,uzum_beyaz,exact,1.0,Beyaz uzum varyete 1 kg
+Üzüm (Beyaz),Çekirdeksiz Üzüm 1 Kg,uzum_beyaz,kg_equivalent,1.0,Cekirdeksiz beyaz uzum paket 1 kg
+Biber (Dolmalık),Dolmalık Biber 300 Gr,biber_dolmalik,exact,1.0,Dolmalik biber paket 300 gr
+Biber (Çarliston),Çarliston Biber 300 Gr,biber_carliston,exact,1.0,Carliston biber paket 300 gr
+Biber (Çarliston),Çarliston Biber 1 Kg,biber_carliston,exact,1.0,Carliston biber paket 1 kg
+Biber (Çarliston),Gurme Paket Çarliston Biber 1 Kg,biber_carliston,kg_equivalent,1.0,Carliston biber gurme paket 1 kg
+Yeşil Soğan,Soğan 1 Kg,sogan,kg_equivalent,1.0,Sogan paket 1 kg
+Yeşil Soğan,Soğan Yeni Hasat 1 Kg,sogan,kg_equivalent,1.0,Yeni hasat sogan paket 1 kg
+Fasulye (Taze),Superfresh Taze Fasulye 450 Gr,fasulye_taze,kg_equivalent,1.0,Taze fasulye paket 450 gr
+Fasulye (Taze),Feast Taze Fasulye 450 Gr,fasulye_taze,kg_equivalent,1.0,Taze fasulye paket 450 gr
+Fasulye (Taze),Fasulye Taze 1 Kg,fasulye_taze,exact,1.0,Taze fasulye paket 1 kg
+Fasulye (Taze),Feast Taze Fasulye 3-5 Cm 2.5 Kg,fasulye_taze,kg_equivalent,1.0,Taze fasulye paket 2.5 kg
+Fasulye (Taze),Gurme Taze Fasulye 1 Kg,fasulye_taze,exact,1.0,Taze fasulye gurme paket 1 kg
+Fasulye (Taze),Paket Fasulye 500 Gr,fasulye_taze,kg_equivalent,1.0,Taze fasulye paket 500 gr
+Bakla (Taze),Paket Bakla 500 Gr,bakla_taze,kg_equivalent,1.0,Taze bakla paket 500 gr
+Bakla (Taze),Bakla 1 Kg,bakla_taze,exact,1.0,Taze bakla paket 1 kg
+Yeni Dünya (Malta),Malta Eriği 400 Gr,yeni_dunya_malta,kg_equivalent,1.0,Malta erigi paket 400 gr
+Yeni Dünya (Malta),Malta Eriği 1 Kg,yeni_dunya_malta,kg_equivalent,1.0,Malta erigi paket 1 kg
+Ananas,Ananas 1 Adet,ananas,exact,1.0,Ayni urun paket 1 adet
+Ananas,Ananas Saksı 1 Adet,ananas,kg_equivalent,1.0,Ananas saksi paket 1 adet
+Salatalik,Salatalık 1 Kg,salatali_cengelkoy,exact,1.0,Ayni urun paket 1 kg
+Salatalik,Çengelköy Salatalık 1 Kg,salatali_cengelkoy,kg_equivalent,1.0,Cengelkoy salatali paket 1 kg
+Salatalik,Çengelköy Salatalık 500 Gr,salatali_cengelkoy,kg_equivalent,1.0,Cengelkoy salatali paket 500 gr
+Salatalik,Çengel Salatalık Gurme 1 Paket,salatali_cengelkoy,kg_equivalent,1.0,Cengelkoy salatali gurme paket
+Salatalik,Eko Salatalık 1 Kg,salatali_cengelkoy,kg_equivalent,1.0,Eko salatali paket 1 kg
+Mantar,Mantar Tabak 300 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 300 gr
+Mantar,Mantar 400 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 400 gr
+Mantar,Mantar Paket 400 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 400 gr
+Mantar,Mantar 300 Gr,mantar_kultur,kg_equivalent,1.0,Kultur mantari paket 300 gr
+Soğan Kuru,Kuru Soğan 1 Kg,sogan_kuru,exact,1.0,Kuru sogan paket 1 kg
+Soğan Kuru,Eko Kuru Soğan 1 Kg,sogan_kuru,kg_equivalent,1.0,Eko kuru sogan paket 1 kg
+Soğan Kuru,Kuru Soğan File 1 Kg,sogan_kuru,kg_equivalent,1.0,Kuru sogan file paket 1 kg
+Marul Kivircik,Eurofresh Yıkanmış Kıvırcık Marul 150 Gr,marul_kivirik,exact,1.0,Kivirik marul yikanmis paket 150 gr
+Marul Kivircik,Kıvırcık 1 Adet,marul_kivirik,exact,1.0,Ayni urun paket 1 adet
+Marul Kivircik,Kıvırcık Salata 1 Adet,marul_kivirik,kg_equivalent,1.0,Kivirik salata paket 1 adet
+Marul Kivircik,Kıvırcık Demet 1 Adet,marul_kivirik,kg_equivalent,1.0,Kivirik demet paket 1 adet
+Marul Kivircik,Eurofresh Yıkanmış Yaprak Marul 250 Gr,marul_kivirik,kg_equivalent,1.0,Yikanmis yaprak marul paket 250 gr
+Mango,Mango 1 Adet,mango,exact,1.0,Ayni urun paket 1 adet
+Mango,Mango Gurme Yemeye Hazır 1 Adet,mango,kg_equivalent,1.0,Mango gurme paket 1 adet
+Elma,Starking Elma 1 Kg,elma_starking,kg_equivalent,1.0,Starking elma paket 1 kg
+Elma,Golden Elma 1 Kg,elma_starking,kg_equivalent,1.0,Golden elma paket 1 kg
+Elma,Granny Smith Elma 1 Kg,elma_starking,kg_equivalent,1.0,Granny smith elma paket 1 kg
+Elma,Ekonomik Elma 1 Kg,elma_starking,kg_equivalent,1.0,Ekonomik elma paket 1 kg
+Elma,Granny Elma 1 Kg,elma_starking,kg_equivalent,1.0,Granny elma paket 1 kg
+Elma,Atıştırmalık Starking Elma 1 Kg,elma_starking,kg_equivalent,1.0,Starking elma atistirmali paket 1 kg
+Fesleğen,Diğer Fesleğen Demet 1 Adet,feslegen,kg_equivalent,1.0,Feslegen demet paket 1 adet
+Fesleğen,Taze Fesleğen 1 Adet,feslegen,exact,1.0,Ayni urun paket 1 adet
+Armut,Deveci Armut 1 Kg,armut_deveci,kg_equivalent,1.0,Deveci armut paket 1 kg
+Armut,Santa Maria Armut 1 Kg,armut_deveci,kg_equivalent,1.0,Santa maria armut paket 1 kg
+Armut,Armut Deveci 1 Adet,armut_deveci,kg_equivalent,1.0,Deveci armut paket 1 adet
+Armut,Deveci Armut Gurme 1 Kg,armut_deveci,kg_equivalent,1.0,Deveci armut gurme paket 1 kg
+Armut,Armut Santa Maria Gurme 1 Kg,armut_deveci,kg_equivalent,1.0,Santa maria armut gurme paket 1 kg
+Armut,Ankara Armut 1 Kg,armut_deveci,kg_equivalent,1.0,Ankara armut paket 1 kg
+Hindistan Cevizi,Hindistan Cevizi 1 Adet,hindistan_cevizi,exact,1.0,Ayni urun paket 1 adet
+Hindistan Cevizi,Hindistan Cevizi 300 Gr,hindistan_cevizi,kg_equivalent,1.0,Hindistan cevizi paket 300 gr
+Fasulye,Superfresh Taze Fasulye 450 Gr,fasulye_taze,kg_equivalent,1.0,Taze fasulye paket 450 gr
+Fasulye,Paket Fasulye 500 Gr,fasulye_taze,kg_equivalent,1.0,Taze fasulye paket 500 gr
+Fasulye,Feast Taze Fasulye 450 Gr,fasulye_taze,kg_equivalent,1.0,Taze fasulye paket 450 gr
+Fasulye,Fasulye Taze 1 Kg,fasulye_taze,exact,1.0,Taze fasulye paket 1 kg
+Fasulye,Feast Taze Fasulye 3-5 Cm 2.5 Kg,fasulye_taze,kg_equivalent,1.0,Taze fasulye paket 2.5 kg
+Fasulye,Gurme Taze Fasulye 1 Kg,fasulye_taze,exact,1.0,Taze fasulye gurme paket 1 kg
+Fasulye,Fasulye 1 Kg,fasulye_taze,exact,1.0,Taze fasulye paket 1 kg
+Fasulye,Ayşe Kadın Fasulye 1 Kg,fasulye_taze,kg_equivalent,1.0,Ayse kadin fasulye paket 1 kg
+Lahana Beyaz,Beyaz Lahana 1 Kg,lahana_beyaz,exact,1.0,Beyaz lahana varyete 1 kg
+Pirasa,Pırasa 1 Kg,pirasa,exact,1.0,Ayni urun paket 1 kg
+Bamya,Feast Bamya 450 Gr,bamya,kg_equivalent,1.0,Bamya paket 450 gr
+Bamya,Superfresh Bamya 450 Gr,bamya,kg_equivalent,1.0,Bamya paket 450 gr
+Bamya,Bamya 1 Kg,bamya,exact,1.0,Ayni urun paket 1 kg
+Kestane,Kestane Dökme 1 Kg,kestane,exact,1.0,Ayni urun paket 1 kg
+Kestane,Yerli Kestane 1 Kg,kestane,exact,1.0,Ayni urun paket 1 kg
+Kestane,Market Manav Kestane 1 Kg,kestane,kg_equivalent,1.0,Kestane paket 1 kg
+Turp,Fındık Turp 1 Adet,turp,kg_equivalent,1.0,Findik turp paket 1 adet
+Turp,Fındık Turp 1 Kg,turp,kg_equivalent,1.0,Findik turp paket 1 kg
+Turp,Alabaş Turp Adt,turp,kg_equivalent,1.0,Turp paket 1 adet
+Turp,Turp 1 Kg,turp,exact,1.0,Ayni urun paket 1 kg
+Biber (Dolma),Dolma Biber 1 Kg,biber_dolma,exact,1.0,Dolma biber varyete 1 kg
+Domates (Pembe),Domates Pembe 1 Kg,domates_pembe,exact,1.0,Pembe domates varyete 1 kg
+Domates (Pembe),Pembe Domates 500 Gr,domates_pembe,kg_equivalent,1.0,Pembe domates paket 500 gr
+Domates (Pembe),Eko Domates 1 Kg,domates_pembe,kg_equivalent,1.0,Eko pembe domates
+Domates (Pembe),Domates 1 Kg,domates_pembe,kg_equivalent,1.0,Genel domates pembe varyete
+Kabak (Sakız),Sakız Kabak 1 Kg,kabak_sakiz,exact,1.0,Sakiz kabak varyete 1 kg
+Kabak (Bal),Kabak Bal Bütün 1 Kg,kabak_bal,exact,1.0,Kabak bal varyete 1 kg
+Barbunya,Superfresh Barbunya 450 Gr,barbunya,kg_equivalent,1.0,Barbunya paket 450 gr
+Barbunya,Barbunya 1 Kg,barbunya,exact,1.0,Ayni urun paket 1 kg
+Patlican,Patlıcan 1 Kg,patlican,exact,1.0,Ayni urun paket 1 kg
+Patlican,Tagem Topak Patlıcan 1 Kg,patlican,kg_equivalent,1.0,Topak patlican paket 1 kg
+Patlican,Bostan Patlıcan 1 Kg,patlican,kg_equivalent,1.0,Bostan patlican paket 1 kg
+Patlican,Patlıcan Paket 1 Kg,patlican,exact,1.0,Ayni urun paket 1 kg
+Bakla,Paket Bakla 500 Gr,bakla_taze,kg_equivalent,1.0,Taze bakla paket 500 gr
+Bakla,Bakla 1 Kg,bakla_taze,exact,1.0,Taze bakla paket 1 kg
+Avokado,Avokado 1 Adet,avokado,exact,1.0,Ayni urun paket 1 adet
+Avokado,Yemeye Hazır Avokado 2 Adet,avokado,kg_equivalent,1.0,Yemeye hazir avokado paket 2 adet
+Avokado,Avokado Gurme Yemeye Hazır 1 Adet,avokado,kg_equivalent,1.0,Avokado gurme paket 1 adet
+Avokado,İthal Avokado 1 Kg,avokado,kg_equivalent,1.0,Ithal avokado paket 1 kg
+Avokado,Avokado Premium 1 Kg,avokado,kg_equivalent,1.0,Avokado premium paket 1 kg
+Pazı,Pazı 1 Adet,pazi,exact,1.0,Ayni urun paket 1 adet
+Marul,Marul 1 Adet,marul,exact,1.0,Ayni urun paket 1 adet
+Marul,Eurofresh Yıkanmış Yaprak Marul 250 Gr,marul,kg_equivalent,1.0,Yikanmis yaprak marul paket 250 gr
+Muz,İthal Muz 1 Kg,muz_ithal,kg_equivalent,1.0,Ithal muz paket 1 kg
+Muz,Yerli Muz 1 Kg,muz_ithal,kg_equivalent,1.0,Yerli muz paket 1 kg
+Muz,Muz Saksı 1 Adet,muz_ithal,kg_equivalent,1.0,Muz saksi paket 1 adet
+Muz,Eko Yerli Muz 1 Kg,muz_ithal,kg_equivalent,1.0,Eko yerli muz paket 1 kg
+Muz,İthal Olgun Muz 1 Kg,muz_ithal,kg_equivalent,1.0,Ithal olgun muz paket 1 kg
+Kuzu Kulağı,Kuzu Kulağı 150 Gr,kuzu_kulagi,exact,1.0,Kuzu kulagi paket 150 gr
+Brokoli̇,Feast Brokoli 500 Gr,brokoli,kg_equivalent,1.0,Brokoli paket 500 gr
+Brokoli̇,Feast Organik Brokoli 450 Gr,brokoli,kg_equivalent,1.0,Organik brokoli paket 450 gr
+Brokoli̇,Feast Brokoli 70-100 Mm 2.5 Kg,brokoli,kg_equivalent,1.0,Brokoli paket 2.5 kg
+Brokoli̇,Brokoli 1 Kg,brokoli,exact,1.0,Ayni urun paket 1 kg
+Marul Aysberg,Marul 1 Adet,marul_aysberg,kg_equivalent,1.0,Ayni urun farkli paket
+Domates Pembe,Domates Pembe 1 Kg,domates_pembe,kg_equivalent,1.0,Ayni urun farkli paket
+Domates Pembe,Domates 1 Kg,domates_pembe,kg_equivalent,1.0,Ayni urun farkli paket
+Üzüm Beyaz,Beyaz Üzüm 1 Kg,uzum_beyaz,kg_equivalent,1.0,Ayni urun farkli paket
+Sarimsak Kuru,Kuru Sarımsak 1 Paket,sarimsak_kuru,kg_equivalent,1.0,Ayni urun farkli paket
+Sarimsak Kuru,Kuru Sarımsak 1 Kg,sarimsak_kuru,kg_equivalent,1.0,Ayni urun farkli paket
+Sarimsak Kuru,Sarımsak 1 Kg,sarimsak_kuru,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan Taze,Taze Soğan 1 Demet,sogan_taze,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan Taze,Taze Soğan 1 Kg,sogan_taze,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan Taze,Soğan 1 Kg,sogan_taze,kg_equivalent,1.0,Ayni urun farkli paket
+Domates Çeri̇,Domates 1 Kg,domates_ceri,kg_equivalent,1.0,Ayni urun farkli paket
+Üzüm,Üzüm Siyah Çekirdeksiz 1 Kg,uzum,kg_equivalent,1.0,Ayni urun farkli paket
+Üzüm,Siyah Üzüm 1 Kg,uzum,kg_equivalent,1.0,Ayni urun farkli paket
+Enginar,Enginar Baby 8 Adet,enginar,kg_equivalent,1.0,Ayni urun farkli paket
+Enginar,Enginar 4'lü Şişe Kavanoz 370 Gr,enginar,kg_equivalent,1.0,Ayni urun farkli paket
+Enginar,Enginar Kalbi 350 Gr,enginar,kg_equivalent,1.0,Ayni urun farkli paket
+Enginar,Enginar Kalbi Küçük 550 Gr,enginar,kg_equivalent,1.0,Ayni urun farkli paket
+Enginar,Enginar Kalbi 900 Gr,enginar,kg_equivalent,1.0,Ayni urun farkli paket
+Kabak Taze,Kabak 1 Kg,kabak_taze,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Çeri),Domates Pembe 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Çeri),Eko Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Çeri),Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Biber (Çarli),Kırmızı Biber Paket 300 Gr,biber,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Salkım),Domates Pembe 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Salkım),Eko Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Salkım),Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Turp (Kırmızı),Kırmızı Turp 1 Kg,turp,kg_equivalent,1.0,Ayni urun farkli paket
+Turp (Kırmızı),Siyah Turp 1 Kg,turp,kg_equivalent,1.0,Ayni urun farkli paket
+Turp (Kırmızı),Beyaz Turp 1 Kg,turp,kg_equivalent,1.0,Ayni urun farkli paket
+Turp (Kırmızı),Turp 1 Kg,turp,kg_equivalent,1.0,Ayni urun farkli paket
+Havuç (Beypazarı),Havuç 1 Kg,havuc,kg_equivalent,1.0,Ayni urun farkli paket
+Havuç (Beypazarı),Havuç Paket 350 Gr,havuc,kg_equivalent,1.0,Ayni urun farkli paket
+Havuç (Beypazarı),Siyah Havuç 1 Kg,havuc,kg_equivalent,1.0,Ayni urun farkli paket
+Domates Kokteyl,Domates 1 Kg,domates_kokteyl,kg_equivalent,1.0,Ayni urun farkli paket
+Domates Cherry,Domates 1 Kg,domates_cherry,kg_equivalent,1.0,Ayni urun farkli paket
+Domates Sera,Domates 1 Kg,domates_sera,kg_equivalent,1.0,Ayni urun farkli paket
+Kayisi,Kayısı 1 Kg,kayisi,kg_equivalent,1.0,Ayni urun farkli paket
+Nektarin,Nektarin 1 Kg,nektarin,kg_equivalent,1.0,Ayni urun farkli paket
+Nektarin,Beyaz Nektarin Kg,nektarin,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Arpacık),Soğan 1 Kg,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Arpacık),Taze Soğan 1 Demet,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Arpacık),Mor Soğan 1 Kg,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Arpacık),Soğan Yeni Hasat 1 Kg,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Domates Salkim,Domates 1 Kg,domates_salkim,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Kokteyl),Domates Pembe 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Kokteyl),Eko Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (Kokteyl),Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Hünnap,Hünnap Keçiboynuzu Özü 640 Gr,hunnap,kg_equivalent,1.0,Ayni urun farkli paket
+Kavun (Kırkağaç),Kavun 1 Kg,kavun,kg_equivalent,1.0,Ayni urun farkli paket
+Patates Taze,Patates Taze 1 Kg,patates_taze,kg_equivalent,1.0,Ayni urun farkli paket
+Patates Taze,Patates 1 Kg,patates_taze,kg_equivalent,1.0,Ayni urun farkli paket
+Marul (Aysberk),Marul 1 Adet,marul,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal Washington,Portakal Washington 1 Kg,portakal_washington,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal Washington,Portakal 1 Kg,portakal_washington,kg_equivalent,1.0,Ayni urun farkli paket
+Pazi,Pazı 1 Adet,pazi,kg_equivalent,1.0,Ayni urun farkli paket
+Lahana (Kara),Lahana Kara 1 Kg,lahana,kg_equivalent,1.0,Ayni urun farkli paket
+Lahana (Kara),Kırmızı Lahana 1 Kg,lahana,kg_equivalent,1.0,Ayni urun farkli paket
+Lahana (Kara),Beyaz Lahana 1 Kg,lahana,kg_equivalent,1.0,Ayni urun farkli paket
+Böğürtlen,Böğürtlen Fide 1 Adet,bogurtlen,kg_equivalent,1.0,Ayni urun farkli paket
+Böğürtlen,Böğürtlen 125 Gr,bogurtlen,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal Fi̇Ni̇Ke,Portakal 1 Kg,portakal_finike,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal Sanayi̇,Portakal 1 Kg,portakal_sanayi,kg_equivalent,1.0,Ayni urun farkli paket
+Marul Kaşik,Marul 1 Adet,marul_kasik,kg_equivalent,1.0,Ayni urun farkli paket
+Salatalik Si̇Lor,Salatalık 1 Kg,salatalik_silor,kg_equivalent,1.0,Ayni urun farkli paket
+Turp Kirmizi,Kırmızı Turp 1 Kg,turp_kirmizi,kg_equivalent,1.0,Ayni urun farkli paket
+Turp Kirmizi,Turp 1 Kg,turp_kirmizi,kg_equivalent,1.0,Ayni urun farkli paket
+Lahana Kirmizi,Kırmızı Lahana 1 Kg,lahana_kirmizi,kg_equivalent,1.0,Ayni urun farkli paket
+Domates  Kokteyl,Domates 1 Kg,domates_kokteyl,kg_equivalent,1.0,Ayni urun farkli paket
+Kabak Bal,Kabak 1 Kg,kabak_bal,kg_equivalent,1.0,Ayni urun farkli paket
+Kabak Sakiz,Kabak 1 Kg,kabak_sakiz,kg_equivalent,1.0,Ayni urun farkli paket
+Dut,Dut 400 Gr,dut,kg_equivalent,1.0,Ayni urun farkli paket
+Marul Iceberg,Marul 1 Adet,marul_iceberg,kg_equivalent,1.0,Ayni urun farkli paket
+Ahududu,Ahududu 125 Gr,ahududu,kg_equivalent,1.0,Ayni urun farkli paket
+Fasulye Taze,Fasulye Taze 1 Kg,fasulye_taze,kg_equivalent,1.0,Ayni urun farkli paket
+Araka,Taze Araka Bezelye 1 Kg,araka,kg_equivalent,1.0,Ayni urun farkli paket
+Biber (Mazo),Kırmızı Biber Paket 300 Gr,biber,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Kuru),Soğan 1 Kg,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Kuru),Taze Soğan 1 Demet,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Biber(Acı Cin),Kırmızı Biber Paket 300 Gr,biber,kg_equivalent,1.0,Ayni urun farkli paket
+Biber (Kıl),Kırmızı Biber Paket 300 Gr,biber,kg_equivalent,1.0,Ayni urun farkli paket
+Biber (Şili),Kırmızı Biber Paket 300 Gr,biber,kg_equivalent,1.0,Ayni urun farkli paket
+Domates(2.Sınıf),Domates Pembe 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates(2.Sınıf),Eko Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates(2.Sınıf),Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (1.Sınıf),Domates Pembe 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (1.Sınıf),Eko Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Domates (1.Sınıf),Domates 1 Kg,domates,kg_equivalent,1.0,Ayni urun farkli paket
+Havuç (Siyah),Siyah Havuç 1 Kg,havuc,kg_equivalent,1.0,Ayni urun farkli paket
+Havuç (Siyah),Havuç 1 Kg,havuc,kg_equivalent,1.0,Ayni urun farkli paket
+Havuç (Siyah),Havuç Paket 350 Gr,havuc,kg_equivalent,1.0,Ayni urun farkli paket
+Kekik (Taze),Kekik 1 Demet,kekik,kg_equivalent,1.0,Ayni urun farkli paket
+Kabak (Top),Kabak 1 Kg,kabak,kg_equivalent,1.0,Ayni urun farkli paket
+Kabak (Top),Siyah Kabak 1 Kg,kabak,kg_equivalent,1.0,Ayni urun farkli paket
+Kabak (Top),Kabak Bal Bütün 1 Kg,kabak,kg_equivalent,1.0,Ayni urun farkli paket
+Fasulye Ayşe Kadin,Fasulye 1 Kg,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun farkli paket
+Altınçilek (Gooseberry),Altınçilek 100 Gr,altincilek,kg_equivalent,1.0,Ayni urun farkli paket
+Patlıcan (Topak),Patlıcan 1 Kg,patlican,kg_equivalent,1.0,Ayni urun farkli paket
+Patlıcan (Topak),Patlıcan Paket 1 Kg,patlican,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal (Valencia Pak),Portakal Valencia 1 Kg,portakal,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal (Valencia Pak),Portakal 1 Kg,portakal,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal (Valencia Pak),Portakal Sıkmalık 1 Kg,portakal,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal (Valencia Pak),Portakal Washington 1 Kg,portakal,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Yeşil),Soğan 1 Kg,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Yeşil),Taze Soğan 1 Demet,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan (Yeşil),Mor Soğan 1 Kg,sogan,kg_equivalent,1.0,Ayni urun farkli paket
+Tere Su,Tere 1 Adet,tere,kg_equivalent,1.0,Ayni urun farkli paketaj
+Karadeniz Yaprağı,Lipton Doğu Karadeniz Çayı 1 Kg,dogus_karadeniz_cay,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Karadeniz Yaprağı,Doğuş Karadeniz Siyah Çay 1 Kg,dogus_karadeniz_cay,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Karadeniz Yaprağı,Doğuş Karadeniz Çay 1 Kg,dogus_karadeniz_cay,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut (Santamariya),Deveci Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut (Santamariya),Santa Maria Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut (Santamariya),Armut Deveci 1 Adet,ankara_armut,kg_equivalent,1.0,Ayni urun farkli paketaj
+Armut (Santamariya),Deveci Armut Gurme 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut (Santamariya),Armut Santa Maria Gurme 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut (Santamariya),Ankara Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Çarli,Kapya Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Çarli,Dolma Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Çarli,Çarliston Biber 300 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Çarli,Yeşil Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Çarli,Sivri Biber Paket 300 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Çarli,Kırmızı Biber Paket 300 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Çarli,Dolmalık Biber 300 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Çarli,Çarliston Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Çarli,Sivri Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Çarli,Şili Biber 150 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Çarli,Kırmızı Dolma Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Hıyar (Slor Paket),Hıyar 1 Kg,hiyar,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Hıyar,Hıyar 1 Kg,hiyar,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Granny Smith Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Elma Granny Smith Gurme 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Golden Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Ekonomik Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),SuperFresh Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Granny Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Torpat Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Lavi Mango Elma Ananas Çarkıfelek Meyveli Smoothie 150 Gr,atistirmalik_starking_elma,kg_equivalent,1.0,Ayni urun farkli paketaj
+Elma (Grann Smith),Feast Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Lavi Dondurulmuş Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Grann Smith),Atıştırmalık Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican Topan,Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican Topan,Kuru Dolmalık Patlıcan 18 Adet,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlican Topan,Kemer Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican Topan,Tagem Topak Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican Topan,Zel Zeytinyağlı Sumaklı Kuru Patlıcan Dolma 200 Gr,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlican Topan,Bostan Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican Topan,Patlıcan Paket 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican  Uzun,Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican  Uzun,Kuru Dolmalık Patlıcan 18 Adet,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlican  Uzun,Kemer Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican  Uzun,Tagem Topak Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican  Uzun,Zel Zeytinyağlı Sumaklı Kuru Patlıcan Dolma 200 Gr,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlican  Uzun,Bostan Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican  Uzun,Patlıcan Paket 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Yerli,İthal Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Yerli,Yerli Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Yerli,Lavi Smoothie Mango Muz Ananas Avokado 150 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz  Yerli,Lavi Smoothie Muz Ahududu Yaban Mersini 150 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz  Yerli,Muz Saksı 1 Adet,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz  Yerli,Eko Yerli Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Yerli,İthal Olgun Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Yerli,Milkten Milkino Muz-Çilek-Orman Meyveli Taze Peynir 6x45 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz  Ithal,İthal Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Ithal,Yerli Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Ithal,Lavi Smoothie Mango Muz Ananas Avokado 150 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz  Ithal,Lavi Smoothie Muz Ahududu Yaban Mersini 150 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz  Ithal,Muz Saksı 1 Adet,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz  Ithal,Eko Yerli Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Ithal,İthal Olgun Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz  Ithal,Milkten Milkino Muz-Çilek-Orman Meyveli Taze Peynir 6x45 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Marul Lolorosso,Göbek Marul 1 Adet,citir_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Marul Lolorosso,Marul 1 Adet,citir_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Marul Lolorosso,Çıtır Marul 1 Adet,citir_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Marul Lolorosso,Eurofresh Yıkanmış Yaprak Marul 250 Gr,citir_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Marul Lolorosso,Eurofresh Yıkanmış Kıvırcık Marul 150 Gr,citir_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Lahana  Kirmizi,Kırmızı Lahana 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Kirmizi,Kırmızı Biber Paket 300 Gr,beyaz_lahana,kg_equivalent,1.0,Ayni urun farkli paketaj
+Lahana  Kirmizi,Beyaz Lahana 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Kirmizi,Kırmızı Dolma Biber 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Kirmizi,Kırmızı Biber 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Kirmizi,Kırmızı Turp 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Kirmizi,Kırmızı Sivri Biber 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Kirmizi,Lahana Kara 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Kirmizi,Kırmızı Soğan 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Y.Tere,Tere 1 Adet,tere,kg_equivalent,1.0,Ayni urun farkli paketaj
+Y.Roka,Roka 1 Adet,roka,kg_equivalent,1.0,Ayni urun farkli paketaj
+Y.Roka,Roka 350 Gr,roka,kg_equivalent,1.0,Ayni urun farkli paketaj
+Y.Roka,Baby Roka 1 Adet,roka,kg_equivalent,1.0,Ayni urun farkli paketaj
+Y.Nane,Nane 1 Adet,nane,kg_equivalent,1.0,Ayni urun farkli paketaj
+Y.Nane,Nane 250 Gr,nane,kg_equivalent,1.0,Ayni urun farkli paketaj
+Y.Nane,Nane 1 Kg,nane,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Y.Nane,Mest Nane Limonlu Yeşil Çay 20 Adet,nane,kg_equivalent,1.0,Ayni urun farkli paketaj
+Y.Dereotu,Dereotu 1 Adet,dereotu,kg_equivalent,1.0,Ayni urun farkli paketaj
+Y.Dereotu,Dereotu 1 Demet,dereotu,kg_equivalent,1.0,Ayni urun farkli paketaj
+Turp  Kirmizi,Kırmızı Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp  Kirmizi,Kırmızı Biber Paket 300 Gr,findik_turp,kg_equivalent,1.0,Ayni urun farkli paketaj
+Turp  Kirmizi,Kırmızı Lahana 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp  Kirmizi,Kırmızı Dolma Biber 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp  Kirmizi,Kırmızı Biber 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp  Kirmizi,Fındık Turp 1 Adet,findik_turp,kg_equivalent,1.0,Ayni urun farkli paketaj
+Turp  Kirmizi,Fındık Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp  Kirmizi,Kırmızı Sivri Biber 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp  Kirmizi,Siyah Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp  Kirmizi,Beyaz Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp  Kirmizi,Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Taze,Taze Soğan 1 Demet,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Taze,Taze Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Taze,Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Taze,Kuru Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Taze,Superfresh Soğan 450 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Taze,Taze Sarımsak 250 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Taze,Feast Gurme Soğan Halka 450 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Taze,Feast Küp Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Taze,Taze Soyulmuş Enginar 5 Adet,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Taze,Arpacık Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Taze,İnci Soğan Halkası 450 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kuru,Kuru Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kuru,Eko Kuru Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kuru,Kuru Soğan File 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kuru,Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kuru,Kuru Dolmalık Patlıcan 18 Adet,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kuru,Superfresh Soğan 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kuru,Taze Soğan 1 Demet,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kuru,Feast Gurme Soğan Halka 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kuru,Feast Küp Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kuru,Kuru Üzüm Promosyon 300 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kuru,Arpacık Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kirmizi,Kırmızı Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kirmizi,Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kirmizi,Kırmızı Biber Paket 300 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kirmizi,Kuru Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kirmizi,Superfresh Soğan 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kirmizi,Kırmızı Lahana 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kirmizi,Taze Soğan 1 Demet,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kirmizi,Feast Gurme Soğan Halka 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan   Kirmizi,Feast Küp Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kirmizi,Kırmızı Dolma Biber 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan   Kirmizi,Arpacık Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak  Kuru,Kuru Sarımsak 1 Paket,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak  Kuru,Kuru Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak  Kuru,File Sarımsak 200 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak  Kuru,Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak  Kuru,Kuru Dolmalık Patlıcan 18 Adet,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak  Kuru,Kuru Soğan 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak  Kuru,Sarımsak File 250 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak  Kuru,Taze Sarımsak 250 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak  Kuru,Kuru Üzüm Promosyon 300 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak  Kuru,Taşköprü Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak  Kuru,Sarımsak Taze Baş 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Salatalik  Si̇Lor,Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Salatalik  Si̇Lor,Çengelköy Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Salatalik  Si̇Lor,Çengelköy Salatalık 500 Gr,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salatalik  Si̇Lor,Çengel Salatalık Gurme 1 Paket,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salatalik  Si̇Lor,Eko Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Beyaz,Beyaz Lahana 1 Kg,beyaz_hindiba,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Beyaz,Kırmızı Lahana 1 Kg,beyaz_hindiba,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Beyaz,Beyaz Hindiba 1 Kg,beyaz_hindiba,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Beyaz,Lahana Kara 1 Kg,beyaz_hindiba,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Beyaz,Beyaz Turp 1 Kg,beyaz_hindiba,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana  Beyaz,Beyaz Üzüm 1 Kg,beyaz_hindiba,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Deniz Börülcesi̇,Deniz Börülcesi 1 Adet,deniz_borulcesi,kg_equivalent,1.0,Ayni urun farkli paketaj
+Deniz Börülcesi̇,Marex Deniz Mahsullü Milanez 400 Gr,deniz_borulcesi,kg_equivalent,1.0,Ayni urun farkli paketaj
+Cilek,Çilek 1 Kg,cilek,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Cilek,Çilek 400 Gr,cilek,kg_equivalent,1.0,Ayni urun farkli paketaj
+Cilek,Çilek Fidesi 1 Adet,cilek,kg_equivalent,1.0,Ayni urun farkli paketaj
+Cilek,Feast Çilek 400 Gr,cilek,kg_equivalent,1.0,Ayni urun farkli paketaj
+Cilek,Dnk Lapestos Çilek 300 Gr,cilek,kg_equivalent,1.0,Ayni urun farkli paketaj
+Cilek,Altın Çilek 100 Gr,cilek,kg_equivalent,1.0,Ayni urun farkli paketaj
+Cilek,Çilek 1 Adet,cilek,kg_equivalent,1.0,Ayni urun farkli paketaj
+Cilek,Milkten Milkino Muz-Çilek-Orman Meyveli Taze Peynir 6x45 Gr,cilek,kg_equivalent,1.0,Ayni urun farkli paketaj
+Cilek,Danone Marvel Çilek Aromalı Yoğurt 90 Gr,cilek,kg_equivalent,1.0,Ayni urun farkli paketaj
+Bi̇Ber Köy(Mazo),Köy Biberi Paket 300 Gr,koy_biberi,kg_equivalent,1.0,Ayni urun farkli paketaj
+Bi̇Ber Köy(Mazo),Köy Biberi 1 Kg,koy_biberi,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber  Kil Aci,Kıl Sivri Biber 1 Kg,kil_sivri_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber  Dolma,Dolma Biber 1 Kg,dolma_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  S.Maria,Santa Maria Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  S.Maria,Armut Santa Maria Gurme 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  S.Maria,Deveci Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  S.Maria,Armut Deveci 1 Adet,ankara_armut,kg_equivalent,1.0,Ayni urun farkli paketaj
+Armut  S.Maria,Deveci Armut Gurme 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  S.Maria,Ankara Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  Deveci,Deveci Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  Deveci,Armut Deveci 1 Adet,ankara_armut,kg_equivalent,1.0,Ayni urun farkli paketaj
+Armut  Deveci,Deveci Armut Gurme 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  Deveci,Santa Maria Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  Deveci,Armut Santa Maria Gurme 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Armut  Deveci,Ankara Armut 1 Kg,ankara_armut,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber Kirmizi,Kırmızı Biber Paket 300 Gr,kirmizi_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Bi̇Ber Kirmizi,Kırmızı Lahana 1 Kg,kirmizi_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber Kirmizi,Kırmızı Dolma Biber 1 Kg,kirmizi_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber Kirmizi,Kırmızı Biber 1 Kg,kirmizi_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber Kirmizi,Kırmızı Turp 1 Kg,kirmizi_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber Kirmizi,Kırmızı Sivri Biber 1 Kg,kirmizi_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber Kirmizi,Kırmızı Soğan 1 Kg,kirmizi_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kavun Di̇Ğer,Galya Kavun 1 Kg,galya_kavun,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kavun Di̇Ğer,Kavun 1 Kg,galya_kavun,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kavun Di̇Ğer,Kırkağaç Kavun 1 Kg,galya_kavun,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kabak  Bal,Kabak Bal Bütün 1 Kg,dolmalik_top_kabak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kabak  Bal,Kabak 1 Kg,dolmalik_top_kabak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kabak  Bal,Sakız Kabak 1 Kg,dolmalik_top_kabak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kabak  Bal,Siyah Kabak 1 Kg,dolmalik_top_kabak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kabak  Bal,Süs Mix Kabak 1 Kg,dolmalik_top_kabak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kabak  Bal,Dolmalık Top Kabak 1 Kg,dolmalik_top_kabak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Cali,Çalı Fasulye 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Cali,Superfresh Taze Fasulye 450 Gr,ayse_kadin_fasulye,kg_equivalent,1.0,Ayni urun farkli paketaj
+Fasulye   Cali,Paket Fasulye 500 Gr,ayse_kadin_fasulye,kg_equivalent,1.0,Ayni urun farkli paketaj
+Fasulye   Cali,Feast Taze Fasulye 450 Gr,ayse_kadin_fasulye,kg_equivalent,1.0,Ayni urun farkli paketaj
+Fasulye   Cali,Fasulye Taze 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Cali,Gurme Taze Fasulye 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Cali,Fasulye 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Cali,Ayşe Kadın Fasulye 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Golden Elma 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Golden Elma Atıştırmalık 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Golden Elma Gurme 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Golden Elma Eko 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Starking Elma 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Granny Smith Elma 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Ekonomik Elma 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,SuperFresh Elma Dilim Patates 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Granny Elma 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Torpat Elma Dilim Patates 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Golden,Lavi Mango Elma Ananas Çarkıfelek Meyveli Smoothie 150 Gr,ekonomik_elma,kg_equivalent,1.0,Ayni urun farkli paketaj
+Elma  Golden,Feast Elma Dilim Patates 1 Kg,ekonomik_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Atıştırmalık Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Eko Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Golden Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Granny Smith Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Ekonomik Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,SuperFresh Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Granny Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Torpat Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Lavi Mango Elma Ananas Çarkıfelek Meyveli Smoothie 150 Gr,atistirmalik_starking_elma,kg_equivalent,1.0,Ayni urun farkli paketaj
+Elma  Starking,Feast Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma  Starking,Lavi Dondurulmuş Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Ayse,Ayşe Kadın Fasulye 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Ayse,Superfresh Taze Fasulye 450 Gr,ayse_kadin_fasulye,kg_equivalent,1.0,Ayni urun farkli paketaj
+Fasulye   Ayse,Paket Fasulye 500 Gr,ayse_kadin_fasulye,kg_equivalent,1.0,Ayni urun farkli paketaj
+Fasulye   Ayse,Feast Taze Fasulye 450 Gr,ayse_kadin_fasulye,kg_equivalent,1.0,Ayni urun farkli paketaj
+Fasulye   Ayse,Çalı Fasulye 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Ayse,Fasulye Taze 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Ayse,Gurme Taze Fasulye 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Fasulye   Ayse,Fasulye 1 Kg,ayse_kadin_fasulye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Golden Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Granny Smith Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Ekonomik Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,SuperFresh Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Granny Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Torpat Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Lavi Mango Elma Ananas Çarkıfelek Meyveli Smoothie 150 Gr,atistirmalik_starking_elma,kg_equivalent,1.0,Ayni urun farkli paketaj
+Elma Gsmi̇T,Feast Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Lavi Dondurulmuş Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Atıştırmalık Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Gsmi̇T,Tarım Kredi Dondurulmuş Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Hurma,Cedid Sukkari Hurma 500 Gr,cedid_sukkari_hurma,kg_equivalent,1.0,Ayni urun farkli paketaj
+Yer Elması,Yer Elması 1 Kg,burch_meyveli_yer_fistikli_musli,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Yer Elması,Snickers Yer Fıstıklı Çikolata 50 Gr,burch_meyveli_yer_fistikli_musli,kg_equivalent,1.0,Ayni urun farkli paketaj
+Yer Elması,Burch Meyveli & Yer Fıstıklı Müsli 275 Gr,burch_meyveli_yer_fistikli_musli,kg_equivalent,1.0,Ayni urun farkli paketaj
+Üzüm Mor,Kuru Üzüm Promosyon 300 Gr,avsarlar_besni_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Üzüm Mor,İthal Beyaz Üzüm 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Mor Soğan 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Kilis Karası Üzüm 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Üzüm Siyah Çekirdeksiz 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Siyah Jumbo Üzüm Çekirdeksiz 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Besni Üzüm 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Avşarlar Besni Üzüm 400 Gr,avsarlar_besni_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Üzüm Mor,Red Globe Üzüm 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Çekirdeksiz Üzüm 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Siyah Üzüm 1 Kg,avsarlar_besni_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm Mor,Torku Üzüm Pekmezi 750 Gr,avsarlar_besni_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mısır,Superfresh Mısır 450 Gr,agrotalya_kocanda_tatli_misir,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mısır,Feast Mısır 450 Gr,agrotalya_kocanda_tatli_misir,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mısır,İnci Tane Mısır 450 Gr,agrotalya_kocanda_tatli_misir,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mısır,Yemeye Hazır Mısır 450 Gr,agrotalya_kocanda_tatli_misir,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mısır,Haşlanmış Mısır 180 Gr,agrotalya_kocanda_tatli_misir,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mısır,Agrotalya Koçanda Tatlı Mısır 400 Gr,agrotalya_kocanda_tatli_misir,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mısır,Nesquik Çokokare Mısır Gevreği 310 Gr,agrotalya_kocanda_tatli_misir,kg_equivalent,1.0,Ayni urun farkli paketaj
+Elma Granny Smith,Granny Smith Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Elma Granny Smith Gurme 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Granny Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Golden Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Ekonomik Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,SuperFresh Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Torpat Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Lavi Mango Elma Ananas Çarkıfelek Meyveli Smoothie 150 Gr,atistirmalik_starking_elma,kg_equivalent,1.0,Ayni urun farkli paketaj
+Elma Granny Smith,Feast Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Lavi Dondurulmuş Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma Granny Smith,Atıştırmalık Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Çağla,Çağla Badem 1 Kg,cagla_badem,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Çağla,Çağla Paket 500 Gr,cagla_badem,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salatalik Yerli̇,Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Salatalik Yerli̇,Çengelköy Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Salatalik Yerli̇,Çengelköy Salatalık 500 Gr,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salatalik Yerli̇,Çengel Salatalık Gurme 1 Paket,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salatalik Yerli̇,Eko Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Eri̇K Papaz (Can),Papaz Erik 400 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Eri̇K Papaz (Can),Papaz Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Eri̇K Papaz (Can),Can Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Eri̇K Papaz (Can),Can Erik 250 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+İNci̇R,İnci Patates 1 Kg,inci_bezelye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNci̇R,İnci İnce Çıtır Patates 1 Kg,inci_bezelye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNci̇R,İnci Tane Mısır 450 Gr,inci_bezelye,kg_equivalent,1.0,Ayni urun farkli paketaj
+İNci̇R,İnci Bezelye 450 Gr,inci_bezelye,kg_equivalent,1.0,Ayni urun farkli paketaj
+İNci̇R,İnci Soğan Halkası 450 Gr,inci_bezelye,kg_equivalent,1.0,Ayni urun farkli paketaj
+İNci̇R,İnci Elma Dilim Patates 1 Kg,inci_bezelye,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNci̇R,İnci Ihlamur 50 Gr,inci_bezelye,kg_equivalent,1.0,Ayni urun farkli paketaj
+Erik (Malta),Yeşil Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Malta),Papaz Erik 400 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Erik (Malta),Papaz Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Malta),Can Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Malta),Erik Angelica 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Malta),Malta Eriği 400 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Erik (Malta),Can Erik 250 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Erik (Malta),Anjelik Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Malta),Malta Eriği 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Malta),Öncüller Kızılcık Alıç Erik Marmelatı 430 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patates (Taze),Patates Taze 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Taze Mini Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Feast Dondurulmuş Patates Crinky 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Superfresh Dondurulmuş Patates 7x7 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Nimet Dondurulmuş Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Kızartmalık Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Feast Dondurulmuş Kriket Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Nimet Dondurulmuş İnce Çıtır Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Kızartmalık Patates File 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Taze),Feast İnce Çubuk Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana Kara,Lahana Kara 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana Kara,Kırmızı Lahana 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana Kara,Beyaz Lahana 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Lahana Kara,Kara Dut 1 Kg,beyaz_lahana,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNcir (Siyah),Siyah Kabak 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNcir (Siyah),Siyah Sarımsak Tek Diş Mürdük 150 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+İNcir (Siyah),Siyah Sarımsak 65 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+İNcir (Siyah),Siyah Jumbo Üzüm Çekirdeksiz 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNcir (Siyah),Siyah Havuç 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNcir (Siyah),Siyah Üzüm 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNcir (Siyah),Seyidoğlu Kuru İncir & Ceviz Yaz Helvası 350 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+İNcir (Siyah),İncir Beyaz 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNcir (Siyah),Siyah Turp 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+İNcir (Siyah),Siyah Üzüm 500 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Di̇Ğer),Domates Pembe 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Di̇Ğer),Salkım Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Di̇Ğer),Şeker Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Di̇Ğer),Kokteyl Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Di̇Ğer),Atıştırmalık Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Di̇Ğer),Kokteyl Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Di̇Ğer),Salkım Domates Paket 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Di̇Ğer),Pembe Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Di̇Ğer),Eko Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Di̇Ğer),Tagem Turuncu Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Di̇Ğer),Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Di̇Ğer),Cherry Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Erik (Angelina),Yeşil Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Angelina),Papaz Erik 400 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Erik (Angelina),Papaz Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Angelina),Can Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Angelina),Erik Angelica 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Angelina),Can Erik 250 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Erik (Angelina),Anjelik Erik 1 Kg,can_erik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Erik (Angelina),Öncüller Kızılcık Alıç Erik Marmelatı 430 Gr,can_erik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates Salkim  (İYi̇ Tarim),Salkım Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates Salkim  (İYi̇ Tarim),Salkım Domates Paket 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates Salkim  (İYi̇ Tarim),Erüst Salkım Çeri Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates Salkim  (İYi̇ Tarim),Domates Pembe 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates Salkim  (İYi̇ Tarim),Şeker Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates Salkim  (İYi̇ Tarim),Kokteyl Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates Salkim  (İYi̇ Tarim),Atıştırmalık Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates Salkim  (İYi̇ Tarim),Kokteyl Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates Salkim  (İYi̇ Tarim),Pembe Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates Salkim  (İYi̇ Tarim),Tarım Kredi Dondurulmuş Parmak Patates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates Salkim  (İYi̇ Tarim),Eko Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates Salkim  (İYi̇ Tarim),Tagem Turuncu Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp Beyaz,Beyaz Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp Beyaz,Beyaz Lahana 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp Beyaz,Fındık Turp 1 Adet,findik_turp,kg_equivalent,1.0,Ayni urun farkli paketaj
+Turp Beyaz,Kırmızı Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp Beyaz,Beyaz Hindiba 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp Beyaz,Fındık Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp Beyaz,Siyah Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp Beyaz,Beyaz Üzüm 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Turp Beyaz,Turp 1 Kg,findik_turp,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Vişne,Lavi Vişne 400 Gr,feast_visne,kg_equivalent,1.0,Ayni urun farkli paketaj
+Vişne,Feast Vişne 400 Gr,feast_visne,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates(3.Sınıf),Domates Pembe 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates(3.Sınıf),Salkım Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates(3.Sınıf),Şeker Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates(3.Sınıf),Kokteyl Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates(3.Sınıf),Atıştırmalık Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates(3.Sınıf),Kokteyl Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates(3.Sınıf),Salkım Domates Paket 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates(3.Sınıf),Pembe Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates(3.Sınıf),Eko Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates(3.Sınıf),Tagem Turuncu Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates(3.Sınıf),Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates(3.Sınıf),Cherry Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak Taze,Taze Sarımsak 250 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak Taze,Sarımsak Taze Baş 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak Taze,File Sarımsak 200 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak Taze,Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak Taze,Sarımsak File 250 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak Taze,Taze Soğan 1 Demet,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak Taze,Taze Soyulmuş Enginar 5 Adet,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak Taze,Taşköprü Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak Taze,Kuru Sarımsak 1 Paket,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak Taze,Kuru Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak Taze,Siyah Sarımsak Tek Diş Mürdük 150 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Üzüm (Siyah),Üzüm Siyah Çekirdeksiz 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm (Siyah),Siyah Jumbo Üzüm Çekirdeksiz 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm (Siyah),Siyah Üzüm 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm (Siyah),Siyah Üzüm 500 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Üzüm (Siyah),Kuru Üzüm Promosyon 300 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Üzüm (Siyah),İthal Beyaz Üzüm 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm (Siyah),Siyah Kabak 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm (Siyah),Siyah Sarımsak Tek Diş Mürdük 150 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Üzüm (Siyah),Siyah Sarımsak 65 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Üzüm (Siyah),Kilis Karası Üzüm 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm (Siyah),Besni Üzüm 1 Kg,siyah_uzum,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Üzüm (Siyah),Avşarlar Besni Üzüm 400 Gr,siyah_uzum,kg_equivalent,1.0,Ayni urun farkli paketaj
+Kirmizi Lahana,Kırmızı Lahana 1 Kg,akdeniz_kirmizi_lolorosso,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kirmizi Lahana,Kırmızı Biber Paket 300 Gr,akdeniz_kirmizi_lolorosso,kg_equivalent,1.0,Ayni urun farkli paketaj
+Kirmizi Lahana,Kırmızı Dolma Biber 1 Kg,akdeniz_kirmizi_lolorosso,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kirmizi Lahana,Kırmızı Biber 1 Kg,akdeniz_kirmizi_lolorosso,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kirmizi Lahana,Kırmızı Turp 1 Kg,akdeniz_kirmizi_lolorosso,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kirmizi Lahana,Kırmızı Sivri Biber 1 Kg,akdeniz_kirmizi_lolorosso,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kirmizi Lahana,Lahana Kara 1 Kg,akdeniz_kirmizi_lolorosso,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kirmizi Lahana,Nesfit Kırmızı Meyveli Mısır Gevreği 400 Gr,akdeniz_kirmizi_lolorosso,kg_equivalent,1.0,Ayni urun farkli paketaj
+Kirmizi Lahana,Akdeniz Kırmızı Lolorosso 25 Gr,akdeniz_kirmizi_lolorosso,kg_equivalent,1.0,Ayni urun farkli paketaj
+Kirmizi Lahana,Kırmızı Soğan 1 Kg,akdeniz_kirmizi_lolorosso,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Salkim),Salkım Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Salkim),Salkım Domates Paket 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Salkim),Erüst Salkım Çeri Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Salkim),Domates Pembe 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Salkim),Şeker Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Salkim),Kokteyl Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Salkim),Atıştırmalık Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Salkim),Kokteyl Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Salkim),Pembe Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates (Salkim),Eko Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Salkim),Tagem Turuncu Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates (Salkim),Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Bi̇Ber (Kapya),Kapya Biber 1 Kg,kapya_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak (Kuru),Kuru Sarımsak 1 Paket,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak (Kuru),Kuru Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak (Kuru),File Sarımsak 200 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak (Kuru),Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak (Kuru),Kuru Dolmalık Patlıcan 18 Adet,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak (Kuru),Kuru Soğan 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak (Kuru),Sarımsak File 250 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak (Kuru),Taze Sarımsak 250 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak (Kuru),Kuru Üzüm Promosyon 300 Gr,kuru_sarimsak,kg_equivalent,1.0,Ayni urun farkli paketaj
+Sarimsak (Kuru),Taşköprü Sarımsak 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Sarimsak (Kuru),Sarımsak Taze Baş 1 Kg,kuru_sarimsak,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican (Kemer),Kemer Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican (Kemer),Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican (Kemer),Kuru Dolmalık Patlıcan 18 Adet,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlican (Kemer),Tagem Topak Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican (Kemer),Zel Zeytinyağlı Sumaklı Kuru Patlıcan Dolma 200 Gr,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlican (Kemer),Bostan Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlican (Kemer),Patlıcan Paket 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Barbunya Taze,Taze Soğan 1 Demet,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Barbunya Taze,Taze Sarımsak 250 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Barbunya Taze,Superfresh Barbunya 450 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Barbunya Taze,Taze Soyulmuş Enginar 5 Adet,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Barbunya Taze,Barbunya 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Barbunya Taze,Taze İç Fındık 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Barbunya Taze,Taze Enginar 1 Adet,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Barbunya Taze,Taze Piliç But İncik 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Barbunya Taze,Taze Bütün Poşet Piliç 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Barbunya Taze,Taze Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Barbunya Taze,Taze Fesleğen 1 Adet,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Zencefil,Zencefil 250 Gr,zencefil,kg_equivalent,1.0,Ayni urun farkli paketaj
+Zencefil,Zencefil Paket 200 Gr,zencefil,kg_equivalent,1.0,Ayni urun farkli paketaj
+Zencefil,Zencefil Taze 1 Kg,zencefil,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Zencefil,Zencefil 200 Gr,zencefil,kg_equivalent,1.0,Ayni urun farkli paketaj
+Zencefil,Herby Zencefil Ve Karamürver Bitki Çayı 27 Gr,zencefil,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patates  Calma,Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Feast Dondurulmuş Patates Crinky 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Superfresh Dondurulmuş Patates 7x7 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Nimet Dondurulmuş Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Kızartmalık Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Feast Dondurulmuş Kriket Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Nimet Dondurulmuş İnce Çıtır Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Kızartmalık Patates File 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Feast İnce Çubuk Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates  Calma,Superfresh Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Börülce,Börülce 1 Kg,borulce,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Baby Patates 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Patates 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Feast Dondurulmuş Patates Crinky 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Superfresh Dondurulmuş Patates 7x7 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Nimet Dondurulmuş Patates 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Kızartmalık Patates 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Feast Dondurulmuş Kriket Patates 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Nimet Dondurulmuş İnce Çıtır Patates 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Kızartmalık Patates File 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Baby),Feast İnce Çubuk Patates 1 Kg,baby_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Feast Dondurulmuş Patates Crinky 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Superfresh Dondurulmuş Patates 7x7 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Nimet Dondurulmuş Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Kızartmalık Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Feast Dondurulmuş Kriket Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Nimet Dondurulmuş İnce Çıtır Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Kızartmalık Patates File 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Feast İnce Çubuk Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patates (Kumpirlik),Superfresh Patates 1 Kg,feast_dondurulmus_kriket_patates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Mantar (Taze),Mantar Tabak 300 Gr,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Mantar 400 Gr,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Mantar Paket 400 Gr,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Taze Soğan 1 Demet,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Taze Sarımsak 250 Gr,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Mantar 300 Gr,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Taze Soyulmuş Enginar 5 Adet,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Mantar Izgara 1 Kg,mantar,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Mantar (Taze),Mantar Shiitake 200 Gr,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Dilim Mantar 400 Gr,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Mantar (Taze),Taze İç Fındık 1 Kg,mantar,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Mantar (Taze),Taze Enginar 1 Adet,mantar,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Cin,Kapya Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Cin,Dolma Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Cin,Çarliston Biber 300 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Cin,Yeşil Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Cin,Sivri Biber Paket 300 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Cin,Kırmızı Biber Paket 300 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Cin,Dolmalık Biber 300 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Cin,Çarliston Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Cin,Sivri Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Biber Cin,Şili Biber 150 Gr,carliston_biber,kg_equivalent,1.0,Ayni urun farkli paketaj
+Biber Cin,Kırmızı Dolma Biber 1 Kg,carliston_biber,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan Beyaz,Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan Beyaz,Kuru Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan Beyaz,Superfresh Soğan 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan Beyaz,Taze Soğan 1 Demet,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan Beyaz,Feast Gurme Soğan Halka 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan Beyaz,Beyaz Lahana 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan Beyaz,Feast Küp Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan Beyaz,Arpacık Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan Beyaz,İnci Soğan Halkası 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan Beyaz,Mor Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan Beyaz,Soğan Yeni Hasat 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates  Beef,Domates Pembe 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates  Beef,Salkım Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates  Beef,Şeker Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates  Beef,Kokteyl Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates  Beef,Atıştırmalık Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates  Beef,Kokteyl Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates  Beef,Salkım Domates Paket 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates  Beef,Pembe Domates 500 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Domates  Beef,Eko Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates  Beef,Tagem Turuncu Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates  Beef,Domates 1 Kg,kokteyl_domates,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Domates  Beef,Cherry Domates 250 Gr,kokteyl_domates,kg_equivalent,1.0,Ayni urun farkli paketaj
+Elma (Gransimit),Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Golden Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Granny Smith Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Ekonomik Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),SuperFresh Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Granny Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Torpat Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Lavi Mango Elma Ananas Çarkıfelek Meyveli Smoothie 150 Gr,atistirmalik_starking_elma,kg_equivalent,1.0,Ayni urun farkli paketaj
+Elma (Gransimit),Feast Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Lavi Dondurulmuş Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Atıştırmalık Starking Elma 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Elma (Gransimit),Tarım Kredi Dondurulmuş Elma Dilim Patates 1 Kg,atistirmalik_starking_elma,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Nane (Tekli),Nane 1 Adet,nane,kg_equivalent,1.0,Ayni urun farkli paketaj
+Nane (Tekli),Nane 250 Gr,nane,kg_equivalent,1.0,Ayni urun farkli paketaj
+Nane (Tekli),Nane 1 Kg,nane,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Nane (Tekli),Mest Nane Limonlu Yeşil Çay 20 Adet,nane,kg_equivalent,1.0,Ayni urun farkli paketaj
+Havuç (Beypazarı)İRi,Havuç 1 Kg,erust_mini_havuc,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Havuç (Beypazarı)İRi,Havuç Paket 350 Gr,erust_mini_havuc,kg_equivalent,1.0,Ayni urun farkli paketaj
+Havuç (Beypazarı)İRi,Erüst Mini Havuç 1 Adet,erust_mini_havuc,kg_equivalent,1.0,Ayni urun farkli paketaj
+Havuç (Beypazarı)İRi,Siyah Havuç 1 Kg,erust_mini_havuc,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan Bostan,Bostan Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan Bostan,Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan Bostan,Kuru Dolmalık Patlıcan 18 Adet,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlıcan Bostan,Kemer Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan Bostan,Tagem Topak Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan Bostan,Zel Zeytinyağlı Sumaklı Kuru Patlıcan Dolma 200 Gr,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlıcan Bostan,Patlıcan Paket 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Kıvırcık,Kıvırcık 1 Adet,eurofresh_yikanmis_kivircik_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Kıvırcık,Kıvırcık Salata 1 Adet,eurofresh_yikanmis_kivircik_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Kıvırcık,Kıvırcık Demet 1 Adet,eurofresh_yikanmis_kivircik_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Kıvırcık,Eurofresh Yıkanmış Kıvırcık Marul 150 Gr,eurofresh_yikanmis_kivircik_marul,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlıcan I.,Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan I.,Kuru Dolmalık Patlıcan 18 Adet,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlıcan I.,Kemer Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan I.,Tagem Topak Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan I.,Zel Zeytinyağlı Sumaklı Kuru Patlıcan Dolma 200 Gr,bostan_patlican,kg_equivalent,1.0,Ayni urun farkli paketaj
+Patlıcan I.,Bostan Patlıcan 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Patlıcan I.,Patlıcan Paket 1 Kg,bostan_patlican,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Ginger (Zencefil),Zencefil 250 Gr,zencefil,kg_equivalent,1.0,Ayni urun farkli paketaj
+Ginger (Zencefil),Zencefil Paket 200 Gr,zencefil,kg_equivalent,1.0,Ayni urun farkli paketaj
+Ginger (Zencefil),Zencefil Taze 1 Kg,zencefil,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Ginger (Zencefil),Zencefil 200 Gr,zencefil,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz (1. Kalite),İthal Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz (1. Kalite),Yerli Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz (1. Kalite),Lavi Smoothie Mango Muz Ananas Avokado 150 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz (1. Kalite),Lavi Smoothie Muz Ahududu Yaban Mersini 150 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz (1. Kalite),Muz Saksı 1 Adet,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Muz (1. Kalite),Eko Yerli Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz (1. Kalite),İthal Olgun Muz 1 Kg,eko_yerli_muz,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Muz (1. Kalite),Milkten Milkino Muz-Çilek-Orman Meyveli Taze Peynir 6x45 Gr,eko_yerli_muz,kg_equivalent,1.0,Ayni urun farkli paketaj
+Göbek Salata,Göbek Salata 1 Adet,eurofresh_dogranmis_gobek_salata,kg_equivalent,1.0,Ayni urun farkli paketaj
+Göbek Salata,Eurofresh Doğranmış Göbek Salata 200 Gr,eurofresh_dogranmis_gobek_salata,kg_equivalent,1.0,Ayni urun farkli paketaj
+Göbek Salata,Göbek Marul 1 Adet,eurofresh_dogranmis_gobek_salata,kg_equivalent,1.0,Ayni urun farkli paketaj
+Göbek Salata,Üstad Kelle Göbek Kaşar Peyniri 400 Gr,eurofresh_dogranmis_gobek_salata,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,Çengelköy Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Salata (Çengelköy) Silor,Çengelköy Salatalık 500 Gr,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,K.Akdeniz Salata 1 Adet,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,Atom Salata 1 Adet,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,Kıvırcık Salata 1 Adet,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,Göbek Salata 1 Adet,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,Eurofresh Doğranmış Göbek Salata 200 Gr,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,Chef Salata 230 Gr,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,Fresh Mix Salata 200 Gr,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salata (Çengelköy) Silor,Karışık Akdeniz Salata 150 Gr,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salatalık I.,Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Salatalık I.,Çengelköy Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Salatalık I.,Çengelköy Salatalık 500 Gr,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salatalık I.,Çengel Salatalık Gurme 1 Paket,cengelkoy_salatalik,kg_equivalent,1.0,Ayni urun farkli paketaj
+Salatalık I.,Eko Salatalık 1 Kg,cengelkoy_salatalik,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Kırmızı Balık),Kırmızı Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Kırmızı Balık),Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Kırmızı Balık),Kırmızı Biber Paket 300 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Kırmızı Balık),Kuru Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Kırmızı Balık),Superfresh Soğan 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Kırmızı Balık),Kırmızı Lahana 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Kırmızı Balık),Taze Soğan 1 Demet,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Kırmızı Balık),Feast Gurme Soğan Halka 450 Gr,arpacik_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Kırmızı Balık),Feast Küp Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Kırmızı Balık),Kırmızı Dolma Biber 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Kırmızı Balık),Arpacık Soğan 1 Kg,arpacik_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Taze),Taze Soğan 1 Demet,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Taze),Taze Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Taze),Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Taze),Kuru Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Taze),Superfresh Soğan 450 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Taze),Taze Sarımsak 250 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Taze),Feast Gurme Soğan Halka 450 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Taze),Feast Küp Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Taze),Taze Soyulmuş Enginar 5 Adet,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Soğan (Taze),Arpacık Soğan 1 Kg,taze_sogan,exact,1.0,Ayni urun ve paketaj (1 Kg)
+Soğan (Taze),İnci Soğan Halkası 450 Gr,taze_sogan,kg_equivalent,1.0,Ayni urun farkli paketaj
+Fasülye (Yer),Çokça Dondurulmuş Taze Fasulye 450 Gr,fasulye_yer,kg_equivalent,1.0,Dondurulmus aynı cesit kg degi_tirilebilir
+Kivi (Yerli),Kivi 1 Kg,kivi_yerli,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kivi (Yerli),Kivi 250 Gr,kivi_yerli,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kivi (Yerli),Kivi İthal 1 Kg,kivi_yerli,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kivi (Yerli),Kivi Paket 500 Gr,kivi_yerli,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasülye (Çalı),Çokça Dondurulmuş Taze Fasulye 450 Gr,fasulye_cali,kg_equivalent,1.0,Dondurulmus aynı cesit kg degi_tirilebilir
+Erik (Anjelik),Erik Angelica 1 Kg,erik_anjelik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma (Starkin),SuperFresh Elma Dilim Patates 1 Kg,elma_starkin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma (Starkin),Torpat Elma Dilim Patates 1 Kg,elma_starkin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma (Starkin),Feast Elma Dilim Patates 1 Kg,elma_starkin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Biber(Sivri Kıl),Biber Sivri Gurme 1 Kg,biber_sivri_kil,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Armut (Margarin),Armut Deveci 1 Adet,armut_margarin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Armut (Margarin),Armut Santa Maria Gurme 1 Kg,armut_margarin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patates Bebe,Patates 1 Kg,patates_bebe,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patates Bebe,Superfresh Patates 1 Kg,patates_bebe,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Domates  Salkim,Domates Pembe 1 Kg,domates_salkim,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Domates  Salkim,Domates 1 Kg,domates_salkim,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kıvırcık Kırmızı(Lolorosso),Kıvırcık 1 Adet,kivircik_kirmizi_lolorosso,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kıvırcık Kırmızı(Lolorosso),Kıvırcık Salata 1 Adet,kivircik_kirmizi_lolorosso,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kıvırcık Kırmızı(Lolorosso),Kıvırcık Demet 1 Adet,kivircik_kirmizi_lolorosso,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Karpuz (1.Kalite),Karpuz 1 Kg,karpuz_1_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Karpuz (1.Kalite),Karpuz Çekirdeksiz 1 Kg,karpuz_1_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Mantar (İSti̇Ri̇Dye),Mantar Tabak 300 Gr,mantar_i_sti_ri_dye,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Mantar (İSti̇Ri̇Dye),Mantar 400 Gr,mantar_i_sti_ri_dye,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Mantar (İSti̇Ri̇Dye),Mantar Paket 400 Gr,mantar_i_sti_ri_dye,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Mantar (İSti̇Ri̇Dye),Mantar 300 Gr,mantar_i_sti_ri_dye,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Mantar (İSti̇Ri̇Dye),Mantar Izgara 1 Kg,mantar_i_sti_ri_dye,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Mantar (İSti̇Ri̇Dye),Mantar Shiitake 200 Gr,mantar_i_sti_ri_dye,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Üzüm Sanayi̇,Üzüm Siyah Çekirdeksiz 1 Kg,uzum_sanayi,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Beyaz Lahana,Beyaz Lahana 1 Kg,beyaz_lahana,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Beyaz Lahana,Beyaz Hindiba 1 Kg,beyaz_lahana,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Beyaz Lahana,Sütaş Beyaz Peynir 700 Gr,beyaz_lahana,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Beyaz Lahana,Ahir Beyaz Peynir 750 Gr,beyaz_lahana,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Marul K.,Marul 1 Adet,marul_k,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Marul G.,Marul 1 Adet,marul_g,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Marul A.,Marul 1 Adet,marul_a,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Lahana Kırmızı,Lahana Kara 1 Kg,lahana_kirmizi,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Lahana Bürüksel,Lahana Kara 1 Kg,lahana_buruksel,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kekik,Kekik 1 Demet,kekik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kekik,Sek Kekik Zeytin Sürülebilir Peynir 150 Gr,kekik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Nazende,Superfresh Taze Fasulye 450 Gr,fasulye_nazende,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Nazende,Paket Fasulye 500 Gr,fasulye_nazende,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Nazende,Feast Taze Fasulye 450 Gr,fasulye_nazende,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Nazende,Fasulye Taze 1 Kg,fasulye_nazende,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Nazende,Feast Taze Fasulye 3-5 Cm 2.5 Kg,fasulye_nazende,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Nazende,Gurme Taze Fasulye 1 Kg,fasulye_nazende,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Nazende,Fasulye 1 Kg,fasulye_nazende,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Nazende,Ayşe Kadın Fasulye 1 Kg,fasulye_nazende,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Ayşe Kadın,Ayşe Kadın Fasulye 1 Kg,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Ayşe Kadın,Superfresh Taze Fasulye 450 Gr,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Ayşe Kadın,Paket Fasulye 500 Gr,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Ayşe Kadın,Feast Taze Fasulye 450 Gr,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Ayşe Kadın,Fasulye Taze 1 Kg,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Ayşe Kadın,Feast Taze Fasulye 3-5 Cm 2.5 Kg,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Ayşe Kadın,Gurme Taze Fasulye 1 Kg,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Ayşe Kadın,Fasulye 1 Kg,fasulye_ayse_kadin,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Domates Salkım,Domates 1 Kg,domates_salkim,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Domates Salçalık,Domates Pembe 1 Kg,domates_salcalik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Domates Salçalık,Domates 1 Kg,domates_salcalik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Domates Beef,Domates Pembe 1 Kg,domates_beef,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Domates Beef,Domates 1 Kg,domates_beef,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patates Eski,Patates 1 Kg,patates_eski,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patates Eski,Superfresh Patates 1 Kg,patates_eski,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Turp Vezir,Turp 1 Kg,turp_vezir,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Turp Kırmızı,Turp 1 Kg,turp_kirmizi,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Turp Fındık,Turp 1 Kg,turp_findik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Sarımsak Taze,Taze Sarımsak 250 Gr,sarimsak_taze,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Sarımsak Taze,Sarımsak Taze Baş 1 Kg,sarimsak_taze,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Sarımsak Taze,Sarımsak 1 Kg,sarimsak_taze,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Sarımsak Taze,Sarımsak File 250 Gr,sarimsak_taze,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Sarımsak Kuru,Sarımsak 1 Kg,sarimsak_kuru,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Sarımsak Kuru,Sarımsak File 250 Gr,sarimsak_kuru,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Sarımsak Kuru,Taze Sarımsak 250 Gr,sarimsak_kuru,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Sarımsak Kuru,Sarımsak Taze Baş 1 Kg,sarimsak_kuru,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Salatalık Çıtır,Salatalık 1 Kg,salatalik_citir,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patlıcan Tophane,Patlıcan 1 Kg,patlican_tophane,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patlıcan Tophane,Patlıcan Paket 1 Kg,patlican_tophane,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kayısı Şekerpare,Kayısı 1 Kg,kayisi_sekerpare,kg_equivalent,1.0,Ayni urun degisik paket boyut
+İNcir (Beyaz),İncir Beyaz 1 Kg,i_ncir_beyaz,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Erik Papaz,Erik Angelica 1 Kg,erik_papaz,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma (Golden ),SuperFresh Elma Dilim Patates 1 Kg,elma_golden,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma (Golden ),Torpat Elma Dilim Patates 1 Kg,elma_golden,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma (Golden ),Feast Elma Dilim Patates 1 Kg,elma_golden,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Biber Kıl Sivri,Biber Sivri Gurme 1 Kg,biber_kil_sivri,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Üzüm Red Globe,Üzüm Siyah Çekirdeksiz 1 Kg,uzum_red_globe,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Üzüm Çekirdeksiz,Üzüm Siyah Çekirdeksiz 1 Kg,uzum_cekirdeksiz,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Mandalina Satsuma,Mandalina 1 Kg,mandalina_satsuma,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Portakal Sıkmalık,Portakal Sıkmalık 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Portakal Sıkmalık,Portakal 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Portakal Sıkmalık,Portakal Valencia 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Portakal Sıkmalık,Portakal Washington 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Portakal Valencia,Portakal Valencia 1 Kg,portakal_valencia,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Portakal Valencia,Portakal 1 Kg,portakal_valencia,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Portakal Valencia,Portakal Sıkmalık 1 Kg,portakal_valencia,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Portakal Valencia,Portakal Washington 1 Kg,portakal_valencia,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Erik Anjelika,Erik Angelica 1 Kg,erik_anjelika,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Marul (Kivircik),Marul 1 Adet,marul_kivircik,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Çalı,Superfresh Taze Fasulye 450 Gr,fasulye_cali,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Çalı,Paket Fasulye 500 Gr,fasulye_cali,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Çalı,Feast Taze Fasulye 450 Gr,fasulye_cali,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Çalı,Fasulye Taze 1 Kg,fasulye_cali,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Çalı,Feast Taze Fasulye 3-5 Cm 2.5 Kg,fasulye_cali,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Çalı,Gurme Taze Fasulye 1 Kg,fasulye_cali,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Çalı,Fasulye 1 Kg,fasulye_cali,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Fasulye Çalı,Ayşe Kadın Fasulye 1 Kg,fasulye_cali,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Soğan (Kirmizi),Soğan 1 Kg,sogan_kirmizi,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Soğan (Kirmizi),Superfresh Soğan 450 Gr,sogan_kirmizi,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Soğan (Kirmizi),Taze Soğan 1 Demet,sogan_kirmizi,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Soğan (Kirmizi),Feast Gurme Soğan Halka 450 Gr,sogan_kirmizi,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kuşkonmaz,Lavi Kuşkonmaz 350 Gr,kuskonmaz,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kuşkonmaz,Kuşkonmaz 300 Gr,kuskonmaz,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kuşkonmaz,Kuşkonmaz Paket 300 Gr,kuskonmaz,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Üzüm  Beyaz,Üzüm Siyah Çekirdeksiz 1 Kg,uzum_beyaz,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Üzüm  Si̇Yah,Üzüm Siyah Çekirdeksiz 1 Kg,uzum_si_yah,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Havuç I.,Havuç 1 Kg,havuc_i,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Havuç I.,Havuç Paket 350 Gr,havuc_i,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek(I.),Çilek 1 Kg,cilek_i,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek(I.),Çilek 400 Gr,cilek_i,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek(I.),Çilek Fidesi 1 Adet,cilek_i,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek(I.),Feast Çilek 400 Gr,cilek_i,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek(I.),Çilek 1 Adet,cilek_i,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patates (2.Kalite),Patates 1 Kg,patates_2_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patates (2.Kalite),Superfresh Patates 1 Kg,patates_2_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Nane Ii.,Nane 1 Adet,nane_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Nane Ii.,Nane 250 Gr,nane_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Nane Ii.,Nane 1 Kg,nane_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Marul Ii.,Marul 1 Adet,marul_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Göbek Salata (2.Kalite),Göbek Salata 1 Adet,gobek_salata_2_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Göbek Salata (2.Kalite),Göbek Marul 1 Adet,gobek_salata_2_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Ispanak Ii.,Superfresh Ispanak 450 Gr,ispanak_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Ispanak Ii.,Feast Ispanak 450 Gr,ispanak_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Ispanak Ii.,Ispanak 1 Kg,ispanak_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Ispanak Ii.,Ispanak 700 Gr,ispanak_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Ispanak Ii.,Eurofresh Ispanak 700 Gr,ispanak_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Ispanak Ii.,Ispanak Demet 250 Gr,ispanak_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kabak Sakız(Ikinci),Kabak 1 Kg,kabak_sakiz_ikinci,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kabak Sakız(Ikinci),Kabak Bal Bütün 1 Kg,kabak_sakiz_ikinci,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kıvırcık (2.Kalite),Kıvırcık 1 Adet,kivircik_2_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kıvırcık (2.Kalite),Kıvırcık Salata 1 Adet,kivircik_2_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Kıvırcık (2.Kalite),Kıvırcık Demet 1 Adet,kivircik_2_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Muz (2. Kalite),Muz Saksı 1 Adet,muz_2_kalite,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Pepino,Pepino 1 Adet,pepino,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Roka Ii.,Roka 1 Adet,roka_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Roka Ii.,Roka 350 Gr,roka_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Salatalık(İKinci),Salatalık 1 Kg,salatalik_i_kinci,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Soğan Kuru Ii.,Soğan 1 Kg,sogan_kuru_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Soğan Kuru Ii.,Superfresh Soğan 450 Gr,sogan_kuru_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Soğan Kuru Ii.,Taze Soğan 1 Demet,sogan_kuru_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Soğan Kuru Ii.,Feast Gurme Soğan Halka 450 Gr,sogan_kuru_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patlıcan (İKinci),Patlıcan 1 Kg,patlican_i_kinci,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Patlıcan (İKinci),Patlıcan Paket 1 Kg,patlican_i_kinci,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Limon (Çıkma),Limon 1 Kg,limon_cikma,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Limon (Çıkma),Limon Lamas 1 Kg,limon_cikma,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Starkin)Ii.,SuperFresh Elma Dilim Patates 1 Kg,elma_starkin_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Starkin)Ii.,Torpat Elma Dilim Patates 1 Kg,elma_starkin_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Starkin)Ii.,Feast Elma Dilim Patates 1 Kg,elma_starkin_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek Ii.,Çilek 1 Kg,cilek_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek Ii.,Çilek 400 Gr,cilek_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek Ii.,Çilek Fidesi 1 Adet,cilek_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek Ii.,Feast Çilek 400 Gr,cilek_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Çilek Ii.,Çilek 1 Adet,cilek_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Goldenii.),SuperFresh Elma Dilim Patates 1 Kg,elma_goldenii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Goldenii.),Torpat Elma Dilim Patates 1 Kg,elma_goldenii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Goldenii.),Feast Elma Dilim Patates 1 Kg,elma_goldenii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Gransimit)Ii.,SuperFresh Elma Dilim Patates 1 Kg,elma_gransimit_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Gransimit)Ii.,Torpat Elma Dilim Patates 1 Kg,elma_gransimit_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Elma(Gransimit)Ii.,Feast Elma Dilim Patates 1 Kg,elma_gransimit_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+Muz(Yerli Ii.),Muz Saksı 1 Adet,muz_yerli_ii,kg_equivalent,1.0,Ayni urun degisik paket boyut
+İNcir,İncir Beyaz 1 Kg,incir,kg_equivalent,1.0,Ayni urun farkli paket boyutu veya marka
+Frenk Üzümü,Verita Redberry Frenk Üzümü 125 Gr,frenk_uzumu,kg_equivalent,1.0,Ayni urun farkli paket boyutu veya marka
+Elma Golden,Golden Elma 1 Kg,elma_golden,kg_equivalent,1.0,Ayni urun farkli paket
+Elma Golden,Golden Elma Atıştırmalık 1 Kg,elma_golden,kg_equivalent,1.0,Ayni urun farkli paket
+Elma Golden,Golden Elma Gurme 1 Kg,elma_golden,kg_equivalent,1.0,Ayni urun farkli paket
+Elma Golden,Golden Elma Eko 1 Kg,elma_golden,kg_equivalent,1.0,Ayni urun farkli paket
+Nektarin  Beyaz,Beyaz Nektarin Kg,nektarin_beyaz,kg_equivalent,1.0,Ayni urun farkli paket
+Dere Otu (Muhteli̇F),Tagem Orom Dere Otu 1 Adet,dere_otu_muhteli_f,kg_equivalent,1.0,Ayni urun farkli paket
+Soğan Mor,Mor Soğan 1 Kg,sogan_mor,kg_equivalent,1.0,Ayni urun farkli paket
+Kivi  İThal,Kivi İthal 1 Kg,kivi_thal,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal  Valencia,Portakal Valencia 1 Kg,portakal_valencia,kg_equivalent,1.0,Ayni urun farkli paket
+Taze Baş Sarımsak,Sarımsak Taze Baş 1 Kg,taze_bas_sarimsak,kg_equivalent,1.0,Ayni urun farkli paket
+Taze Baş Sarımsak,Taze Sarımsak 250 Gr,taze_bas_sarimsak,kg_equivalent,1.0,Ayni urun farkli paket
+Portakal (Sikmalik),Portakal Sıkmalık 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Üzüm (Çeki̇Rdeksi̇Z),Siyah Jumbo Üzüm Çekirdeksiz 1 Kg,uzum_cekirdeksiz,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Brüksel Lahanasi,Superfresh Brüksel Lahanası 450 Gr,bruksel_lahanasi,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Brüksel Lahanasi,Brüksel Lahanası 400 Gr,bruksel_lahanasi,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Brüksel Lahanasi,Brüksel Lahanası 1 Kg,bruksel_lahanasi,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Taze Fasulye,Superfresh Taze Fasulye 450 Gr,taze_fasulye,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Taze Fasulye,Çokça Dondurulmuş Taze Fasulye 450 Gr,taze_fasulye,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Taze Fasulye,Feast Taze Fasulye 450 Gr,taze_fasulye,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Taze Fasulye,Feast Taze Fasulye 3-5 Cm 2.5 Kg,taze_fasulye,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Taze Fasulye,Gurme Taze Fasulye 1 Kg,taze_fasulye,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Visne,Lavi Vişne 400 Gr,visne,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Visne,Superfresh Dondurulmuş Vişne 350 Gr,visne,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Visne,Feast Vişne 400 Gr,visne,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Yerli Yaban Mersini  125 Gr,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Iff's Dondurulmuş Yaban Mersini 350 Gr,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,İthal Yaban Mersini Blueberry 125 Gr,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Lavi Yaban Mersini 400 Gr,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Yaban Mersini Paket 1 Adet,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Yaban Mersini Blueberry 125 Gr,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Yaban Mersini Saksı 1 Adet,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Dnk Lapestos Yaban Mersini 300 Gr,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Yaban Mersini Paket 125 Gr,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Yaban Mersini,Lavi Smoothie Muz Ahududu Yaban Mersini 150 Gr,yaban_mersini,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Sarımsak (Taze),Sarımsak Taze Baş 1 Kg,sarimsak_taze,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Sarimsak  Taze,Sarımsak Taze Baş 1 Kg,sarimsak_taze,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Sarimsak (Taze),Sarımsak Taze Baş 1 Kg,sarimsak_taze,kg_equivalent,1.0,Ayni urun - farkli paket/varyete
+Hurma Yaş,Cedid Sukkari Hurma 500 Gr,hurma_yas,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya (Muhteli̇F),Feast Bamya 450 Gr,bamya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya (Muhteli̇F),Superfresh Sivri Bamya 450 Gr,bamya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya (Muhteli̇F),Superfresh Ege'den Sultani Bamya 450 Gr,bamya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya (Muhteli̇F),Superfresh Bamya 450 Gr,bamya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya (Muhteli̇F),Süperfresh Sultani Bamya 450 Gr,bamya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya (Muhteli̇F),Feast Sivri Bamya 0-6 Cm 2.5 Kg,bamya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya (Muhteli̇F),Bamya 1 Kg,bamya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Superfresh Taze Fasulye 450 Gr,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Paket Fasulye 500 Gr,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Feast Taze Fasulye 450 Gr,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Çalı Fasulye 1 Kg,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Fasulye Taze 1 Kg,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Feast Taze Fasulye 3-5 Cm 2.5 Kg,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Gurme Taze Fasulye 1 Kg,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Fasulye 1 Kg,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye (Ci̇No),Ayşe Kadın Fasulye 1 Kg,fasulye_cino,kg_equivalent,1.0,Aynı ürün farklı paket
+Findik Turpu,Fındık Turp 1 Adet,findik_turpu,kg_equivalent,1.0,Aynı ürün farklı paket
+Findik Turpu,Taze İç Fındık 1 Kg,findik_turpu,kg_equivalent,1.0,Aynı ürün farklı paket
+Findik Turpu,Fındık Turp 1 Kg,findik_turpu,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç Dökme,Havuç 1 Kg,havuc_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç Dökme,Havuç Paket 350 Gr,havuc_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç Dökme,Erüst Mini Havuç 1 Adet,havuc_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç Dökme,Siyah Havuç 1 Kg,havuc_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Sarimsak,File Sarımsak 200 Gr,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Sarımsak 1 Kg,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Sarımsak File 250 Gr,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Taze Sarımsak 250 Gr,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Taşköprü Sarımsak 1 Kg,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Kuru Sarımsak 1 Paket,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Kuru Sarımsak 1 Kg,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Sarımsak Taze Baş 1 Kg,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Siyah Sarımsak Tek Diş Mürdük 150 Gr,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,Siyah Sarımsak 65 Gr,sarimsak,exact,1.0,Aynı ürün
+Sarimsak,The Black Garlic Siyah Sarımsak Tek Diş 65 Gr,sarimsak,exact,1.0,Aynı ürün
+Salatalik Sera,Salatalık 1 Kg,salatalik_sera,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Sera,Çengelköy Salatalık 1 Kg,salatalik_sera,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Sera,Çengelköy Salatalık 500 Gr,salatalik_sera,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Sera,Çengel Salatalık Gurme 1 Paket,salatalik_sera,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Sera,Eko Salatalık 1 Kg,salatalik_sera,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul Normal,Göbek Marul 1 Adet,marul_normal,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul Normal,Marul 1 Adet,marul_normal,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul Normal,Çıtır Marul 1 Adet,marul_normal,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul Normal,Eurofresh Yıkanmış Yaprak Marul 250 Gr,marul_normal,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul Normal,Eurofresh Yıkanmış Kıvırcık Marul 150 Gr,marul_normal,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Feast Bamya 450 Gr,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Taze Soğan 1 Demet,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Superfresh Sivri Bamya 450 Gr,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Taze Sarımsak 250 Gr,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Taze Soyulmuş Enginar 5 Adet,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Superfresh Ege'den Sultani Bamya 450 Gr,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Superfresh Bamya 450 Gr,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Süperfresh Sultani Bamya 450 Gr,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Bamya Taze,Taze İç Fındık 1 Kg,bamya_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Beyaz Turp 1 Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Beyaz Lahana 1 Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Fındık Turp 1 Adet,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Kırmızı Turp 1 Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Beyaz Hindiba 1 Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Fındık Turp 1 Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Alabaş Turp Adt,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Beyaz Nektarin Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Siyah Turp 1 Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Beyaz Üzüm 1 Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Beyaz),Turp 1 Kg,turp_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,İthal Muz 1 Kg,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,İthal Olgun Muz 1 Kg,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,Yerli Muz 1 Kg,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,İthal Yaban Mersini Blueberry 125 Gr,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,Lavi Smoothie Mango Muz Ananas Avokado 150 Gr,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,İthal Beyaz Üzüm 1 Kg,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,İthal Tatlı Patates 1 Kg,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,İthal Çarkıfelek Meyvesi 1 Adet,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,Lavi Smoothie Muz Ahududu Yaban Mersini 150 Gr,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,Muz Saksı 1 Adet,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,Eko Yerli Muz 1 Kg,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+Muz İThal Koli̇,İthal Avokado 1 Kg,muz_ithal_koli,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),Beyaz Lahana 1 Kg,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),İnci Patates 1 Kg,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),İnci Parmak Patates 2.5 Kg,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),İnci İnce Çıtır Patates 1 Kg,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),İnci Tane Mısır 450 Gr,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),İnci Bezelye 450 Gr,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),İnci Soğan Halkası 450 Gr,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),İnci Elma Dilim Patates 1 Kg,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),Beyaz Hindiba 1 Kg,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),Beyaz Nektarin Kg,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),İnci Ihlamur 50 Gr,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Beyaz),Beyaz Turp 1 Kg,incir_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K Kirmizi,Kırmızı Biber Paket 300 Gr,erik_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K Kirmizi,Kırmızı Lahana 1 Kg,erik_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K Kirmizi,Kırmızı Dolma Biber 1 Kg,erik_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K Kirmizi,Kırmızı Biber 1 Kg,erik_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K Kirmizi,Kırmızı Turp 1 Kg,erik_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K Kirmizi,Kırmızı Sivri Biber 1 Kg,erik_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K Kirmizi,Kırmızı Soğan 1 Kg,erik_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Kırmızı Biber Paket 300 Gr,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Kırmızı Lahana 1 Kg,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Kırmızı Dolma Biber 1 Kg,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Kırmızı Biber 1 Kg,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Kırmızı Turp 1 Kg,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Kırmızı Sivri Biber 1 Kg,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Nesfit Kırmızı Meyveli Mısır Gevreği 400 Gr,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Akdeniz Kırmızı Lolorosso 25 Gr,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Kirmizi Eri̇K,Kırmızı Soğan 1 Kg,kirmizi_erik,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Ayşe Kadın Fasulye 1 Kg,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Superfresh Taze Fasulye 450 Gr,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Paket Fasulye 500 Gr,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Feast Taze Fasulye 450 Gr,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Çalı Fasulye 1 Kg,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Fasulye Taze 1 Kg,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Feast Taze Fasulye 3-5 Cm 2.5 Kg,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Gurme Taze Fasulye 1 Kg,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye Ayşe,Fasulye 1 Kg,fasulye_ayse,kg_equivalent,1.0,Aynı ürün farklı paket
+Tatli Patates,İthal Tatlı Patates 1 Kg,tatli_patates,exact,1.0,Aynı ürün
+Tatli Patates,Patates 1 Kg,tatli_patates,kg_equivalent,1.0,Aynı ürün farklı paket
+Tatli Patates,Agrotalya Koçanda Tatlı Mısır 400 Gr,tatli_patates,kg_equivalent,1.0,Aynı ürün farklı paket
+Tatli Patates,Patates Taze 1 Kg,tatli_patates,kg_equivalent,1.0,Aynı ürün farklı paket
+Mandalina (Satsuma),Mandalina 1 Kg,mandalina_satsuma,kg_equivalent,1.0,Aynı ürün farklı paket
+Mandalina (Satsuma),W. Murcott Mandalina 1 Kg,mandalina_satsuma,kg_equivalent,1.0,Aynı ürün farklı paket
+Kayisi  Igdir,Kayısı 1 Kg,kayisi_igdir,kg_equivalent,1.0,Aynı ürün farklı paket
+Kayisi  Igdir,Activia Kayısı 4x100 Gr,kayisi_igdir,kg_equivalent,1.0,Aynı ürün farklı paket
+Bi̇Ber(Dolmalik),Dolmalık Biber 300 Gr,biber_dolmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Bi̇Ber(Dolmalik),Dolmalık Top Kabak 1 Kg,biber_dolmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç Paket,Havuç 1 Kg,havuc_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç Paket,Havuç Paket 350 Gr,havuc_paket,exact,1.0,Aynı ürün
+Havuç Paket,Erüst Mini Havuç 1 Adet,havuc_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç Paket,Siyah Havuç 1 Kg,havuc_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Çi̇N),Fındık Turp 1 Adet,turp_cin,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Çi̇N),Kırmızı Turp 1 Kg,turp_cin,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Çi̇N),Fındık Turp 1 Kg,turp_cin,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Çi̇N),Alabaş Turp Adt,turp_cin,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Çi̇N),Siyah Turp 1 Kg,turp_cin,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Çi̇N),Beyaz Turp 1 Kg,turp_cin,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Çi̇N),Turp 1 Kg,turp_cin,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Kivricik),Göbek Marul 1 Adet,marul_kivricik,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Kivricik),Marul 1 Adet,marul_kivricik,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Kivricik),Çıtır Marul 1 Adet,marul_kivricik,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Kivricik),Eurofresh Yıkanmış Yaprak Marul 250 Gr,marul_kivricik,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Kivricik),Eurofresh Yıkanmış Kıvırcık Marul 150 Gr,marul_kivricik,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Si̇Yah),Fındık Turp 1 Adet,turp_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Si̇Yah),Kırmızı Turp 1 Kg,turp_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Si̇Yah),Fındık Turp 1 Kg,turp_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Si̇Yah),Alabaş Turp Adt,turp_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Si̇Yah),Siyah Turp 1 Kg,turp_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Si̇Yah),Beyaz Turp 1 Kg,turp_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp(Si̇Yah),Turp 1 Kg,turp_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Soğan 1 Demet,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Sarımsak 250 Gr,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Soyulmuş Enginar 5 Adet,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Börülce 1 Kg,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze İç Fındık 1 Kg,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Enginar 1 Adet,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Piliç But İncik 1 Kg,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Bütün Poşet Piliç 1 Kg,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Soğan 1 Kg,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Fesleğen 1 Adet,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Araka Bezelye 1 Kg,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Börülce Taze,Taze Zerdeçal 100 Gr,borulce_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Domates Pembe 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Salkım Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Şeker Domates 250 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Kokteyl Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Atıştırmalık Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Kokteyl Domates 500 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Salkım Domates Paket 500 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Pembe Domates 500 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Eko Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Tagem Turuncu Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Bursa Dökme),Cherry Domates 250 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Taze Soğan 1 Demet,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Taze Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Kuru Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Superfresh Soğan 450 Gr,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Taze Sarımsak 250 Gr,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Feast Gurme Soğan Halka 450 Gr,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Beyaz Lahana 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Feast Küp Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Taze Soyulmuş Enginar 5 Adet,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Beyaz),Arpacık Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates (Başak),Patates 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates (Başak),Kızartmalık Patates 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates (Başak),Kızartmalık Patates File 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates (Başak),Feast İnce Çubuk Patates 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates (Başak),Superfresh Patates 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Di̇Ğer,Salatalık 1 Kg,salatalik_diger,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Di̇Ğer,Çengelköy Salatalık 1 Kg,salatalik_diger,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Di̇Ğer,Çengelköy Salatalık 500 Gr,salatalik_diger,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Di̇Ğer,Çengel Salatalık Gurme 1 Paket,salatalik_diger,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Di̇Ğer,Eko Salatalık 1 Kg,salatalik_diger,kg_equivalent,1.0,Aynı ürün farklı paket
+Samirsak Kuru,Kuru Dolmalık Patlıcan 18 Adet,samirsak_kuru,kg_equivalent,1.0,Aynı ürün farklı paket
+Samirsak Kuru,Kuru Soğan 1 Kg,samirsak_kuru,kg_equivalent,1.0,Aynı ürün farklı paket
+Samirsak Kuru,Kuru Üzüm Promosyon 300 Gr,samirsak_kuru,kg_equivalent,1.0,Aynı ürün farklı paket
+Samirsak Kuru,Kuru Sarımsak 1 Paket,samirsak_kuru,kg_equivalent,1.0,Aynı ürün farklı paket
+Samirsak Kuru,Kuru Sarımsak 1 Kg,samirsak_kuru,kg_equivalent,1.0,Aynı ürün farklı paket
+Samirsak Kuru,Kuru Soğan File 1 Kg,samirsak_kuru,kg_equivalent,1.0,Aynı ürün farklı paket
+Asma Yapraği,Salamura Asma Yaprak 475 Gr,asma_yapragi,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K (Can),Can Erik 1 Kg,erik_can,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K (Can),Can Erik 250 Gr,erik_can,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Domates Pembe 1 Kg,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Salkım Domates 1 Kg,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Şeker Domates 250 Gr,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Kokteyl Domates 1 Kg,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Atıştırmalık Domates 1 Kg,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Kokteyl Domates 500 Gr,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Salkım Domates Paket 500 Gr,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Pembe Domates 500 Gr,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Eko Domates 1 Kg,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Tagem Turuncu Domates 1 Kg,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Domates 1 Kg,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Ayaş,Cherry Domates 250 Gr,domates_ayas,kg_equivalent,1.0,Aynı ürün farklı paket
+Erik (Papaz),Papaz Erik 400 Gr,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Erik (Papaz),Papaz Erik 1 Kg,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Erik (Papaz),Yeşil Erik 1 Kg,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Erik (Papaz),Can Erik 1 Kg,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Erik (Papaz),Erik Angelica 1 Kg,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Erik (Papaz),Can Erik 250 Gr,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Erik (Papaz),Anjelik Erik 1 Kg,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican(Topak),Tagem Topak Patlıcan 1 Kg,patlican_topak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican(Topak),Patlıcan 1 Kg,patlican_topak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican(Topak),Kuru Dolmalık Patlıcan 18 Adet,patlican_topak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican(Topak),Kemer Patlıcan 1 Kg,patlican_topak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican(Topak),Zel Zeytinyağlı Sumaklı Kuru Patlıcan Dolma 200 Gr,patlican_topak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican(Topak),Bostan Patlıcan 1 Kg,patlican_topak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican(Topak),Patlıcan Paket 1 Kg,patlican_topak,kg_equivalent,1.0,Aynı ürün farklı paket
+Bakla İÇ,Paket Bakla 500 Gr,bakla_ic,kg_equivalent,1.0,Aynı ürün farklı paket
+Bakla İÇ,Bakla 1 Kg,bakla_ic,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Taze Soğan 1 Demet,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Taze Soğan 1 Kg,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Soğan 1 Kg,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Kuru Soğan 1 Kg,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Superfresh Soğan 450 Gr,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Taze Sarımsak 250 Gr,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Feast Gurme Soğan Halka 450 Gr,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Feast Küp Soğan 1 Kg,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Taze Soyulmuş Enginar 5 Adet,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),Arpacık Soğan 1 Kg,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan ( Taze ),İnci Soğan Halkası 450 Gr,sogan_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Soğan 1 Demet,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Sarımsak 250 Gr,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Soyulmuş Enginar 5 Adet,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze İç Fındık 1 Kg,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Enginar 1 Adet,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Piliç But İncik 1 Kg,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Bütün Poşet Piliç 1 Kg,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Soğan 1 Kg,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Fesleğen 1 Adet,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Araka Bezelye 1 Kg,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Mısır 3'lü Paket 200 Gr,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Fri̇Go Misir Taze,Taze Zerdeçal 100 Gr,frigo_misir_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Mi̇Sket,Portakal 1 Kg,portakal_misket,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Mi̇Sket,Portakal Sıkmalık 1 Kg,portakal_misket,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Mi̇Sket,Sıkmalık Portakal File 1 Kg,portakal_misket,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Mi̇Sket,Portakal Valencia 1 Kg,portakal_misket,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Mi̇Sket,Portakal Washington 1 Kg,portakal_misket,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Mi̇Sket,Finike Gurme Portakal 1 Kg,portakal_misket,kg_equivalent,1.0,Aynı ürün farklı paket
+Kayısı (Iğdır),Kayısı 1 Kg,kayisi_igdir,kg_equivalent,1.0,Aynı ürün farklı paket
+Kayısı (Iğdır),Activia Kayısı 4x100 Gr,kayisi_igdir,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Domates Pembe 1 Kg,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Salkım Domates 1 Kg,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Şeker Domates 250 Gr,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Kokteyl Domates 1 Kg,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Atıştırmalık Domates 1 Kg,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Kokteyl Domates 500 Gr,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Salkım Domates Paket 500 Gr,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Pembe Domates 500 Gr,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Eko Domates 1 Kg,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Tagem Turuncu Domates 1 Kg,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Domates 1 Kg,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Yayla),Cherry Domates 250 Gr,domates_yayla,kg_equivalent,1.0,Aynı ürün farklı paket
+Şeftali̇ Sanayi̇,Şeftali 1 Kg,seftali_sanayi,kg_equivalent,1.0,Aynı ürün farklı paket
+Şeftali̇ Sanayi̇,Şeftali Yassı 1 Kg,seftali_sanayi,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),Havuç 1 Kg,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),Havuç Paket 350 Gr,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),İnci Patates 1 Kg,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),İnci Parmak Patates 2.5 Kg,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),İnci İnce Çıtır Patates 1 Kg,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),İnci Tane Mısır 450 Gr,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),İnci Bezelye 450 Gr,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),İnci Soğan Halkası 450 Gr,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),İnci Elma Dilim Patates 1 Kg,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),Erüst Mini Havuç 1 Adet,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),Siyah Havuç 1 Kg,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Havuç (İKi̇Nci̇),İnci Ihlamur 50 Gr,havuc_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Domates Pembe 1 Kg,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Salkım Domates 1 Kg,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Şeker Domates 250 Gr,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Kokteyl Domates 1 Kg,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Atıştırmalık Domates 1 Kg,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Kokteyl Domates 500 Gr,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Salkım Domates Paket 500 Gr,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Pembe Domates 500 Gr,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Eko Domates 1 Kg,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Tagem Turuncu Domates 1 Kg,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Domates 1 Kg,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Tarla,Cherry Domates 250 Gr,domates_tarla,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Taze Soğan 1 Demet,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Taze Sarımsak 250 Gr,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Yurtalan Zade Salamura Yaprak 500 Gr,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Taze Soyulmuş Enginar 5 Adet,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Alatat Salamura Yaprak 475 Gr,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Salamura Asma Yaprak 475 Gr,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Eurofresh Yıkanmış Yaprak Marul 250 Gr,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Taze İç Fındık 1 Kg,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Taze Enginar 1 Adet,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Hastavuk Donuk Piliç Yaprak Döner 500 Gr,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Taze Piliç But İncik 1 Kg,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak (Taze ),Taze Bütün Poşet Piliç 1 Kg,yaprak_taze,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Domates Pembe 1 Kg,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Salkım Domates 1 Kg,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Şeker Domates 250 Gr,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Kokteyl Domates 1 Kg,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Atıştırmalık Domates 1 Kg,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Kokteyl Domates 500 Gr,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Salkım Domates Paket 500 Gr,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Pembe Domates 500 Gr,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Eko Domates 1 Kg,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Tagem Turuncu Domates 1 Kg,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Beef(İYi̇ Tarim),Domates 1 Kg,domates_beef_iyi_tarim,kg_equivalent,1.0,Aynı ürün farklı paket
+Yer Elmasi,Yer Elması 1 Kg,yer_elmasi,exact,1.0,Aynı ürün
+Yer Elmasi,Snickers Yer Fıstıklı Çikolata 50 Gr,yer_elmasi,kg_equivalent,1.0,Aynı ürün farklı paket
+Yer Elmasi,Burch Meyveli & Yer Fıstıklı Müsli 275 Gr,yer_elmasi,kg_equivalent,1.0,Aynı ürün farklı paket
+Çağla (Badem),Çağla Badem 1 Kg,cagla_badem,exact,1.0,Aynı ürün
+Çağla (Badem),Çağla Paket 500 Gr,cagla_badem,kg_equivalent,1.0,Aynı ürün farklı paket
+Asma Yapraği (Muhteli̇F),Salamura Asma Yaprak 475 Gr,asma_yapragi_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Japon ),Fındık Turp 1 Adet,turp_japon,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Japon ),Kırmızı Turp 1 Kg,turp_japon,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Japon ),Fındık Turp 1 Kg,turp_japon,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Japon ),Alabaş Turp Adt,turp_japon,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Japon ),Siyah Turp 1 Kg,turp_japon,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Japon ),Beyaz Turp 1 Kg,turp_japon,kg_equivalent,1.0,Aynı ürün farklı paket
+Turp (Japon ),Turp 1 Kg,turp_japon,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Kırmızı Soğan 1 Kg,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Soğan 1 Kg,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Kırmızı Biber Paket 300 Gr,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Kuru Soğan 1 Kg,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Superfresh Soğan 450 Gr,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Kırmızı Lahana 1 Kg,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Taze Soğan 1 Demet,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Feast Gurme Soğan Halka 450 Gr,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Feast Küp Soğan 1 Kg,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Kırmızı Dolma Biber 1 Kg,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Kirmizi ),Arpacık Soğan 1 Kg,sogan_kirmizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Domates Pembe 1 Kg,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Salkım Domates 1 Kg,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Şeker Domates 250 Gr,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Kokteyl Domates 1 Kg,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Atıştırmalık Domates 1 Kg,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Kokteyl Domates 500 Gr,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Salkım Domates Paket 500 Gr,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Pembe Domates 500 Gr,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Eko Domates 1 Kg,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Tagem Turuncu Domates 1 Kg,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Domates 1 Kg,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates (Salçalik),Cherry Domates 250 Gr,domates_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),İstiridye Mantar 200 Gr,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),Mantar Tabak 300 Gr,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),Mantar 400 Gr,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),Mantar Paket 400 Gr,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),Mantar 300 Gr,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),İstiridye Kayın Mantarı 200 Gr,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),Mantar Izgara 1 Kg,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),Mantar Shiitake 200 Gr,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Mantar(İStiridye),Dilim Mantar 400 Gr,mantar_istiridye,kg_equivalent,1.0,Aynı ürün farklı paket
+Çağla (Kayisi),Kayısı 1 Kg,cagla_kayisi,kg_equivalent,1.0,Aynı ürün farklı paket
+Çağla (Kayisi),Çağla Badem 1 Kg,cagla_kayisi,kg_equivalent,1.0,Aynı ürün farklı paket
+Çağla (Kayisi),Çağla Paket 500 Gr,cagla_kayisi,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Si̇Yah),İnci Patates 1 Kg,incir_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Si̇Yah),İnci Parmak Patates 2.5 Kg,incir_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Si̇Yah),İnci İnce Çıtır Patates 1 Kg,incir_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Si̇Yah),İnci Tane Mısır 450 Gr,incir_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Si̇Yah),İnci Bezelye 450 Gr,incir_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Si̇Yah),İnci Soğan Halkası 450 Gr,incir_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Si̇Yah),İnci Elma Dilim Patates 1 Kg,incir_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+İNci̇R (Si̇Yah),İnci Ihlamur 50 Gr,incir_siyah,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican Bi̇Reci̇K,Patlıcan 1 Kg,patlican_birecik,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican Bi̇Reci̇K,Kuru Dolmalık Patlıcan 18 Adet,patlican_birecik,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican Bi̇Reci̇K,Kemer Patlıcan 1 Kg,patlican_birecik,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican Bi̇Reci̇K,Tagem Topak Patlıcan 1 Kg,patlican_birecik,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican Bi̇Reci̇K,Zel Zeytinyağlı Sumaklı Kuru Patlıcan Dolma 200 Gr,patlican_birecik,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican Bi̇Reci̇K,Bostan Patlıcan 1 Kg,patlican_birecik,kg_equivalent,1.0,Aynı ürün farklı paket
+Patlican Bi̇Reci̇K,Patlıcan Paket 1 Kg,patlican_birecik,kg_equivalent,1.0,Aynı ürün farklı paket
+Barbunya (Muhteli̇F),Superfresh Barbunya 450 Gr,barbunya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Barbunya (Muhteli̇F),Barbunya 1 Kg,barbunya_muhtelif,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K (Papaz),Papaz Erik 400 Gr,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Eri̇K (Papaz),Papaz Erik 1 Kg,erik_papaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),İnci Soğan Halkası 450 Gr,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),Soğan 1 Kg,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),Kuru Soğan 1 Kg,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),Superfresh Soğan 450 Gr,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),Taze Soğan 1 Demet,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),Feast Gurme Soğan Halka 450 Gr,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),Feast Küp Soğan 1 Kg,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),Arpacık Soğan 1 Kg,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),İnci Patates 1 Kg,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),İnci Parmak Patates 2.5 Kg,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (İKi̇Nci̇),İnci İnce Çıtır Patates 1 Kg,sogan_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),İthal Muz 1 Kg,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),Galya Kavun 1 Kg,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),Kavun 1 Kg,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),İthal Yaban Mersini Blueberry 125 Gr,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),İthal Beyaz Üzüm 1 Kg,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),İthal Tatlı Patates 1 Kg,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),İthal Çarkıfelek Meyvesi 1 Adet,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),İthal Olgun Muz 1 Kg,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),İthal Avokado 1 Kg,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Kavun (İThal),Kırkağaç Kavun 1 Kg,kavun_ithal,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Taze Soğan 1 Demet,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Taze Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Kuru Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Superfresh Soğan 450 Gr,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Taze Sarımsak 250 Gr,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Feast Gurme Soğan Halka 450 Gr,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Beyaz Lahana 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Feast Küp Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Taze Soyulmuş Enginar 5 Adet,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan  Taze (Beyaz),Arpacık Soğan 1 Kg,sogan_taze_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Kayisi  Tokali,Kayısı 1 Kg,kayisi_tokali,kg_equivalent,1.0,Aynı ürün farklı paket
+Kayisi  Tokali,Activia Kayısı 4x100 Gr,kayisi_tokali,kg_equivalent,1.0,Aynı ürün farklı paket
+Misir (Frigo),Superfresh Mısır 450 Gr,misir_frigo,kg_equivalent,1.0,Aynı ürün farklı paket
+Misir (Frigo),Feast Mısır 450 Gr,misir_frigo,kg_equivalent,1.0,Aynı ürün farklı paket
+Misir (Frigo),İnci Tane Mısır 450 Gr,misir_frigo,kg_equivalent,1.0,Aynı ürün farklı paket
+Misir (Frigo),Yemeye Hazır Mısır 450 Gr,misir_frigo,kg_equivalent,1.0,Aynı ürün farklı paket
+Misir (Frigo),Haşlanmış Mısır 180 Gr,misir_frigo,kg_equivalent,1.0,Aynı ürün farklı paket
+Misir (Frigo),Agrotalya Koçanda Tatlı Mısır 400 Gr,misir_frigo,kg_equivalent,1.0,Aynı ürün farklı paket
+Misir (Frigo),Nesquik Çokokare Mısır Gevreği 310 Gr,misir_frigo,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates(Başak),Patates 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates(Başak),Kızartmalık Patates 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates(Başak),Kızartmalık Patates File 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates(Başak),Feast İnce Çubuk Patates 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Patates(Başak),Superfresh Patates 1 Kg,patates_basak,kg_equivalent,1.0,Aynı ürün farklı paket
+Ananas Adet,Ananas 1 Adet,ananas_adet,kg_equivalent,1.0,Aynı ürün farklı paket
+Ananas Adet,Lavi Mango Elma Ananas Çarkıfelek Meyveli Smoothie 150 Gr,ananas_adet,kg_equivalent,1.0,Aynı ürün farklı paket
+Ananas Adet,Lavi Smoothie Mango Muz Ananas Avokado 150 Gr,ananas_adet,kg_equivalent,1.0,Aynı ürün farklı paket
+Ananas Adet,Ananas Saksı 1 Adet,ananas_adet,kg_equivalent,1.0,Aynı ürün farklı paket
+Ananas Adet,Dilimlenmiş Taze Ananas 125 Gr,ananas_adet,kg_equivalent,1.0,Aynı ürün farklı paket
+Ananas Adet,Dr. Oetker Toz İçecek Mango Ananas 90 Gr,ananas_adet,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Asberg),Göbek Marul 1 Adet,marul_asberg,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Asberg),Marul 1 Adet,marul_asberg,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Asberg),Çıtır Marul 1 Adet,marul_asberg,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Asberg),Eurofresh Yıkanmış Yaprak Marul 250 Gr,marul_asberg,kg_equivalent,1.0,Aynı ürün farklı paket
+Marul (Asberg),Eurofresh Yıkanmış Kıvırcık Marul 150 Gr,marul_asberg,kg_equivalent,1.0,Aynı ürün farklı paket
+Kabak Kiş,Kabak 1 Kg,kabak_kis,kg_equivalent,1.0,Aynı ürün farklı paket
+Kabak Kiş,Sakız Kabak 1 Kg,kabak_kis,kg_equivalent,1.0,Aynı ürün farklı paket
+Kabak Kiş,Siyah Kabak 1 Kg,kabak_kis,kg_equivalent,1.0,Aynı ürün farklı paket
+Kabak Kiş,Süs Mix Kabak 1 Kg,kabak_kis,kg_equivalent,1.0,Aynı ürün farklı paket
+Kabak Kiş,Dolmalık Top Kabak 1 Kg,kabak_kis,kg_equivalent,1.0,Aynı ürün farklı paket
+Kabak Kiş,Kabak Bal Bütün 1 Kg,kabak_kis,kg_equivalent,1.0,Aynı ürün farklı paket
+Soya Fi̇Li̇Zi̇,Soya Filizi 125 Gr,soya_filizi,exact,1.0,Aynı ürün
+Soya Fi̇Li̇Zi̇,Dolco Edamame Soya Fasulyesi 1 Kg,soya_filizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Soya Fi̇Li̇Zi̇,Dolco Edamame Soyulmamış Soya Fasulyesi 1 Kg,soya_filizi,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Turşuluk,Salatalık 1 Kg,salatalik_tursuluk,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Turşuluk,Çengelköy Salatalık 1 Kg,salatalik_tursuluk,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Turşuluk,Çengelköy Salatalık 500 Gr,salatalik_tursuluk,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Turşuluk,Çengel Salatalık Gurme 1 Paket,salatalik_tursuluk,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik Turşuluk,Eko Salatalık 1 Kg,salatalik_tursuluk,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Domates Pembe 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Salkım Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Şeker Domates 250 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Kokteyl Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Atıştırmalık Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Kokteyl Domates 500 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Salkım Domates Paket 500 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Pembe Domates 500 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Eko Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Tagem Turuncu Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Domates 1 Kg,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa (Dökme),Cherry Domates 250 Gr,domates_bursa_dokme,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Sikmalik,Portakal Sıkmalık 1 Kg,portakal_sikmalik,exact,1.0,Aynı ürün
+Portakal Sikmalik,Sıkmalık Portakal File 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Sikmalik,Portakal 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Sikmalik,Portakal Valencia 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Sikmalik,Portakal Washington 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Portakal Sikmalik,Finike Gurme Portakal 1 Kg,portakal_sikmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Nar (Çeki̇Rdeksi̇Z),Lavi Nar 400 Gr,nar_cekirdeksiz,kg_equivalent,1.0,Aynı ürün farklı paket
+Nar (Çeki̇Rdeksi̇Z),Nar 1 Kg,nar_cekirdeksiz,kg_equivalent,1.0,Aynı ürün farklı paket
+Kumkuat,Kumkuat 200 Gr,kumkuat,exact,1.0,Aynı ürün
+Salatalik (Korni̇Şon),Salatalık 1 Kg,salatalik_kornison,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik (Korni̇Şon),Çengelköy Salatalık 1 Kg,salatalik_kornison,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik (Korni̇Şon),Çengelköy Salatalık 500 Gr,salatalik_kornison,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik (Korni̇Şon),Çengel Salatalık Gurme 1 Paket,salatalik_kornison,kg_equivalent,1.0,Aynı ürün farklı paket
+Salatalik (Korni̇Şon),Eko Salatalık 1 Kg,salatalik_kornison,kg_equivalent,1.0,Aynı ürün farklı paket
+Engi̇Nar (Adet),Nar 1 Kg,enginar_adet,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),Yerli Yaban Mersini  125 Gr,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),İthal Yaban Mersini Blueberry 125 Gr,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),Lavi Yaban Mersini 400 Gr,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),Yaban Mersini Paket 1 Adet,yaban_mersini_paket,exact,1.0,Aynı ürün
+Yaban Mersi̇Ni̇ (Paket),Yaban Mersini Blueberry 125 Gr,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),Yaban Mersini Saksı 1 Adet,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),Dnk Lapestos Yaban Mersini 300 Gr,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),Yaban Mersini Paket 125 Gr,yaban_mersini_paket,exact,1.0,Aynı ürün
+Yaban Mersi̇Ni̇ (Paket),Lavi Smoothie Muz Ahududu Yaban Mersini 150 Gr,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),Sek Quark Yaban Mersinli 140 Gr,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaban Mersi̇Ni̇ (Paket),Activia Probiyotik Yoğurt Yaban Mersini 4x100 Gr,yaban_mersini_paket,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Arpacık Soğan 1 Kg,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Arpacık Soğan 500 Gr,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Soğan 1 Kg,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Kuru Soğan 1 Kg,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Superfresh Soğan 450 Gr,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Taze Soğan 1 Demet,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Feast Gurme Soğan Halka 450 Gr,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Feast Küp Soğan 1 Kg,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),İnci Soğan Halkası 450 Gr,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Mor Soğan 1 Kg,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan (Arpacik),Soğan Yeni Hasat 1 Kg,sogan_arpacik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Domates Pembe 1 Kg,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Salkım Domates 1 Kg,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Şeker Domates 250 Gr,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Kokteyl Domates 1 Kg,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Atıştırmalık Domates 1 Kg,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Kokteyl Domates 500 Gr,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Salkım Domates Paket 500 Gr,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Pembe Domates 500 Gr,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Eko Domates 1 Kg,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Tagem Turuncu Domates 1 Kg,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Domates 1 Kg,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Domates Bursa Dökme(Salçalik),Cherry Domates 250 Gr,domates_bursa_dokme_salcalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahan Kara,Kara Dut 1 Kg,lahan_kara,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Superfresh Taze Fasulye 450 Gr,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Paket Fasulye 500 Gr,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Feast Taze Fasulye 450 Gr,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Çalı Fasulye 1 Kg,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Fasulye Taze 1 Kg,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Feast Taze Fasulye 3-5 Cm 2.5 Kg,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Gurme Taze Fasulye 1 Kg,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Fasulye 1 Kg,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Fasulye(Yeşi̇L),Ayşe Kadın Fasulye 1 Kg,fasulye_yesil,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Taze Soğan 1 Demet,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Taze Soğan 1 Kg,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Soğan 1 Kg,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Kuru Soğan 1 Kg,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Superfresh Soğan 450 Gr,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Taze Sarımsak 250 Gr,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Feast Gurme Soğan Halka 450 Gr,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Feast Küp Soğan 1 Kg,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Taze Soyulmuş Enginar 5 Adet,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),Arpacık Soğan 1 Kg,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Soğan Taze (Sapli),İnci Soğan Halkası 450 Gr,sogan_taze_sapli,kg_equivalent,1.0,Aynı ürün farklı paket
+Bi̇Ber( Dolmalik),Dolmalık Biber 300 Gr,biber_dolmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Bi̇Ber( Dolmalik),Dolmalık Top Kabak 1 Kg,biber_dolmalik,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Mor Soğan 1 Kg,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Soğan 1 Kg,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Kuru Soğan 1 Kg,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Superfresh Soğan 450 Gr,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Taze Soğan 1 Demet,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Feast Gurme Soğan Halka 450 Gr,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Feast Küp Soğan 1 Kg,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Arpacık Soğan 1 Kg,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,İnci Soğan Halkası 450 Gr,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Sogan Mor,Soğan Yeni Hasat 1 Kg,sogan_mor,kg_equivalent,1.0,Aynı ürün farklı paket
+Yaprak,Yurtalan Zade Salamura Yaprak 500 Gr,yaprak,exact,1.0,Aynı ürün
+Yaprak,Alatat Salamura Yaprak 475 Gr,yaprak,exact,1.0,Aynı ürün
+Yaprak,Salamura Asma Yaprak 475 Gr,yaprak,exact,1.0,Aynı ürün
+Yaprak,Eurofresh Yıkanmış Yaprak Marul 250 Gr,yaprak,exact,1.0,Aynı ürün
+Yaprak,Hastavuk Donuk Piliç Yaprak Döner 500 Gr,yaprak,exact,1.0,Aynı ürün
+Yaprak,Lezita %60 Yaprak %40 Kıyma Piliç Döner 500 Gr,yaprak,exact,1.0,Aynı ürün
+Yaprak,Banvit Piliç Yaprak Döner 500 Gr,yaprak,exact,1.0,Aynı ürün
+Yaprak,Banvit Piliç Yaprak Döner 200 Gr,yaprak,exact,1.0,Aynı ürün
+Yaprak,Lezita Piliç Yaprak Döner 200 Gr,yaprak,exact,1.0,Aynı ürün
+Li̇Mon (İKi̇Nci̇),İnci Patates 1 Kg,limon_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Li̇Mon (İKi̇Nci̇),İnci Parmak Patates 2.5 Kg,limon_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Li̇Mon (İKi̇Nci̇),İnci İnce Çıtır Patates 1 Kg,limon_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Li̇Mon (İKi̇Nci̇),İnci Tane Mısır 450 Gr,limon_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Li̇Mon (İKi̇Nci̇),İnci Bezelye 450 Gr,limon_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Li̇Mon (İKi̇Nci̇),İnci Soğan Halkası 450 Gr,limon_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Li̇Mon (İKi̇Nci̇),İnci Elma Dilim Patates 1 Kg,limon_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Li̇Mon (İKi̇Nci̇),İnci Ihlamur 50 Gr,limon_ikinci,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahana,Kırmızı Lahana 1 Kg,lahana,exact,1.0,Aynı ürün
+Lahana,Beyaz Lahana 1 Kg,lahana,exact,1.0,Aynı ürün
+Lahana,Lahana Kara 1 Kg,lahana,exact,1.0,Aynı ürün
+Yeşi̇L Fasulye,Paket Fasulye 500 Gr,yesil_fasulye,kg_equivalent,1.0,Aynı ürün farklı paket
+Yeşi̇L Fasulye,Fasulye Taze 1 Kg,yesil_fasulye,kg_equivalent,1.0,Aynı ürün farklı paket
+Yeşi̇L Fasulye,Fasulye 1 Kg,yesil_fasulye,kg_equivalent,1.0,Aynı ürün farklı paket
+Bi̇Ber( Kapya),Kapya Biber 1 Kg,biber_kapya,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahana( Beyaz),Beyaz Lahana 1 Kg,lahana_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahana( Beyaz),Kırmızı Lahana 1 Kg,lahana_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahana( Beyaz),Beyaz Hindiba 1 Kg,lahana_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahana( Beyaz),Beyaz Nektarin Kg,lahana_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahana( Beyaz),Lahana Kara 1 Kg,lahana_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahana( Beyaz),Beyaz Turp 1 Kg,lahana_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
+Lahana( Beyaz),Beyaz Üzüm 1 Kg,lahana_beyaz,kg_equivalent,1.0,Aynı ürün farklı paket
