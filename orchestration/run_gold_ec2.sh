@@ -26,7 +26,7 @@ run() {
   echo "=== STEP $name DONE rc=$rc $(date +%H:%M:%S) ==="
 }
 
-run silver/gdelt_silver.py --skip-articles --start-date 2026-05-20 --end-date 2026-05-20
+run silver/gdelt_silver.py --skip-articles --start-date 2026-05-19 --end-date 2026-05-19
 run gold/daily_margin.py $DEMO
 run gold/price_inequality.py $DEMO
 run gold/rockets_feathers.py $DEMO
