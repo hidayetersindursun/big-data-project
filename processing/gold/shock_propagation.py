@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "silver"))
 import pandas as pd
 from pyspark.sql import functions as F
 from utils.spark_session import get_spark_session
-from silver.utils.cities import normalize_city_expr  # noqa: E402
+from utils.cities import normalize_city_expr  # noqa: E402
 
 _S3_PREFIX = "s3" if os.environ.get("ON_EMR", "false").lower() == "true" else "s3a"
 SILVER_WEATHER = f"{_S3_PREFIX}://s3-bbuckett/silver/weather_daily"

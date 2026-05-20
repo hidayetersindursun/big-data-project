@@ -20,7 +20,9 @@ import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(_HERE, "..", "silver"))   # utils.spark_session burada
+sys.path.insert(0, os.path.join(_HERE, ".."))             # es.config bulunabilsin
 
 import pandas as pd
 from elasticsearch import helpers
