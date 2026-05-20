@@ -39,10 +39,13 @@ BRONZE_REAL      = f"{_S3_PREFIX}://s3-bbuckett/bronze/market"
 BRONZE_SYNTHETIC = f"{_S3_PREFIX}://s3-bbuckett/bronze/market_synthetic"
 SILVER_PATH      = f"{_S3_PREFIX}://s3-bbuckett/silver/market_prices"
 
+# NOT: year/month burada YOK — transform withColumn("year"/"month") ile Bronze
+# partition kolonlarını date'ten yeniden türetir (aynı isimle override eder).
+# DROP_COLS'a year/month konulursa türetilen kolonlar da düşer, FINAL_COLS patlar.
 DROP_COLS = {
     "imageUrl", "indexTime", "percentage", "categories", "id",
     "promotionText", "discountRatio", "refinedQuantityUnit",
-    "_scraped_at", "_base_date", "year", "month", "day",
+    "_scraped_at", "_base_date", "day",
     "_synthetic",
 }
 
