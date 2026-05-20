@@ -118,13 +118,17 @@ def main():
 
     df = spark.read.parquet(BRONZE_PATH)
     # Partition pruning: bronze/gdelt year/month/day partition'lı.
-    # year/month kolonları üzerinden filtrele — yoksa tüm 90M+ satır taranır.
+    # year*10000+month*100+day üzerinden filtrele — day-level pruning ile tek gün ~50K satıra iner.
     if args.start_date:
-        sy, sm = int(args.start_date[:4]), int(args.start_date[5:7])
-        df = df.filter((F.col("year") * 100 + F.col("month")) >= sy * 100 + sm)
+        sy, sm, sd = int(args.start_date[:4]), int(args.start_date[5:7]), int(args.start_date[8:10])
+        df = df.filter(
+            (F.col("year") * 10000 + F.col("month") * 100 + F.col("day")) >= sy * 10000 + sm * 100 + sd
+        )
     if args.end_date:
-        ey, em = int(args.end_date[:4]), int(args.end_date[5:7])
-        df = df.filter((F.col("year") * 100 + F.col("month")) <= ey * 100 + em)
+        ey, em, ed = int(args.end_date[:4]), int(args.end_date[5:7]), int(args.end_date[8:10])
+        df = df.filter(
+            (F.col("year") * 10000 + F.col("month") * 100 + F.col("day")) <= ey * 10000 + em * 100 + ed
+        )
 
     articles = transform_articles(df)
     # cache: show + count + write üç action — cache'siz DAG 3 kez çalışır
