@@ -26,6 +26,7 @@ sys.path.insert(0, os.path.join(_HERE, ".."))             # es.config bulunabils
 
 import pandas as pd
 from elasticsearch import helpers
+from pyspark.sql import functions as F
 from utils.spark_session import get_spark_session
 from es.config import get_es_client, ES_BULK_BATCH
 
@@ -65,58 +66,67 @@ def recreate_index(es, name, body):
     es.indices.create(index=name, **body)
 
 
-def enrich_geo(pdf: pd.DataFrame, coords: pd.DataFrame, city_field: str) -> pd.DataFrame:
-    """city kolonuna karşılık city_geo {lat, lon} alanı ekle."""
-    df = pdf.merge(coords, left_on=city_field, right_on="city", how="left", suffixes=("", "_coord"))
-    df["city_geo"] = df.apply(
-        lambda r: {"lat": r["lat"], "lon": r["lon"]} if pd.notna(r.get("lat")) else None,
-        axis=1,
-    )
-    # cleanup
-    drop_cols = [c for c in ["lat", "lon", "region", "city_coord"] if c in df.columns]
-    df = df.drop(columns=drop_cols)
-    return df
+def _row_to_clean_dict(row, city_field):
+    d = row.asDict(recursive=True)
+    # city_geo'yu lat/lon'dan inşa et (broadcast join sonrası)
+    if city_field and d.get("lat") is not None and d.get("lon") is not None:
+        d["city_geo"] = {"lat": float(d["lat"]), "lon": float(d["lon"])}
+    for k in ("lat", "lon", "region"):
+        d.pop(k, None)
+    # None / NaN sanitize + datetime → ISO
+    clean = {}
+    for k, v in d.items():
+        if v is None:
+            clean[k] = None
+        elif isinstance(v, float) and v != v:  # NaN
+            clean[k] = None
+        elif hasattr(v, "isoformat"):
+            clean[k] = v.isoformat()
+        else:
+            clean[k] = v
+    return clean
 
 
-def df_to_bulk_actions(df: pd.DataFrame, index_name: str):
-    """DataFrame'i ES bulk action iterator'a çevir."""
-    for record in df.to_dict(orient="records"):
-        # NaN'leri None'a çevir (ES JSON serializer NaN sevmiyor)
-        clean = {k: (None if pd.isna(v) else v) for k, v in record.items()}
-        # ISO date için pandas timestamp → string
-        for k, v in clean.items():
-            if hasattr(v, "isoformat"):
-                clean[k] = v.isoformat()
-        yield {
-            "_index": index_name,
-            "_source": clean,
-        }
-
-
-def push_index(spark, es, index_name, src, coords, dry_run):
+def push_index(spark, es, index_name, src, coords_pdf, dry_run):
+    """Spark df'i streaming bulk indexle — toPandas() yok, RAM-safe."""
     path = f"{GOLD_BASE}/{src['path']}"
     print(f"\n=== {index_name} ←  {path} ===")
-    df = spark.read.parquet(path)
+    try:
+        df = spark.read.parquet(path)
+    except Exception as e:
+        print(f"  ATLANIYOR (parquet okunamadı: {e})")
+        return
     n = df.count()
     print(f"  Spark satır: {n:,}")
     if n == 0:
         print("  ATLANIYOR (boş)")
         return
 
-    pdf = df.toPandas()
-    if src["city_field"] and src["city_field"] in pdf.columns:
-        pdf = enrich_geo(pdf, coords, src["city_field"])
+    city_field = src.get("city_field")
+    if city_field and city_field in df.columns:
+        coords_spark = spark.createDataFrame(coords_pdf)
+        # right side'daki city'yi rename ki conflict olmasın
+        coords_spark = coords_spark.withColumnRenamed("city", "_geo_city")
+        df = df.join(
+            F.broadcast(coords_spark),
+            df[city_field] == coords_spark["_geo_city"],
+            "left",
+        ).drop("_geo_city")
 
     if dry_run:
-        print(f"  [DRY] {len(pdf):,} satır bulk olarak yazılacaktı")
-        print(pdf.head(2))
+        print(f"  [DRY] {n:,} satır bulk olarak yazılacaktı")
+        df.show(2, truncate=False)
         return
 
-    actions = df_to_bulk_actions(pdf, index_name)
+    def yield_actions():
+        for row in df.toLocalIterator():
+            yield {"_index": index_name, "_source": _row_to_clean_dict(row, city_field)}
+
     success, errors = helpers.bulk(
-        es, actions, chunk_size=ES_BULK_BATCH, raise_on_error=False, raise_on_exception=False
+        es, yield_actions(), chunk_size=ES_BULK_BATCH,
+        raise_on_error=False, raise_on_exception=False,
     )
-    print(f"  Bulk: {success} başarılı, hata: {len(errors) if isinstance(errors, list) else errors}")
+    print(f"  Bulk: {success}/{n} başarılı, hata: {len(errors) if isinstance(errors, list) else errors}")
 
 
 def main():
