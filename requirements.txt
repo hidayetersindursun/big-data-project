@@ -29,5 +29,5 @@ unidecode
 # Entity resolution
 anthropic
 
-# Elasticsearch indexing
-elasticsearch>=8.0.0
+# Elasticsearch indexing (8.x client, ES 8.13 server)
+elasticsearch>=8.0.0,<9.0.0
