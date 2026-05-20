@@ -117,20 +117,24 @@ def main():
     spark.conf.set("spark.sql.shuffle.partitions", "100")
 
     df = spark.read.parquet(BRONZE_PATH)
+    # Partition pruning: bronze/gdelt year/month/day partition'lı.
+    # year/month kolonları üzerinden filtrele — yoksa tüm 90M+ satır taranır.
     if args.start_date:
-        df = df.filter(F.col("date") >= args.start_date.replace("-", ""))
+        sy, sm = int(args.start_date[:4]), int(args.start_date[5:7])
+        df = df.filter((F.col("year") * 100 + F.col("month")) >= sy * 100 + sm)
     if args.end_date:
-        df = df.filter(F.col("date") <= args.end_date.replace("-", "") + "999999")
+        ey, em = int(args.end_date[:4]), int(args.end_date[5:7])
+        df = df.filter((F.col("year") * 100 + F.col("month")) <= ey * 100 + em)
 
     articles = transform_articles(df)
-    daily = transform_daily(articles)
+    # cache: show + count + write üç action — cache'siz DAG 3 kez çalışır
+    daily = transform_daily(articles).cache()
 
     print(f"=== silver/gdelt_daily ===")
     daily.printSchema()
-    daily.show(10, truncate=False)
-
     daily_count = daily.count()
     print(f"Daily satır: {daily_count:,}")
+    daily.show(10, truncate=False)
 
     (
         daily
