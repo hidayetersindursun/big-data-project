@@ -1,0 +1,82 @@
+city,lat,lon,region
+Adana,37.0,35.3213,Akdeniz
+Adıyaman,37.7648,38.2786,Güneydoğu Anadolu
+Afyonkarahisar,38.7507,30.5567,Ege
+Ağrı,39.7191,43.0503,Doğu Anadolu
+Aksaray,38.3687,34.037,İç Anadolu
+Amasya,40.6499,35.8353,Karadeniz
+Ankara,39.9334,32.8597,İç Anadolu
+Antalya,36.8969,30.7133,Akdeniz
+Ardahan,41.1105,42.7022,Doğu Anadolu
+Artvin,41.1828,41.8183,Karadeniz
+Aydın,37.8444,27.8458,Ege
+Balıkesir,39.6484,27.8826,Marmara
+Bartın,41.6344,32.337,Karadeniz
+Batman,37.8812,41.1351,Güneydoğu Anadolu
+Bayburt,40.2552,40.2249,Karadeniz
+Bilecik,40.1426,29.9793,Marmara
+Bingöl,38.8847,40.4986,Doğu Anadolu
+Bitlis,38.4012,42.1078,Doğu Anadolu
+Bolu,40.7392,31.6093,Karadeniz
+Burdur,37.7269,30.2906,Akdeniz
+Bursa,40.1885,29.061,Marmara
+Çanakkale,40.1553,26.4142,Marmara
+Çankırı,40.6013,33.6134,İç Anadolu
+Çorum,40.5499,34.9533,Karadeniz
+Denizli,37.7765,29.0864,Ege
+Diyarbakır,37.9144,40.2306,Güneydoğu Anadolu
+Düzce,40.8438,31.1565,Karadeniz
+Edirne,41.6818,26.5623,Marmara
+Elazığ,38.6748,39.2226,Doğu Anadolu
+Erzincan,39.7464,39.4914,Doğu Anadolu
+Erzurum,39.9043,41.2679,Doğu Anadolu
+Eskişehir,39.7767,30.5206,İç Anadolu
+Gaziantep,37.0662,37.3833,Güneydoğu Anadolu
+Giresun,40.9128,38.3895,Karadeniz
+Gümüşhane,40.4607,39.4814,Karadeniz
+Hakkâri,37.5833,43.7333,Doğu Anadolu
+Hatay,36.4018,36.3498,Akdeniz
+Iğdır,39.92,44.045,Doğu Anadolu
+Isparta,37.7648,30.5566,Akdeniz
+İstanbul,41.0082,28.9784,Marmara
+İzmir,38.4192,27.1287,Ege
+Kahramanmaraş,37.5858,36.937,Akdeniz
+Karabük,41.2061,32.6204,Karadeniz
+Karaman,37.1759,33.2287,İç Anadolu
+Kars,40.6013,43.0975,Doğu Anadolu
+Kastamonu,41.3887,33.7827,Karadeniz
+Kayseri,38.7312,35.4787,İç Anadolu
+Kırıkkale,39.8468,33.5153,İç Anadolu
+Kırklareli,41.7333,27.2167,Marmara
+Kırşehir,39.1425,34.1709,İç Anadolu
+Kilis,36.7184,37.1212,Güneydoğu Anadolu
+Kocaeli,40.8533,29.8815,Marmara
+Konya,37.8746,32.4932,İç Anadolu
+Kütahya,39.4167,29.9833,Ege
+Malatya,38.3552,38.3095,Doğu Anadolu
+Manisa,38.6191,27.4289,Ege
+Mardin,37.3212,40.7245,Güneydoğu Anadolu
+Mersin,36.8121,34.6415,Akdeniz
+Muğla,37.2153,28.3636,Ege
+Muş,38.7432,41.5065,Doğu Anadolu
+Nevşehir,38.6939,34.6857,İç Anadolu
+Niğde,37.9667,34.6833,İç Anadolu
+Ordu,40.9839,37.8764,Karadeniz
+Osmaniye,37.0742,36.2467,Akdeniz
+Rize,41.0201,40.5234,Karadeniz
+Sakarya,40.7569,30.378,Marmara
+Samsun,41.2867,36.33,Karadeniz
+Siirt,37.9333,41.95,Güneydoğu Anadolu
+Sinop,42.0264,35.1551,Karadeniz
+Sivas,39.7477,37.0179,İç Anadolu
+Şanlıurfa,37.1591,38.7969,Güneydoğu Anadolu
+Şırnak,37.5164,42.4611,Güneydoğu Anadolu
+Tekirdağ,40.9833,27.5167,Marmara
+Tokat,40.3167,36.55,Karadeniz
+Trabzon,41.0015,39.7178,Karadeniz
+Tunceli,39.3074,39.4388,Doğu Anadolu
+Uşak,38.6823,29.4082,Ege
+Van,38.5012,43.3729,Doğu Anadolu
+Yalova,40.65,29.2667,Marmara
+Yozgat,39.8181,34.8147,İç Anadolu
+Zonguldak,41.4564,31.7987,Karadeniz

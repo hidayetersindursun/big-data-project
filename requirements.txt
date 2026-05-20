@@ -10,3 +10,24 @@ eptr2
 google-cloud-bigquery
 db-dtypes
 yfinance
+
+# S3 + AWS
+boto3
+python-dotenv
+pyarrow
+
+# Spark (lokal dev için; EMR'da pre-installed)
+pyspark>=3.4.0
+
+# Silver/Gold processing
+scipy
+statsmodels
+prophet
+python-Levenshtein
+unidecode
+
+# Entity resolution
+anthropic
+
+# Elasticsearch indexing
+elasticsearch>=8.0.0

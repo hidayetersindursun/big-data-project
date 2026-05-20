@@ -27,41 +27,45 @@ BigQuery'den sorgu atabilmek için aktif bir Google Cloud Projesine ve API yetki
 
 ## Kullanım
 
-Veri çekme botu varsayılan olarak son 1 günün verisini kontrol edip çeker. Önceden çekilen günleri `state.json` dosyasında tutarak mükerrer sorguların önüne geçer.
+Veri çekme botu varsayılan olarak **son 5 yılın** verisini çeker (`state.json` ile devam eder), BigQuery sorgusu sonucunu doğrudan **S3 Bronze'a Parquet** olarak yükler — lokal'e JSONL yazmaz. Önceden çekilen günleri hem `state.json` hem de S3 `head_object` kontrolü ile atlar.
 
 ```bash
-# Sadece çalışmayı test etmek için (veri kaydetmez, kotanızı harcar ama sonucu görmenizi sağlar)
+# Varsayılan: son 5 yıl, S3'e Parquet
+python ingestion/gdelt/gdelt_ingest.py
+
+# Belirli aralık
+python ingestion/gdelt/gdelt_ingest.py --start-date 2025-05-20 --end-date 2026-05-20
+
+# Worker sayısı (paralel BQ sorgusu)
+python ingestion/gdelt/gdelt_ingest.py --workers 8
+
+# Dry run (S3'e yazma, sadece BQ + log)
 python ingestion/gdelt/gdelt_ingest.py --dry-run
 
-# Belirli bir tarih aralığını çekmek için
-python ingestion/gdelt/gdelt_ingest.py --start-date 2026-05-10 --end-date 2026-05-15
-
-# Varsayılan çalışma (dünün verisini çeker, crontab veya Airflow'da çalıştırılabilir)
-python ingestion/gdelt/gdelt_ingest.py
+# Farklı bucket
+python ingestion/gdelt/gdelt_ingest.py --bucket s3-bbuckett
 ```
+
+Windows uyku engeli otomatik aktif (uzun backfill sırasında PC uykuya gitmez).
 
 ## Çıktı Formatı
 
-Betiğin başarılı çalışması sonucunda `ingestion/gdelt/data/{YYYY-MM-DD}.jsonl` dosyası oluşur. Her satır bir JSON objesidir:
+S3 Bronze: `s3://s3-bbuckett/bronze/gdelt/year=YYYY/month=MM/day=DD/part-0000.parquet`
 
-```json
-{
-  "id": "20260515120000-12345",
-  "date": "20260515120000",
-  "source": "1",
-  "url": "https://ornek-haber-sitesi.com/haber-adresi",
-  "tone": -4.5,
-  "themes": [
-    "FOOD_SECURITY",
-    "ECON_INFLATION",
-    "WB_135_TRANSPORT"
-  ],
-  "_ingested_at": "2026-05-16T08:00:00.123456"
-}
-```
+Schema (parquet kolonları):
 
-* `tone`: GDELT V2Tone metriğinin ilk değeri. Pozitif değerler olumlu, negatif değerler olumsuz haber tonunu ifade eder.
-* `themes`: GKG temalarının ayrıştırılmış listesidir.
+| Alan | Tip | Açıklama |
+|---|---|---|
+| id | string | GKGRECORDID |
+| date | string | YYYYMMDDHHMMSS |
+| source | int | kaynak ID |
+| url | string | haber URL |
+| tone | double | V2Tone ilk değeri (-10..+10) |
+| themes | string | CSV-virgüllü theme listesi (örn. `FOOD_SECURITY,2196, AGRICULTURE,33`) |
+| _ingested_at | string ISO | scrape timestamp |
+
+* `tone`: Pozitif değerler olumlu, negatif değerler olumsuz haber tonunu ifade eder.
+* `themes`: GKG theme'ları virgülle ayrılmış string olarak saklanır (Silver tarafında split edilir).
 
 **Not:** BigQuery'deki GDELT sorguları kotadan harcar. Ücretsiz sınır ayda 1 TB'dır. Bu nedenle geriye dönük yüklü veri çekimi yaparken `start-date` ve `end-date` filtrelerini birer haftalık/aylık bloklar halinde dikkatlice kullanınız.
 

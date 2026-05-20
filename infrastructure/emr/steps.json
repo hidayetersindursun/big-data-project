@@ -1,0 +1,113 @@
+[
+  {
+    "Name": "1-silver-joined",
+    "Type": "Spark",
+    "ActionOnFailure": "TERMINATE_CLUSTER",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/silver/silver_joined.py",
+      "--start-date", "2025-05-20",
+      "--end-date", "2026-05-20"
+    ]
+  },
+  {
+    "Name": "2-gdelt-silver",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/silver/gdelt_silver.py",
+      "--skip-articles"
+    ]
+  },
+  {
+    "Name": "3-gold-daily-margin",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/gold/daily_margin.py",
+      "--start-date", "2025-05-20",
+      "--end-date", "2026-05-20"
+    ]
+  },
+  {
+    "Name": "4-gold-price-inequality",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/gold/price_inequality.py",
+      "--start-date", "2025-05-20",
+      "--end-date", "2026-05-20"
+    ]
+  },
+  {
+    "Name": "5-gold-rockets-feathers",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/gold/rockets_feathers.py",
+      "--start-date", "2025-05-20",
+      "--end-date", "2026-05-20"
+    ]
+  },
+  {
+    "Name": "6-gold-shock-propagation",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/gold/shock_propagation.py",
+      "--start-date", "2025-05-20",
+      "--end-date", "2026-05-20"
+    ]
+  },
+  {
+    "Name": "7-gold-pandemic-gap",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/gold/pandemic_gap.py"
+    ]
+  },
+  {
+    "Name": "8-gold-news-price-corr",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/gold/news_price_corr.py"
+    ]
+  },
+  {
+    "Name": "9-gold-prophet-forecast",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/gold/prophet_forecast.py"
+    ]
+  }
+]

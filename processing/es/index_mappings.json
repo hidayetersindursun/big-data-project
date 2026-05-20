@@ -1,0 +1,154 @@
+{
+  "gidaradar_daily_margin": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "properties": {
+        "date": { "type": "date" },
+        "year": { "type": "integer" },
+        "month": { "type": "integer" },
+        "city": { "type": "keyword" },
+        "city_geo": { "type": "geo_point" },
+        "region": { "type": "keyword" },
+        "product_canonical": { "type": "keyword" },
+        "market_name": { "type": "keyword" },
+        "hal_price_per_kg": { "type": "double" },
+        "market_price_per_kg": { "type": "double" },
+        "margin_abs": { "type": "double" },
+        "margin_pct": { "type": "double" },
+        "margin_7d": { "type": "double" },
+        "hal_price_7d": { "type": "double" },
+        "market_price_7d": { "type": "double" },
+        "hal_source_type": { "type": "keyword" },
+        "market_source_type": { "type": "keyword" }
+      }
+    }
+  },
+  "gidaradar_price_inequality_hal": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "date": { "type": "date" },
+        "year": { "type": "integer" },
+        "month": { "type": "integer" },
+        "product": { "type": "keyword" },
+        "avg_price": { "type": "double" },
+        "median_price": { "type": "double" },
+        "min_price": { "type": "double" },
+        "max_price": { "type": "double" },
+        "std_price": { "type": "double" },
+        "cv": { "type": "double" },
+        "spread_pct": { "type": "double" },
+        "n_cities": { "type": "integer" },
+        "min_city": { "type": "keyword" },
+        "max_city": { "type": "keyword" },
+        "source_label": { "type": "keyword" }
+      }
+    }
+  },
+  "gidaradar_price_inequality_market": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "date": { "type": "date" },
+        "year": { "type": "integer" },
+        "month": { "type": "integer" },
+        "product": { "type": "keyword" },
+        "avg_price": { "type": "double" },
+        "median_price": { "type": "double" },
+        "min_price": { "type": "double" },
+        "max_price": { "type": "double" },
+        "std_price": { "type": "double" },
+        "cv": { "type": "double" },
+        "spread_pct": { "type": "double" },
+        "n_cities": { "type": "integer" },
+        "min_city": { "type": "keyword" },
+        "max_city": { "type": "keyword" },
+        "source_label": { "type": "keyword" }
+      }
+    }
+  },
+  "gidaradar_rockets_feathers": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "product_canonical": { "type": "keyword" },
+        "market_name": { "type": "keyword" },
+        "beta_up": { "type": "double" },
+        "beta_down": { "type": "double" },
+        "asymmetry_score": { "type": "double" },
+        "ec_coef": { "type": "double" },
+        "half_life_days": { "type": "double" },
+        "n_obs": { "type": "integer" },
+        "r_squared": { "type": "double" },
+        "ec_pvalue": { "type": "double" }
+      }
+    }
+  },
+  "gidaradar_shocks": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "event_date": { "type": "date" },
+        "city": { "type": "keyword" },
+        "city_geo": { "type": "geo_point" },
+        "event_type": { "type": "keyword" },
+        "product_canonical": { "type": "keyword" },
+        "baseline_hal_price": { "type": "double" },
+        "peak_hal_price": { "type": "double" },
+        "peak_change_pct": { "type": "double" },
+        "hal_lag_days": { "type": "integer" },
+        "market_lag_days": { "type": "integer" }
+      }
+    }
+  },
+  "gidaradar_pandemic_gap": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "product_canonical": { "type": "keyword" },
+        "market_name": { "type": "keyword" },
+        "baseline_year": { "type": "integer" },
+        "comparison_year": { "type": "integer" },
+        "baseline_margin": { "type": "double" },
+        "post_margin": { "type": "double" },
+        "gap_widening_pct": { "type": "double" },
+        "baseline_hal": { "type": "double" },
+        "post_hal": { "type": "double" },
+        "baseline_market": { "type": "double" },
+        "post_market": { "type": "double" },
+        "baseline_n": { "type": "integer" },
+        "post_n": { "type": "integer" }
+      }
+    }
+  },
+  "gidaradar_news_corr": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "product_canonical": { "type": "keyword" },
+        "gdelt_metric": { "type": "keyword" },
+        "lag_days": { "type": "integer" },
+        "correlation": { "type": "double" },
+        "p_value": { "type": "double" },
+        "n_obs": { "type": "integer" }
+      }
+    }
+  },
+  "gidaradar_forecast": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "product_canonical": { "type": "keyword" },
+        "date": { "type": "date" },
+        "yhat": { "type": "double" },
+        "yhat_lower": { "type": "double" },
+        "yhat_upper": { "type": "double" },
+        "is_changepoint": { "type": "boolean" },
+        "is_forecast": { "type": "boolean" }
+      }
+    }
+  }
+}
