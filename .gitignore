@@ -54,3 +54,4 @@ ingestion/*/plots/
 ingestion/*/state.json
 *.png
 *.html
+gcp-credentials.json
