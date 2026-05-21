@@ -189,8 +189,9 @@ def lens_table(viz_id, title, dv_id, columns, col_order):
 # ----------------------------------------------------------------------
 # Maps (type: map) — ES_GEO_GRID nokta katmanı
 # ----------------------------------------------------------------------
-def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label):
-    """Türkiye haritası: her ızgara noktası bir konum, renk = avg(metric_field)."""
+def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label, color_stops):
+    """Türkiye haritası: her ızgara noktası bir konum, renk = avg(metric_field).
+    color_stops: [(değer, '#hex'), ...] — gerçek veri dağılımına oturtulmuş eşikler."""
     color_name = f"avg_of_{metric_field}"
     source = {
         "type": "ES_GEO_GRID",
@@ -212,10 +213,9 @@ def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label):
         "fillColor": {
             "type": "DYNAMIC",
             "options": {
-                "color": "Yellow to Red",
-                "colorCategory": "palette_0",
+                "useCustomColorRamp": True,
+                "customColorRamp": [{"stop": s, "color": c} for s, c in color_stops],
                 "field": {"name": color_name, "origin": "source"},
-                "fieldMetaOptions": {"isEnabled": True, "sigma": 3},
                 "type": "ORDINAL",
             },
         },
@@ -358,7 +358,9 @@ def build_all(dv):
                 {"m1": col_metric("average", "margin_pct", "Ort. Marj %", 1)},
                 series_type="bar_horizontal"),
         kibana_map("gr-map-marj", "Marj Haritası — İl Bazlı (renk = ort. marj %)",
-                   dm, "city_geo", "margin_pct", "Ort. Marj %"),
+                   dm, "city_geo", "margin_pct", "Ort. Marj %",
+                   [(95, "#ffffb2"), (125, "#fecc5c"), (155, "#fd8d3c"),
+                    (195, "#f03b20"), (235, "#bd0026")]),
     ]
     objs.append(dashboard("gr-dashboard-marj", "GıdaRadar — Marj Genel Bakış", [
         ("gr-l-dm-kpi-margin", 0, 0, 16, 7),
@@ -419,7 +421,9 @@ def build_all(dv):
                     "c5": col_metric("average", "market_lag_days", "Market gecikme (gün)", 1)},
                    ["c1", "c2", "c3", "c4", "c5"]),
         kibana_map("gr-map-sok", "Şok Haritası — İl Bazlı (renk = ort. zirve değişim %)",
-                   sh, "city_geo", "peak_change_pct", "Zirve değişim %"),
+                   sh, "city_geo", "peak_change_pct", "Zirve değişim %",
+                   [(14, "#ffffb2"), (16.5, "#fecc5c"), (18, "#fd8d3c"),
+                    (22, "#f03b20"), (30, "#bd0026")]),
     ]
     objs.append(dashboard("gr-dashboard-sok", "GıdaRadar — Şok Yayılım", [
         ("gr-l-sh-kpi", 0, 0, 48, 6),
