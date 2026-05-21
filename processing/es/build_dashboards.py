@@ -24,6 +24,46 @@ KIBANA = os.environ.get("KIBANA_HOST", "http://localhost:5601")
 TIME_FROM = "2025-05-01T00:00:00.000Z"
 TIME_TO = "2026-05-21T23:59:59.000Z"
 
+# Her dashboard'ın üstündeki açıklama metni (Markdown)
+MD_MARJ = """### Marj Genel Bakış — Hal (toptan) ile Market (perakende) Fiyat Farkı
+
+Bu dashboard, ürünlerin **toptan hal fiyatı** ile **market raf fiyatı** arasındaki kâr marjını analiz eder.
+
+- **KPI kartları** — ortalama marj %, ortalama hal ve market fiyatı (₺/kg)
+- **Marj Trendi** — 6 market zincirinin zaman içindeki marj değişimi
+- **İl Tablosu + Harita** — marjın 81 ildeki coğrafi dağılımı (harita: koyu kırmızı = yüksek marj)
+- **Ürün Grafiği** — hangi üründe marj en yüksek
+
+*Demo dönemi: Mayıs 2025 – Mayıs 2026.*"""
+
+MD_ROCKETS = """### Rockets & Feathers — Asimetrik Fiyat Geçişi
+
+Market fiyatları, hal fiyatı **artınca hızlı** yükselip **düşünce yavaş** mı iniyor? ("Roket gibi çıkar, tüy gibi iner.")
+
+- **Asimetri Skoru > 1** → roket etkisi (tüketici aleyhine asimetri)
+- **β⁺** hal artışına geçiş hızı · **β⁻** hal düşüşüne geçiş hızı
+- **Yarı ömür (gün)** — fiyatın dengeye dönüş süresi
+
+Engle-Granger asimetrik hata düzeltme modeli (ECM) ile hesaplanmıştır."""
+
+MD_SOK = """### Şok Yayılım — Olaydan Rafa Geçiş Hızı
+
+Hava olayları ve fiyat şoklarının hal ve market fiyatlarına **kaç günde** yansıdığını ölçer.
+
+- **Olay Tipi Dağılımı** — şok olaylarının türlere göre sayısı
+- **Ortalama Gecikme** — şokun hal ve markete ulaşma süresi (gün); düşük = hızlı geçiş
+- **Tablo + Harita** — il bazlı zirve fiyat değişimi % ve coğrafi yoğunluk"""
+
+MD_PROPHET = """### Prophet Tahmin — 30 Günlük Fiyat Öngörüsü
+
+Meta **Prophet** zaman serisi modeli ile ürün fiyatlarının gelecek 30 günlük tahmini.
+
+- **Tahmin Trendi** — ürün bazlı öngörülen fiyat (₺/kg)
+- **Güven Aralığı** — tahminin belirsizlik bandı (alt/üst sınır)
+- **Tablo** — ürün bazlı tahmin özeti
+
+Model, mevsimsellik ve trend bileşenleriyle 10 yıllık geçmiş seriden öğrenir."""
+
 
 # ----------------------------------------------------------------------
 # Kibana'dan data view id'leri
@@ -281,18 +321,54 @@ def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label, colo
 
 
 # ----------------------------------------------------------------------
+# Markdown / metin paneli (type: visualization, visType: markdown)
+# ----------------------------------------------------------------------
+def markdown_panel(viz_id, markdown_text):
+    return {
+        "id": viz_id,
+        "type": "visualization",
+        "attributes": {
+            "title": viz_id,
+            "visState": json.dumps({
+                "title": viz_id,
+                "type": "markdown",
+                "params": {"markdown": markdown_text, "openLinksInNewTab": True, "fontSize": 12},
+                "aggs": [],
+            }, ensure_ascii=False),
+            "uiStateJSON": "{}",
+            "description": "",
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": json.dumps({
+                    "query": {"query": "", "language": "kuery"}, "filter": [],
+                }),
+            },
+        },
+        "references": [],
+    }
+
+
+# ----------------------------------------------------------------------
 # Dashboard
 # ----------------------------------------------------------------------
-def dashboard(dash_id, title, panels):
+def dashboard(dash_id, title, panels, intro_viz_id=None):
     """panels: [(viz_id, x, y, w, h), ...]  → lens varsayılır
-              veya [(ptype, viz_id, x, y, w, h), ...] → tip açık (lens|map)"""
+              veya [(ptype, viz_id, x, y, w, h), ...] → tip açık (lens|map)
+    intro_viz_id verilirse en üste tam-genişlik açıklama paneli eklenir."""
+    # normalize → hepsi 6-tuple
+    norm = []
+    for p in panels:
+        if len(p) == 5:
+            norm.append(("lens",) + tuple(p))
+        else:
+            norm.append(tuple(p))
+    if intro_viz_id:
+        intro_h = 8
+        norm = [("visualization", intro_viz_id, 0, 0, 48, intro_h)] + [
+            (t, i, x, y + intro_h, w, h) for (t, i, x, y, w, h) in norm
+        ]
     panels_json = []
     references = []
-    for i, p in enumerate(panels):
-        if len(p) == 5:
-            ptype, viz_id, x, y, w, h = "lens", *p
-        else:
-            ptype, viz_id, x, y, w, h = p
+    for i, (ptype, viz_id, x, y, w, h) in enumerate(norm):
         pid = f"p{i+1}"
         ref_name = f"panel_{pid}"
         panels_json.append({
@@ -332,6 +408,13 @@ def dashboard(dash_id, title, panels):
 # ----------------------------------------------------------------------
 def build_all(dv):
     objs = []
+    # Açıklama panelleri — push sırasında dashboard'lardan önce gelmeli
+    objs += [
+        markdown_panel("gr-txt-marj", MD_MARJ),
+        markdown_panel("gr-txt-rockets", MD_ROCKETS),
+        markdown_panel("gr-txt-sok", MD_SOK),
+        markdown_panel("gr-txt-prophet", MD_PROPHET),
+    ]
 
     # === Dashboard 1: Marj Genel Bakış ===
     dm = dv["gidaradar_daily_margin"]
@@ -370,7 +453,7 @@ def build_all(dv):
         ("gr-l-dm-city", 0, 22, 24, 18),
         ("gr-l-dm-product", 24, 22, 24, 18),
         ("map", "gr-map-marj", 0, 40, 48, 20),
-    ]))
+    ], intro_viz_id="gr-txt-marj"))
 
     # === Dashboard 2: Rockets & Feathers ===
     rf = dv["gidaradar_rockets_feathers"]
@@ -398,7 +481,7 @@ def build_all(dv):
         ("gr-l-rf-market", 0, 6, 24, 15),
         ("gr-l-rf-product", 24, 6, 24, 15),
         ("gr-l-rf-table", 0, 21, 48, 18),
-    ]))
+    ], intro_viz_id="gr-txt-rockets"))
 
     # === Dashboard 3: Şok Yayılım ===
     sh = dv["gidaradar_shocks"]
@@ -431,7 +514,7 @@ def build_all(dv):
         ("gr-l-sh-lag", 24, 6, 24, 15),
         ("gr-l-sh-table", 0, 21, 48, 18),
         ("map", "gr-map-sok", 0, 39, 48, 20),
-    ]))
+    ], intro_viz_id="gr-txt-sok"))
 
     # === Dashboard 4: Prophet Tahmin ===
     fc = dv["gidaradar_forecast"]
@@ -460,7 +543,7 @@ def build_all(dv):
         ("gr-l-fc-trend", 0, 6, 48, 15),
         ("gr-l-fc-band", 0, 21, 24, 15),
         ("gr-l-fc-table", 24, 21, 24, 15),
-    ]))
+    ], intro_viz_id="gr-txt-prophet"))
 
     return objs
 
