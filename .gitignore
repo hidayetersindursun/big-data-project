@@ -21,7 +21,7 @@ venv.bak/
 infrastructure/.env
 
 # Credentials / Anahtarlar — asla commit edilmez
-gcp-credentials.json
+gcp-credentials*.json
 *.pem
 *.key
 *.p12
@@ -54,4 +54,7 @@ ingestion/*/plots/
 ingestion/*/state.json
 *.png
 *.html
-gcp-credentials.json
+
+# Build artifact + araç klasörü
+.claude/
+infrastructure/emr/deps.zip
