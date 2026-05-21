@@ -46,6 +46,7 @@ INDEX_SOURCES = {
     "gidaradar_pandemic_gap":           {"path": "pandemic_gap", "city_field": None},
     "gidaradar_news_corr":              {"path": "news_price_corr", "city_field": None},
     "gidaradar_forecast":               {"path": "price_forecast", "city_field": None},
+    "gidaradar_macro_corr":             {"path": "macro_price_corr", "city_field": None},
 }
 
 

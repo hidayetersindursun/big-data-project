@@ -126,13 +126,27 @@ def main():
     parser.add_argument(
         "--dataset",
         choices=ALL_DATASETS,
-        help="Tek bir dataset işle (varsayılan: tümü)",
+        help="Tek bir dataset işle",
+    )
+    parser.add_argument(
+        "--datasets",
+        type=str,
+        default=None,
+        help="Virgüllü dataset listesi — grup grup çalıştırma (EC2 RAM kısıtı için)",
     )
     args = parser.parse_args()
 
-    spark = get_spark_session("epias_silver")
+    if args.datasets:
+        targets = [d.strip() for d in args.datasets.split(",") if d.strip()]
+        unknown = [d for d in targets if d not in ALL_DATASETS]
+        if unknown:
+            raise SystemExit(f"Bilinmeyen dataset(ler): {unknown}")
+    elif args.dataset:
+        targets = [args.dataset]
+    else:
+        targets = ALL_DATASETS
 
-    targets = [args.dataset] if args.dataset else ALL_DATASETS
+    spark = get_spark_session("epias_silver")
     failed = []
 
     for dataset in targets:

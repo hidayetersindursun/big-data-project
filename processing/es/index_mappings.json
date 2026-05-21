@@ -150,5 +150,22 @@
         "is_forecast": { "type": "boolean" }
       }
     }
+  },
+  "gidaradar_macro_corr": {
+    "settings": { "number_of_shards": 1, "number_of_replicas": 0 },
+    "mappings": {
+      "properties": {
+        "macro_source": { "type": "keyword" },
+        "macro_series": { "type": "keyword" },
+        "product_canonical": { "type": "keyword" },
+        "target_type": { "type": "keyword" },
+        "corr_basis": { "type": "keyword" },
+        "lag_days": { "type": "integer" },
+        "correlation": { "type": "double" },
+        "p_value": { "type": "double" },
+        "n_obs": { "type": "integer" },
+        "best_lag": { "type": "boolean" }
+      }
+    }
   }
 }

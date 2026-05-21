@@ -45,6 +45,7 @@ create_dv "gidaradar_price_inequality_market" "Price Inequality (Market)" "date"
 create_dv "gidaradar_rockets_feathers"      "Rockets & Feathers"  ""
 create_dv "gidaradar_shocks"                "Shock Propagation"   "event_date"
 create_dv "gidaradar_forecast"              "Price Forecast"      "date"
+create_dv "gidaradar_macro_corr"            "Macro Correlation"   ""
 create_dv "gidaradar_*"                     "GidaRadar (All)"     "date"
 
 echo "=== Listeleme ==="
