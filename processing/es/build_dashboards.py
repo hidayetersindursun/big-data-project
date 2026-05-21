@@ -352,10 +352,11 @@ def _markdown_panel_json(pid, markdown_text, h):
 # ----------------------------------------------------------------------
 # Dashboard
 # ----------------------------------------------------------------------
-def dashboard(dash_id, title, panels, intro_md=None):
+def dashboard(dash_id, title, panels, intro_md=None, time_from=None, time_to=None):
     """panels: [(viz_id, x, y, w, h), ...]  → lens varsayılır
               veya [(ptype, viz_id, x, y, w, h), ...] → tip açık (lens|map)
-    intro_md verilirse en üste tam-genişlik (by-value) markdown açıklama paneli eklenir."""
+    intro_md verilirse en üste tam-genişlik (by-value) markdown açıklama paneli eklenir.
+    time_from/time_to verilmezse global demo aralığı kullanılır."""
     # normalize → hepsi 6-tuple
     norm = []
     for p in panels:
@@ -392,8 +393,8 @@ def dashboard(dash_id, title, panels, intro_md=None):
                 "syncTooltips": False, "hidePanelTitles": False,
             }),
             "timeRestore": True,
-            "timeFrom": TIME_FROM,
-            "timeTo": TIME_TO,
+            "timeFrom": time_from or TIME_FROM,
+            "timeTo": time_to or TIME_TO,
             "kibanaSavedObjectMeta": {
                 "searchSourceJSON": json.dumps({
                     "query": {"query": "", "language": "kuery"}, "filter": [],
@@ -537,7 +538,8 @@ def build_all(dv):
         ("gr-l-fc-trend", 0, 6, 48, 15),
         ("gr-l-fc-band", 0, 21, 24, 15),
         ("gr-l-fc-table", 24, 21, 24, 15),
-    ], intro_md=MD_PROPHET))
+    ], intro_md=MD_PROPHET,
+       time_from="2024-06-01T00:00:00.000Z", time_to="2027-02-15T23:59:59.000Z"))
 
     return objs
 
