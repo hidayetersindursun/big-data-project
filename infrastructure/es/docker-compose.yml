@@ -24,7 +24,9 @@ services:
     volumes:
       - es-data:/usr/share/elasticsearch/data
     ports:
-      - "9200:9200"
+      # localhost-only: ES'i internete AÇMA. Kibana container-network'ten,
+      # index_to_es localhost'tan erişir. 9200'ü dışa açmak = ransomware botu daveti.
+      - "127.0.0.1:9200:9200"
     networks:
       - gidaradar-net
     healthcheck:
