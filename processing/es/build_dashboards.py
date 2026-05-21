@@ -221,14 +221,7 @@ def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label):
         },
         "lineColor": {"type": "STATIC", "options": {"color": "#3d3d3d"}},
         "lineWidth": {"type": "STATIC", "options": {"size": 1}},
-        "iconSize": {
-            "type": "DYNAMIC",
-            "options": {
-                "minSize": 7, "maxSize": 24,
-                "field": {"name": "doc_count", "origin": "source"},
-                "fieldMetaOptions": {"isEnabled": True, "sigma": 3},
-            },
-        },
+        "iconSize": {"type": "STATIC", "options": {"size": 8}},
         "iconOrientation": {"type": "STATIC", "options": {"orientation": 0}},
         "labelText": {"type": "STATIC", "options": {"value": ""}},
         "labelZoomRange": {"options": {"useLayerZoomRange": True, "minZoom": 0, "maxZoom": 24}},
@@ -247,7 +240,19 @@ def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label):
         "style": {"type": "VECTOR", "properties": style_props, "isTimeAware": True},
         "type": "GEOJSON_VECTOR",
         "joins": [],
-        "minZoom": 0, "maxZoom": 24, "alpha": 0.75,
+        "minZoom": 0, "maxZoom": 24, "alpha": 0.9,
+        "includeInFitToBounds": True,
+    }
+    # Base map (zemin harita) — EMS road map. Olmadan harita beyaz görünür.
+    base_layer = {
+        "id": f"{map_id}-base",
+        "label": None,
+        "sourceDescriptor": {"type": "EMS_TMS", "isAutoSelect": True},
+        "type": "EMS_VECTOR_TILE",
+        "minZoom": 0, "maxZoom": 24,
+        "alpha": 1,
+        "visible": True,
+        "style": {"type": "EMS_VECTOR_TILE", "color": ""},
         "includeInFitToBounds": True,
     }
     map_state = {
@@ -266,7 +271,7 @@ def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label):
             "title": title,
             "description": "",
             "mapStateJSON": json.dumps(map_state),
-            "layerListJSON": json.dumps([layer]),
+            "layerListJSON": json.dumps([base_layer, layer]),
             "uiStateJSON": json.dumps({"isLayerTOCOpen": True, "openTOCDetails": []}),
         },
         "references": [
