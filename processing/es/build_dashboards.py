@@ -187,23 +187,117 @@ def lens_table(viz_id, title, dv_id, columns, col_order):
 
 
 # ----------------------------------------------------------------------
+# Maps (type: map) — ES_GEO_GRID nokta katmanı
+# ----------------------------------------------------------------------
+def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label):
+    """Türkiye haritası: her ızgara noktası bir konum, renk = avg(metric_field)."""
+    color_name = f"avg_of_{metric_field}"
+    source = {
+        "type": "ES_GEO_GRID",
+        "id": f"{map_id}-src",
+        "applyGlobalQuery": True,
+        "applyGlobalTime": True,
+        "applyForceRefresh": True,
+        "geoField": geo_field,
+        "metrics": [
+            {"type": "count"},
+            {"type": "avg", "field": metric_field, "label": metric_label},
+        ],
+        "requestType": "point",
+        "resolution": "MOST_FINE",
+        "indexPatternRefName": "layer_0_source_index_pattern",
+    }
+    style_props = {
+        "icon": {"type": "STATIC", "options": {"value": "marker"}},
+        "fillColor": {
+            "type": "DYNAMIC",
+            "options": {
+                "color": "Yellow to Red",
+                "colorCategory": "palette_0",
+                "field": {"name": color_name, "origin": "source"},
+                "fieldMetaOptions": {"isEnabled": True, "sigma": 3},
+                "type": "ORDINAL",
+            },
+        },
+        "lineColor": {"type": "STATIC", "options": {"color": "#3d3d3d"}},
+        "lineWidth": {"type": "STATIC", "options": {"size": 1}},
+        "iconSize": {
+            "type": "DYNAMIC",
+            "options": {
+                "minSize": 7, "maxSize": 24,
+                "field": {"name": "doc_count", "origin": "source"},
+                "fieldMetaOptions": {"isEnabled": True, "sigma": 3},
+            },
+        },
+        "iconOrientation": {"type": "STATIC", "options": {"orientation": 0}},
+        "labelText": {"type": "STATIC", "options": {"value": ""}},
+        "labelZoomRange": {"options": {"useLayerZoomRange": True, "minZoom": 0, "maxZoom": 24}},
+        "labelColor": {"type": "STATIC", "options": {"color": "#000000"}},
+        "labelSize": {"type": "STATIC", "options": {"size": 14}},
+        "labelBorderColor": {"type": "STATIC", "options": {"color": "#FFFFFF"}},
+        "symbolizeAs": {"options": {"value": "circle"}},
+        "labelBorderSize": {"options": {"size": "SMALL"}},
+        "labelPosition": {"options": {"position": "CENTER"}},
+    }
+    layer = {
+        "id": f"{map_id}-layer",
+        "label": title,
+        "sourceDescriptor": source,
+        "visible": True,
+        "style": {"type": "VECTOR", "properties": style_props, "isTimeAware": True},
+        "type": "GEOJSON_VECTOR",
+        "joins": [],
+        "minZoom": 0, "maxZoom": 24, "alpha": 0.75,
+        "includeInFitToBounds": True,
+    }
+    map_state = {
+        "zoom": 5.4,
+        "center": {"lon": 35.4, "lat": 39.1},
+        "timeFilters": {"from": TIME_FROM, "to": TIME_TO},
+        "refreshConfig": {"isPaused": True, "interval": 0},
+        "query": {"query": "", "language": "kuery"},
+        "filters": [],
+        "settings": {"autoFitToDataBounds": False},
+    }
+    return {
+        "id": map_id,
+        "type": "map",
+        "attributes": {
+            "title": title,
+            "description": "",
+            "mapStateJSON": json.dumps(map_state),
+            "layerListJSON": json.dumps([layer]),
+            "uiStateJSON": json.dumps({"isLayerTOCOpen": True, "openTOCDetails": []}),
+        },
+        "references": [
+            {"type": "index-pattern", "id": dv_id, "name": "layer_0_source_index_pattern"},
+        ],
+    }
+
+
+# ----------------------------------------------------------------------
 # Dashboard
 # ----------------------------------------------------------------------
 def dashboard(dash_id, title, panels):
-    """panels: [(viz_id, x, y, w, h), ...]"""
+    """panels: [(viz_id, x, y, w, h), ...]  → lens varsayılır
+              veya [(ptype, viz_id, x, y, w, h), ...] → tip açık (lens|map)"""
     panels_json = []
     references = []
-    for i, (viz_id, x, y, w, h) in enumerate(panels):
+    for i, p in enumerate(panels):
+        if len(p) == 5:
+            ptype, viz_id, x, y, w, h = "lens", *p
+        else:
+            ptype, viz_id, x, y, w, h = p
         pid = f"p{i+1}"
         ref_name = f"panel_{pid}"
         panels_json.append({
-            "type": "lens",
+            "type": ptype,
             "gridData": {"x": x, "y": y, "w": w, "h": h, "i": pid},
             "panelIndex": pid,
             "embeddableConfig": {"enhancements": {}},
             "panelRefName": ref_name,
         })
-        references.append({"type": "lens", "id": viz_id, "name": ref_name})
+        references.append({"type": ptype, "id": viz_id, "name": ref_name})
     return {
         "id": dash_id,
         "type": "dashboard",
@@ -258,6 +352,8 @@ def build_all(dv):
                 col_terms("product_canonical", 15, order_col="m1"),
                 {"m1": col_metric("average", "margin_pct", "Ort. Marj %", 1)},
                 series_type="bar_horizontal"),
+        kibana_map("gr-map-marj", "Marj Haritası — İl Bazlı (renk = ort. marj %)",
+                   dm, "city_geo", "margin_pct", "Ort. Marj %"),
     ]
     objs.append(dashboard("gr-dashboard-marj", "GıdaRadar — Marj Genel Bakış", [
         ("gr-l-dm-kpi-margin", 0, 0, 16, 7),
@@ -266,6 +362,7 @@ def build_all(dv):
         ("gr-l-dm-trend", 0, 7, 48, 15),
         ("gr-l-dm-city", 0, 22, 24, 18),
         ("gr-l-dm-product", 24, 22, 24, 18),
+        ("map", "gr-map-marj", 0, 40, 48, 20),
     ]))
 
     # === Dashboard 2: Rockets & Feathers ===
@@ -316,12 +413,15 @@ def build_all(dv):
                     "c4": col_metric("average", "hal_lag_days", "Hal gecikme (gün)", 1),
                     "c5": col_metric("average", "market_lag_days", "Market gecikme (gün)", 1)},
                    ["c1", "c2", "c3", "c4", "c5"]),
+        kibana_map("gr-map-sok", "Şok Haritası — İl Bazlı (renk = ort. zirve değişim %)",
+                   sh, "city_geo", "peak_change_pct", "Zirve değişim %"),
     ]
     objs.append(dashboard("gr-dashboard-sok", "GıdaRadar — Şok Yayılım", [
         ("gr-l-sh-kpi", 0, 0, 48, 6),
         ("gr-l-sh-type", 0, 6, 24, 15),
         ("gr-l-sh-lag", 24, 6, 24, 15),
         ("gr-l-sh-table", 0, 21, 48, 18),
+        ("map", "gr-map-sok", 0, 39, 48, 20),
     ]))
 
     # === Dashboard 4: Prophet Tahmin ===
