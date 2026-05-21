@@ -33,15 +33,19 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from pyspark.sql import functions as F
 from utils.spark_session import get_spark_session
-from silver.utils.cities import normalize_city_expr  # noqa: E402
+from utils.cities import normalize_city_expr  # noqa: E402
 
-_S3_PREFIX = "s3" if os.environ.get("ON_EMR", "false").lower() == "true" else "s3a"
+_ON_EMR = os.environ.get("ON_EMR", "false").lower() == "true"
+_S3_PREFIX = "s3" if _ON_EMR else "s3a"
 SILVER_MARKET = f"{_S3_PREFIX}://s3-bbuckett/silver/market_prices"
 SILVER_HAL = f"{_S3_PREFIX}://s3-bbuckett/silver/hal_prices"
 SILVER_OUT = f"{_S3_PREFIX}://s3-bbuckett/silver/market_hal_joined"
 
 LOOKUP_DIR = Path(__file__).resolve().parent / "lookups"
 MAPPING_CSV = LOOKUP_DIR / "hal_market_mapping.csv"
+# EMR cluster mode'da script S3'ten tek dosya iner — lookups/ klasörü inmez.
+# ON_EMR'da mapping CSV, aws s3 sync ile yüklenmiş code/ kopyasından okunur.
+MAPPING_CSV_EMR = f"{_S3_PREFIX}://s3-bbuckett/code/processing/silver/lookups/hal_market_mapping.csv"
 
 # Mapping CSV'de geçerli sayılacak confidence değerleri
 VALID_CONFIDENCE = ("exact", "kg_equivalent")
@@ -49,14 +53,18 @@ VALID_CONFIDENCE = ("exact", "kg_equivalent")
 
 def read_mapping(spark):
     """Lookup CSV'yi oku ve broadcast'le."""
-    if not MAPPING_CSV.exists():
-        raise FileNotFoundError(
-            f"{MAPPING_CSV} bulunamadı. Önce build_mapping_skeleton.py + "
-            f"build_mapping_with_claude.py çalıştırın ve manuel review yapın."
-        )
+    if _ON_EMR:
+        path = MAPPING_CSV_EMR
+    else:
+        if not MAPPING_CSV.exists():
+            raise FileNotFoundError(
+                f"{MAPPING_CSV} bulunamadı. Önce build_mapping_skeleton.py + "
+                f"build_mapping_with_claude.py çalıştırın ve manuel review yapın."
+            )
+        path = f"file:///{MAPPING_CSV.as_posix()}"
     df = (
         spark.read.option("header", "true")
-        .csv(f"file:///{MAPPING_CSV.as_posix()}")
+        .csv(path)
         .filter(F.col("confidence").isin(*VALID_CONFIDENCE))
         .withColumn("unit_conversion_factor", F.col("unit_conversion_factor").cast("double"))
         .select("hal_product", "market_product", "product_canonical", "unit_conversion_factor")

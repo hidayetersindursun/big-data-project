@@ -7,6 +7,7 @@
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "--conf", "spark.executorEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/silver/silver_joined.py",
       "--start-date", "2025-05-20",
       "--end-date", "2026-05-20"
@@ -19,6 +20,7 @@
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/silver/gdelt_silver.py",
       "--skip-articles",
       "--start-date", "2025-05-20",
@@ -32,6 +34,7 @@
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/daily_margin.py",
       "--start-date", "2025-05-20",
       "--end-date", "2026-05-20"
@@ -44,6 +47,7 @@
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/price_inequality.py",
       "--start-date", "2025-05-20",
       "--end-date", "2026-05-20"
@@ -56,6 +60,7 @@
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/rockets_feathers.py",
       "--start-date", "2025-05-20",
       "--end-date", "2026-05-20"
@@ -68,6 +73,7 @@
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/shock_propagation.py",
       "--start-date", "2025-05-20",
       "--end-date", "2026-05-20"
@@ -80,6 +86,7 @@
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/news_price_corr.py",
       "--years", "2025,2026"
     ]
@@ -91,6 +98,7 @@
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/prophet_forecast.py"
     ]
   },
@@ -101,6 +109,7 @@
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/macro_price_corr.py",
       "--start-date", "2025-05-20",
       "--end-date", "2026-05-20"
