@@ -16,7 +16,7 @@ set -euo pipefail
 REGION="${AWS_REGION:-eu-central-1}"
 BUCKET="${BUCKET:-s3-bbuckett}"
 CLUSTER_NAME="${CLUSTER_NAME:-GidaRadar-Demo-$(date +%Y%m%d-%H%M)}"
-RELEASE="emr-6.15.0"
+RELEASE="emr-7.2.0"   # Spark 3.5.1 + Python 3.9 (6.15 Python 3.7 → modern paketler kurulamıyor)
 LOG_URI="s3://${BUCKET}/emr-logs/"
 KEY_NAME="${EMR_KEY_NAME:-azmi-yagli-h23}"
 
