@@ -109,5 +109,18 @@
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/gold/prophet_forecast.py"
     ]
+  },
+  {
+    "Name": "10-gold-macro-price-corr",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "spark-submit",
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "s3://s3-bbuckett/code/processing/gold/macro_price_corr.py",
+      "--start-date", "2025-05-20",
+      "--end-date", "2026-05-20"
+    ]
   }
 ]
