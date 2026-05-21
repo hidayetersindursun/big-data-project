@@ -320,40 +320,42 @@ def kibana_map(map_id, title, dv_id, geo_field, metric_field, metric_label, colo
     }
 
 
-# ----------------------------------------------------------------------
-# Markdown / metin paneli (type: visualization, visType: markdown)
-# ----------------------------------------------------------------------
-def markdown_panel(viz_id, markdown_text):
+def _markdown_panel_json(pid, markdown_text, h):
+    """Dashboard'a gömülü (by-value) markdown paneli — ayrı saved object değil.
+    Kibana 8.x'te 'Text' paneli böyle saklanır; by-reference markdown render olmaz."""
     return {
-        "id": viz_id,
         "type": "visualization",
-        "attributes": {
-            "title": viz_id,
-            "visState": json.dumps({
-                "title": viz_id,
+        "gridData": {"x": 0, "y": 0, "w": 48, "h": h, "i": pid},
+        "panelIndex": pid,
+        "embeddableConfig": {
+            "savedVis": {
+                "id": "",
                 "type": "markdown",
-                "params": {"markdown": markdown_text, "openLinksInNewTab": True, "fontSize": 12},
-                "aggs": [],
-            }, ensure_ascii=False),
-            "uiStateJSON": "{}",
-            "description": "",
-            "kibanaSavedObjectMeta": {
-                "searchSourceJSON": json.dumps({
-                    "query": {"query": "", "language": "kuery"}, "filter": [],
-                }),
+                "title": "",
+                "description": "",
+                "params": {
+                    "fontSize": 12,
+                    "openLinksInNewTab": True,
+                    "markdown": markdown_text,
+                },
+                "uiState": {},
+                "data": {
+                    "aggs": [],
+                    "searchSource": {"query": {"query": "", "language": "kuery"}, "filter": []},
+                },
             },
+            "enhancements": {},
         },
-        "references": [],
     }
 
 
 # ----------------------------------------------------------------------
 # Dashboard
 # ----------------------------------------------------------------------
-def dashboard(dash_id, title, panels, intro_viz_id=None):
+def dashboard(dash_id, title, panels, intro_md=None):
     """panels: [(viz_id, x, y, w, h), ...]  → lens varsayılır
               veya [(ptype, viz_id, x, y, w, h), ...] → tip açık (lens|map)
-    intro_viz_id verilirse en üste tam-genişlik açıklama paneli eklenir."""
+    intro_md verilirse en üste tam-genişlik (by-value) markdown açıklama paneli eklenir."""
     # normalize → hepsi 6-tuple
     norm = []
     for p in panels:
@@ -361,13 +363,12 @@ def dashboard(dash_id, title, panels, intro_viz_id=None):
             norm.append(("lens",) + tuple(p))
         else:
             norm.append(tuple(p))
-    if intro_viz_id:
-        intro_h = 8
-        norm = [("visualization", intro_viz_id, 0, 0, 48, intro_h)] + [
-            (t, i, x, y + intro_h, w, h) for (t, i, x, y, w, h) in norm
-        ]
     panels_json = []
     references = []
+    intro_h = 9
+    if intro_md:
+        panels_json.append(_markdown_panel_json("intro", intro_md, intro_h))
+        norm = [(t, i, x, y + intro_h, w, h) for (t, i, x, y, w, h) in norm]
     for i, (ptype, viz_id, x, y, w, h) in enumerate(norm):
         pid = f"p{i+1}"
         ref_name = f"panel_{pid}"
@@ -408,13 +409,6 @@ def dashboard(dash_id, title, panels, intro_viz_id=None):
 # ----------------------------------------------------------------------
 def build_all(dv):
     objs = []
-    # Açıklama panelleri — push sırasında dashboard'lardan önce gelmeli
-    objs += [
-        markdown_panel("gr-txt-marj", MD_MARJ),
-        markdown_panel("gr-txt-rockets", MD_ROCKETS),
-        markdown_panel("gr-txt-sok", MD_SOK),
-        markdown_panel("gr-txt-prophet", MD_PROPHET),
-    ]
 
     # === Dashboard 1: Marj Genel Bakış ===
     dm = dv["gidaradar_daily_margin"]
@@ -453,7 +447,7 @@ def build_all(dv):
         ("gr-l-dm-city", 0, 22, 24, 18),
         ("gr-l-dm-product", 24, 22, 24, 18),
         ("map", "gr-map-marj", 0, 40, 48, 20),
-    ], intro_viz_id="gr-txt-marj"))
+    ], intro_md=MD_MARJ))
 
     # === Dashboard 2: Rockets & Feathers ===
     rf = dv["gidaradar_rockets_feathers"]
@@ -481,7 +475,7 @@ def build_all(dv):
         ("gr-l-rf-market", 0, 6, 24, 15),
         ("gr-l-rf-product", 24, 6, 24, 15),
         ("gr-l-rf-table", 0, 21, 48, 18),
-    ], intro_viz_id="gr-txt-rockets"))
+    ], intro_md=MD_ROCKETS))
 
     # === Dashboard 3: Şok Yayılım ===
     sh = dv["gidaradar_shocks"]
@@ -514,7 +508,7 @@ def build_all(dv):
         ("gr-l-sh-lag", 24, 6, 24, 15),
         ("gr-l-sh-table", 0, 21, 48, 18),
         ("map", "gr-map-sok", 0, 39, 48, 20),
-    ], intro_viz_id="gr-txt-sok"))
+    ], intro_md=MD_SOK))
 
     # === Dashboard 4: Prophet Tahmin ===
     fc = dv["gidaradar_forecast"]
@@ -543,7 +537,7 @@ def build_all(dv):
         ("gr-l-fc-trend", 0, 6, 48, 15),
         ("gr-l-fc-band", 0, 21, 24, 15),
         ("gr-l-fc-table", 24, 21, 24, 15),
-    ], intro_viz_id="gr-txt-prophet"))
+    ], intro_md=MD_PROPHET))
 
     return objs
 
