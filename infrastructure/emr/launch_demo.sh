@@ -46,7 +46,6 @@ aws emr create-cluster \
   --bootstrap-actions \
     "Path=s3://${BUCKET}/bootstrap/install_libs.sh,Name=install-libs" \
   --steps file://steps.json \
-  --auto-terminate \
   --use-default-roles \
   --log-uri "${LOG_URI}" \
   --region "${REGION}" \
@@ -55,8 +54,9 @@ aws emr create-cluster \
   --output text
 
 echo ""
-echo "Cluster ayağa kalkıyor (~3-5 dk). 'aws emr describe-cluster --cluster-id <id>' ile takip et."
-echo "Beklenen toplam wall-clock (1y subset): 18-22 dk."
+echo "KEEP-ALIVE cluster — auto-terminate YOK. Step biter/fail eder, cluster WAITING'te kalir."
+echo "Step fail ederse:  duzelt + kodu S3'e sync + 'aws emr add-steps --cluster-id <id> --steps file://steps.json'"
+echo "Test bitince MUTLAKA kapat:  aws emr terminate-clusters --cluster-ids <id>"
 echo ""
-echo "Sunum sırasında durum takibi:"
-echo "  watch -n 30 \"aws emr list-steps --cluster-id <id> --query 'Steps[].[Name,Status.State]' --output table\""
+echo "Durum takibi:"
+echo "  aws emr list-steps --cluster-id <id> --query 'Steps[].[Name,Status.State]' --output table"

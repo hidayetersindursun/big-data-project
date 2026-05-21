@@ -2,9 +2,8 @@
   {
     "Name": "1-silver-joined",
     "Type": "Spark",
-    "ActionOnFailure": "TERMINATE_CLUSTER",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "--conf", "spark.executorEnv.ON_EMR=true",
@@ -16,9 +15,8 @@
   {
     "Name": "2-gdelt-silver",
     "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/silver/gdelt_silver.py",
@@ -30,9 +28,8 @@
   {
     "Name": "3-gold-daily-margin",
     "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/gold/daily_margin.py",
@@ -43,9 +40,8 @@
   {
     "Name": "4-gold-price-inequality",
     "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/gold/price_inequality.py",
@@ -56,9 +52,8 @@
   {
     "Name": "5-gold-rockets-feathers",
     "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/gold/rockets_feathers.py",
@@ -69,9 +64,8 @@
   {
     "Name": "6-gold-shock-propagation",
     "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/gold/shock_propagation.py",
@@ -82,9 +76,8 @@
   {
     "Name": "7-gold-news-price-corr",
     "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/gold/news_price_corr.py",
@@ -94,9 +87,8 @@
   {
     "Name": "8-gold-prophet-forecast",
     "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/gold/prophet_forecast.py"
@@ -105,9 +97,8 @@
   {
     "Name": "9-gold-macro-price-corr",
     "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
     "Args": [
-      "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/gold/macro_price_corr.py",
