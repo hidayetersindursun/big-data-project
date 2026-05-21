@@ -38,7 +38,7 @@ COORDS_FILE = Path(__file__).resolve().parent.parent / "silver" / "lookups" / "c
 
 # index_name → {gold_table_path, city_field_name (geo enrich için, varsa)}
 INDEX_SOURCES = {
-    "gidaradar_daily_margin":           {"path": "daily_margin", "city_field": "city"},
+    "gidaradar_daily_margin":           {"path": "daily_margin", "city_field": "city", "rollup": "monthly"},
     "gidaradar_price_inequality_hal":   {"path": "price_inequality_hal", "city_field": None},
     "gidaradar_price_inequality_market":{"path": "price_inequality_market", "city_field": None},
     "gidaradar_rockets_feathers":       {"path": "rockets_feathers", "city_field": None},
@@ -88,7 +88,37 @@ def _row_to_clean_dict(row, city_field):
     return clean
 
 
-def push_index(spark, es, index_name, src, coords_pdf, dry_run):
+def apply_monthly_rollup(df):
+    """daily_margin → aylık özet rollup.
+
+    10 yıllık ham günlük satır (date×city×product×market = onlarca milyon) tek-node
+    ES'i (8 GB RAM, 1.5 GB heap) zorlar. Aylık rollup satır sayısını ~30x düşürür.
+    Alan isimleri index_mappings.json ile uyumlu kalır; `date` ilgili ayın ilk günü,
+    `n_days` o ayda ortalamaya giren günlük gözlem sayısıdır.
+    """
+    return (
+        df
+        .groupBy("year", "month", "city", "product_canonical", "market_name")
+        .agg(
+            F.round(F.avg("margin_pct"), 4).alias("margin_pct"),
+            F.round(F.avg("margin_abs"), 4).alias("margin_abs"),
+            F.round(F.avg("hal_price_per_kg"), 4).alias("hal_price_per_kg"),
+            F.round(F.avg("market_price_per_kg"), 4).alias("market_price_per_kg"),
+            F.count(F.lit(1)).cast("int").alias("n_days"),
+        )
+        .withColumn(
+            "date",
+            F.to_date(F.concat_ws(
+                "-",
+                F.col("year").cast("string"),
+                F.lpad(F.col("month").cast("string"), 2, "0"),
+                F.lit("01"),
+            )),
+        )
+    )
+
+
+def push_index(spark, es, index_name, src, coords_pdf, dry_run, no_rollup=False):
     """Spark df'i streaming bulk indexle — toPandas() yok, RAM-safe."""
     path = f"{GOLD_BASE}/{src['path']}"
     print(f"\n=== {index_name} ←  {path} ===")
@@ -97,6 +127,12 @@ def push_index(spark, es, index_name, src, coords_pdf, dry_run):
     except Exception as e:
         print(f"  ATLANIYOR (parquet okunamadı: {e})")
         return
+
+    # Heavy tablolar (daily_margin) aylık rollup ile küçültülür — tek-node ES koruması.
+    if src.get("rollup") == "monthly" and not no_rollup:
+        df = apply_monthly_rollup(df)
+        print("  Aylik rollup uygulandi (ham gunluk satir yerine ay ozeti)")
+
     n = df.count()
     print(f"  Spark satır: {n:,}")
     if n == 0:
@@ -139,6 +175,8 @@ def main():
     parser.add_argument("--recreate-only", action="store_true",
                         help="Sadece index'leri oluştur, veri push'lama")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--no-rollup", action="store_true",
+                        help="Rollup'i atla — heavy tablolari ham gunluk satir olarak indexle")
     args = parser.parse_args()
 
     mappings = load_mappings()
@@ -165,7 +203,7 @@ def main():
             print(f"  UYARI: {name} INDEX_SOURCES'ta yok")
             continue
         try:
-            push_index(spark, es, name, src, coords, args.dry_run)
+            push_index(spark, es, name, src, coords, args.dry_run, args.no_rollup)
         except Exception as e:
             print(f"  HATA [{name}]: {e}")
 

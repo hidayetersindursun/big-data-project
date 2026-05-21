@@ -134,6 +134,7 @@ def main():
 
     (
         out_df
+        .coalesce(1)
         .write
         .mode("overwrite")
         .partitionBy("gdelt_metric")

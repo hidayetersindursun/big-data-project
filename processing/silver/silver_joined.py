@@ -34,6 +34,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from pyspark.sql import functions as F
 from utils.spark_session import get_spark_session
 from utils.cities import normalize_city_expr  # noqa: E402
+from utils.partitions import filter_by_date_partitioned  # noqa: E402
 
 _ON_EMR = os.environ.get("ON_EMR", "false").lower() == "true"
 _S3_PREFIX = "s3" if _ON_EMR else "s3a"
@@ -197,14 +198,15 @@ def main():
     hal = spark.read.parquet(SILVER_HAL)
 
     if args.debug_day:
-        market = market.filter(F.col("date") == args.debug_day)
+        # market year/month partition'lı → tek gün için tek ay klasörü taranır.
+        market = filter_by_date_partitioned(market, args.debug_day, args.debug_day)
         hal = hal.filter(F.col("date") == args.debug_day)
     else:
+        # market year/month partition'lı; hal zaten date partition'lı.
+        market = filter_by_date_partitioned(market, args.start_date, args.end_date)
         if args.start_date:
-            market = market.filter(F.col("date") >= args.start_date)
             hal = hal.filter(F.col("date") >= args.start_date)
         if args.end_date:
-            market = market.filter(F.col("date") <= args.end_date)
             hal = hal.filter(F.col("date") <= args.end_date)
 
     market_t = transform_market(market, mapping)
@@ -223,8 +225,11 @@ def main():
     else:
         n = joined.count()
         print(f"\nToplam: {n:,} satır")
+        # repartition(year, month) → her ay partition'ı ~1 dosya; küçük-dosya
+        # patlamasını (10 yıl × 200 shuffle partition) önler, dashboard okumasını hızlandırır.
         (
             joined
+            .repartition("year", "month")
             .write
             .mode(args.mode)
             .partitionBy("year", "month")

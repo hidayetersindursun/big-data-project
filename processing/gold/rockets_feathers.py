@@ -12,10 +12,10 @@ Algoritma (Asymmetric Error Correction Model — Engle-Granger varyantı):
   asymmetry_score = (Σγ⁺ + β⁺) / (|Σγ⁻| + |β⁻|)
     > 1 → rockets (artışta hızlı yansıt)
     < 1 → feathers (düşüşte yavaş yansıt)
-    1'in üstü tüketici aleyhine
 
 Spark side : (product, market_name) gruplarında lag(1..7) feature engineering
-Driver side: gözlem sayısı yeterli olan gruplarda statsmodels OLS
+OLS fit'i  : Spark applyInPandas ile DAĞITIK — her (ürün × chain) grubu ayrı
+             executor'da statsmodels OLS fit eder (eski sürücü-bound döngünün yerine).
 
 Çıktı: gold/rockets_feathers/  (~120 satır, flat)
 """
@@ -30,7 +30,11 @@ import numpy as np
 import pandas as pd
 from pyspark.sql import functions as F
 from pyspark.sql import Window
+from pyspark.sql.types import (
+    DoubleType, LongType, StringType, StructField, StructType,
+)
 from utils.spark_session import get_spark_session
+from utils.partitions import filter_by_date_partitioned  # noqa: E402
 
 _S3_PREFIX = "s3" if os.environ.get("ON_EMR", "false").lower() == "true" else "s3a"
 SILVER_JOINED = f"{_S3_PREFIX}://s3-bbuckett/silver/market_hal_joined"
@@ -38,6 +42,24 @@ GOLD_OUT = f"{_S3_PREFIX}://s3-bbuckett/gold/rockets_feathers"
 
 MIN_OBS = 100         # bir grup için minimum gözlem
 MAX_LAG = 7           # lag sayısı
+
+ROCKETS_COLS = [
+    "product_canonical", "market_name", "beta_up", "beta_down",
+    "asymmetry_score", "ec_coef", "half_life_days", "n_obs",
+    "r_squared", "ec_pvalue",
+]
+ROCKETS_SCHEMA = StructType([
+    StructField("product_canonical", StringType()),
+    StructField("market_name", StringType()),
+    StructField("beta_up", DoubleType()),
+    StructField("beta_down", DoubleType()),
+    StructField("asymmetry_score", DoubleType()),
+    StructField("ec_coef", DoubleType()),
+    StructField("half_life_days", DoubleType()),
+    StructField("n_obs", LongType()),
+    StructField("r_squared", DoubleType()),
+    StructField("ec_pvalue", DoubleType()),
+])
 
 
 def build_features(df):
@@ -145,6 +167,24 @@ def fit_group(pdf: pd.DataFrame) -> dict:
     }
 
 
+def _fit_group_udf(pdf: pd.DataFrame) -> pd.DataFrame:
+    """applyInPandas wrapper — tek (ürün × chain) grubu → tek satır sonuç.
+    Executor'da çalışır; yetersiz veri/hata durumunda boş döner."""
+    if pdf.empty:
+        return pd.DataFrame(columns=ROCKETS_COLS)
+    res = fit_group(pdf)
+    if res is None:
+        return pd.DataFrame(columns=ROCKETS_COLS)
+    res["product_canonical"] = pdf["product_canonical"].iloc[0]
+    res["market_name"] = pdf["market_name"].iloc[0]
+    row = pd.DataFrame([res])[ROCKETS_COLS]
+    for c in ("beta_up", "beta_down", "asymmetry_score", "ec_coef",
+              "half_life_days", "r_squared", "ec_pvalue"):
+        row[c] = row[c].astype("float64")
+    row["n_obs"] = row["n_obs"].astype("int64")
+    return row
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--start-date", type=str, default=None)
@@ -156,11 +196,10 @@ def main():
     spark = get_spark_session("gold_rockets_feathers")
     spark.conf.set("spark.sql.shuffle.partitions", "100")
 
-    df = spark.read.parquet(SILVER_JOINED)
-    if args.start_date:
-        df = df.filter(F.col("date") >= args.start_date)
-    if args.end_date:
-        df = df.filter(F.col("date") <= args.end_date)
+    # silver_joined year/month partition'lı → year/month pruning ile S3 okumasını daralt.
+    df = filter_by_date_partitioned(
+        spark.read.parquet(SILVER_JOINED), args.start_date, args.end_date
+    )
 
     features = build_features(df)
 
@@ -178,35 +217,14 @@ def main():
 
     features_top = features.filter(F.col("product_canonical").isin(*top_products))
 
-    # Driver tarafına çek (top N × ~6 chain × günler = manageable)
-    print("Driver'a çekiyor...")
-    pdf = features_top.toPandas()
-    print(f"Driver'da satır: {len(pdf):,}")
-
-    results = []
-    for (prod, chain), group in pdf.groupby(["product_canonical", "market_name"]):
-        if len(group) < MIN_OBS:
-            continue
-        res = fit_group(group)
-        if res is None:
-            continue
-        res["product_canonical"] = prod
-        res["market_name"] = chain
-        results.append(res)
-
-    print(f"Fit edilen (ürün × chain): {len(results)}")
-    if not results:
-        print("UYARI: Hiçbir grup yeterli gözlem alamadı.")
-        spark.stop()
-        return
-
-    pdf_out = pd.DataFrame(results)
-    out_df = spark.createDataFrame(pdf_out)
-    out_df.printSchema()
-    out_df.orderBy(F.col("asymmetry_score").desc()).show(30, truncate=False)
+    # OLS fit'i DAĞITIK — her (ürün × chain) grubu ayrı executor'da
+    out_df = features_top.groupBy("product_canonical", "market_name").applyInPandas(
+        _fit_group_udf, schema=ROCKETS_SCHEMA
+    )
 
     (
         out_df
+        .coalesce(1)
         .write
         .mode("overwrite")
         .partitionBy("market_name")

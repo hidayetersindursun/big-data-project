@@ -16,6 +16,9 @@ Algoritma:
        market_lag_days = aynı şekilde market için
        peak_change_pct = max(hal_price_t..t+30) / baseline - 1
   4. Output: event_date, city, event_type, product_canonical, hal_lag_days, market_lag_days, peak_change_pct
+
+Hesaplama DAĞITIK: shocks ve fiyatlar şehir bazında cogroup edilir; her şehrin
+propagation hesabı ayrı executor'da koşar (eski sürücü-bound toPandas'ın yerine).
 """
 
 import argparse
@@ -26,8 +29,12 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "silver"))
 
 import pandas as pd
 from pyspark.sql import functions as F
+from pyspark.sql.types import (
+    DateType, DoubleType, StringType, StructField, StructType,
+)
 from utils.spark_session import get_spark_session
 from utils.cities import normalize_city_expr  # noqa: E402
+from utils.partitions import filter_by_date_partitioned  # noqa: E402
 
 _S3_PREFIX = "s3" if os.environ.get("ON_EMR", "false").lower() == "true" else "s3a"
 SILVER_WEATHER = f"{_S3_PREFIX}://s3-bbuckett/silver/weather_daily"
@@ -42,6 +49,23 @@ CLIMATE_SENSITIVE = [
     "elma", "armut", "uzum", "kayisi", "seftali", "kiraz",
     "cilek", "limon", "portakal",
 ]
+
+SHOCK_COLS = [
+    "event_date", "city", "event_type", "product_canonical",
+    "baseline_hal_price", "peak_hal_price", "peak_change_pct",
+    "hal_lag_days", "market_lag_days",
+]
+SHOCK_SCHEMA = StructType([
+    StructField("event_date", DateType()),
+    StructField("city", StringType()),
+    StructField("event_type", StringType()),
+    StructField("product_canonical", StringType()),
+    StructField("baseline_hal_price", DoubleType()),
+    StructField("peak_hal_price", DoubleType()),
+    StructField("peak_change_pct", DoubleType()),
+    StructField("hal_lag_days", DoubleType()),
+    StructField("market_lag_days", DoubleType()),
+])
 
 
 def detect_shocks(weather_df):
@@ -121,10 +145,24 @@ def compute_propagation(shocks_pdf: pd.DataFrame, prices_pdf: pd.DataFrame) -> l
                 "baseline_hal_price": float(baseline_hal),
                 "peak_hal_price": float(peak_hal) if pd.notna(peak_hal) else None,
                 "peak_change_pct": float(peak_change_pct) if peak_change_pct is not None else None,
-                "hal_lag_days": int(hal_lag) if hal_lag is not None else None,
-                "market_lag_days": int(mkt_lag) if mkt_lag is not None else None,
+                "hal_lag_days": float(hal_lag) if hal_lag is not None else None,
+                "market_lag_days": float(mkt_lag) if mkt_lag is not None else None,
             })
     return results
+
+
+def _propagation_udf(shocks_pdf: pd.DataFrame, prices_pdf: pd.DataFrame) -> pd.DataFrame:
+    """cogroup applyInPandas wrapper — tek şehrin shock'ları × fiyatları.
+    Executor'da çalışır; sonuç yoksa boş döner."""
+    results = compute_propagation(shocks_pdf, prices_pdf)
+    if not results:
+        return pd.DataFrame(columns=SHOCK_COLS)
+    out = pd.DataFrame(results)[SHOCK_COLS]
+    out["event_date"] = pd.to_datetime(out["event_date"])
+    for c in ("baseline_hal_price", "peak_hal_price", "peak_change_pct",
+              "hal_lag_days", "market_lag_days"):
+        out[c] = out[c].astype("float64")
+    return out
 
 
 def main():
@@ -143,40 +181,27 @@ def main():
         weather = weather.filter(F.col("date") <= args.end_date)
 
     shocks = detect_shocks(weather)
-    print(f"Detected shocks: {shocks.count():,}")
-    shocks.groupBy("event_type").count().show()
 
+    # year/month pruning select'ten ÖNCE — select year/month kolonlarını düşürür.
     joined = (
-        spark.read.parquet(SILVER_JOINED)
+        filter_by_date_partitioned(
+            spark.read.parquet(SILVER_JOINED), args.start_date, args.end_date
+        )
         .filter(F.col("product_canonical").isin(*CLIMATE_SENSITIVE))
         .select("date", "city", "product_canonical",
                 "hal_price_per_kg", "market_price_per_kg")
     )
-    if args.start_date:
-        # Genişletilmiş aralık — shock öncesi 7 gün ve sonrası 30 gün için
-        joined = joined.filter(F.col("date") >= args.start_date)
-    if args.end_date:
-        joined = joined.filter(F.col("date") <= args.end_date)
 
-    shocks_pdf = shocks.toPandas()
-    prices_pdf = joined.toPandas()
-    print(f"Shocks (driver): {len(shocks_pdf):,}  Prices (driver): {len(prices_pdf):,}")
-
-    results = compute_propagation(shocks_pdf, prices_pdf)
-    print(f"Propagation kayıt: {len(results)}")
-
-    if not results:
-        print("UYARI: Sonuç boş.")
-        spark.stop()
-        return
-
-    pdf_out = pd.DataFrame(results)
-    out_df = spark.createDataFrame(pdf_out)
-    out_df.printSchema()
-    out_df.show(20, truncate=False)
+    # Şehir bazında cogroup → her şehrin propagation hesabı ayrı executor'da
+    out_df = (
+        shocks.groupBy("city")
+        .cogroup(joined.groupBy("city"))
+        .applyInPandas(_propagation_udf, schema=SHOCK_SCHEMA)
+    )
 
     (
         out_df
+        .coalesce(1)
         .write
         .mode("overwrite")
         .partitionBy("event_type")

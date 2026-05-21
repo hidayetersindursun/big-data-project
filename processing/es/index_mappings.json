@@ -22,7 +22,8 @@
         "hal_price_7d": { "type": "double" },
         "market_price_7d": { "type": "double" },
         "hal_source_type": { "type": "keyword" },
-        "market_source_type": { "type": "keyword" }
+        "market_source_type": { "type": "keyword" },
+        "n_days": { "type": "integer" }
       }
     }
   },

@@ -28,10 +28,16 @@ Gold parquet'i Spark ile okur, `toLocalIterator()` ile satır satır stream eder
 
 - `city_geo` alanı, `lookups/city_coords.csv` Spark tarafında broadcast join ile eklenir.
 - `INDEX_SOURCES` dict'i index → Gold path eşlemesini tutar.
+- **Aylık rollup:** `daily_margin` (`INDEX_SOURCES`'ta `"rollup": "monthly"`) ham günlük
+  satır yerine `(year, month, city, product, market)` aylık özetine indirilir — 10 yıllık
+  ham veri (onlarca milyon satır) tek-node ES'i (8 GB RAM) zorlar; rollup ~30x küçültür.
+  Alan isimleri korunur (mapping uyumlu), ek `n_days` alanı eklenir. `--no-rollup` ile
+  ham satır indexlenebilir.
 
 ```bash
 python processing/es/index_to_es.py --recreate          # tüm index'ler, drop+create
 python processing/es/index_to_es.py --index gidaradar_macro_corr
+python processing/es/index_to_es.py --no-rollup         # daily_margin'i ham günlük indexle
 ```
 
 ## create_data_views.sh — Kibana data view'leri

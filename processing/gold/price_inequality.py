@@ -22,6 +22,7 @@ from pyspark.sql import functions as F
 from pyspark.sql import Window
 from utils.spark_session import get_spark_session
 from utils.cities import normalize_city_expr  # noqa: E402
+from utils.partitions import filter_by_date_partitioned  # noqa: E402
 
 _S3_PREFIX = "s3" if os.environ.get("ON_EMR", "false").lower() == "true" else "s3a"
 SILVER_MARKET = f"{_S3_PREFIX}://s3-bbuckett/silver/market_prices"
@@ -101,19 +102,20 @@ def main():
     hal_out = compute_inequality(hal, "price_avg", "product_name", "hal")
     hal_out.printSchema()
     print(f"Hal inequality satır: {hal_out.count():,}")
-    (hal_out.write.mode("overwrite").partitionBy("year", "month").parquet(GOLD_HAL))
+    (hal_out.repartition("year", "month").write.mode("overwrite")
+     .partitionBy("year", "month").parquet(GOLD_HAL))
     print(f"Yazıldı → {GOLD_HAL}")
 
     # ---- Market tarafı (joined kullan: product_canonical zaten var) ----
-    joined = spark.read.parquet(SILVER_JOINED).filter(F.col("market_price_per_kg").isNotNull())
-    if args.start_date:
-        joined = joined.filter(F.col("date") >= args.start_date)
-    if args.end_date:
-        joined = joined.filter(F.col("date") <= args.end_date)
+    # silver_joined year/month partition'lı → year/month pruning ile S3 okumasını daralt.
+    joined = filter_by_date_partitioned(
+        spark.read.parquet(SILVER_JOINED), args.start_date, args.end_date
+    ).filter(F.col("market_price_per_kg").isNotNull())
 
     mkt_out = compute_inequality(joined, "market_price_per_kg", "product_canonical", "market")
     print(f"Market inequality satır: {mkt_out.count():,}")
-    (mkt_out.write.mode("overwrite").partitionBy("year", "month").parquet(GOLD_MARKET))
+    (mkt_out.repartition("year", "month").write.mode("overwrite")
+     .partitionBy("year", "month").parquet(GOLD_MARKET))
     print(f"Yazıldı → {GOLD_MARKET}")
 
     spark.stop()

@@ -192,8 +192,10 @@ def main():
     print("\n=== Yıl dağılımı ===")
     df_silver.groupBy("year").count().orderBy("year").show()
 
+    # repartition(year, month) → her ay partition'ı ~1 dosya (küçük-dosya patlamasını önler).
     (
         df_silver
+        .repartition("year", "month")
         .write
         .mode(args.mode)
         .partitionBy("year", "month")

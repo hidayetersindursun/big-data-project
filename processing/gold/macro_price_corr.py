@@ -28,6 +28,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "silver"))
 import pandas as pd
 from pyspark.sql import functions as F
 from utils.spark_session import get_spark_session
+from utils.partitions import filter_by_date_partitioned  # noqa: E402
 
 _S3_PREFIX = "s3" if os.environ.get("ON_EMR", "false").lower() == "true" else "s3a"
 SILVER_JOINED = f"{_S3_PREFIX}://s3-bbuckett/silver/market_hal_joined"
@@ -173,13 +174,10 @@ def main():
 
     spark = get_spark_session("gold_macro_price_corr")
 
-    joined = spark.read.parquet(SILVER_JOINED).filter(
-        F.col("market_price_per_kg").isNotNull()
-    )
-    if args.start_date:
-        joined = joined.filter(F.col("date") >= args.start_date)
-    if args.end_date:
-        joined = joined.filter(F.col("date") <= args.end_date)
+    # silver_joined year/month partition'lı → year/month pruning ile S3 okumasını daralt.
+    joined = filter_by_date_partitioned(
+        spark.read.parquet(SILVER_JOINED), args.start_date, args.end_date
+    ).filter(F.col("market_price_per_kg").isNotNull())
 
     # Top-N ürün (en çok kayıt)
     top = (
@@ -238,6 +236,7 @@ def main():
     out_df.printSchema()
     (
         out_df
+        .coalesce(1)
         .write
         .mode("overwrite")
         .partitionBy("macro_source")

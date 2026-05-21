@@ -1,10 +1,13 @@
 """
 Gold: prophet_forecast
 
-Meta Prophet ile top-20 ürünün 10 yıllık zaman serisi tahmini.
+Meta Prophet ile top-20 ürünün zaman serisi tahmini.
 Pandemic changepoint detection — 2020-03 civarı otomatik tespit edilirse 'is_changepoint' flag.
 
-Driver-side sequential fit (top 20 ürün × tek Prophet model = küçük, hızlı).
+Sürücü-tabanlı sıralı fit: top-20 ürün × tek Prophet model.
+NOT: Prophet'in Stan backend'i Spark executor sandbox'ında çalışmadığı için
+applyInPandas ile DAĞITILMAZ — fit sürücüde (AM) yapılır. Veri küçük olduğu için
+(20 ürün × günlük seri) sürücüde toPandas + döngü RAM-safe ve yeterince hızlı.
 
 Çıktı: gold/price_forecast/
   product_canonical, date, yhat, yhat_lower, yhat_upper,
@@ -17,7 +20,6 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "silver"))
 
-import numpy as np
 import pandas as pd
 from pyspark.sql import functions as F
 from utils.spark_session import get_spark_session
@@ -95,7 +97,7 @@ def main():
         products = [r["product_name"] for r in top]
     print(f"Forecast ürünleri: {products}")
 
-    # Bütün hal verisini bir kerede driver'a al (20 ürün × ~10y günlük × 81 şehir = manageable)
+    # Top-20 ürünün hal verisini sürücüye al (20 ürün × günlük seri = küçük, RAM-safe)
     pdf = (
         hal
         .filter(F.col("product_name").isin(*products))
@@ -126,10 +128,10 @@ def main():
 
     out_df = spark.createDataFrame(out_pdf)
     out_df.printSchema()
-    out_df.show(10, truncate=False)
 
     (
         out_df
+        .coalesce(1)
         .write
         .mode("overwrite")
         .partitionBy("product_canonical")

@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "silver"))
 from pyspark.sql import functions as F
 from pyspark.sql import Window
 from utils.spark_session import get_spark_session
+from utils.partitions import filter_by_date_partitioned  # noqa: E402
 
 _S3_PREFIX = "s3" if os.environ.get("ON_EMR", "false").lower() == "true" else "s3a"
 SILVER_JOINED = f"{_S3_PREFIX}://s3-bbuckett/silver/market_hal_joined"
@@ -64,19 +65,20 @@ def main():
     spark = get_spark_session("gold_daily_margin")
     spark.conf.set("spark.sql.shuffle.partitions", "200")
 
-    df = spark.read.parquet(SILVER_JOINED)
-    if args.start_date:
-        df = df.filter(F.col("date") >= args.start_date)
-    if args.end_date:
-        df = df.filter(F.col("date") <= args.end_date)
+    # silver_joined year/month partition'lı → year/month pruning ile S3 okumasını daralt.
+    df = filter_by_date_partitioned(
+        spark.read.parquet(SILVER_JOINED), args.start_date, args.end_date
+    )
 
     out = transform(df)
     out.printSchema()
     n = out.count()
     print(f"\nGold daily_margin satır: {n:,}")
 
+    # repartition(year, month) → her ay partition'ı ~1 dosya (küçük-dosya patlamasını önler).
     (
         out
+        .repartition("year", "month")
         .write
         .mode("overwrite")
         .partitionBy("year", "month")

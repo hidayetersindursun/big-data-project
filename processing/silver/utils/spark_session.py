@@ -41,6 +41,15 @@ def get_spark_session(app_name: str) -> SparkSession:
         .appName(app_name)
         .config("spark.sql.parquet.compression.codec", "snappy")
         .config("spark.sql.session.timeZone", "Europe/Istanbul")
+        # AQE — küçük demo subset'inde 200 shuffle partition'ı otomatik birleştirir,
+        # skew join'i böler. Spark 3.5'te çoğu default açık; explicit set hem EMR
+        # hem EC2 local mode için tutarlılık sağlar.
+        .config("spark.sql.adaptive.enabled", "true")
+        .config("spark.sql.adaptive.coalescePartitions.enabled", "true")
+        .config("spark.sql.adaptive.skewJoin.enabled", "true")
+        .config("spark.sql.adaptive.advisoryPartitionSizeInBytes", "64m")
+        # Küçük lookup/agg tabloları broadcast join'le shuffle'sız işlensin.
+        .config("spark.sql.autoBroadcastJoinThreshold", str(50 * 1024 * 1024))
     )
 
     if not _ON_EMR:

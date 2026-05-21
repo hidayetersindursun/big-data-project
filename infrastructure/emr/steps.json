@@ -1,118 +1,137 @@
 [
   {
-    "Name": "1-silver-joined",
+    "Name": "0-smoke-silver-joined",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "TERMINATE_CLUSTER",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/silver/silver_joined.py",
-      "--start-date", "2025-05-20",
-      "--end-date", "2026-05-20"
+      "--debug-day", "2026-05-13"
     ]
   },
   {
-    "Name": "2-gdelt-silver",
+    "Name": "1-market-silver",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "CONTINUE",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
+      "s3://s3-bbuckett/code/processing/silver/market_silver.py"
+    ]
+  },
+  {
+    "Name": "2-silver-joined",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
+      "--py-files", "s3://s3-bbuckett/code/deps.zip",
+      "s3://s3-bbuckett/code/processing/silver/silver_joined.py"
+    ]
+  },
+  {
+    "Name": "3-gdelt-silver",
+    "Type": "Spark",
+    "ActionOnFailure": "CONTINUE",
+    "Args": [
+      "--deploy-mode", "cluster",
+      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/silver/gdelt_silver.py",
-      "--skip-articles",
-      "--start-date", "2025-05-20",
-      "--end-date", "2026-05-20"
+      "--skip-articles"
     ]
   },
   {
-    "Name": "3-gold-daily-margin",
+    "Name": "4-gold-daily-margin",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "CONTINUE",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
-      "s3://s3-bbuckett/code/processing/gold/daily_margin.py",
-      "--start-date", "2025-05-20",
-      "--end-date", "2026-05-20"
+      "s3://s3-bbuckett/code/processing/gold/daily_margin.py"
     ]
   },
   {
-    "Name": "4-gold-price-inequality",
+    "Name": "5-gold-price-inequality",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "CONTINUE",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
-      "s3://s3-bbuckett/code/processing/gold/price_inequality.py",
-      "--start-date", "2025-05-20",
-      "--end-date", "2026-05-20"
+      "s3://s3-bbuckett/code/processing/gold/price_inequality.py"
     ]
   },
   {
-    "Name": "5-gold-rockets-feathers",
+    "Name": "6-gold-rockets-feathers",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "CONTINUE",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
-      "s3://s3-bbuckett/code/processing/gold/rockets_feathers.py",
-      "--start-date", "2025-05-20",
-      "--end-date", "2026-05-20"
+      "s3://s3-bbuckett/code/processing/gold/rockets_feathers.py"
     ]
   },
   {
-    "Name": "6-gold-shock-propagation",
+    "Name": "7-gold-shock-propagation",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "CONTINUE",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
-      "s3://s3-bbuckett/code/processing/gold/shock_propagation.py",
-      "--start-date", "2025-05-20",
-      "--end-date", "2026-05-20"
+      "s3://s3-bbuckett/code/processing/gold/shock_propagation.py"
     ]
   },
   {
-    "Name": "7-gold-news-price-corr",
+    "Name": "8-gold-news-price-corr",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "CONTINUE",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/news_price_corr.py",
-      "--years", "2025,2026"
+      "--years", "2019,2020,2021,2022,2023,2024,2025,2026"
     ]
   },
   {
-    "Name": "8-gold-prophet-forecast",
+    "Name": "9-gold-prophet-forecast",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "CONTINUE",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
       "s3://s3-bbuckett/code/processing/gold/prophet_forecast.py"
     ]
   },
   {
-    "Name": "9-gold-macro-price-corr",
+    "Name": "10-gold-macro-price-corr",
     "Type": "Spark",
-    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "ActionOnFailure": "CONTINUE",
     "Args": [
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf", "spark.executorEnv.ON_EMR=true",
       "--py-files", "s3://s3-bbuckett/code/deps.zip",
-      "s3://s3-bbuckett/code/processing/gold/macro_price_corr.py",
-      "--start-date", "2025-05-20",
-      "--end-date", "2026-05-20"
+      "s3://s3-bbuckett/code/processing/gold/macro_price_corr.py"
     ]
   }
 ]
