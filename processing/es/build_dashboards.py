@@ -15,6 +15,7 @@ Kullanım:
 import argparse
 import json
 import os
+import urllib.error
 import urllib.request
 
 KIBANA = os.environ.get("KIBANA_HOST", "http://localhost:5601")
@@ -355,9 +356,29 @@ def build_all(dv):
     return objs
 
 
+def push_object(obj):
+    """Tek saved object'i create endpoint ile yükle — _import'tan farklı:
+    migration zinciri uygulanmaz, obje 'current version' kabul edilir."""
+    url = f"{KIBANA}/api/saved_objects/{obj['type']}/{obj['id']}?overwrite=true"
+    body = json.dumps({
+        "attributes": obj["attributes"],
+        "references": obj.get("references", []),
+    }, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(url, data=body, method="POST", headers={
+        "kbn-xsrf": "true",
+        "Content-Type": "application/json",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return True, r.status
+    except urllib.error.HTTPError as e:
+        return False, f"{e.code}: {e.read().decode('utf-8', 'ignore')[:400]}"
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", default="/tmp/gr_dashboards.ndjson")
+    parser.add_argument("--no-push", action="store_true", help="Sadece NDJSON yaz, Kibana'ya gönderme")
     args = parser.parse_args()
 
     dv = fetch_data_views()
@@ -375,6 +396,20 @@ def main():
     n_lens = sum(1 for o in objs if o["type"] == "lens")
     n_dash = sum(1 for o in objs if o["type"] == "dashboard")
     print(f"Yazıldı → {args.out}  ({n_lens} Lens viz + {n_dash} dashboard)")
+
+    if args.no_push:
+        return
+
+    # Push: build_all sırası zaten lens'leri kendi dashboard'undan önce üretir.
+    ok, fail = 0, 0
+    for o in objs:
+        success, info = push_object(o)
+        if success:
+            ok += 1
+        else:
+            fail += 1
+            print(f"  HATA {o['type']}/{o['id']}: {info}")
+    print(f"Push: {ok} OK, {fail} hata")
 
 
 if __name__ == "__main__":
