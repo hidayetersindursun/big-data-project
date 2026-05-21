@@ -22,7 +22,9 @@
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
       "s3://s3-bbuckett/code/processing/silver/gdelt_silver.py",
-      "--skip-articles"
+      "--skip-articles",
+      "--start-date", "2025-05-20",
+      "--end-date", "2026-05-20"
     ]
   },
   {
@@ -78,29 +80,19 @@
     ]
   },
   {
-    "Name": "7-gold-pandemic-gap",
+    "Name": "7-gold-news-price-corr",
     "Type": "Spark",
     "ActionOnFailure": "CONTINUE",
     "Args": [
       "spark-submit",
       "--deploy-mode", "cluster",
       "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
-      "s3://s3-bbuckett/code/processing/gold/pandemic_gap.py"
+      "s3://s3-bbuckett/code/processing/gold/news_price_corr.py",
+      "--years", "2025,2026"
     ]
   },
   {
-    "Name": "8-gold-news-price-corr",
-    "Type": "Spark",
-    "ActionOnFailure": "CONTINUE",
-    "Args": [
-      "spark-submit",
-      "--deploy-mode", "cluster",
-      "--conf", "spark.yarn.appMasterEnv.ON_EMR=true",
-      "s3://s3-bbuckett/code/processing/gold/news_price_corr.py"
-    ]
-  },
-  {
-    "Name": "9-gold-prophet-forecast",
+    "Name": "8-gold-prophet-forecast",
     "Type": "Spark",
     "ActionOnFailure": "CONTINUE",
     "Args": [
@@ -111,7 +103,7 @@
     ]
   },
   {
-    "Name": "10-gold-macro-price-corr",
+    "Name": "9-gold-macro-price-corr",
     "Type": "Spark",
     "ActionOnFailure": "CONTINUE",
     "Args": [
