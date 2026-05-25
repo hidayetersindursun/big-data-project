@@ -723,66 +723,51 @@ notes(s, "9 — Büyük Veri Ölçeği",
 footer(s)
 
 # ===========================================================================
-# SLAYT 10 — ARCHITECTURE
+# SLAYT 10 — END-TO-END DATA PIPELINE (diyagram, tek sayfada mimari)
 # ===========================================================================
 s = new_slide()
-title_bar(s, "Architecture", "Medallion on AWS")
-# ingest -> bronze -> silver -> gold -> serve
-stages = [
-    ("INGEST", "NiFi + Kafka\ncontinuous batches", ORANGE),
-    ("BRONZE", "Raw Parquet\non S3", GOLD),
-    ("SILVER", "Spark — cleaned,\nentity-resolved", TEAL),
-    ("GOLD", "Spark — analysis\ntables (8)", NAVY),
-    ("SERVE", "Elasticsearch\n+ Kibana", GREY),
-]
-x = 0.6
-for i, (t, d, c) in enumerate(stages):
-    box = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(x),
-                             Inches(1.75), Inches(2.16), Inches(1.7))
-    _solid(box, c)
-    box.shadow.inherit = False
-    tf = box.text_frame
-    tf.vertical_anchor = MSO_ANCHOR.MIDDLE
-    para(tf, t, 18, WHITE, bold=True, first=True, align=PP_ALIGN.CENTER,
-         space_after=3)
-    para(tf, d, 12, WHITE, align=PP_ALIGN.CENTER)
-    x += 2.16
-    if i < 4:
-        arrow(s, x - 0.06, 2.42, 0.34, color=DARK)
-        x += 0.34
-rows = [
-    ("Orchestration", "Apache NiFi drives the ingestion pipeline as "
-     "continuous batches (the professor's request — NiFi over Airflow); "
-     "Kafka is the durable event log."),
-    ("Storage", "Bronze / Silver / Gold all land on Amazon S3 as Parquet — "
-     "Hive-style year/month partitioning for cheap pruning."),
-    ("Compute", "PySpark 3.5.1 — local mode on EC2 for development, AWS EMR "
-     "transient clusters for the heavy runs."),
-    ("Serving", "Gold tables indexed into Elasticsearch; Kibana dashboards "
-     "for interactive exploration (ELK, not Athena)."),
-]
-bullets(s, [t + " — " + d for t, d in rows], 0.7, 3.75, 12.1, 3.0,
-        size=15, gap=11)
-notes(s, "10 — Mimari",
-      "Sistemi medallion mimarisiyle kurduk ve tamamı AWS üzerinde. Soldan "
-      "sağa akış şöyle: Ingest katmanında Apache NiFi ve Kafka var; ham "
-      "veri Bronze'a Parquet olarak iniyor; Spark ile Silver'da "
-      "temizlenip entity resolution yapılıyor; yine Spark ile Gold'da "
-      "analiz tabloları üretiliyor; en sonda Elasticsearch ve Kibana ile "
-      "sunuluyor. Birkaç tasarım kararını vurgulayalım. Orkestrasyon: "
-      "hocamızın isteği doğrultusunda Airflow yerine Apache NiFi "
-      "kullandık; NiFi ingestion pipeline'ını sürekli batch'ler halinde "
-      "sürüyor, Kafka da dayanıklı olay günlüğü görevini görüyor. Depolama: "
-      "Bronze, Silver ve Gold'un üçü de Amazon S3'te Parquet olarak duruyor, "
-      "yıl-ay bazlı Hive partition'larıyla. İşlem: PySpark 3.5.1; "
-      "geliştirme için EC2'de local mode, ağır koşular için AWS EMR "
-      "transient cluster. Sunum: Gold tabloları Elasticsearch'e indeksleniyor "
-      "ve yine hocamızın yönlendirmesiyle Athena yerine Kibana dashboard'ları "
-      "kullanıyoruz.")
+title_bar(s, "End-to-End Data Pipeline", "Medallion on AWS · from source to dashboard")
+# pipeline_diagram.png — 1939x811, aspect ~2.39:1
+picture(s, "pipeline_diagram.png", 0.4, 1.4, w=12.5)
+caption(s,
+        "9 sources  →  Apache NiFi + Kafka  →  S3 Bronze / Silver / Gold "
+        "(Parquet, year/month)  →  Elasticsearch + Kibana",
+        0.5, 6.75, 12.5)
+notes(s, "Veri Pipeline'ı (Uçtan Uca)",
+      "Bu tek diyagram, projedeki tüm bileşenlerin nasıl bir araya "
+      "geldiğini özetliyor — uçtan uca medallion mimarisi, tamamı AWS "
+      "üzerinde. Soldan başlayalım. 9 bağımsız veri kaynağımız var: "
+      "marketfiyati.org.tr (perakende, REST async), İBB İstanbul Hali ve "
+      "Harman Hali (toptan; Selenium ve curl_cffi), TCMB EVDS (kur ve "
+      "enflasyon), EPİAŞ Transparency (26 elektrik veri seti), Open-Meteo "
+      "(saatlik hava), GDELT (15 dakikalık haber), commodities ve "
+      "akaryakıt. Orkestrasyon tarafında — hocamızın özellikle istediği "
+      "şekilde Airflow yerine Apache NiFi kullandık; NiFi ingestion'ı "
+      "sürekli batch'ler halinde sürüyor, Kafka ise dayanıklı olay "
+      "günlüğü görevini üstleniyor. Veri buradan AWS S3'e Parquet "
+      "formatında Bronze katmanına iniyor — ham, ama sıkıştırılmış ve "
+      "kolonlanmış halde; yıl-ay bazlı Hive partition'larıyla. PySpark "
+      "joblarımız Bronze'dan Silver'a entity resolution (hal ürün adı "
+      "ile market slug'ını fuzzy match ile eşleme), birim "
+      "standartlaştırma (her şey kilograma) ve mekansal eşleme yapıyor. "
+      "Silver'dan Gold'a ise 8 analiz tablosu üretiyoruz: günlük marj, "
+      "rockets and feathers asimetrisi, hava şok yayılımı, market ve "
+      "hal için şehirler arası fiyat farkı, makro korelasyon, haber "
+      "korelasyonu ve Prophet tabanlı fiyat tahmini. Tüm hesaplama "
+      "PySpark 3.5.1 ile yapılıyor — geliştirme için EC2 local mode, "
+      "ağır 10 yıllık koşular için AWS EMR transient cluster: işi yap, "
+      "kapan, faturayı sıfırla. Sunum tarafında — yine hocamızın "
+      "yönlendirmesiyle Athena yerine Elasticsearch + Kibana tercih "
+      "ettik; Gold tabloları ES'e indeksleniyor, Kibana dashboard'ları "
+      "interaktif keşif sağlıyor. Diyagramın alt bandı mimarinin altı "
+      "özelliğini hatırlatıyor: resilient ve scalable, medallion, "
+      "partitioned lake, PySpark powered, curated analytics, search ve "
+      "visualize. Yani 9 farklı kaynak ve format, tek bir analitik "
+      "katmana dönüşüp interaktif görselleştirmeye ulaşıyor.")
 footer(s)
 
 # ===========================================================================
-# SLAYT 11 — BRONZE & PARQUET COMPRESSION
+# SLAYT 12 — BRONZE & PARQUET COMPRESSION
 # ===========================================================================
 s = new_slide()
 title_bar(s, "Bronze Layer & Parquet Compression", "Why Parquet")
@@ -1282,111 +1267,128 @@ notes(NOTES and prs.slides[-1], "22 — Sonuç: Tahminleme",
 # ===========================================================================
 s = new_slide()
 title_bar(s, "Pandemic Gap Analysis", "Did margins widen for good?")
-para(textbox(s, 0.7, 1.4, 12.2, 0.95),
-     "Research question: did the hal→retail margin widen permanently after "
-     "the 2020 pandemic, instead of reverting to its pre-2020 level?",
-     17, DARK, bold=True, first=True)
-# karsilastirma
-chip(s, 1.4, 2.6, 3.2, 1.2, "2019 baseline\npre-pandemic margin", TEAL,
-     size=15)
-arrow(s, 4.85, 2.95, 0.5, color=GREY)
-chip(s, 5.6, 2.6, 3.2, 1.2, "2021–2024\npost-pandemic margin", ORANGE,
-     size=15)
-eq = textbox(s, 9.1, 2.75, 3.6, 1.0)
-para(eq, "gap_widening_% =", 15, NAVY, bold=True, first=True)
-para(eq, "(post − baseline) / baseline", 14, GREY)
-rows = [
-    ("Method", 2),
-    ("pandemic_gap.py compares each product/chain's 2019 average margin to "
-     "its 2021–2024 average → gap-widening percentage.", 0),
-    ("Status", 2),
-    ("Requires the full 2016–2026 backfill (the 1-year EMR demo subset has "
-     "no 2019 baseline); the full-history run is being computed now.", 0),
-    ("Result panel — to be populated from the full-backfill run.", 1),
-]
-bullets(s, rows, 0.7, 4.15, 12.1, 2.5, size=15, gap=9)
-ph = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.7),
-                        Inches(6.0), Inches(11.93), Inches(0.78))
-_solid(ph, LIGHT)
-ph.shadow.inherit = False
-tfp = ph.text_frame
-tfp.vertical_anchor = MSO_ANCHOR.MIDDLE
-para(tfp, "[ Pandemic gap result — figure & numbers to be inserted from the "
-          "full-backfill run ]", 14, GREY, italic=True, bold=True,
-     first=True, align=PP_ALIGN.CENTER)
-notes(s, "23 — Pandemi Gap Analizi",
-      "Hocamızın altını çizdiği bir araştırma sorusu da pandemi gap'iydi: "
-      "hal-perakende marjı 2020 pandemisinden sonra kalıcı olarak açıldı mı, "
-      "yoksa pandemi öncesi seviyesine geri döndü mü? Yöntemimiz net: "
-      "pandemic_gap script'i her ürün ve zincir için 2019 ortalama marjını "
-      "baz alıyor, bunu 2021-2024 ortalama marjıyla karşılaştırıyor ve gap "
-      "genişleme yüzdesini hesaplıyor; formül post eksi baz, bölü baz. "
-      "Durum şu: bu analiz tam 2016-2026 backfill'i gerektiriyor, çünkü 1 "
-      "yıllık EMR demo alt kümesinde 2019 baz çizgisi yok. Tam geçmiş "
-      "üzerindeki koşu şu anda hesaplanıyor; sonuç panelini o koşudan gelen "
-      "grafik ve rakamlarla dolduracağız. Yani metodoloji ve altyapı hazır, "
-      "yalnızca tam veriyle çalışan nihai sayıyı bekliyoruz. Beklentimiz, "
-      "diğer sonuçlarımızla tutarlı biçimde, marjın pandemi sonrası kalıcı "
-      "olarak bir miktar genişlemiş olması yönünde — ama bunu veriyle "
-      "doğrulamadan iddia etmiyoruz.")
+picture(s, "pandemic_gap.png", 0.4, 1.4, w=8.4)
+panel = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(9.0),
+                           Inches(1.4), Inches(4.0), Inches(4.4))
+_solid(panel, LIGHT)
+panel.shadow.inherit = False
+tf = textbox(s, 9.22, 1.55, 3.6, 4.1)
+para(tf, "RESEARCH QUESTION", 13, TEAL, bold=True, first=True, space_after=5)
+para(tf, "Did the hal→retail margin widen permanently after the 2020 "
+         "pandemic, vs reverting to pre-2020?", 12.5, DARK, space_after=10)
+para(tf, "METHOD", 13, TEAL, bold=True, space_after=5)
+para(tf, "1,446 product×chain cases compared: avg margin in 2019 vs "
+         "each year 2021–2024. Formula:", 12.5, DARK, space_after=4)
+para(tf, "gap% = (post − baseline) / |baseline| × 100", 12, NAVY,
+     bold=True, italic=True, space_after=10)
+para(tf, "FINDING", 13, ORANGE, bold=True, space_after=5)
+para(tf, "Median gap NARROWED each year (−28% to −85%). Hypothesis NOT "
+         "confirmed at population level.", 12.5, DARK, space_after=10)
+para(tf, "CAVEAT", 13, GREY, bold=True, space_after=5)
+para(tf, "Market data 2019–2025 is synthetic backfill — direction is "
+         "indicative, not conclusive.", 12.5, GREY, italic=True)
+band = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.4),
+                          Inches(6.55), Inches(12.5), Inches(0.85))
+_solid(band, NAVY)
+band.shadow.inherit = False
+tfb = band.text_frame
+tfb.vertical_anchor = MSO_ANCHOR.MIDDLE
+para(tfb, "Counter-intuitive result: median product-chain margin actually "
+          "compressed post-pandemic — only specific products (right panel) "
+          "show permanent widening.",
+     14, WHITE, bold=True, first=True, align=PP_ALIGN.CENTER)
+notes(s, "Pandemi Gap Analizi",
+      "Hocamızın altını çizdiği araştırma sorusu: hal-perakende marjı 2020 "
+      "pandemisinden sonra kalıcı olarak açıldı mı, yoksa pandemi öncesi "
+      "seviyesine geri döndü mü? Yöntem: her ürün ve zincir için 2019 "
+      "ortalama marjı baseline, bunu 2021, 2022, 2023 ve 2024'ün her biriyle "
+      "ayrı ayrı karşılaştırdık. Formül: post eksi baseline, bölü mutlak "
+      "baseline, çarpı yüz. Toplam 1.446 ürün-zincir vakası, 4 yıl üzerinden. "
+      "Hesabı EMR transient cluster'da koşturduk — pandemic_gap step'i "
+      "demo run'da unutulmuştu, sadece bu adıma özel küçük bir cluster "
+      "açıp tamamladık. Sonuç hipotezimize ters çıktı: medyan gap her yıl "
+      "negatif — 2021'de eksi yirmi sekiz, 2022'de eksi seksen beş, 2023'te "
+      "eksi altmış altı, 2024'te eksi otuz üç. Yani çoğu ürün-zincir "
+      "kombinasyonunda marj 2019'a göre genişlemedi, daraldı. Bu beklenmedik "
+      "ama açıklanabilir: pandemi sonrası yüksek enflasyon ortamında hal "
+      "fiyatları çoğu üründe perakendeye göre daha hızlı yükselmiş "
+      "olabilir; yani perakende marjı görece sıkışmış. Sağdaki panelde "
+      "kuralın istisnaları var — bazı spesifik ürünlerde gap gerçekten "
+      "kalıcı olarak açılmış, bunlar denetim için ilginç vakalar. Önemli "
+      "bir çekince: market verisi 2019-2025 arası sentetik backfill, "
+      "yani sonuç yön açısından bilgilendirici ama kesin değil. Gerçek "
+      "perakende verisi geçmişe genişletildiğinde bu rakamlar netleşecek.")
 footer(s)
 
 # ===========================================================================
 # SLAYT 24 — DASHBOARD
 # ===========================================================================
 s = new_slide()
-title_bar(s, "Dashboards", "Elasticsearch + Kibana")
-para(textbox(s, 0.7, 1.4, 12.2, 0.6),
-     "Gold tables are indexed into Elasticsearch and explored through "
-     "Kibana — interactive, not static (ELK instead of Athena).",
-     16, DARK, bold=True, first=True)
-dash = [
-    ("Margin Map", "Province-level hal→retail margin heat view of Türkiye"),
-    ("Asymmetry Board", "Rockets & Feathers scores per product & chain"),
-    ("Shock Timeline", "Weather/news events overlaid on price series"),
-    ("Forecast View", "Prophet outlook with seasonality & changepoints"),
+title_bar(s, "Dashboards", "Elasticsearch + Kibana — live screenshots")
+# 2 × 3 grid: 6 thumbnail (4 dashboard, Marj ve Sok ikiser view)
+dashes = [
+    ("Marj — Genel Bakış",       "marj-genel-bakis-1.png"),
+    ("Rockets & Feathers",        "rockets-feathers.png"),
+    ("Prophet — Fiyat Tahmini",   "prophet.png"),
+    ("Marj — Türkiye Haritası",   "marj-genel-bakis-2.png"),
+    ("Şok Yayılım — İstatistik",  "sok-yayilim-1.png"),
+    ("Şok Yayılım — Harita",      "sok-yayilim-2.png"),
 ]
-x = 0.7
-for t, d in dash:
-    card = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(x),
-                              Inches(2.25), Inches(2.86), Inches(2.35))
-    _solid(card, LIGHT)
-    card.shadow.inherit = False
-    head = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(x),
-                              Inches(2.25), Inches(2.86), Inches(0.7))
-    _solid(head, NAVY)
-    head.shadow.inherit = False
-    tfh = head.text_frame
+# Width 3.5 — tallest aspect (prophet ~1.55) -> h≈2.26 < row budget
+W_CELL = 3.5
+H_HEADER = 0.32
+GAP_X = 0.18
+ROW_PITCH = 2.68
+# Grid'i ortala: 3*3.5 + 2*0.18 = 10.86, slayt 13.333 → margin 1.24
+X0 = 1.24
+Y0 = 1.4
+for i, (name, img) in enumerate(dashes):
+    col = i % 3
+    row = i // 3
+    x = X0 + col * (W_CELL + GAP_X)
+    y = Y0 + row * ROW_PITCH
+    hdr = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(x), Inches(y),
+                             Inches(W_CELL), Inches(H_HEADER))
+    _solid(hdr, NAVY)
+    hdr.shadow.inherit = False
+    tfh = hdr.text_frame
     tfh.vertical_anchor = MSO_ANCHOR.MIDDLE
-    para(tfh, t, 15, WHITE, bold=True, first=True, align=PP_ALIGN.CENTER)
-    tf = textbox(s, x + 0.2, 3.15, 2.5, 1.3)
-    para(tf, d, 13.5, DARK, first=True, align=PP_ALIGN.CENTER)
-    x += 3.04
-band = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.7),
-                          Inches(5.0), Inches(11.93), Inches(1.5))
-_solid(band, TEAL)
+    tfh.margin_left = Inches(0.1); tfh.margin_right = Inches(0.1)
+    para(tfh, name, 11, WHITE, bold=True, first=True, align=PP_ALIGN.CENTER)
+    # Görsel — başlığın hemen altında, hücre genişliğinde; yükseklik aspect ile
+    picture(s, img, x, y + H_HEADER + 0.03, w=W_CELL)
+band = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0),
+                          Inches(6.75), SW, Inches(0.7))
+_solid(band, NAVY)
 band.shadow.inherit = False
 tfb = band.text_frame
 tfb.vertical_anchor = MSO_ANCHOR.MIDDLE
 tfb.word_wrap = True
-para(tfb, "The dashboard set grows as new analyses land — Kibana lets a "
-          "regulator drill from a national map down to a single "
-          "product-city-day in seconds.", 16, WHITE, bold=True, first=True,
-     align=PP_ALIGN.CENTER)
-notes(s, "24 — Dashboard",
+para(tfb, "From a national heat map to a single product-city-day in "
+          "seconds — Kibana lets regulators, journalists & policy teams "
+          "drill the Gold layer interactively.",
+     13.5, WHITE, bold=True, first=True, align=PP_ALIGN.CENTER)
+notes(s, "Dashboard",
       "Analiz sonuçlarını yalnızca tablo olarak bırakmıyoruz; Gold "
       "tabloları Elasticsearch'e indeksleniyor ve Kibana üzerinden "
-      "keşfediliyor. Hocamızın yönlendirmesiyle Athena yerine ELK yığınını "
-      "seçtik; çünkü statik bir sorgu değil, etkileşimli bir keşif istiyoruz. "
-      "Dört ana dashboard'umuz var. Marj haritası: il bazında hal-perakende "
-      "marjının Türkiye ısı görünümü. Asimetri panosu: ürün ve zincir "
-      "bazında Rockets and Feathers skorları. Şok zaman çizelgesi: hava ve "
-      "haber olaylarının fiyat serisi üstüne bindirilmesi. Tahmin görünümü: "
-      "Prophet öngörüsü, mevsimsellik ve değişim noktalarıyla. Dashboard "
-      "setimiz yeni analizler eklendikçe büyüyor. Kibana'nın asıl değeri "
-      "şu: bir düzenleyici, ulusal haritadan başlayıp saniyeler içinde tek "
-      "bir ürün-şehir-gün kırılımına kadar inebiliyor. Yani sistem sadece "
-      "veri üretmiyor, o veriyi karar verilebilir hale getiriyor.")
+      "etkileşimli olarak keşfediliyor. Hocamızın yönlendirmesiyle Athena "
+      "yerine ELK yığınını seçtik; çünkü statik bir sorgu değil, üstüne "
+      "tıklanıp keşif yapılan bir deneyim istiyoruz. Slaytta dört ana "
+      "dashboard'umuzdan gerçek ekran görüntüleri var — beşincisi makro "
+      "etkenler panosu, slaytta yer kısıtı nedeniyle göstermedik. Birinci "
+      "satır soldan sağa: Marj Genel Bakış'ta KPI'lar, zincir bazlı marj "
+      "trendi ve il bazlı top-20 tablosu görüyoruz; Rockets and Feathers "
+      "panosunda ürün ve zincir bazlı asimetri skorları artı 30 satırlık "
+      "detay tablosu; Prophet panosunda ürün bazlı tahminler ve güven "
+      "aralıkları. İkinci satırda: Marj Türkiye Haritası — il bazlı renkli "
+      "ısı görünümü, koyu kırmızı yüksek marj demek, Marmara ve Ege'de "
+      "yoğun; Şok Yayılım istatistik panosu — toplam 912 bin şok olayı, "
+      "olay tipi dağılımı ve hal-market gecikmesi; ve Şok Türkiye "
+      "Haritası — pikem değişim yüzdesini il bazlı gösteriyor, Karadeniz "
+      "ve Akdeniz'de daha çarpıcı. Kibana'nın asıl değeri şu: ulusal "
+      "haritadan başlayıp saniyeler içinde tek bir ürün-şehir-gün "
+      "kırılımına inebiliyorsunuz. Yani sistem sadece veri üretmiyor, o "
+      "veriyi karar verilebilir hale getiriyor.")
 footer(s)
 
 # ===========================================================================

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "1-gold-pandemic-gap",
+    "Type": "Spark",
+    "ActionOnFailure": "TERMINATE_CLUSTER",
+    "Args": [
+      "--deploy-mode",
+      "cluster",
+      "--conf",
+      "spark.yarn.appMasterEnv.ON_EMR=true",
+      "--conf",
+      "spark.executorEnv.ON_EMR=true",
+      "--py-files",
+      "s3://s3-bbuckett/code/deps.zip",
+      "s3://s3-bbuckett/code/processing/gold/pandemic_gap.py"
+    ]
+  }
+]

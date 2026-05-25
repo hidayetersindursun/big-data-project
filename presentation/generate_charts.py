@@ -39,8 +39,12 @@ plt.rcParams.update({
 })
 
 
-def load_gold(prefix, max_files=4000):
-    """gold/<prefix>/ altındaki parquet dosyalarını tek DataFrame'e indir."""
+def load_gold(prefix, max_files=4000, columns=None):
+    """gold/<prefix>/ altındaki parquet dosyalarını tek DataFrame'e indir.
+
+    `columns` verilirse sadece o kolonlar okunur — büyük tablolar (örn.
+    daily_margin ~423 MB) için belleği 5-10x küçültür.
+    """
     keys = []
     pg = s3.get_paginator("list_objects_v2")
     for page in pg.paginate(Bucket=BUCKET, Prefix=prefix):
@@ -51,7 +55,8 @@ def load_gold(prefix, max_files=4000):
     for k in keys[:max_files]:
         try:
             obj = s3.get_object(Bucket=BUCKET, Key=k)
-            dfs.append(pd.read_parquet(io.BytesIO(obj["Body"].read())))
+            dfs.append(pd.read_parquet(io.BytesIO(obj["Body"].read()),
+                                       columns=columns))
         except Exception as e:
             print(f"  skip {k}: {e}")
     return pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
@@ -131,7 +136,7 @@ def chart_source_coverage():
 
 # ---------------------------------------------------------------- 3. daily margin
 def chart_margin():
-    df = load_gold("gold/daily_margin/")
+    df = load_gold("gold/daily_margin/", columns=["margin_pct", "city"])
     df = df[df["margin_pct"].notna()]
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(13, 5.2))
     clipped = df["margin_pct"].clip(-20, 320)
@@ -158,7 +163,8 @@ def chart_margin():
 
 # ---------------------------------------------------------------- 4. rockets & feathers
 def chart_rockets():
-    df = load_gold("gold/rockets_feathers/")
+    df = load_gold("gold/rockets_feathers/",
+                   columns=["n_obs", "asymmetry_score", "product_canonical"])
     df = df[(df["n_obs"] >= 150) & df["asymmetry_score"].notna()]
     df = df[(df["asymmetry_score"] > 0) & (df["asymmetry_score"] < 5)]
     df = df.sort_values("asymmetry_score")
@@ -185,9 +191,13 @@ def chart_rockets():
 
 # ---------------------------------------------------------------- 5. shock propagation
 def chart_shock():
-    df = load_gold("gold/shock_propagation/")
-    need = {"market_lag_days", "hal_lag_days", "peak_change_pct",
-            "product_canonical"}
+    need_cols = ["market_lag_days", "hal_lag_days", "peak_change_pct",
+                 "product_canonical"]
+    try:
+        df = load_gold("gold/shock_propagation/", columns=need_cols)
+    except Exception:
+        df = load_gold("gold/shock_propagation/")
+    need = set(need_cols)
     if df.empty or not need.issubset(df.columns):
         print("  shock: beklenen kolonlar yok (tablo yeniden yazılıyor "
               "olabilir) — mevcut PNG korunuyor")
@@ -219,7 +229,8 @@ def chart_shock():
 
 # ---------------------------------------------------------------- 6. price inequality
 def chart_inequality():
-    df = load_gold("gold/price_inequality_market/")
+    df = load_gold("gold/price_inequality_market/",
+                   columns=["product", "spread_pct", "cv"])
     df = df[df["spread_pct"].notna()]
     prod = (df.groupby("product")["spread_pct"].median()
             .sort_values(ascending=False).head(14))
@@ -242,7 +253,8 @@ def chart_inequality():
 
 # ---------------------------------------------------------------- 7. macro corr
 def chart_macro():
-    df = load_gold("gold/macro_price_corr/")
+    df = load_gold("gold/macro_price_corr/",
+                   columns=["macro_series", "correlation", "best_lag"])
     df = df[df["best_lag"] == True]
     df = df[df["correlation"].notna()]
     df["abs_corr"] = df["correlation"].abs()
@@ -294,12 +306,80 @@ def chart_forecast(product="Domates"):
     save(fig, "forecast_domates.png")
 
 
+# ---------------------------------------------------------------- 9. pandemic gap
+def chart_pandemic_gap():
+    """`comparison_year` partition kolonu olduğu için manuel okuma."""
+    keys = []
+    pg = s3.get_paginator("list_objects_v2")
+    for page in pg.paginate(Bucket=BUCKET, Prefix="gold/pandemic_gap/"):
+        for o in page.get("Contents", []):
+            if o["Key"].endswith(".parquet"):
+                keys.append(o["Key"])
+    dfs = []
+    for k in keys:
+        # Path: gold/pandemic_gap/comparison_year=2021/part-....parquet
+        year = int(k.split("comparison_year=")[1].split("/")[0])
+        obj = s3.get_object(Bucket=BUCKET, Key=k)
+        d = pd.read_parquet(io.BytesIO(obj["Body"].read()),
+                            columns=["product_canonical", "market_name",
+                                     "baseline_margin", "post_margin",
+                                     "gap_widening_pct"])
+        d["comparison_year"] = year
+        dfs.append(d)
+    if not dfs:
+        print("  pandemic_gap: veri yok, atlandi")
+        return
+    df = pd.concat(dfs, ignore_index=True)
+    # Sıfıra yakın baseline'lar % oranı patlatıyor; |baseline|>=5% şart.
+    df = df[(df["baseline_margin"].abs() >= 5.0)
+            & df["gap_widening_pct"].notna()]
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(13, 5.4))
+    years = sorted(df["comparison_year"].unique())
+    data_by_year = [df[df["comparison_year"] == y]["gap_widening_pct"]
+                    .clip(-150, 200).values for y in years]
+    box_colors = [TEAL, NAVY, GOLD, ORANGE]
+    bp = a1.boxplot(data_by_year, labels=[str(y) for y in years],
+                    patch_artist=True, showfliers=False,
+                    medianprops=dict(color="white", linewidth=2),
+                    whiskerprops=dict(color=GREY),
+                    capprops=dict(color=GREY))
+    for patch, c in zip(bp["boxes"], box_colors):
+        patch.set_facecolor(c); patch.set_edgecolor(c)
+    medians = [float(np.median(arr)) for arr in data_by_year]
+    for i, m in enumerate(medians, 1):
+        a1.text(i, m + 4, f"{m:+.0f}%", ha="center", fontsize=11,
+                fontweight="bold", color=NAVY)
+    a1.axhline(0, color=NAVY, lw=1.2, ls="--")
+    a1.set_ylabel("Gap widening vs 2019 baseline  (%)")
+    a1.set_xlabel("Comparison year")
+    a1.set_title(f"Margin Gap by Year ({len(df):,} product×chain cases)")
+    a1.set_ylim(-160, 220)
+
+    # En çok genişleyen ürünler (yıllar arası medyan, sadece pozitif tarafa
+    # bakıyoruz — hipotezi destekleyen örnekler).
+    prod_med = (df.groupby("product_canonical")["gap_widening_pct"]
+                  .median().sort_values(ascending=False).head(10))
+    a2.barh([p.replace("_", " ").title() for p in prod_med.index[::-1]],
+            prod_med.values[::-1], color=ORANGE)
+    a2.axvline(0, color=NAVY, lw=1, ls="--")
+    a2.set_xlabel("Median gap widening across 2021-24  (%)")
+    a2.set_title("Products with Largest Permanent Widening")
+    for i, v in enumerate(prod_med.values[::-1]):
+        a2.text(v + (3 if v > 0 else -3), i, f"{v:+.0f}%",
+                va="center", ha="left" if v > 0 else "right", fontsize=10)
+    fig.tight_layout(rect=[0, 0, 1, 0.91])
+    fig.suptitle("Did margins widen permanently after the 2020 pandemic?  "
+                 "— median actually NARROWED",
+                 fontsize=14, fontweight="bold", y=0.985)
+    save(fig, "pandemic_gap.png")
+
+
 if __name__ == "__main__":
     print("Grafikler uretiliyor (S3 Gold)...")
     # Her grafik bagimsiz; biri hata verirse digerleri ve onceki PNG korunur.
     for fn in (chart_compression, chart_source_coverage, chart_margin,
                chart_rockets, chart_shock, chart_inequality, chart_macro,
-               chart_forecast):
+               chart_forecast, chart_pandemic_gap):
         try:
             fn()
         except Exception as e:
