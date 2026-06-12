@@ -1,0 +1,235 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\kern-.125emX}}
+
+\title{GıdaRadar: A Big Data Engine for Wholesale\\to Retail Margin Analysis in the Turkish\\Food Supply Chain}
+
+\author{
+\IEEEauthorblockN{Azmi Yağlı, Abdullah Zengin, Hidayet Ersin Dursun}
+\IEEEauthorblockA{\textit{Istanbul Technical University}\\
+BVA 504E Big Data Technologies and Applications}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Food price volatility is a recurring economic concern in Türkiye, yet the wholesale to retail margin that sits behind it is not measured in any public dataset. We present \textit{GıdaRadar}, an end to end big data pipeline that integrates nine independent sources covering retail prices from 81 provinces, wholesale (\textit{hal}) prices from 10 cities, weather, news tone, electricity, FX, inflation, fuel and global commodities. The pipeline is built on AWS S3 with a Medallion (Bronze, Silver, Gold) layout, orchestrated through Apache NiFi and Kafka, and processed by PySpark on transient Amazon EMR clusters. We resolve product entities between wholesale and retail vocabularies using a language model assisted matching procedure rather than the more common TF-IDF baseline, normalize units to a common kilogram scale, and align sources at the city and day level. On top of the curated Gold layer we run five analyses: daily margin distributions, an asymmetric error correction model for the \textit{Rockets and Feathers} hypothesis, an event study for weather shock propagation, spatial price inequality across cities, and Prophet based forecasting. A full Bronze to Gold run over a one year subset finishes in 30 to 45 minutes for roughly one US dollar of cluster cost. The results provide measurable evidence of asymmetric price transmission and quantify the lag between weather shocks and shelf prices.
+\end{abstract}
+
+\begin{IEEEkeywords}
+big data, data engineering, supply chain transparency, asymmetric price transmission, Apache Spark, AWS EMR, food prices, Medallion architecture.
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+In Türkiye, a tomato that leaves the wholesale market at roughly 15~TL frequently reaches the supermarket shelf at 30 to 40~TL. Food inflation has stayed near the top of the public agenda for several years, and international organizations have flagged volatility in fresh produce prices as a structural risk for emerging economies \cite{hlpe2011,faooutlook}. Yet the gap that sits behind the headline number, the per product margin between wholesale and retail, is never systematically measured at the product, retailer and province level. We treat this opacity as the core problem: there is no public dataset that links wholesale prices to retail prices on a shared key. Without that link, three further questions stay unanswered. First, is the transmission asymmetric, i.e., do retail prices follow the \emph{Rockets and Feathers} pattern \cite{bacon1991,peltzman2000,vct1998}? Second, how quickly do supply shocks reach the shelf \cite{deaton1999}? Third, how unequally is the same product priced across 81 provinces on the same day?
+
+The contribution of this project is a working data pipeline that answers these questions on real data, rather than a new model. From an engineering perspective it shows how a heterogeneous mix of REST APIs, headless browsers and BigQuery exports can be lifted into a Parquet based Medallion lake on S3, then processed by PySpark on transient EMR clusters that open, compute and shut down. From an analytical perspective it produces five Gold tables that we surface through an Elasticsearch and Kibana stack. The system is reproducible from the public repository and runs the same code on a one year demo subset and on the full 10 year backfill, with only the start date parameter changing.
+
+The rest of the paper is organized as follows. Section~\ref{sec:related} positions the work in the literature. Section~\ref{sec:data} describes the nine sources and the collection techniques. Section~\ref{sec:arch} details the pipeline architecture and the EMR runtime. Section~\ref{sec:method} lists the analytical methods. Section~\ref{sec:results} reports the empirical findings. Section~\ref{sec:concl} concludes.
+
+\section{Related Work}
+\label{sec:related}
+
+Asymmetric price transmission has a long econometric history. Peltzman \cite{peltzman2000} documents the regularity that output prices rise faster than they fall across many markets, while Bacon \cite{bacon1991} coined the \textit{Rockets and Feathers} label for the same pattern in gasoline. von Cramon-Taubadel \cite{vct1998} provides the early error correction formulation, Meyer and von Cramon-Taubadel \cite{meyer2004} survey the methodological landscape, and Frey and Manera \cite{freymanera2007} extend the survey to a wider class of estimators. We adopt the asymmetric error correction specification that this stream of work converges on. For supply chain transparency, the EU Commission and FAO maintain aggregated price observatories \cite{faooutlook}, but these are not granular enough to link a wholesale entry to a specific retailer in a specific city. Domestic alternatives exist for parts of the problem. The Turkish Statistical Institute and the Central Bank \cite{tcmbevds} publish food inflation indices, but only at the aggregate level. Commercial price comparison apps such as \textit{Cimri} and \textit{Marketfiyatı} list retail prices across chains, yet they do not surface the upstream wholesale price and therefore cannot expose the margin. Satellite based crop health products built on Sentinel-2 NDVI \cite{sentinel2} are promising as upstream signals and are on our roadmap. To our knowledge, no published Turkish system joins wholesale and retail on a common key at the province level. GıdaRadar is, at minimum, a useful instance of that join.
+
+\section{Data Sources and Collection}
+\label{sec:data}
+
+The pipeline integrates nine sources, summarized in Table~\ref{tab:sources}. The diversity is not in the count but in the formats and refresh rates: five distinct serialization formats and five distinct cadences ranging from 15 minutes to monthly.
+
+\begin{table}[!t]
+\caption{Data sources integrated by GıdaRadar.}
+\label{tab:sources}
+\centering
+\footnotesize
+\begin{tabular}{@{}p{2.05cm}p{1.95cm}p{1.25cm}p{1.55cm}@{}}
+\toprule
+\textbf{Source} & \textbf{Coverage} & \textbf{Cadence} & \textbf{Access} \\
+\midrule
+marketfiyati.org.tr & 6 chains, 81 provinces & Intraday & Async REST \\
+İBB Hal & İstanbul wholesale & Daily & Selenium \\
+Harman Hal & 9 cities wholesale & Daily & curl\_cffi \\
+GDELT & TR food and agri news & 15~min & BigQuery + S3 \\
+EPİAŞ & 26 electricity datasets & Hourly & EPTR2 SDK \\
+TCMB EVDS & FX, food CPI & Daily, monthly & REST \\
+Open-Meteo & 81 provinces weather & Hourly & REST \\
+EPDK Fuel & 81 provinces fuel & Daily & REST \\
+Yahoo Finance & Wheat, Brent, etc. & Daily & yfinance \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each source required a different ingestion technique. Four examples illustrate the engineering surface.
+
+\paragraph{Adaptive grid search for retail} The \texttt{marketfiyati.org.tr} API returns only the depots near a single query coordinate. A naive scrape at a district centroid leaves the far neighborhoods of that same district uncovered. We split the district bounding box into a fine grid (roughly 500~m spacing) and issue one \texttt{/nearest} query per grid point, deduplicating depots by ID. In Bayrampaşa, one centroid call returned 10 depots while the grid scan recovered 629 unique depots.
+
+\paragraph{Headless browser for İBB} The İstanbul wholesale portal renders prices through JavaScript, so we drive it with Selenium and a headless Chrome.
+
+\paragraph{TLS fingerprint bypass for Harman} The Harman portal sits behind Cloudflare. The \texttt{curl\_cffi} library impersonates the Chrome TLS fingerprint and passes the challenge without any browser automation.
+
+\paragraph{BigQuery export for GDELT} The GDELT GKG table is queried with theme and country filters in BigQuery, then written directly into S3 as Parquet, which avoids ingesting tens of millions of unrelated rows.
+
+The common backbone for every collector is asynchronous I/O, exponential backoff for rate limiting and an incremental state file that re-fetches only stale partitions.
+
+\paragraph{Synthetic backfill} Public retail price history before 2026 is not available. To enable the pandemic gap study, we synthesize retail prices for cities and years that have no real coverage. The synthetic value is a product of four factors: the real scraped base price for 2026, a deflator derived from the TCMB fresh fruit and vegetable index, a product specific seasonal profile, and deterministic noise seeded from the (product, date, depot) tuple. Every synthetic row is tagged in a \texttt{veri\_turu} column so real and synthetic records never silently mix.
+
+\section{Pipeline Architecture}
+\label{sec:arch}
+
+Figure~\ref{fig:pipeline} shows the end to end pipeline. Apache NiFi 1.25 (2~GB heap) orchestrates ingestion through continuous micro batches and Kafka 7.5 acts as a durable event log; seven \texttt{raw\_*} topics with six partitions each let heavy producers fan out without head of line blocking. Collectors apply adaptive backoff: a sliding error counter widens the per request delay up to 60~seconds, and full retry rounds back off exponentially from 30 to 300~seconds. GDELT is a 15~minute windowed pull from BigQuery rather than a true stream. All raw data lands on S3 in Parquet, partitioned by year and month (or year, month, day for the daily sources).
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.95\textwidth]{pipeline_diagram.png}
+\caption{End to end Medallion pipeline on AWS. Nine ingestion sources feed Bronze in Parquet. PySpark jobs produce Silver and eight Gold analytic tables. Elasticsearch indexes the Gold layer and Kibana renders the dashboards.}
+\label{fig:pipeline}
+\end{figure*}
+
+\paragraph{Bronze: format as a cost decision} JSON and CSV inputs are flattened and written as Parquet. The choice is not stylistic. Columnar storage, dictionary encoding and run length encoding shrink the footprint substantially: hal CSV drops from 1028~MB to 62~MB (a 17$\times$ reduction), fuel by 12$\times$ and EPİAŞ by 6$\times$. Combined with Hive style partition pruning, the saving translates directly into shorter Spark scans and lower EMR bills. Figure~\ref{fig:compression} summarizes the per source ratios.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{compression.png}
+\caption{Raw versus Parquet size per source on a representative slice.}
+\label{fig:compression}
+\end{figure}
+
+\paragraph{Silver: entity resolution and unit normalization} The hardest engineering problem is entity resolution. The wholesale system describes a product as ``Domates Sofralık Sera'' while the retail catalog uses a slug such as ``salkim-domates-1-kg.'' We follow a four step procedure: collect candidate pairs with a cheap lexical prefilter, send each candidate batch to a language model (Claude Haiku) for adjudication with cache friendly prompts, then export to a human reviewed CSV. The reviewed mapping is broadcast to every executor at join time to avoid an expensive shuffle. Unit normalization happens through Spark UDFs that resolve crate, bunch, gram and piece labels into a common kilogram unit. Quality gates run inline: rows missing a date or unit price are dropped, product strings normalized through \texttt{initcap(lower(trim(\dots)))}, null categories filled with a sentinel, and a \texttt{source\_type} column propagates the real vs synthetic split into every Gold table. Temporal alignment uses an as of join so a 15 minute news record joins the latest daily price snapshot rather than the nearest one in absolute time.
+
+\paragraph{Gold: eight analytic tables} The Silver join feeds eight curated tables: \texttt{daily\_margin}, \texttt{rockets\_feathers}, \texttt{shock\_propagation}, \texttt{retail\_inequality}, \texttt{hal\_inequality}, \texttt{macro\_corr}, \texttt{news\_corr} and \texttt{prophet\_forecast}.
+
+\paragraph{Compute: transient EMR} Spark runs on a transient EMR 7.2.0 cluster (Spark 3.5.1, Python 3.9) with one \texttt{m5.xlarge} master and three \texttt{m5.2xlarge} core nodes (8 vCPU, 32~GB each), configured with \texttt{maximizeResourceAllocation} so YARN sizes one large executor per node. A preflight step validates script syntax and the dependency zip statically before any cluster spins up, failing early at zero cost. Eleven Spark steps run in order: a smoke step on a single day with \texttt{TERMINATE\_CLUSTER} on failure, then three Silver and seven Gold steps with \texttt{CONTINUE} so partial failures do not block the rest. End to end runtime on a 12 month subset is 30 to 45 minutes for roughly one US dollar of EC2 spend, and auto-termination prevents an idle cluster from silently accruing cost.
+
+\paragraph{Spark internals} The session enables AQE with skew join handling, partition coalescing and a 64~MB advisory size, sets \texttt{autoBroadcastJoinThreshold} to 50~MB so the entity mapping CSV joins without a shuffle, and writes Parquet with Snappy; the synthetic market job raises \texttt{spark.sql.shuffle.partitions} to 200 for its 5.5~GB working set. The heavy join \texttt{silver\_joined} is a full outer join on (date, city, product). Daily margins use window functions partitioned by city and product for seven day rolling averages without a full shuffle. Per product Rockets and Feathers, the cogrouped shock event study and Prophet runs use \texttt{applyInPandas} so executors fit groups in parallel rather than collecting on the driver.
+
+\section{Methodology}
+\label{sec:method}
+
+We use five quantitative methods.
+
+\paragraph{Asymmetric Error Correction Model} For each product, the change in retail price is regressed on the lagged change in the wholesale price, split into a positive and a negative component, following the standard Engle-Granger asymmetric specification \cite{meyer2004}. The asymmetry score is the ratio of the sum of positive coefficients to the absolute value of the sum of negative coefficients. A score above one indicates faster pass through on the way up.
+
+\paragraph{Event study} Weather records are scanned for frost, heat and heavy rain events. For each event, the post event price series is compared against a baseline window and the system records the number of days until the price rises 10\% above baseline, separately at the wholesale and retail layers.
+
+\paragraph{Spatial inequality} For each product on each day, we compute the coefficient of variation and the spread (max minus min divided by mean) across cities to quantify how unequally the same product is priced.
+
+\paragraph{Lagged correlation with macro signals} The pipeline computes Pearson correlations between price returns and each macro series (fuel, FX, commodities, electricity) at lags from 0 to 30 days, then keeps the best lag and its p value. The GDELT tone score is treated the same way.
+
+\paragraph{Prophet forecasting} Meta's Prophet \cite{prophet} fits trend, yearly seasonality and changepoints for each product. The output is a 30 day forecast with an uncertainty band and a list of structural breakpoints.
+
+\section{Results}
+\label{sec:results}
+
+\paragraph{Daily margins} Figure~\ref{fig:margin} shows the distribution of the daily margin across all (product, city, day) records and across cities. The distribution is right skewed with a long tail of outliers, which means the average margin sits visibly above the median. In practice the typical shelf price is close to twice the wholesale price, with some product and city combinations far above that. The per city panel confirms that the margin is not uniform across provinces.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{margin_dist.png}
+\caption{Margin distribution (left) and per city median (right).}
+\label{fig:margin}
+\end{figure}
+
+\paragraph{Rockets and Feathers} Figure~\ref{fig:rf} ranks products by the asymmetry score (vertical line at 1.0 marks symmetric pass through). Several staple items (dry garlic, baby potato, potato) sit clearly above one, indicating faster upward than downward transmission. The result is a numerical instance of the asymmetry that Bacon described for gasoline \cite{bacon1991}, now observed in Turkish fresh produce.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{rockets_feathers.png}
+\caption{Asymmetry score by product. Bars above 1.0 are Rockets, below 1.0 are Feathers.}
+\label{fig:rf}
+\end{figure}
+
+\paragraph{Shock propagation} Figure~\ref{fig:shock} shows the distribution of days to a 10\% retail price reaction after a weather event. Wholesale reacts first, with retail following at a measurable lag. The gap is the early warning window the regulator can act in.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{shock_lag.png}
+\caption{Lag distribution from weather event to a 10\% price move.}
+\label{fig:shock}
+\end{figure}
+
+\paragraph{Spatial inequality} Figure~\ref{fig:inequality} ranks products by the across city spread, defined as the maximum minus minimum retail price divided by the mean. Top items reach double digit percentages on a single day, well above what local logistics costs alone can explain. The residual is consistent with location based pricing power, which is the policy relevant signal.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{price_inequality.png}
+\caption{Cross city price spread by product on a representative day.}
+\label{fig:inequality}
+\end{figure}
+
+\paragraph{Macro coupling} Figure~\ref{fig:macro} ranks macro and commodity series by the absolute Pearson correlation with food price returns at the best lag. Fuel, FX and global wheat sit at the top, with the strongest signals concentrated at lags between 7 and 21 days. GDELT news tone enters the same ranking as a weaker but still positive leading indicator, which extends the early warning window further upstream.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{macro_corr.png}
+\caption{Lagged correlation of macro signals with food price returns.}
+\label{fig:macro}
+\end{figure}
+
+\paragraph{Forecasting} Figure~\ref{fig:forecast} shows the tomato price series from 2016 to 2026 and a 30 day Prophet forecast. The model captures the strong yearly seasonality, the rising trend and several structural change points.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{forecast_domates.png}
+\caption{Tomato price history with Prophet 30 day forecast and uncertainty band.}
+\label{fig:forecast}
+\end{figure}
+
+\paragraph{Pandemic gap} Figure~\ref{fig:gap} compares the average margin in 2019 (baseline) against 2021 through 2024. The median gap is negative every year, which is the opposite of the popular narrative. A plausible explanation is that during the high inflation regime after 2021 wholesale prices grew faster than retail prices for most product and chain pairs, compressing the retail margin in relative terms. A small set of product and chain pairs do show a persistently positive gap; these are the cases worth a manual audit. One caveat is that retail prices before 2026 are synthetic, so the result is directional rather than precise.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{pandemic_gap.png}
+\caption{Distribution of the margin gap relative to 2019 baseline, by year.}
+\label{fig:gap}
+\end{figure}
+
+\section{Scale and Limitations}
+\label{sec:limits}
+
+\paragraph{Scale} The active working set is in the tens of gigabytes, but the system is designed for the regime where a single machine no longer suffices. The market backfill alone reaches roughly 283 million rows and 52~GB in Parquet for the six year horizon; the 2026 onward partitions are real scrapes while the 2019 to 2025 partitions are synthetic, and the same Spark code path treats them identically through the \texttt{source\_type} column. Joining the other eight sources moves the lake into the 200 to 500~GB band, and only the start date parameter changes between the demo subset and the full backfill, so the volume increase is a configuration switch rather than a rewrite.
+
+\paragraph{Limitations} Five caveats apply to the current release. First, public retail price history before 2026 is not available, so the pandemic gap result rests on synthetic retail prices anchored to the real TCMB fresh produce inflation series; the direction of the result is informative but the magnitude will only be precise once a real retail backfill is acquired. Second, wholesale coverage is real for 10 cities; the remaining provinces inherit a regional proxy and should be read with that in mind. Third, entity resolution requires a small but non zero human review step on top of the language model adjudication, which limits how quickly the catalog can grow. Fourth, the shock event study uses a fixed 10\% threshold; sensitivity to that choice has not yet been profiled. Fifth, logistics cost is approximated through fuel rather than measured at the corridor level, so a part of the spatial inequality figure should be read as a residual that includes transport effects we cannot yet separate.
+
+\section{Discussion and Future Work}
+\label{sec:concl}
+
+GıdaRadar shows that the wholesale to retail margin question can be answered at scale on commodity cloud infrastructure. The Medallion layout on S3, Parquet for cost and a transient EMR cluster keep the bill predictable; on a one year demo the whole pipeline costs about one US dollar. The asymmetric error correction results and the shock lag results are, to our knowledge, the first such numbers reported on a Turkish retail panel that is also linked to wholesale prices.
+
+Several extensions are planned. A complete 2016 to 2026 backfill on EMR will replace the directional pandemic gap result with a numerical one. XGBoost and LSTM will sit next to Prophet for multivariate forecasts. Sentinel-2 NDVI \cite{sentinel2} will feed an upstream supply shock signal before the price even moves at the wholesale market. A corridor level transport cost layer, for example the Ankara to Konya and İstanbul to İzmir routes, will isolate logistics from pricing power in the spatial inequality figure. The NiFi and Kafka stack will be promoted from micro batch to fully continuous streaming, and the real hal coverage will grow beyond the current 10 cities.
+
+\paragraph{Reproducibility and AI assistance} The codebase, the dashboards and the EMR step specifications are all in the project repository and run end to end from a single shell script. We used AI tools during development for code drafting, documentation, the entity resolution adjudication step and for parts of this manuscript.
+
+\begin{thebibliography}{12}
+\bibitem{bacon1991} R. W. Bacon, ``Rockets and Feathers: The Asymmetric Speed of Adjustment of UK Retail Gasoline Prices to Cost Changes,'' \textit{Energy Economics}, vol. 13, no. 3, pp. 211-218, 1991.
+\bibitem{peltzman2000} S. Peltzman, ``Prices Rise Faster Than They Fall,'' \textit{Journal of Political Economy}, vol. 108, no. 3, pp. 466-502, 2000.
+\bibitem{vct1998} S. von Cramon-Taubadel, ``Estimating Asymmetric Price Transmission with the Error Correction Representation: An Application to the German Pork Market,'' \textit{European Review of Agricultural Economics}, vol. 25, no. 1, pp. 1-18, 1998.
+\bibitem{meyer2004} J. Meyer and S. von Cramon-Taubadel, ``Asymmetric Price Transmission: A Survey,'' \textit{Journal of Agricultural Economics}, vol. 55, no. 3, pp. 581-611, 2004.
+\bibitem{freymanera2007} G. Frey and M. Manera, ``Econometric Models of Asymmetric Price Transmission,'' \textit{Journal of Economic Surveys}, vol. 21, no. 2, pp. 349-415, 2007.
+\bibitem{deaton1999} A. Deaton, ``Commodity Prices and Growth in Africa,'' \textit{Journal of Economic Perspectives}, vol. 13, no. 3, pp. 23-40, 1999.
+\bibitem{hlpe2011} HLPE, ``Price Volatility and Food Security,'' Report of the High Level Panel of Experts on Food Security and Nutrition, FAO Committee on World Food Security, Rome, 2011.
+\bibitem{faooutlook} OECD and FAO, \textit{OECD-FAO Agricultural Outlook 2023-2032}, OECD Publishing, Paris, 2023.
+\bibitem{prophet} S. J. Taylor and B. Letham, ``Forecasting at Scale,'' \textit{The American Statistician}, vol. 72, no. 1, pp. 37-45, 2018.
+\bibitem{sentinel2} M. Drusch et al., ``Sentinel-2: ESA's Optical High-Resolution Mission for GMES Operational Services,'' \textit{Remote Sensing of Environment}, vol. 120, pp. 25-36, 2012.
+\bibitem{tcmbevds} Central Bank of the Republic of Türkiye, ``Electronic Data Delivery System (EVDS),'' \url{https://evds2.tcmb.gov.tr/}.
+\bibitem{gdelt} The GDELT Project, ``Global Database of Events, Language, and Tone,'' \url{https://www.gdeltproject.org/}.
+\bibitem{epias} EPİAŞ, ``Transparency Platform,'' \url{https://seffaflik.epias.com.tr/}.
+\bibitem{openmeteo} Open-Meteo, ``Free Weather API,'' \url{https://open-meteo.com/}.
+\end{thebibliography}
+
+\end{document}
