@@ -92,7 +92,7 @@ def main():
     (
         df_silver
         .write
-        .mode("append")
+        .mode("overwrite")
         .partitionBy("series_name")
         .parquet(SILVER_PATH)
     )

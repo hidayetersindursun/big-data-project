@@ -66,7 +66,7 @@ def main():
     (
         df_silver
         .write
-        .mode("append")
+        .mode("overwrite")
         .partitionBy("commodity_name")
         .parquet(SILVER_PATH)
     )
